@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window type="dialog" id="1197">
+	<visible>system.getbool(lookandfeel.enablerssfeeds) + !Window.IsVisible(slideshow) + !Window.IsVisible(SettingsScreenCalibration.xml) + !Window.IsVisible(screensaver) + !Window.IsVisible(startup) + !Window.IsVisible(fullscreenvideo) + !Window.IsVisible(visualisation) + !Window.IsVisible(SettingsCategory.xml)</visible>
+	<controls>
+	    <control type="rss">
+            <posx>48</posx>
+            <posy>1032</posy>
+            <width>1870</width>
+            <font>Font-RSS</font>
+            <textcolor>SideArrow</textcolor>
+            <headlinecolor>SideArrow</headlinecolor>
+            <titlecolor>LineLabel</titlecolor>
+            <visible>Window.IsVisible(Home.xml)</visible>         
+            <visible>Skin.String(HomeStyle, textintile)</visible>
+            <animation effect="slide" start="-1200" end="0" time="250">WindowOpen</animation>
+            <animation effect="slide" end="-1200" start="0" time="250">WindowClose</animation>
+            <animation effect="slide" tween="quadratic" easing="in" time="150" end="0,266" start="0" reversible="false" condition="!String.IsEmpty(Window(home).Property(FO9001)) + String.IsEqual(Window(home).Property(FO9001),2)">Conditional</animation>
+            <animation effect="slide" start="0" end="0,266" time="500" tween="back" reversible="false" easing="out" condition="!String.IsEmpty(Window(home).Property(FO9001)) + String.IsEqual(Window(home).Property(FO9001),1)">Conditional</animation>
+            <animation effect="slide" end="0" start="0,266" time="150" reversible="false" condition="String.IsEmpty(Window(home).Property(FO9001))">Conditional</animation>
+        </control>
+        <control type="group">
+            <include>Animation_FadeIn</include>
+            <visible>Window.IsVisible(Home.xml)</visible>
+            <visible>!Window.IsActive(DialogNotification.xml)</visible>
+            <visible>!Window.IsActive(DialogExtendedProgressBar.xml)</visible>
+            <visible>!Player.HasMedia</visible>           
+            <visible>Skin.String(HomeStyle, rounded) | Skin.String(HomeStyle, squared) | Skin.String(HomeStyle, beveled) | Skin.String(HomeStyle, circle) | Skin.String(HomeStyle, emptybeveled) | Skin.String(HomeStyle, emptyrounded) | Skin.String(HomeStyle, emptysquared) | Skin.String(HomeStyle, emptycircle) | Skin.String(HomeStyle, iconsonly) | Skin.String(HomeStyle, textonly) | Skin.String(HomeStyle, vertical)</visible>
+			<animation effect="slide" start="-1200" end="0" time="250">WindowOpen</animation>
+            <animation effect="slide" end="-1200" start="0" time="250">WindowClose</animation>
+            <animation effect="slide" tween="quadratic" easing="in" time="150" end="0,266" start="0" reversible="false" condition="!String.IsEmpty(Window(home).Property(FO9001)) + String.IsEqual(Window(home).Property(FO9001),2) + !String.IsEqual(Skin.String(HomeStyle),textonly)">Conditional</animation>
+            <animation effect="slide" start="0" end="0,266" time="500" tween="back" reversible="false" easing="out" condition="!String.IsEmpty(Window(home).Property(FO9001)) + String.IsEqual(Window(home).Property(FO9001),1) + !String.IsEqual(Skin.String(HomeStyle),textonly) + !String.IsEqual(Skin.String(HomeStyle),vertical)">Conditional</animation>
+            <animation effect="slide" end="0" start="0,266" time="150" reversible="false" condition="String.IsEmpty(Window(home).Property(FO9001)) + !String.IsEqual(Skin.String(HomeStyle),textonly) + !String.IsEqual(Skin.String(HomeStyle),vertical)">Conditional</animation>           
+			<animation effect="slide" end="0,160" start="0" time="100" reversible="true" condition="!String.IsEmpty(Window(home).Property(FO9001)) + String.IsEqual(Skin.String(HomeStyle),textonly)">Conditional</animation>
+            <animation effect="slide" end="0,160" start="0" time="100" reversible="true" condition="String.IsEmpty(Window(home).Property(FO9001)) + String.IsEqual(Skin.String(HomeStyle),textonly)">Conditional</animation>
+			<animation effect="slide" end="0,106" start="0" time="150" reversible="true" condition="!String.IsEmpty(Window(home).Property(FO9001)) + String.IsEqual(Window(home).Property(FO9001),2) + String.IsEqual(Skin.String(HomeStyle),textonly)">Conditional</animation>
+            <animation effect="slide" end="0,106" start="0" time="150" reversible="true" condition="!String.IsEmpty(Window(home).Property(FO9001)) + String.IsEqual(Window(home).Property(FO9001),1) + String.IsEqual(Skin.String(HomeStyle),textonly)">Conditional</animation>	
+            <animation effect="slide" start="0" end="-206,0" time="500" tween="back" reversible="true" easing="out" condition="!String.IsEmpty(Window(home).Property(FO9001)) + String.IsEqual(Window(home).Property(FO9001),1) + String.IsEqual(Skin.String(HomeStyle),vertical)">Conditional</animation>			
+			<control type="image">
+                <posx>16</posx>
+                <posy>314r</posy>
+                <width>32</width>
+                <height>32</height>
+                <texture colordiffuse="LineLabel">common/rss.png</texture>
+				<animation effect="slide" start="0,6400" end="0" time="5">VisibleChange</animation>
+				<animation effect="slide" end="196,266" start="0" time="0" reversible="false" condition="String.IsEqual(Skin.String(HomeStyle),vertical)">Conditional</animation>
+			</control>
+            <control type="rss">
+                <posx>48</posx>
+                <posy>314r</posy>
+                <width>1040</width>
+                <height>32</height>
+                <aligny>center</aligny>
+                <font>Font-RSS</font>
+                <textcolor>SideArrow</textcolor>
+                <headlinecolor>SideArrow</headlinecolor>
+                <titlecolor>LineLabel</titlecolor>
+				<animation effect="slide" start="0,6400" end="0" time="5">VisibleChange</animation>
+				<animation effect="slide" end="206,266" start="0" time="0" reversible="false" condition="String.IsEqual(Skin.String(HomeStyle),vertical)">Conditional</animation>
+            </control>
+        </control>
+
+        
+	    
+	</controls>
+</window>

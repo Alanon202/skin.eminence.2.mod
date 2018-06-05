@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<!-- loginscreen -->
+	<defaultcontrol always="true">52</defaultcontrol>
+        <backgroundcolor>Background</backgroundcolor>
+	<controls>
+
+        <!-- Content -->        
+        <control type="group">
+            <posx>400r</posx>
+            <animation effect="slide" start="0" end="92" condition="Skin.HasSetting(disable.weatherheader)">Conditional</animation>
+            <control type="image">
+                <posx>284</posx>
+                <posy>28</posy>
+                <width>100</width>
+                <height>100</height>
+                <fadetime>350</fadetime>
+                <aspectratio aligny="center" align="center">keep</aspectratio>
+                <texture colordiffuse="$VAR[Furniture_TopBar_MainLabel_Color]">$INFO[Weather.FanartCode,weather-icons/,.png]</texture>
+                <visible>!Skin.HasSetting(disable.weatherheader)</visible>
+            </control>
+            <control type="label">
+                <posx>268</posx>
+                <posy>115</posy>
+                <width>128</width>
+                <height>100</height>
+                <aligny>top</aligny>
+                <font>Font-Sublabel</font>
+                <textcolor>$VAR[Furniture_TopBar_MainLabel_Color]</textcolor>
+                <align>center</align>
+                <aligny>top</aligny>
+                <label>$INFO[Weather.Temperature]</label>
+                <visible>!Skin.HasSetting(disable.weatherheader)</visible>
+            </control>
+            <control type="label">
+                <posx>270</posx>
+                <posy>25</posy>
+                <width>300</width>
+                <height>100</height>
+                <font>Font-Header</font>
+                <align>right</align>
+                <aligny>top</aligny>
+                <label>$INFO[System.Time(hh:mm)]</label>
+                <textcolor>$VAR[Furniture_TopBar_MainLabel_Color]</textcolor>
+                <animation effect="slide" start="0" end="-58" condition="!String.IsEmpty(System.Time(xx))">Conditional</animation>
+            </control>
+            <control type="label">
+                <posx>270</posx>
+                <posy>71</posy>
+                <width>100</width>
+                <height>100</height>
+                <aligny>top</aligny>
+                <font>Font-Sublabel</font>
+                <textcolor>$VAR[Furniture_TopBar_MainLabel_Color]</textcolor>
+                <align>right</align>
+                <label>$INFO[System.Time(xx)]</label>
+               <visible>!String.IsEmpty(System.Time(xx))</visible>            
+            </control>
+            <control type="label">
+                <posx>270</posx>
+                <posy>115</posy>
+                <width>500</width>
+                <height>100</height>
+                <aligny>top</aligny>
+                <font>Font-Sublabel</font>
+                <textcolor>$VAR[Furniture_TopBar_MainLabel_Color]</textcolor>
+                <align>right</align>
+                <label>$INFO[System.Date(DDD)]$COMMA $INFO[System.Date(dd MMM yyyy)]</label>
+            </control>
+        </control>   
+        
+<control type="group">
+            <control type="list" id="52">
+                <visible>!Window.IsVisible(DialogSettings.xml)</visible>
+                <posx>635</posx>
+                <posy>360</posy>
+                <width>650</width>
+                <height>360</height>
+                <onleft>61</onleft>
+                <onright>noop</onright>
+                <onup>52</onup>
+                <ondown>52</ondown>
+                <pagecontrol>61</pagecontrol>
+                <scrolltime tween="cubic" easing="out">500</scrolltime>
+                <movement>1</movement>
+                <itemlayout height="120">
+                    <control type="label">
+                        <posx>140</posx>
+                        <posy>22</posy>
+                        <width>490</width>
+                        <height>40</height>
+                        <textcolor>$VAR[Furniture_TopBar_MainLabel_Color]</textcolor>
+                        <font>Font-Button-Black</font>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                    <control type="label">
+                        <posx>140</posx>
+                        <posy>61</posy>
+                        <width>490</width>
+                        <height>40</height>
+                        <textcolor>$VAR[Furniture_TopBar_MainLabel_Color]</textcolor>
+                        <label>$INFO[ListItem.Label2]</label>
+                        <font>Font-ListInfo-Small</font>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="120">
+                    <control type="image">                                
+                        <left>8</left>
+                        <centertop>50%</centertop>
+                        <width>111</width>
+                        <height>111</height>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <texture diffuse="common/login_diffuse.png" fallback="common/login_fallback_default.png">$INFO[Listitem.Icon]</texture>
+                        <animation effect="slide" start="0,120" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(52).OnPrevious">Focus</animation>
+                        <animation effect="slide" start="0,-120" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(52).OnNext">Focus</animation>
+                        <visible>String.IsEqual(Skin.CurrentColourTheme,SKINDEFAULT) | !String.IsEqual(Skin.CurrentColourTheme,Light)</visible>
+                    </control>
+                    
+                    <control type="image">                                
+                        <left>8</left>
+                        <centertop>50%</centertop>
+                        <width>111</width>
+                        <height>111</height>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <texture diffuse="common/login_diffuse.png" fallback="common/login_fallback_light.png">$INFO[Listitem.Icon]</texture>
+                        <animation effect="slide" start="0,120" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(52).OnPrevious">Focus</animation>
+                        <animation effect="slide" start="0,-120" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(52).OnNext">Focus</animation>
+                        <visible>String.IsEqual(Skin.CurrentColourTheme,Light)</visible>
+                    </control>
+          
+                    <control type="group">
+                        <animation type="Focus" condition="Container(52).OnNext | Container(52).OnPrevious" reversible="false">
+                            <effect type="fade" start="50" end="100" time="300" tween="sine" easing="inout" />
+                        </animation>
+                        <animation effect="fade" start="100" end="50" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(52)">Conditional</animation>
+                        <control type="label">
+                            <posx>140</posx>
+                            <posy>22</posy>
+                            <width>490</width>
+                            <height>40</height>
+                            <font>Font-Button-Black</font>
+                            <textcolor>$VAR[Furniture_TopBar_MainLabel_Color]</textcolor>
+                            <label>$INFO[ListItem.Label]</label>
+                        </control>
+                        <control type="label">
+                            <posx>140</posx>
+                            <posy>61</posy>
+                            <width>490</width>
+                            <height>40</height>
+                            <textcolor>$VAR[Furniture_TopBar_MainLabel_Color]</textcolor>
+                            <label>$INFO[ListItem.Label2]</label>
+                            <font>Font-ListInfo-Small</font>
+                        </control>
+                    </control>
+                </focusedlayout>
+            </control>
+        </control>
+
+        <control type="label" id="2"><visible>false</visible></control>
+
+	</controls>
+
+</window>

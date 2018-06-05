@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1199" type="dialog">
+	<onload condition="Skin.HasSetting(OSDAutoPlayback) + !Window.IsActive(visualisation)">FullScreen</onload>
+	<visible>Player.HasAudio + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia)) + String.IsEmpty(Window(Home).Property(script.cinemavision.running))</visible>
+	<controls />
+</window>

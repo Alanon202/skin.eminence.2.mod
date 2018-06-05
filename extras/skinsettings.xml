@@ -1,0 +1,66 @@
+<settings>
+    <!-- Home Style -->
+    <!-- <setting id="HomeStyle" value="beveled" label="$LOCALIZE[31636]" condition="Stringcompare(Skin.CurrentColourTheme,Light)" icon="special://skin/extras/viewthumbs/home_beveled_light.jpg" description=""/> -->
+    <!-- <setting id="HomeStyle" value="emptybeveled" label="$LOCALIZE[31668]" condition="Stringcompare(Skin.CurrentColourTheme,Light)" icon="special://skin/extras/viewthumbs/home_emptybeveled_light.jpg" description=""/> -->
+    <!-- <setting id="HomeStyle" value="rounded" label="$LOCALIZE[31664]" condition="Stringcompare(Skin.CurrentColourTheme,Light)" icon="special://skin/extras/viewthumbs/home_rounded_light.jpg" description=""/> -->
+    <!-- <setting id="HomeStyle" value="emptyrounded" label="$LOCALIZE[31667]" condition="Stringcompare(Skin.CurrentColourTheme,Light)" icon="special://skin/extras/viewthumbs/home_emptyrounded_light.jpg" description=""/> -->
+    <!-- <setting id="HomeStyle" value="squared" label="$LOCALIZE[31502]" condition="Stringcompare(Skin.CurrentColourTheme,Light)" icon="special://skin/extras/viewthumbs/home_squared_light.jpg" description=""/> -->
+    <!-- <setting id="HomeStyle" value="emptysquared" label="$LOCALIZE[31666]" condition="Stringcompare(Skin.CurrentColourTheme,Light)" icon="special://skin/extras/viewthumbs/home_emptysquared_light.jpg" description=""/> -->
+    <!-- <setting id="HomeStyle" value="circle" label="$LOCALIZE[31501]" condition="Stringcompare(Skin.CurrentColourTheme,Light)" icon="special://skin/extras/viewthumbs/home_circle_light.jpg" description=""/> -->
+    <!-- <setting id="HomeStyle" value="emptycircle" label="$LOCALIZE[31665]" condition="Stringcompare(Skin.CurrentColourTheme,Light)" icon="special://skin/extras/viewthumbs/home_emptycircle_light.jpg" description=""/> -->
+    <!-- <setting id="HomeStyle" value="iconsonly" label="$LOCALIZE[31709]" condition="Stringcompare(Skin.CurrentColourTheme,Light)" icon="special://skin/extras/viewthumbs/home_iconsonly_light.jpg" description=""/> -->
+    <!-- <setting id="HomeStyle" value="textintile" label="$LOCALIZE[31181]" condition="Stringcompare(Skin.CurrentColourTheme,Light)" icon="special://skin/extras/viewthumbs/home_textintile_light.jpg" description=""/> -->
+    <!-- <setting id="HomeStyle" value="textonly" label="$LOCALIZE[31182]" condition="Stringcompare(Skin.CurrentColourTheme,Light)" icon="special://skin/extras/viewthumbs/home_textonly_light.jpg" description=""/> -->
+	<!-- <setting id="HomeStyle" value="vertical" label="$LOCALIZE[31817]" condition="Stringcompare(Skin.CurrentColourTheme,Light)" icon="special://skin/extras/viewthumbs/home_vertical_light.jpg" description=""/> -->
+    
+    <!-- <setting id="HomeStyle" value="beveled" label="$LOCALIZE[31636]" condition="Stringcompare(Skin.CurrentColourTheme,SKINDEFAULT)" icon="special://skin/extras/viewthumbs/home_beveled_default.jpg" description=""/> -->
+    <!-- <setting id="HomeStyle" value="emptybeveled" label="$LOCALIZE[31668]" condition="Stringcompare(Skin.CurrentColourTheme,SKINDEFAULT)" icon="special://skin/extras/viewthumbs/home_emptybeveled_default.jpg" description=""/> -->
+    <!-- <setting id="HomeStyle" value="rounded" label="$LOCALIZE[31664]" condition="Stringcompare(Skin.CurrentColourTheme,SKINDEFAULT)" icon="special://skin/extras/viewthumbs/home_rounded_default.jpg" description=""/> -->
+    <!-- <setting id="HomeStyle" value="emptyrounded" label="$LOCALIZE[31667]" condition="Stringcompare(Skin.CurrentColourTheme,SKINDEFAULT)" icon="special://skin/extras/viewthumbs/home_emptyrounded_default.jpg" description=""/> -->
+    <!-- <setting id="HomeStyle" value="squared" label="$LOCALIZE[31502]" condition="Stringcompare(Skin.CurrentColourTheme,SKINDEFAULT)" icon="special://skin/extras/viewthumbs/home_squared_default.jpg" description=""/> -->
+    <!-- <setting id="HomeStyle" value="emptysquared" label="$LOCALIZE[31666]" condition="Stringcompare(Skin.CurrentColourTheme,SKINDEFAULT)" icon="special://skin/extras/viewthumbs/home_emptysquared_default.jpg" description=""/> -->
+    <!-- <setting id="HomeStyle" value="circle" label="$LOCALIZE[31501]" condition="Stringcompare(Skin.CurrentColourTheme,SKINDEFAULT)" icon="special://skin/extras/viewthumbs/home_circle_default.jpg" description=""/> -->
+    <!-- <setting id="HomeStyle" value="emptycircle" label="$LOCALIZE[31665]" condition="Stringcompare(Skin.CurrentColourTheme,SKINDEFAULT)" icon="special://skin/extras/viewthumbs/home_emptycircle_default.jpg" description=""/> -->
+    <!-- <setting id="HomeStyle" value="iconsonly" label="$LOCALIZE[31709]" condition="Stringcompare(Skin.CurrentColourTheme,SKINDEFAULT)" icon="special://skin/extras/viewthumbs/home_iconsonly_default.jpg" description=""/> -->
+    <!-- <setting id="HomeStyle" value="textintile" label="$LOCALIZE[31181]" condition="Stringcompare(Skin.CurrentColourTheme,SKINDEFAULT)" icon="special://skin/extras/viewthumbs/home_textintile_default.jpg" description=""/> -->
+    <!-- <setting id="HomeStyle" value="textonly" label="$LOCALIZE[31182]" condition="Stringcompare(Skin.CurrentColourTheme,SKINDEFAULT)" icon="special://skin/extras/viewthumbs/home_textonly_default.jpg" description=""/> -->
+    <!-- <setting id="HomeStyle" value="vertical" label="$LOCALIZE[31817]" condition="Stringcompare(Skin.CurrentColourTheme,SKINDEFAULT)" icon="special://skin/extras/viewthumbs/home_vertical_default.jpg" description=""/>	 -->
+    
+    <!-- Header Style -->
+    <!-- <setting id="HeaderStyle" value="beveledheadertile" label="$LOCALIZE[31505]" condition="Stringcompare(Skin.CurrentColourTheme,Light)" icon="special://skin/extras/viewthumbs/tile_beveled_light.jpg" description=""/> -->
+    <!-- <setting id="HeaderStyle" value="roundedheadertile" label="$LOCALIZE[31503]" condition="Stringcompare(Skin.CurrentColourTheme,Light)" icon="special://skin/extras/viewthumbs/tile_rounded_light.jpg" description=""/> -->
+    <!-- <setting id="HeaderStyle" value="squaredheadertile" label="$LOCALIZE[31504]" condition="Stringcompare(Skin.CurrentColourTheme,Light)" icon="special://skin/extras/viewthumbs/tile_squared_light.jpg" description=""/> -->
+    
+    <setting id="HeaderStyle" value="beveledheadertile" label="$LOCALIZE[31505]" icon="special://skin/extras/viewthumbs/tile_beveled_default.jpg" description=""/>
+    <setting id="HeaderStyle" value="roundedheadertile" label="$LOCALIZE[31503]" icon="special://skin/extras/viewthumbs/tile_rounded_default.jpg" description=""/>
+    <setting id="HeaderStyle" value="squaredheadertile" label="$LOCALIZE[31504]" icon="special://skin/extras/viewthumbs/tile_squared_default.jpg" description=""/>
+    
+    <!-- Widget Style -->
+    <!-- <setting id="WidgetStyle" value="beveledwidget" label="$LOCALIZE[31505]" condition="Stringcompare(Skin.CurrentColourTheme,Light)" icon="special://skin/extras/viewthumbs/widget_beveled_light.jpg" description=""/> -->
+    <!-- <setting id="WidgetStyle" value="roundedwidget" label="$LOCALIZE[31503]" condition="Stringcompare(Skin.CurrentColourTheme,Light)" icon="special://skin/extras/viewthumbs/widget_rounded_light.jpg" description=""/> -->
+    <!-- <setting id="WidgetStyle" value="squaredwidget" label="$LOCALIZE[31504]" condition="Stringcompare(Skin.CurrentColourTheme,Light)" icon="special://skin/extras/viewthumbs/widget_squared_light.jpg" description=""/> -->
+    
+    <setting id="WidgetStyle" value="beveledwidget" label="$LOCALIZE[31505]" icon="special://skin/extras/viewthumbs/widget_beveled_default.jpg" description=""/>
+    <setting id="WidgetStyle" value="roundedwidget" label="$LOCALIZE[31503]" icon="special://skin/extras/viewthumbs/widget_rounded_default.jpg" description=""/>
+    <setting id="WidgetStyle" value="squaredwidget" label="$LOCALIZE[31504]" icon="special://skin/extras/viewthumbs/widget_squared_default.jpg" description=""/>
+    
+    <!-- Music Visualisation -->
+    <!-- <setting id="MusicVisualisation" value="fanart" label="Fanart" condition="Stringcompare(Skin.CurrentColourTheme,Light)" icon="special://skin/extras/viewthumbs/music_fanart_light.jpg" description=""/> -->
+    <!-- <setting id="MusicVisualisation" value="artistslideshow" label="$LOCALIZE[31565]" condition="System.HasAddon(script.artistslideshow) + Stringcompare(Skin.CurrentColourTheme,Light)" icon="special://skin/extras/viewthumbs/music_artistslideshow_light.jpg" description=""/> -->
+    <!-- <setting id="MusicVisualisation" value="albumswall" label="$LOCALIZE[31637]" condition="Stringcompare(Skin.CurrentColourTheme,Light)" icon="special://skin/extras/viewthumbs/music_albumswall_light.jpg" description=""/> -->
+    <!-- <setting id="MusicVisualisation" value="pixelated" label="$LOCALIZE[31740]" condition="System.HasAddon(script.colorbox) + Stringcompare(Skin.CurrentColourTheme,Light)" icon="special://skin/extras/viewthumbs/music_pixelated_light.jpg" description=""/> -->
+    <!-- <setting id="MusicVisualisation" value="none" label="$LOCALIZE[31189]" condition="Stringcompare(Skin.CurrentColourTheme,Light)" icon="special://skin/extras/viewthumbs/music_none_light.jpg" description=""/> -->
+    
+    <setting id="MusicVisualisation" value="fanart" label="Fanart" icon="special://skin/extras/viewthumbs/music_fanart_default.jpg" description=""/>
+    <setting id="MusicVisualisation" value="artistslideshow" label="$LOCALIZE[31565]" condition="System.HasAddon(script.artistslideshow)" icon="special://skin/extras/viewthumbs/music_artistslideshow_default.jpg" description=""/>
+    <setting id="MusicVisualisation" value="albumswall" label="$LOCALIZE[31637]" icon="special://skin/extras/viewthumbs/music_albumswall_default.jpg" description=""/>
+    <setting id="MusicVisualisation" value="pixelated" label="$LOCALIZE[31740]" condition="System.HasAddon(script.colorbox)" icon="special://skin/extras/viewthumbs/music_pixelated_default.jpg" description=""/>
+    <setting id="MusicVisualisation" value="none" label="$LOCALIZE[31189]" icon="special://skin/extras/viewthumbs/music_none_default.jpg" description=""/>
+    
+    <!-- Submenus Style -->
+    <!-- <setting id="SubmenuStyle" value="Large" label="$LOCALIZE[31759]" condition="Stringcompare(Skin.CurrentColourTheme,Light)" icon="special://skin/extras/viewthumbs/submenus_large_light.jpg" description=""/> -->
+    <!-- <setting id="SubmenuStyle" value="Small" label="$LOCALIZE[31760]" condition="Stringcompare(Skin.CurrentColourTheme,Light)" icon="special://skin/extras/viewthumbs/submenus_small_light.jpg" description=""/> -->
+    
+    <setting id="SubmenuStyle" value="Large" label="$LOCALIZE[31759]" icon="special://skin/extras/viewthumbs/submenus_large_default.jpg" description=""/>
+    <setting id="SubmenuStyle" value="Small" label="$LOCALIZE[31760]" icon="special://skin/extras/viewthumbs/submenus_small_default.jpg" description=""/>
+</settings>

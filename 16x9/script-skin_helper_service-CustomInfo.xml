@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+    <defaultcontrol always="true">5</defaultcontrol>
+    <controls>
+	
+		<!--fake list used as container -->
+		<!-- use Container(999).ListItem to get all info -->
+		<!-- all normal listitem properties will be available -->
+		<control type="list" id="999">
+            <posx>630</posx>
+            <posy>0</posy>
+            <itemlayout />
+            <focusedlayout />
+		</control>
+        
+        <!-- include list/container with ID 998 for cast list -->
+        <!-- include list/container with ID 997 for similar list -->
+		
+        <control type="group">
+			<animation type="WindowOpen">
+				<effect type="slide" start="1200" end="30" time="250" tween="cubic" easing="inout" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="slide" start="30" end="1200" time="250" tween="cubic" easing="inout" />
+			</animation>
+            <!--Panel-->
+            <control type="image">
+                <posx>630</posx>
+                <posy>0</posy>
+                <width>1290</width>
+                <height>1080</height>
+		<texture border="15" colordiffuse="DialogBG">common/white.png</texture>
+            </control>
+						
+           <!--Header-->
+            <control type="label">
+                <description>Heading</description>
+                <posx>700</posx>
+                <posy>120</posy>
+                <width>1200</width>
+                <font>Font-InfoBox-Title</font>
+		<textcolor>ListLabel</textcolor>
+		<scroll>yes</scroll>
+                <align>left</align>
+		<height>36</height>
+		<label>$INFO[Container(999).ListItem.Label]</label>
+            </control>
+			<!-- subtitle -->
+			<control type="label" id="189">
+				<posx>700</posx>
+				<posy>-700</posy>
+				<width>838</width>
+				<align>left</align>
+				<font>Font-ListInfo-Bold</font>
+				<textcolor>ListLabel</textcolor>
+				<scroll>yes</scroll>
+				<label>[I]$INFO[Container(999).ListItem.Tagline][/I]</label>
+            </control>
+					
+			<control type="image">
+				<posx>700</posx>
+                		<posy>220</posy>
+				<width>838</width>
+				<height>1</height>
+				<texture colordiffuse="PosterBorder">common/white.png</texture>
+			</control>
+			
+			<!--Icon-->
+	    <control type="group">
+	    <right>60</right>
+                <posy>20</posy>
+                <width>312</width>
+                <height>460</height>
+		<control type="image">              
+                <fadetime>800</fadetime>
+		<texture colordiffuse="PosterBorder">common/white.png</texture>
+            </control>	
+            <control type="image">
+                <left>10</left>
+                <top>10</top>
+                <width>292</width>
+                <height>440</height>
+                <fadetime>800</fadetime>
+                <aspectratio align="right" aligny="bottom">stretch</aspectratio>
+		<texture>$VAR[Image_Poster]</texture>
+            </control>
+            </control>
+			
+            <control type="grouplist">
+                <posx>680</posx>
+                <posy>235</posy>
+				
+				<control type="group">
+					<height>60</height>
+					<control type="label">
+						<description>Director</description>
+						<posx>20</posx>
+						<width>230</width>
+						<height>60</height>
+						<align>left</align>
+						<font>Font-ListInfo-Small</font>
+						<label>$LOCALIZE[20339] :</label>
+						<textcolor>ListLabel</textcolor>
+						<visible>!String.IsEqual(Container(999).ListItem.Property(type),tvshow)</visible>
+					</control>
+					<control type="label">
+						<description>Studio</description>
+						<posx>20</posx>
+						<width>230</width>
+						<height>60</height>
+						<align>left</align>
+						<font>Font-ListInfo-Small</font>
+						<label>$LOCALIZE[572] :</label>						
+						<textcolor>ListLabel</textcolor>
+						<visible>String.IsEqual(Container(999).ListItem.Property(type),tvshow)</visible>
+					</control>
+					<control type="label">
+						<width>608</width>
+						<posx>250</posx>
+						<height>60</height>
+						<align>left</align>
+						<textcolor>ListLabel</textcolor>
+						<label>$INFO[Container(999).ListItem.Director]</label>
+						<font>Font-ListInfo-Bold</font>
+						<scroll>yes</scroll>
+						<visible>!String.IsEqual(Container(999).ListItem.Property(type),tvshow)</visible>
+					</control>
+					<control type="label">
+						<width>608</width>
+						<posx>250</posx>
+						<height>60</height>
+						<align>left</align>
+						<textcolor>ListLabel</textcolor>
+						<label>$INFO[Container(999).ListItem.Studio]</label>
+						<font>Font-ListInfo-Bold</font>
+						<scroll>yes</scroll>
+						<visible>String.IsEqual(Container(999).ListItem.Property(type),tvshow)</visible>
+					</control>
+				</control>
+				
+				<control type="group">
+					<height>60</height>
+					<visible>!String.IsEqual(Container(999).ListItem.Property(type),episode)</visible>
+					<control type="label">
+						<description>Genre</description>
+						<posx>20</posx>
+						<width>230</width>
+						<height>60</height>
+						<align>left</align>
+						<font>Font-ListInfo-Small</font>
+						<label>$LOCALIZE[515] :</label>						
+						<textcolor>ListLabel</textcolor>
+					</control>
+					<control type="label">
+						<width>608</width>
+						<posx>250</posx>
+						<height>60</height>
+						<align>left</align>
+						<label>$INFO[Container(999).ListItem.Genre]</label>
+						<font>Font-ListInfo-Bold</font>
+						<scroll>yes</scroll>
+						<textcolor>ListLabel</textcolor>
+					</control>
+				</control>
+				
+				<control type="group">
+					<height>60</height>
+					<control type="label">
+						<description>Year</description>
+						<posx>20</posx>
+						<width>230</width>
+						<height>60</height>
+						<align>left</align>
+						<label>$LOCALIZE[562] :</label>
+						<font>Font-ListInfo-Small</font>
+						<textcolor>ListLabel</textcolor>
+						<visible>String.IsEqual(Container(999).ListItem.Property(type),movie)</visible>
+					</control>
+					<control type="label">
+						<description>First Aired</description>
+						<posx>20</posx>
+						<width>230</width>
+						<height>60</height>
+						<align>left</align>
+						<label>$LOCALIZE[20416] :</label>
+						<font>Font-ListInfo-Small</font>
+						<textcolor>ListLabel</textcolor>
+						<visible>!String.IsEqual(Container(999).ListItem.Property(type),movie)</visible>
+					</control>
+					<control type="label">
+						<width>608</width>
+						<posx>250</posx>
+						<height>60</height>
+						<align>left</align>
+						<label>$INFO[Container(999).ListItem.Year]</label>
+						<font>Font-ListInfo-Bold</font>
+						<scroll>yes</scroll>
+						<textcolor>ListLabel</textcolor>
+						<visible>String.IsEqual(Container(999).ListItem.Property(type),movie)</visible>
+					</control>
+					<control type="label">
+						<width>608</width>
+						<posx>250</posx>
+						<height>60</height>
+						<align>left</align>
+						<scroll>yes</scroll>
+						<label>$INFO[Container(999).ListItem.Premiered]</label>
+						<font>Font-ListInfo-Bold</font>
+						<textcolor>ListLabel</textcolor>
+						<visible>!String.IsEqual(Container(999).ListItem.Property(type),movie)</visible>
+					</control>
+				</control>
+				
+				<control type="group">
+					<height>60</height>
+					<control type="label">
+						<description>Rating</description>
+						<posx>20</posx>
+						<width>230</width>
+						<height>60</height>
+						<align>left</align>
+						<label>$LOCALIZE[563] :</label>
+						<font>Font-ListInfo-Small</font>						
+						<textcolor>ListLabel</textcolor>
+					</control>
+					<control type="label">
+						<width>608</width>
+						<posx>250</posx>
+						<height>60</height>
+						<align>left</align>
+						<scroll>yes</scroll>
+						<textcolor>ListLabel</textcolor>
+						<font>Font-ListInfo-Bold</font>
+						<label>$INFO[Container(999).ListItem.Rating]</label>
+					</control>
+				</control>
+
+            </control>
+            <control type="image">
+                <posx>700</posx>
+                <posy>500</posy>
+                <width>1160</width>
+                <height>1</height>
+                <texture colordiffuse="PosterBorder">common/white.png</texture>
+            </control>
+            <control type="textbox">
+                <description>Plot</description>
+                <posx>700</posx>
+                <posy>520</posy>
+                <width>1160</width>
+                <height>340</height>
+                <align>justify</align>
+                <scroll>yes</scroll>
+                <font>Font-ListInfo</font>
+                <pagecontrol>60</pagecontrol>
+                <label fallback="19055">$INFO[Container(999).ListItem.Plot]</label>
+		<textcolor>ListLabel</textcolor>
+            </control>
+			<!--Button Group-->
+            <control type="grouplist" id="9000">
+                <posx>700</posx>
+                <posy>940</posy>
+		<orientation>horizontal</orientation>
+		<itemgap>20</itemgap>
+                <defaultcontrol>5</defaultcontrol>
+		<onup>50</onup>
+		<control type="button" id="5">
+                    <!--Play-->
+                    <width>80</width>
+                    <height>80</height>
+                    <font></font>
+		    <texturenofocus colordiffuse="Disabled" border="5">buttons/play.png</texturenofocus>
+                    <texturefocus colordiffuse="$VAR[HighlightColor]" border="5">buttons/play.png</texturefocus>
+                </control>
+                <control type="button" id="6">
+                    <!--Trailer-->
+                    <width>80</width>
+                    <height>80</height>
+                    <font></font>
+                    <texturenofocus colordiffuse="Disabled" border="5">buttons/trailer.png</texturenofocus>
+                    <texturefocus colordiffuse="$VAR[HighlightColor]" border="5">buttons/trailer.png</texturefocus>
+		    <onclick>PlayMedia($ESCINFO[Container(999).ListItem.Trailer])</onclick>
+                </control>
+            </control>
+            
+            <!-- Ajout ClearArt -->
+            	<control type="image">
+			<right>60</right>
+			<bottom>0</bottom>
+			<width>350</width>
+			<height>196</height>
+			<fadetime>800</fadetime>
+			<texture>$VAR[ClearArt]</texture>						
+		</control>
+            
+        </control>
+    </controls>
+</window>

@@ -1,0 +1,858 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <!-- seekbar -->
+    <defaultcontrol always="true">901</defaultcontrol>
+    <visible>[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)]</visible>
+
+    <controls>
+        <control type="image">
+            <visible>Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml)</visible>
+            <width>1920</width>
+            <height>1080</height>
+            <texture colordiffuse="FanartFade">common/white.png</texture>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut_Delay</include>
+        </control>
+        <include>Furniture_TopBar</include>
+    <control type="group">
+        <visible>Player.Caching | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsVisible(DialogFullScreenInfo.xml) | Window.IsActive(musicosd) | Window.IsActive(videoosd)</visible>
+		<visible>!Window.IsVisible(DialogSlider.xml)</visible> 
+		<animation effect="slide" start="0" end="0,-64" time="200" condition="Window.IsVisible(musicosd) | Window.IsActive(videoosd)">Conditional</animation>
+        <animation effect="slide" start="0" end="0,-260" time="200" tween="quadratic" condition="[Window.IsVisible(DialogFullScreenInfo.xml) + Skin.HasSetting(videoosd.showinfo)] | [!String.IsEmpty(Window(home).Property(osdinfo)) + !Window.IsVisible(visualisation)] | [Skin.HasSetting(videoosd.showinfoonpause) + Player.Paused + !Window.IsVisible(DialogSubtitles.xml)]">Conditional</animation>
+        <include>Animation_FadeIn</include>
+        <include>Animation_FadeOut</include>
+<!-- Non-Compact Info OSD-->		
+        <control type="group">
+           <visible>!Skin.HasSetting(videoosd.showcompact)</visible>
+		   <visible>!Window.IsVisible(MusicVisualisation.xml) + !Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + !Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)</visible>
+				<control type="image">
+                    <left>-8</left>
+                    <bottom>16</bottom>
+                    <width>627</width>
+                    <height>50</height>  
+                    <texture colordiffuse="$VAR[OSD_Color]">osd/top_left.png</texture>
+                </control>
+                <control type="image">
+                    <left>15</left>
+                    <bottom>17</bottom>
+                    <width>48</width>
+                    <height>48</height>  
+                    <texture colordiffuse="LineLabel">osd/clock.png</texture>
+                </control>
+                <control type="label">
+                    <left>73</left>
+                    <bottom>19</bottom>
+                    <height>48</height> 
+                    <aligny>center</aligny>
+                    <textcolor>LineLabel</textcolor> 
+                    <label>$INFO[Player.Time] / $INFO[Player.Duration]</label>
+                </control>
+                <control type="image">
+                    <left>397</left>
+                    <bottom>17</bottom>
+                    <width>48</width>
+                    <height>48</height>  
+                    <texture colordiffuse="LineLabel">osd/finishtime.png</texture>
+                </control>
+                <control type="label">
+                    <left>455</left>
+                    <bottom>19</bottom>
+                    <height>48</height> 
+                    <aligny>center</aligny>
+                    <textcolor>LineLabel</textcolor> 
+                    <label>$INFO[Player.FinishTime(hh:mm)]</label>
+                </control>
+                <control type="label">
+                    <left>545</left>
+                    <bottom>16</bottom>
+                    <height>48</height> 
+                    <aligny>center</aligny>
+                    <font>Font-RSS</font>
+                    <textcolor>LineLabel</textcolor> 
+                    <label>$INFO[Player.FinishTime(xx)]</label>
+                    <visible>!String.IsEmpty(Player.FinishTime(xx))</visible> 
+                </control>
+				<control type="image">
+                    <right>-8</right>
+                    <bottom>16</bottom>
+                    <width>627</width>
+                    <height>50</height>  
+                    <texture colordiffuse="$VAR[OSD_Color]" flippy="true">osd/top_right.png</texture>
+                    <visible>!Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + !Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)</visible>
+                </control> 
+                <control type="grouplist">
+                    <usecontrolcoords>true</usecontrolcoords>
+                    <right>pad</right>                   
+                    <bottom>23</bottom>
+                    <height>35</height>
+                    <align>right</align>
+                    <orientation>horizontal</orientation>
+                    <itemgap>30</itemgap>   
+                    <visible>!Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + !Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)</visible>            
+				<control type="image">
+					<include condition="Skin.HasSetting(colouredflags)">Defs_CompactPlayerFlagsColour</include>
+					<include condition="!Skin.HasSetting(colouredflags)">Defs_CompactPlayerFlagsWhite</include>
+					<texture fallback="$VAR[MediaFlagsPathVar]/fallback_ratio.png">$VAR[MediaFlagsPathVar]/aspectratio/$INFO[VideoPlayer.VideoAspect,,.png]</texture>
+                    <visible>!String.IsEmpty(VideoPlayer.VideoAspect)</visible>
+                </control>
+                <control type="image">
+					<include condition="Skin.HasSetting(colouredflags)">Defs_CompactPlayerFlagsColour</include>
+					<include condition="!Skin.HasSetting(colouredflags)">Defs_CompactPlayerFlagsWhite</include>
+                    <texture fallback="$VAR[MediaFlagsPathVar]/fallback_resolution.png">$VAR[MediaFlagsPathVar]/resolution/$INFO[VideoPlayer.VideoResolution,,.png]</texture>
+                     <visible>!String.IsEmpty(VideoPlayer.VideoResolution)</visible>
+                </control>               
+                <control type="image">
+					<include condition="Skin.HasSetting(colouredflags)">Defs_CompactPlayerFlagsColour</include>
+					<include condition="!Skin.HasSetting(colouredflags)">Defs_CompactPlayerFlagsWhite</include>
+              	    <texture fallback="$VAR[MediaFlagsPathVar]/fallback_video.png">$VAR[MediaFlagsPathVar]/video/$INFO[VideoPlayer.VideoCodec,,.png]</texture>
+                     <visible>!String.IsEmpty(VideoPlayer.VideoCodec)</visible>
+                </control>                      
+                <control type="image">
+					<include condition="Skin.HasSetting(colouredflags)">Defs_CompactPlayerFlagsColour</include>
+					<include condition="!Skin.HasSetting(colouredflags)">Defs_CompactPlayerFlagsWhite</include>
+					<texture fallback="$VAR[MediaFlagsPathVar]/fallback_audio.png">$VAR[MediaFlagsPathVar]/audio/$INFO[VideoPlayer.AudioCodec,,.png]</texture>
+                    <visible>!String.IsEmpty(VideoPlayer.AudioCodec)</visible>
+                    </control>                                  
+                <control type="image">
+					<include condition="Skin.HasSetting(colouredflags)">Defs_CompactPlayerFlagsColour</include>
+					<include condition="!Skin.HasSetting(colouredflags)">Defs_CompactPlayerFlagsWhite</include>
+                    <visible>!String.IsEmpty(VideoPlayer.AudioChannels)</visible>
+                    <texture fallback="$VAR[MediaFlagsPathVar]/fallback_channels.png">$VAR[MediaFlagsPathVar]/channels/$INFO[VideoPlayer.AudioChannels,,.png]</texture>
+                </control>  
+        </control>          
+    </control> 
+<!-- Clear Art -->            
+            <control type="image">
+				<include condition="String.IsEqual(Skin.String(ClearArtPos),$LOCALIZE[31239])">ClearArtCenter</include>
+				<include condition="String.IsEqual(Skin.String(ClearArtPos),$LOCALIZE[31240]) + !Skin.HasSetting(videoosd.showcompact)">ClearArtLeft</include>
+				<include condition="String.IsEqual(Skin.String(ClearArtPos),$LOCALIZE[31241]) + !Skin.HasSetting(videoosd.showcompact)">ClearArtRight</include>
+				<include condition="String.IsEqual(Skin.String(ClearArtPos),$LOCALIZE[31240]) + Skin.HasSetting(videoosd.showcompact)">ClearArtLeft2</include>
+				<include condition="String.IsEqual(Skin.String(ClearArtPos),$LOCALIZE[31241]) + Skin.HasSetting(videoosd.showcompact)">ClearArtRight2</include>
+                <width>500</width>
+                <height>281</height>
+                <texture>$VAR[PlayerClearArt]</texture>
+                <aspectratio align="center" aligny="bottom">keep</aspectratio>
+                <visible>Skin.HasSetting(videoosd.showclearart)</visible>
+                <visible>!Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + !Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) + !Window.IsVisible(visualisation)</visible>
+            </control>
+            <control type="image">
+                <bottom>-500</bottom>
+                <height>500</height>
+                <width>100%</width>
+                <texture colordiffuse="$VAR[OSD_Color]">common/white.png</texture>
+            </control>
+            <control type="group">
+                <visible>[Window.IsVisible(DialogFullScreenInfo.xml) + Skin.HasSetting(videoosd.showinfo)] | [!String.IsEmpty(Window(home).Property(osdinfo)) + !Window.IsVisible(visualisation)] | [Skin.HasSetting(videoosd.showinfoonpause) + Player.Paused + !Window.IsVisible(DialogSubtitles.xml)]</visible>
+				<animation effect="fade" start="0" end="100" time="200" delay="200" reversible="false">Visible</animation>
+                <bottom>-310</bottom>
+                <left>side</left>
+                <right>side</right>
+                <height>300</height>
+				<!-- Flags and Ratings -->                    
+                <control type="grouplist">
+                    <usecontrolcoords>true</usecontrolcoords>
+                    <itemgap>pad</itemgap>
+                    <right>0</right>
+					<left>pad</left>
+                    <height>35</height>
+                    <align>right</align>
+					<aligny>center</aligny>
+                    <orientation>horizontal</orientation>
+                    <itemgap>side</itemgap>   
+					<control type="image">
+						<include condition="Skin.HasSetting(colouredflags)">Defs_PlayerFlagsColour</include>
+						<include condition="!Skin.HasSetting(colouredflags)">Defs_PlayerFlagsWhite</include>
+						<texture fallback="$VAR[MediaFlagsPathVar]/fallback_ratio.png">$VAR[MediaFlagsPathVar]/aspectratio/$INFO[VideoPlayer.VideoAspect,,.png]</texture>
+						<visible>!String.IsEmpty(VideoPlayer.VideoAspect) + Skin.HasSetting(videoosd.showcompact)</visible>
+					</control>						
+					<control type="image">
+						<include condition="Skin.HasSetting(colouredflags)">Defs_PlayerFlagsColour</include>
+						<include condition="!Skin.HasSetting(colouredflags)">Defs_PlayerFlagsWhite</include>
+						<texture fallback="$VAR[MediaFlagsPathVar]/fallback_resolution.png">$VAR[MediaFlagsPathVar]/resolution/$INFO[VideoPlayer.VideoResolution,,.png]</texture>
+						<visible>!String.IsEmpty(VideoPlayer.VideoResolution) + Skin.HasSetting(videoosd.showcompact)</visible>
+					</control>
+					<control type="image">
+						<include condition="Skin.HasSetting(colouredflags)">Defs_PlayerFlagsColour</include>
+						<include condition="!Skin.HasSetting(colouredflags)">Defs_PlayerFlagsWhite</include>
+						<texture fallback="$VAR[MediaFlagsPathVar]/fallback_video.png">$VAR[MediaFlagsPathVar]/video/$INFO[VideoPlayer.VideoCodec,,.png]</texture>
+						<visible>!String.IsEmpty(VideoPlayer.VideoCodec) + Skin.HasSetting(videoosd.showcompact)</visible>
+					</control>   
+					<control type="image">
+						<include condition="Skin.HasSetting(colouredflags)">Defs_PlayerFlagsColour</include>
+						<include condition="!Skin.HasSetting(colouredflags)">Defs_PlayerFlagsWhite</include>
+						<texture fallback="$VAR[MediaFlagsPathVar]/fallback_audio.png">$VAR[MediaFlagsPathVar]/audio/$INFO[VideoPlayer.AudioCodec,,.png]</texture>
+						<visible>!String.IsEmpty(VideoPlayer.AudioCodec) + Skin.HasSetting(videoosd.showcompact)</visible>
+					</control>						
+					<control type="image">
+						<include condition="Skin.HasSetting(colouredflags)">Defs_PlayerFlagsColour</include>
+						<include condition="!Skin.HasSetting(colouredflags)">Defs_PlayerFlagsWhite</include>
+						<visible>!String.IsEmpty(VideoPlayer.AudioChannels) + Skin.HasSetting(videoosd.showcompact)</visible>
+						<texture fallback="$VAR[MediaFlagsPathVar]/fallback_channels.png">$VAR[MediaFlagsPathVar]/channels/$INFO[VideoPlayer.AudioChannels,,.png]</texture>
+					</control>
+					<control type="image">
+						<width>35</width>
+						<height>35</height>
+						<aspectratio>keep</aspectratio>
+						<visible>VideoPlayer.IsStereoscopic</visible>
+						<texture colordiffuse="LineLabel" fallback="$VAR[MediaFlagsPathVar]/fallback_source.png">$VAR[MediaFlagsPathVar]/3D.png</texture>
+					</control>
+					<control type="image">
+						<include condition="Skin.HasSetting(colouredflags)">Defs_PlayerFlagsColour</include>
+						<include condition="!Skin.HasSetting(colouredflags)">Defs_PlayerFlagsWhite</include>
+						<align>right</align>
+						<centertop>50%</centertop>
+						<aspectratio>keep</aspectratio>	
+						<font></font>
+						<texture background="true" fallback="$VAR[MediaFlagsPathVar]/mpaa/OSD/unrated.png">$VAR[MediaFlagsPathVar]/mpaa/OSD/$VAR[OSDRating,,.png]</texture>
+						<visible>!Skin.HasSetting(disable.mpaa) + [!String.IsEmpty(VideoPlayer.MPAA) | !String.IsEmpty(Window(Home).Property(SkinHelper.Player.MPAA))]</visible>
+					</control>					
+					<!-- <control type="group"> -->
+						<!-- <width>98</width> -->
+						<!-- <height>35</height> -->
+						<!-- <aligny>center</aligny> -->
+						<!-- <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.Player.IMDB.Top250))</visible> -->
+						<!-- <control type="image"> -->
+							<!-- <width>108</width> -->
+							<!-- <height>45</height> -->
+							<!-- <aspectratio>keep</aspectratio> -->
+							<!-- <texture colordiffuse="LineLabel" fallback="$VAR[MediaFlagsPathVar]/imdb.png">$VAR[MediaFlagsPathVar]/top250frame.png</texture> -->
+						<!-- </control> -->
+						<!-- <control type="label"> -->
+							<!-- <right>5</right> -->
+							<!-- <width>65</width> -->
+							<!-- <height>45</height> -->
+							<!-- <align>center</align> -->
+							<!-- <font>Font-ListInfo-Small-Bold</font> -->
+							<!-- <label colordiffuse="LineLabel">$INFO[Window(Home).Property(SkinHelper.Player.IMDB.Top250)]</label> -->
+						<!-- </control> -->
+					<!-- </control> -->
+					<control type="image">
+						<width>98</width>
+						<height>35</height>
+						<align>right</align>
+						<font>Font-ListInfo-Small</font>
+						<aspectratio>keep</aspectratio>	
+						<include condition="!Skin.HasSetting(colouredflags)">Defs_FlagsMisc</include>						
+						<texture>$VAR[MediaFlagsPathVar]/playerrating/$VAR[PlayerRating,,.png]</texture>
+						<visible>!Skin.HasSetting(disable.rating) + !Player.HasAudio + [!String.IsEmpty(VideoPlayer.Rating) | !String.IsEmpty(Window(Home).Property(SkinHelper.Player.Rating))]</visible>
+					</control>
+				</control>
+                <control type="image">
+					<width>168</width>
+                    <height>240</height>
+					<aspectratio>keep</aspectratio>
+                    <texture fallback="DefaultVideoPlayer.png">$VAR[PlayerPoster]</texture>
+                    <visible>!VideoPlayer.Content(LiveTV)</visible>
+                </control>                 
+                <control type="image">
+                	<top>37</top>
+                    <width>168</width>
+                    <height>168</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture fallback="DefaultVideoPlayer.png">$VAR[PVRPlayerPoster]</texture>
+                    <visible>VideoPlayer.Content(LiveTV)</visible>
+                </control> 
+				<!-- Plot and other Text -->               
+                <control type="grouplist">
+                    <usecontrolcoords>true</usecontrolcoords>
+                    <itemgap>pad</itemgap>
+                    <orientation>vertical</orientation>                   
+                    <left>180</left>                    
+                    <right>0</right>
+                    <!--<top>pad</top>-->
+                    <bottom>pad</bottom>  
+					<visible>!Skin.HasSetting(videoosd.moreinfo) + !VideoPlayer.Content(LiveTV) | !Skin.HasSetting(pvr.infoepg) + VideoPlayer.Content(LiveTV)</visible>				
+					<control type="label">
+						<!--<top>pad</top>-->
+						<left>pad</left>
+						<right>960</right>
+                        <height>36</height>
+						<aligny>bottom</aligny>
+                        <font>Font-InfoBox-Title</font>
+                        <label>$INFO[VideoPlayer.Title]</label>
+						<visible>Skin.HasSetting(videoosd.showcompact)</visible>
+                    </control>
+					<control type="label">
+						<!--<top>pad</top>-->
+						<left>pad</left>
+						<right>500</right>
+                        <height>36</height>
+						<aligny>bottom</aligny>
+                        <font>Font-InfoBox-Title</font>
+                        <label>$INFO[VideoPlayer.Title]</label>
+						<visible>!Skin.HasSetting(videoosd.showcompact)</visible>
+                    </control>
+                    <control type="label">
+                        <left>pad</left>
+                        <right>pad</right>
+                        <height>32</height>
+						<aligny>bottom</aligny>
+                        <font>Font-ListInfo-Small-Bold</font>
+						<scroll>yes</scroll>
+                        <label>$VAR[PlayerEpisode]$VAR[PlayerPremiered]$VAR[PlayerStudio]$VAR[PlayerDirector]$VAR[PlayerWriter]$VAR[PlayerTagline]</label>
+                        <visible>!String.IsEmpty(VideoPlayer.TvShowTitle)</visible>
+                    </control>
+                    <control type="label">
+                        <left>pad</left>
+                        <right>pad</right>
+                        <height>32</height>
+						<aligny>bottom</aligny>
+                        <font>Font-ListInfo-Small-Bold</font>
+						<scroll>yes</scroll>
+                        <label>$VAR[PlayerPremiered]$VAR[PlayerStudio]$VAR[PlayerWriter]$VAR[PlayerTagline]</label>
+                        <visible>String.IsEmpty(VideoPlayer.TvShowTitle)</visible>
+                    </control>					
+                    <control type="textbox">
+                        <left>pad</left>
+                        <right>pad</right>
+                        <height>154</height>
+                        <font>Font-ListInfo</font>
+                        <align>justify</align>
+						<label>$VAR[PlayerPlot]</label>
+                    </control>			
+                </control>
+				<control type="group">
+					<visible>Skin.HasSetting(videoosd.moreinfo) + !VideoPlayer.Content(LiveTV)</visible>
+					<left>176</left>
+					<right>0</right>
+					<top>0</top>
+					<!-- <control type="image"> -->
+						<!-- <height>100%</height> -->
+						<!-- <width>100%</width> -->
+						<!-- <texture colordiffuse="$VAR[OSD_Color]">common/white.png</texture> -->
+					<!-- </control> -->
+					<control id="5556" type="wraplist">
+						<left>0</left>
+						<right>0</right>
+						<top>0</top>
+						<height>240</height>
+						<preloaditems>8</preloaditems>
+						<focusposition>0</focusposition>
+						<autoscroll time="4000">!Control.HasFocus(5556)</autoscroll>
+						<viewtype label="casting">list</viewtype>
+						<orientation>horizontal</orientation>
+						<scrolltime easing="out" tween="back">600</scrolltime>					
+						<itemlayout height="183" width="128">
+							<control type="group">
+								<animation effect="zoom" end="85" start="100" time="200" center="auto" condition="Control.HasFocus(5556)">Conditional</animation>
+								<control type="image">
+									<left>0</left>
+									<top>0</top>
+									<right>0</right>
+									<bottom>0</bottom>
+									<aspectratio align="center" aligny="center">scale</aspectratio>
+									<texture background="true" fallback="DefaultActorDark.png">$INFO[ListItem.Icon]</texture>
+								</control>
+							</control>
+						</itemlayout>
+						<focusedlayout height="240" width="168">
+							<control type="group">
+								<control type="button">
+									<texturefocus></texturefocus>
+									<texturenofocus></texturenofocus>
+									<onfocus>SetProperty(OSD_Cast_String,$INFO[ListItem.Label]$INFO[ListItem.Label2, $LOCALIZE[20347] ],home)</onfocus>
+								</control>
+								<control type="image">
+									<left>0</left>
+									<top>0</top>
+									<right>0</right>
+									<bottom>0</bottom>
+									<aspectratio align="center" aligny="center">scale</aspectratio>
+									<texture background="true" fallback="DefaultActorDark.png">$INFO[ListItem.Icon]</texture>
+								</control>
+							</control>
+						</focusedlayout>
+						<content target="video">$VAR[PlayerCast]</content>
+					</control>
+					<control type="label">
+						<bottom>60</bottom>
+						<width>100%</width>
+						<align>center</align>
+						<height>41</height>
+						<scroll>true</scroll>
+						<font>Font-ListInfo-Small-Bold</font>
+						<label>$INFO[Container(5556).ListItem.Label]$INFO[Container(5556).ListItem.Label2, $LOCALIZE[20347] ]</label>
+						<visible>Integer.IsGreater(Container(5556).NumItems,0)</visible>
+					</control>
+				</control>
+            	<control type="grouplist">
+					<visible>Skin.HasSetting(pvr.infoepg) + VideoPlayer.Content(LiveTV)</visible>
+                    <itemgap>70</itemgap>
+                    <orientation>vertical</orientation> 					
+					<left>196</left>
+					<right>0</right>
+					<top>60</top>
+					<control type="grouplist">
+						<orientation>horizontal</orientation>
+						<left>pad</left>
+						<top>0</top>
+						<control type="label">
+							<left>pad</left>
+							<width>1460</width>
+							<height>30</height>
+							<aligny>top</aligny>
+							<scroll>yes</scroll>
+							<font>Font-InfoBox-Title</font>
+							<label>[COLOR=$VAR[HighlightColor]]$LOCALIZE[31235][/COLOR] $INFO[VideoPlayer.StartTime] - $INFO[VideoPlayer.EndTime]: [COLOR white]$INFO[VideoPlayer.Title][/COLOR]</label>
+						</control>
+						<control type="label">
+							<width>340</width>
+							<height>30</height>
+							<aligny>top</aligny>
+							<right>pad</right>
+							<scroll>yes</scroll>
+							<font>Font-InfoBox-Title</font>
+							<label>+ $INFO[VideoPlayer.TimeRemaining]</label>
+						</control>
+					</control>
+					<control type="grouplist">
+						<orientation>horizontal</orientation>
+						<left>pad</left>
+						<control type="label">
+							<left>pad</left>
+							<width>1460</width>
+							<height>30</height>
+							<aligny>top</aligny>
+							<scroll>yes</scroll>
+							<font>Font-InfoBox-Title</font>
+							<label>[COLOR=$VAR[HighlightColor2]]$LOCALIZE[31236][/COLOR] $INFO[VideoPlayer.NextStartTime] - $INFO[VideoPlayer.NextEndTime]: [COLOR white]$INFO[VideoPlayer.NextTitle][/COLOR]</label>
+						</control>
+						<control type="label">
+							<width>340</width>
+							<height>30</height>
+							<aligny>top</aligny>
+							<right>pad</right>
+							<scroll>yes</scroll>
+							<font>Font-InfoBox-Title</font>
+							<label>$INFO[VideoPlayer.NextDuration]</label>
+						</control>
+					</control>
+					<!-- Bottom Section -->
+					<control type="group">
+						<control type="image">
+							<top>10</top>
+							<width>1805</width>
+							<height>2</height>
+							<texture border="0" colordiffuse="white">osd/line.png</texture>
+						</control>
+						<control type="group">
+							<top>10</top>
+							<!-- Encryption -->
+							<control type="group">
+								<control type="label">
+									<width>50</width>
+									<height>38</height>
+									<font>Font-OSD</font>
+									<textcolor>white</textcolor>
+									<label>S</label>
+								</control>
+								<control type="label">
+									<visible>String.Contains(PVR.ActStreamEncryptionName,01) | String.Contains(PVR.ActStreamEncryptionName,9F)</visible>
+									<width>50</width>
+									<height>38</height>
+									<font>Font-OSD</font>
+									<textcolor>green</textcolor>
+									<label>S</label>
+								</control>
+								<control type="label">
+									<left>30</left>
+									<width>50</width>
+									<height>38</height>
+									<font>Font-OSD</font>
+									<textcolor>white</textcolor>
+									<label>V</label>
+								</control>
+								<control type="label">
+									<visible>String.Contains(PVR.ActStreamEncryptionName,5)</visible>
+									<left>30</left>
+									<width>50</width>
+									<height>38</height>
+									<font>Font-OSD</font>
+									<textcolor>green</textcolor>
+									<label>V</label>
+								</control>
+								<control type="label">
+									<left>63</left>
+									<width>50</width>
+									<height>38</height>
+									<font>Font-OSD</font>
+									<textcolor>white</textcolor>
+									<label>I</label>
+								</control>
+								<control type="label">
+									<visible>String.Contains(PVR.ActStreamEncryptionName,06)</visible>
+									<left>63</left>
+									<width>50</width>
+									<height>38</height>
+									<font>Font-OSD</font>
+									<textcolor>green</textcolor>
+									<label>I</label>
+								</control>
+								<control type="label">
+									<left>85</left>
+									<width>50</width>
+									<height>38</height>
+									<font>Font-OSD</font>
+									<textcolor>white</textcolor>
+									<label>ND</label>
+								</control>
+								<control type="label">
+									<visible>String.Contains(PVR.ActStreamEncryptionName,09)</visible>
+									<left>85</left>
+									<width>50</width>
+									<height>38</height>
+									<font>Font-OSD</font>
+									<textcolor>green</textcolor>
+									<label>ND</label>
+								</control>
+								<control type="label">
+									<left>135</left>
+									<width>50</width>
+									<height>38</height>
+									<font>Font-OSD</font>
+									<textcolor>white</textcolor>
+									<label>CO</label>
+								</control>
+								<control type="label">
+									<visible>String.Contains(PVR.ActStreamEncryptionName,0B)</visible>
+									<left>135</left>
+									<width>50</width>
+									<height>38</height>
+									<font>Font-OSD</font>
+									<textcolor>green</textcolor>
+									<label>CO</label>
+								</control>
+								<control type="label">
+									<left>180</left>
+									<width>50</width>
+									<height>38</height>
+									<font>Font-OSD</font>
+									<textcolor>white</textcolor>
+									<label>CW</label>
+								</control>
+								<control type="label">
+									<visible>String.Contains(PVR.ActStreamEncryptionName,0D)</visible>
+									<left>180</left>
+									<width>50</width>
+									<height>38</height>
+									<font>Font-OSD</font>
+									<textcolor>green</textcolor>
+									<label>CW</label>
+								</control>
+								<control type="label">
+									<left>230</left>
+									<width>70</width>
+									<height>38</height>
+									<font>Font-OSD</font>
+									<textcolor>white</textcolor>
+									<label>B</label>
+								</control>
+								<control type="label">
+									<visible>String.Contains(PVR.ActStreamEncryptionName,17)</visible>
+									<left>230</left>
+									<width>70</width>
+									<height>38</height>
+									<font>Font-OSD</font>
+									<textcolor>green</textcolor>
+									<label>B</label>
+								</control>
+								<control type="label">
+									<left>258</left>
+									<width>50</width>
+									<height>38</height>
+									<font>Font-OSD</font>
+									<textcolor>white</textcolor>
+									<label>N</label>
+								</control>
+								<control type="label">
+									<visible>String.Contains(PVR.ActStreamEncryptionName,18)</visible>
+									<left>258</left>
+									<width>50</width>
+									<height>38</height>
+									<font>Font-OSD</font>
+									<textcolor>green</textcolor>
+									<label>N</label>
+								</control>
+								<control type="label">
+									<left>320</left>
+									<width>1000</width>
+									<height>38</height>
+									<font>Font-OSD</font>
+									<textcolor>green</textcolor>
+									<label>$INFO[PVR.ActStreamEncryptionName]</label>
+								</control>
+							</control>
+							<!-- Signal -->
+							<control type="group">
+								<left>1150</left>
+								<width>250</width>
+								<visible>!String.Contains(PVR.ActStreamStatus,TIMESHIFT) </visible>
+								<control type="label">
+									<width>250</width>
+									<height>38</height>
+									<font>Font-OSD</font>
+									<textcolor>white</textcolor>
+									<label>$INFO[PVR.ActStreamSNR,SNR: ,]</label>
+								</control>
+								<control type="label">
+									<left>130</left>
+									<width>250</width>
+									<height>38</height>
+									<font>Font-OSD</font>
+									<textcolor>white</textcolor>
+									<label>$INFO[PVR.ActStreamSignal,AGC: ,]</label>
+								</control>
+							</control>
+							<!-- Tuner -->
+							<control type="grouplist">
+								<left>1420</left>
+								<width>300</width>
+								<orientation>horizontal</orientation>
+								<control type="label">
+									<width>150</width>
+									<height>38</height>
+									<font>Font-OSD</font>
+									<textcolor>white</textcolor>
+									<label>$LOCALIZE[31816]</label>
+									<align>center</align>
+								</control>
+								<control type="label">
+									<width>25</width>
+									<height>38</height>
+									<font>Font-OSD</font>
+									<textcolor>white</textcolor>
+									<label>A</label>
+									<visible>!String.Contains(PVR.ActStreamDevice,#0)</visible>
+								</control>
+								<control type="label">
+									<width>25</width>
+									<height>38</height>
+									<font>Font-OSD</font>
+									<textcolor>green</textcolor>
+									<label>A</label>
+									<visible>String.Contains(PVR.ActStreamDevice,#0)</visible>
+								</control>
+								<control type="label">
+									<width>25</width>
+									<height>38</height>
+									<font>Font-OSD</font>
+									<textcolor>white</textcolor>
+									<label>B</label>
+									<visible>!String.Contains(PVR.ActStreamDevice,#1)</visible>
+								</control>
+								<control type="label">
+									<width>25</width>
+									<height>38</height>
+									<font>Font-OSD</font>
+									<textcolor>green</textcolor>
+									<label>B</label>
+									<visible>String.Contains(PVR.ActStreamDevice,#1)</visible>
+								</control>
+								<control type="label">
+									<width>25</width>
+									<height>38</height>
+									<font>Font-OSD</font>
+									<textcolor>white</textcolor>
+									<label>C</label>
+									<visible>!String.Contains(PVR.ActStreamDevice,#2)</visible>
+								</control>
+								<control type="label">
+									<width>25</width>
+									<height>38</height>
+									<font>Font-OSD</font>
+									<textcolor>green</textcolor>
+									<label>C</label>
+									<visible>String.Contains(PVR.ActStreamDevice,#2)</visible>
+								</control>
+								<control type="label">
+									<width>25</width>
+									<height>38</height>
+									<font>Font-OSD</font>
+									<textcolor>white</textcolor>
+									<label>D</label>
+									<visible>!String.Contains(PVR.ActStreamDevice,#3)</visible>
+								</control>
+								<control type="label">
+									<width>25</width>
+									<height>38</height>
+									<font>Font-OSD</font>
+									<textcolor>green</textcolor>
+									<label>D</label>
+									<visible>String.Contains(PVR.ActStreamDevice,#3)</visible>
+								</control>
+							</control>
+							<!-- TIMESHIFT -->
+							<control type="label">
+								<left>1495</left>
+								<width>250</width>
+								<height>38</height>
+								<font>Font-OSD</font>
+								<textcolor>$VAR[HighlightColor]</textcolor>
+								<label>[B]TIMESHIFT[/B]</label>
+								<visible>String.Contains(PVR.ActStreamStatus,TIMESHIFT)</visible>
+							</control>
+						</control>					
+					</control>
+				</control>
+			</control>
+            <control type="progress" description="cache">
+                <width>100%</width>
+                <bottom>0</bottom>
+                <height>16</height>
+                <info>Player.ProgressCache</info>              
+                <texturebg colordiffuse="00ffffff">osd/progress-bg.png</texturebg>
+                <lefttexture colordiffuse="$VAR[HighlightColor2]">osd/progress-end.png</lefttexture>
+                <midtexture colordiffuse="$VAR[HighlightColor2]">osd/progress-end.png</midtexture>
+                <righttexture colordiffuse="$VAR[HighlightColor2]">osd/progress-end.png</righttexture>
+				<visible>Skin.HasSetting(videoosd.showcompact)</visible>
+            </control>
+            <control type="progress" description="cache">
+                <width>100%</width>
+                <bottom>0</bottom>
+                <height>16</height>
+                <info>Player.ProgressCache</info>
+                <texturebg colordiffuse="$VAR[OSD_Color]">osd/progress-bg.png</texturebg>
+                <lefttexture colordiffuse="$VAR[HighlightColor2]">osd/progress-end.png</lefttexture>
+                <midtexture colordiffuse="$VAR[HighlightColor2]">osd/progress-end.png</midtexture>
+                <righttexture colordiffuse="$VAR[HighlightColor2]">osd/progress-end.png</righttexture>
+				<visible>!Skin.HasSetting(videoosd.showcompact)</visible>
+            </control>				
+            <control type="progress" id="23">
+                <width>100%</width>
+                <bottom>0</bottom>
+                <height>16</height>
+                <info>Player.Progress</info>
+                <visible>!Player.Seeking</visible>
+            </control>
+			<control type="progress" id="401">
+                <width>100%</width>
+                <bottom>0</bottom>
+                <height>16</height>
+                <visible>Player.Seeking</visible>
+            </control>			
+            <control type="group">
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),1)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),2)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),3)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),4)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),5)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),6)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),7)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),8)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),9)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),10)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),11)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),12)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),13)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),14)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),15)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),16)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),17)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),18)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),19)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),20)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),21)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),22)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),23)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),24)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),25)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),26)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),27)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),28)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),29)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),30)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),31)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),32)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),33)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),34)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),35)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),36)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),37)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),38)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),39)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),40)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),41)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),42)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),43)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),44)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),45)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),46)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),47)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),48)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),49)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),50)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),51)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),52)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),53)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),54)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),55)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),56)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),57)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),58)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),59)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),60)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),61)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),62)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),63)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),64)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),65)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),66)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),67)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),68)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),69)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),70)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),71)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),72)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),73)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),74)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),75)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),76)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),77)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),78)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),79)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),80)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),81)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),82)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),83)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),84)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),85)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),86)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),87)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),88)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),89)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),90)">Conditional</animation>
+				<animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),91)">Conditional</animation>
+				<animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),92)">Conditional</animation>
+				<animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),93)">Conditional</animation>
+				<animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),94)">Conditional</animation>
+				<animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),95)">Conditional</animation>
+				<animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),96)">Conditional</animation>
+				<animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),97)">Conditional</animation>
+				<animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),98)">Conditional</animation>
+				<animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),99)">Conditional</animation>
+				<animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),100)">Conditional</animation>
+                <left>19</left>
+                <bottom>16</bottom>
+                <height>64</height>
+                <width>140</width>
+                <control type="image">
+                    <width>100%</width>
+                    <height>100%</height>              
+                    <texture colordiffuse="DialogBG">common/bubble.png</texture>
+                </control>
+                <control type="label">
+                    <left>0</left>
+                    <right>0</right>
+                    <label>$VAR[Label_SeekStep]</label>
+                    <height>30</height>
+                    <top>8</top>
+                    <align>center</align>
+                    <font>Font-ListInfo-Small-Bold</font>
+                </control>
+                <visible>[Player.Caching | Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding] + !Player.Paused</visible>
+                <include>Animation_FadeIn</include>
+                <animation effect="fade" start="100" end="0" time="200" delay="0">Hidden</animation>
+			</control>
+        </control>
+	</controls>
+</window>

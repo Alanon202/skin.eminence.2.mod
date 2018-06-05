@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window type="dialog" id="1195">
+    <backgroundcolor>Background</backgroundcolor>
+    <defaultcontrol always="true">9000</defaultcontrol>
+
+    <controls>
+        <control type="group">
+            <include>Animation_SlideIn_Bounce</include>
+            <include>Animation_FadeOut</include>
+            <centerleft>50%</centerleft>
+            <width>1792</width>
+            <bottom>100</bottom>
+            <height>676</height>
+            <include>Dialog_Background</include>
+            <include content="Dialog_Top_IconHeader">
+                <param name="label" value="$LOCALIZE[31201]" />
+                <param name="icon" value="special://skin/extras/icons/paintbrush.png" />
+            </include>
+            <control type="group">
+                <right>side</right>
+                <bottom>side</bottom>
+                <width>1024</width>
+                <height>576</height>
+                <include>Object_Background</include>
+                <control type="image">
+                    <aspectratio>scale</aspectratio>
+                    <texture background="true" fallback="DefaultAddon.png">$INFO[Container(9000).ListItem.Icon]</texture>
+                </control>
+            </control>
+
+            <control type="group">
+                <left>side</left>
+                <bottom>side</bottom>
+                <width>708</width>
+                <height>576</height>
+                <include>Object_Background</include>
+            </control>
+            <control type="list" id="9000">
+                <bottom>side</bottom>
+                <onleft>8000</onleft>
+                <onright>8000</onright>
+                <left>pad</left>
+                <width>728</width>
+                <height>576</height>
+                <orientation>vertical</orientation>
+                <itemlayout height="96" width="728">
+                    <control type="group">
+                        <left>pad</left>
+                        <right>pad</right>
+                        <control type="image">
+                            <top>pad</top>
+                            <bottom>pad</bottom>
+                            <left>pad</left>
+                            <width>300</width>
+                            <aspectratio align="left">keep</aspectratio>
+                            <texture>$INFO[ListItem.Icon]</texture>
+                        </control>
+                        <control type="label">
+                            <height>100%</height>
+                            <left>170</left>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <label>$INFO[ListItem.Label]</label>
+                        </control>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="96" width="728">
+                    <control type="group">
+                        <left>pad</left>
+                        <right>pad</right>
+                        <control type="image">
+                            <visible>!Control.HasFocus(9000)</visible>
+                            <texture colordiffuse="PosterBorder">common/white.png</texture>
+                        </control>
+                        <control type="image">
+                            <visible>!Control.HasFocus(9000)</visible>
+                            <aspectratio>center</aspectratio>
+                            <texture colordiffuse="PosterBorder">common/selected.png</texture>
+                        </control>
+                        <control type="image">
+                            <visible>Control.HasFocus(9000)</visible>
+                            <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                        </control>
+
+                        <control type="image">
+                            <top>pad</top>
+                            <bottom>pad</bottom>
+                            <left>pad</left>
+                            <width>300</width>
+                            <aspectratio align="left">keep</aspectratio>
+                            <texture>$INFO[ListItem.Icon]</texture>
+                        </control>
+                        <control type="label">
+                            <height>100%</height>
+                            <left>170</left>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <textcolor>Selected</textcolor>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <label>$INFO[ListItem.Label]</label>
+                        </control>
+                    </control>
+                </focusedlayout>
+                <content>
+                    <!-- Posters -->
+                    <item>
+                        <label>31651</label>
+                        <icon>special://skin/extras/viewthumbs/52.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <onclick>Container.SetViewMode(52)</onclick>
+						<visible>!Skin.HasSetting(SkinHelper.View.Disabled.52)</visible>
+						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)</visible>
+                    </item>
+                    <!-- Cycle -->
+                    <item>
+                        <label>31728</label>
+                        <icon>special://skin/extras/viewthumbs/156.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <onclick>Container.SetViewMode(156)</onclick>
+						<visible>!Skin.HasSetting(SkinHelper.View.Disabled.156)</visible>
+						<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)</visible>
+                    </item>
+                    <!-- Info icons -->
+                    <item>
+                        <label>31141</label>
+                        <icon>special://skin/extras/viewthumbs/59.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <onclick>Container.SetViewMode(59)</onclick>
+						<visible>!Skin.HasSetting(SkinHelper.View.Disabled.59)</visible>
+						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)</visible>
+                    </item>
+                    <!-- Big Posters -->
+                    <item>
+                        <label>31643</label>
+                        <icon>special://skin/extras/viewthumbs/51.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <onclick>Container.SetViewMode(51)</onclick>
+						<visible>!Skin.HasSetting(SkinHelper.View.Disabled.51)</visible>
+						<visible>!Window.IsVisible(MyPVRChannels.xml)</visible>
+						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(images) | Container.Content(artists) | Container.Content(albums) | Container.Content(actors) | Container.Content(videos)</visible>						
+                    </item>
+                    <!-- Posters list 1 -->
+                    <item>
+                        <label>31685</label>
+                        <icon>special://skin/extras/viewthumbs/504.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <onclick>Container.SetViewMode(504)</onclick>
+						<visible>!Skin.HasSetting(SkinHelper.View.Disabled.504)</visible>
+						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
+                    </item>
+                    <!-- Posters list 2 -->
+                    <item>
+                        <label>31685</label>
+                        <icon>special://skin/extras/viewthumbs/507.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <onclick>Container.SetViewMode(507)</onclick>
+						<visible>!Skin.HasSetting(SkinHelper.View.Disabled.507)</visible>
+						<visible>Container.Content(addons) | Container.Content(artists) | Container.Content(albums) | Container.Content(files) | Container.Content(videos)</visible>
+                    </item>
+                    <!-- Banners -->
+                    <item>
+                        <label>31642</label>
+                        <icon>special://skin/extras/viewthumbs/55.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <onclick>Container.SetViewMode(55)</onclick>
+						<visible>!Skin.HasSetting(SkinHelper.View.Disabled.55)</visible>
+						<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(videos)</visible>
+                    </item>
+                    <!-- Big Banner -->
+                    <item>
+                        <label>31730</label>
+                        <icon>special://skin/extras/viewthumbs/158.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <onclick>Container.SetViewMode(158)</onclick>
+						<visible>!Skin.HasSetting(SkinHelper.View.Disabled.158)</visible>
+						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(videos)</visible>
+                    </item>
+                    <!-- Frames -->
+                    <item>
+                        <label>31644</label>
+                        <icon>special://skin/extras/viewthumbs/56.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <onclick>Container.SetViewMode(56)</onclick>
+						<visible>!Window.IsVisible(MyPVRChannels.xml)</visible>
+                    </item>
+                    <!-- Gallery -->
+                    <item>
+                        <label>31163</label>
+                        <icon>special://skin/extras/viewthumbs/505.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <onclick>Container.SetViewMode(505)</onclick>
+						<visible>!Window.IsVisible(MyPVRChannels.xml)</visible>
+						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(images) | Container.Content(addons) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(actors) | Container.Content(videos)</visible>						
+                    </item>
+                    <!-- Big wide -->
+                    <item>
+                        <label>540</label>
+                        <icon>special://skin/extras/viewthumbs/53.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <onclick>Container.SetViewMode(53)</onclick>
+						<visible>!Skin.HasSetting(SkinHelper.View.Disabled.53)</visible>
+						<visible>!Window.IsVisible(MyPVRChannels.xml)</visible>
+						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(images) | Container.Content(addons) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(actors) | Container.Content(videos)</visible>						
+                    </item>
+                    <!-- Big wide with logos -->
+                    <item>
+                        <label>31532</label>
+                        <icon>special://skin/extras/viewthumbs/600.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <onclick>Container.SetViewMode(600)</onclick>
+						<visible>!Skin.HasSetting(SkinHelper.View.Disabled.600)</visible>
+						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows)</visible>
+                    </item>	
+                    <!-- BigWide ClearArt -->
+                    <item>
+                        <label>31743</label>
+                        <icon>special://skin/extras/viewthumbs/160.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <onclick>Container.SetViewMode(160)</onclick>
+						<visible>!Skin.HasSetting(SkinHelper.View.Disabled.160)</visible>
+						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows)</visible>
+                    </item>
+                    <!-- Big list -->
+                    <item>
+                        <label>537</label>
+                        <icon>special://skin/extras/viewthumbs/57.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <onclick>Container.SetViewMode(57)</onclick>
+						<visible>!Window.IsVisible(MyPVRChannels.xml)</visible>
+                    </item>
+                    <!-- Big list info -->
+                    <item>
+                        <label>31142</label>
+                        <icon>special://skin/extras/viewthumbs/501.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <onclick>Container.SetViewMode(501)</onclick>
+						<visible>!Skin.HasSetting(SkinHelper.View.Disabled.501)</visible>
+						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
+                    </item>
+                    <!-- Panel list -->
+                    <item>
+                        <label>31137</label>
+                        <icon>special://skin/extras/viewthumbs/58.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <onclick>Container.SetViewMode(58)</onclick>
+						<visible>!Window.IsVisible(MyPVRChannels.xml)</visible>
+                    </item>
+                    <!-- Thumbs -->
+                    <item>
+                        <label>31647</label>
+                        <icon>special://skin/extras/viewthumbs/500.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <onclick>Container.SetViewMode(500)</onclick>
+						<visible>!Window.IsVisible(MyPVRChannels.xml)</visible>
+                    </item>				
+                    <!-- List -->
+                    <item>
+                        <label>535</label>
+                        <icon>special://skin/extras/viewthumbs/550.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <onclick>Container.SetViewMode(550)</onclick>
+                        <visible>Container.Content(countries) | Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(directors) | Container.Content(files) | Container.Content(actors)</visible>
+                    </item>
+                    <!-- List 2 -->
+                    <item>
+                        <label>31813</label>
+                        <icon>special://skin/extras/viewthumbs/549.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <onclick>Container.SetViewMode(549)</onclick>
+                        <visible>Container.Content(countries) | Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(directors) | Container.Content(files) | Container.Content(actors)</visible>
+                    </item>					
+                    <!-- Square List -->
+                    <item>
+                        <label>535</label>
+                        <icon>special://skin/extras/viewthumbs/50.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <visible>Container.Content(genres) | Container.Content(studios) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(musicvideos) | Container.Content(addons) | Container.Content(games) | Container.Content(unknown) | Container.Content(videos) | Container.Content(years) | Container.Content(images)</visible>
+                    </item>	
+                    <!-- Low List -->
+                    <item>
+                        <label>31265</label>
+                        <icon>special://skin/extras/viewthumbs/551.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <onclick>Container.SetViewMode(551)</onclick>
+                        <visible>Container.Content(videos) | Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs)</visible>
+                    </item>						
+					<!-- Plain List -->
+                    <item>
+                        <label>31205</label>
+                        <icon>special://skin/extras/viewthumbs/552.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <onclick>Container.SetViewMode(552)</onclick>
+                        <visible>!Window.IsVisible(MyPVRChannels.xml)</visible>
+                    </item>	
+					<!-- RightList -->
+                    <item>
+                        <label>31251</label>
+                        <icon>special://skin/extras/viewthumbs/516.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <onclick>Container.SetViewMode(516)</onclick>
+                        <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(videos)</visible>
+                    </item>					
+                    <!-- Media Info 1 -->
+                    <item>
+                        <label>31645</label>
+                        <icon>special://skin/extras/viewthumbs/54.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <onclick>Container.SetViewMode(54)</onclick>
+                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.54)</visible>
+                        <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs)</visible>
+                    </item>
+                    <!-- Media Info 2 -->
+                    <item>
+                        <label>31143</label>
+                        <icon>special://skin/extras/viewthumbs/502.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <onclick>Container.SetViewMode(502)</onclick>
+                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.502)</visible>
+                        <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs)</visible>
+                    </item>
+                    <!-- Media Info 3 -->
+                    <item>
+                        <label>31148</label>
+                        <icon>special://skin/extras/viewthumbs/503.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <onclick>Container.SetViewMode(503)</onclick>
+                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.503)</visible>
+                        <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs)</visible>
+                    </item>
+                    <!-- Media Info 4 -->
+                    <item>
+                        <label>31814</label>
+                        <icon>special://skin/extras/viewthumbs/548.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <onclick>Container.SetViewMode(548)</onclick>
+                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.548)</visible>
+                        <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs)</visible>
+                    </item>							
+                    <!-- Info List -->
+                    <item>
+                        <label>31192</label>
+                        <icon>special://skin/extras/viewthumbs/508.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <onclick>Container.SetViewMode(508)</onclick>
+                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.508)</visible>
+                        <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs)</visible>
+                    </item>
+                    <!-- Info List 2 -->
+                    <item>
+                        <label>31646</label>
+                        <icon>special://skin/extras/viewthumbs/509.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <onclick>Container.SetViewMode(509)</onclick>
+                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.509)</visible>
+                        <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs)</visible>
+                    </item>
+					<!-- Info List 3 -->
+                    <item>
+                        <label>31206</label>
+                        <icon>special://skin/extras/viewthumbs/553.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <onclick>Container.SetViewMode(553)</onclick>
+                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.509)</visible>
+                        <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(artists) | Container.Content(albums)</visible>
+                    </item>					
+                    <!-- Fanarts/Thumbs list -->
+                    <item>
+                        <label>31164</label>
+                        <icon>special://skin/extras/viewthumbs/506.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <onclick>Container.SetViewMode(506)</onclick>
+						<visible>!Skin.HasSetting(SkinHelper.View.Disabled.506)</visible>
+						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(videos) | Container.Content(addons) | Container.Content(images)</visible>						
+                    </item>
+                    <!-- Fanart Logo -->
+                    <item>
+                        <label>31742</label>
+                        <icon>special://skin/extras/viewthumbs/159.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <onclick>Container.SetViewMode(159)</onclick>
+						<visible>!Skin.HasSetting(SkinHelper.View.Disabled.159)</visible>
+						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows)</visible>
+                    </item>
+                    <!-- Lovefilm -->
+                    <item>
+                        <label>31208</label>
+                        <icon>special://skin/extras/viewthumbs/521.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <onclick>Container.SetViewMode(521)</onclick>
+						<visible>!Skin.HasSetting(SkinHelper.View.Disabled.521)</visible>
+						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(artists) | Container.Content(albums) | Container.Content(videos)</visible>
+                    </item>					
+                    <!-- BigWide Classic (Big Fanarts) -->
+                    <item>
+                        <label>31729</label>
+                        <icon>special://skin/extras/viewthumbs/157.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <onclick>Container.SetViewMode(157)</onclick>
+						<visible>!Skin.HasSetting(SkinHelper.View.Disabled.157)</visible>
+						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(artists) | Container.Content(albums) | Container.Content(videos)</visible>
+                    </item>
+                    <!-- ClearArts List -->
+                    <item>
+                        <label>31744</label>
+                        <icon>special://skin/extras/viewthumbs/161.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <onclick>Container.SetViewMode(161)</onclick>
+						<visible>!Skin.HasSetting(SkinHelper.View.Disabled.161)</visible>
+						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows)</visible>
+                    </item>
+                    <!-- Logos List -->
+                    <item>
+                        <label>31745</label>
+                        <icon>special://skin/extras/viewthumbs/162.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <onclick>Container.SetViewMode(162)</onclick>
+						<visible>!Skin.HasSetting(SkinHelper.View.Disabled.162)</visible>
+						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows)</visible>
+                    </item>
+                    <!-- Showcase -->
+                    <item>
+                        <label>31199</label>
+                        <icon>special://skin/extras/viewthumbs/535.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <onclick>Container.SetViewMode(535)</onclick>
+                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.535)</visible>
+                        <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(artists) | Container.Content(albums)</visible>
+                    </item>
+                    <!-- Medium Icon -->
+                    <item>
+                        <label>31207</label>
+                        <icon>special://skin/extras/viewthumbs/525.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <onclick>Container.SetViewMode(525)</onclick>
+                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.525)</visible>
+                        <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(artists) | Container.Content(albums)</visible>
+                    </item>		
+					<!-- Fanart Icons -->
+                    <item>
+                        <label>31284</label>
+                        <icon>special://skin/extras/viewthumbs/514.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <onclick>Container.SetViewMode(514)</onclick>
+                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.514)</visible>
+                        <visible>Container.Content(seasons) | Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows)</visible>
+                    </item>		
+					<!-- Fanart Icons Ep.-->
+                    <item>
+                        <label>31285</label>
+                        <icon>special://skin/extras/viewthumbs/513.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <onclick>Container.SetViewMode(513)</onclick>
+                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.513)</visible>
+						<visible>!Skin.HasSetting(SkinHelper.View.Disabled.513)</visible>
+                        <visible>Container.Content(episodes) | Container.Content(videos)</visible>
+                    </item>						
+                    <!-- Netflix -->
+                    <item>
+                        <label>31200</label>
+                        <icon>special://skin/extras/viewthumbs/515.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <onclick>Container.SetViewMode(515)</onclick>
+                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.515)</visible>
+                        <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
+                    </item>
+                    <!-- Widget View -->
+                    <item>
+                        <label>31815</label>
+                        <icon>special://skin/extras/viewthumbs/555.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <onclick>Container.SetViewMode(555)</onclick>
+                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.555)</visible>
+                        <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)</visible>
+                    </item>					
+                    <!-- PVR WideList -->
+                    <item>
+                        <label>31168</label>
+                        <icon>special://skin/extras/viewthumbs/163.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <onclick>Container.SetViewMode(163)</onclick>
+                        <visible>Window.IsVisible(MyPVRChannels.xml)</visible>
+                    </item>
+                    <!-- PVR Small List -->
+                    <item>
+                        <label>535</label>
+                        <icon>special://skin/extras/viewthumbs/164.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <onclick>Container.SetViewMode(164)</onclick>
+                        <visible>Window.IsVisible(MyPVRChannels.xml)</visible>
+                    </item>
+                    <!-- PVR Big List -->
+                    <item>
+                        <label>537</label>
+                        <icon>special://skin/extras/viewthumbs/165.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <onclick>Container.SetViewMode(165)</onclick>
+                        <visible>Window.IsVisible(MyPVRChannels.xml)</visible>
+                    </item>					
+                </content>
+            </control>
+            <!-- Button grouplist -->
+            <control type="grouplist" id="8000">
+                <animation effect="slide" start="0" end="-586" time="0" condition="Control.IsVisible(3)">Conditional</animation>
+                <right>side</right>
+                <top>pad</top>
+                <align>right</align>
+                <height>60</height>
+                <onleft>9000</onleft>
+                <onright>9000</onright>
+                <onup>9000</onup>
+                <ondown>9000</ondown>
+                <orientation>horizontal</orientation>
+                <itemgap>pad</itemgap>
+                <!-- Lock to View -->
+                <control type="button" id="8003">
+                    <width>auto</width>
+                    <height>100%</height>
+                    <align>right</align>
+                    <label>[CAPITALIZE]$LOCALIZE[31197] $INFO[Container.Content,(,)][/CAPITALIZE]</label>
+                    <texturenofocus></texturenofocus>
+                    <texturefocus></texturefocus>
+                    <focusedcolor>$VAR[HighlightColor]</focusedcolor>
+                    <include>Defs_OptionButton</include>
+                    <onclick>SetFocus(9000)</onclick>
+                    <onclick>Action(Select)</onclick>
+					<visible>!Window.IsVisible(addonbrowser)</visible>
+					<visible>!Window.IsVisible(MyPVRChannels.xml)</visible>
+					<visible>[Container.Content(tags) | Container.Content(years) | Container.Content(genres) | Container.Content(countries) | Container.Content(studios) | Container.Content(playlists) | Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(musicvideos) | Container.Content(addons) | Container.Content(actors) | Container.Content(directors) | Container.Content(files) | Container.Content(mixed) | Container.Content(images) | Container.Content(games) | Container.Content(unknown) | Container.Content(videos)]</visible>
+                    <onclick condition="[Container.Content() + String.IsEmpty(Skin.String(Skin.ForcedView.))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(tags) + String.IsEmpty(Skin.String(Skin.ForcedView.tags))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(years) + String.IsEmpty(Skin.String(Skin.ForcedView.years))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(genres) + String.IsEmpty(Skin.String(Skin.ForcedView.genres))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(countries) + String.IsEmpty(Skin.String(Skin.ForcedView.countries))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(studios) + String.IsEmpty(Skin.String(Skin.ForcedView.studios))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(playlists) + String.IsEmpty(Skin.String(Skin.ForcedView.playlists))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(movies) + String.IsEmpty(Skin.String(Skin.ForcedView.movies))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(sets) + String.IsEmpty(Skin.String(Skin.ForcedView.sets))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(tvshows) + String.IsEmpty(Skin.String(Skin.ForcedView.tvshows))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(seasons) + String.IsEmpty(Skin.String(Skin.ForcedView.seasons))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(episodes) + String.IsEmpty(Skin.String(Skin.ForcedView.episodes))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(artists) + String.IsEmpty(Skin.String(Skin.ForcedView.artists))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(albums) + String.IsEmpty(Skin.String(Skin.ForcedView.albums))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(songs) + String.IsEmpty(Skin.String(Skin.ForcedView.songs))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(musicvideos) + String.IsEmpty(Skin.String(Skin.ForcedView.musicvideos))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(addons) + String.IsEmpty(Skin.String(Skin.ForcedView.addons))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(actors) + String.IsEmpty(Skin.String(Skin.ForcedView.actors))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(directors) + String.IsEmpty(Skin.String(Skin.ForcedView.directors))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(files) + String.IsEmpty(Skin.String(Skin.ForcedView.files))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(mixed) + String.IsEmpty(Skin.String(Skin.ForcedView.mixed))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(images) + String.IsEmpty(Skin.String(Skin.ForcedView.images))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(games) + String.IsEmpty(Skin.String(Skin.ForcedView.games))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(unknown) + String.IsEmpty(Skin.String(Skin.ForcedView.unknown))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(videos) + String.IsEmpty(Skin.String(Skin.ForcedView.videos))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                </control>
+                <!-- Disable / Enable Views -->
+                <control type="button" id="8002">
+                    <width>auto</width>
+                    <height>100%</height>
+                    <align>right</align>
+                    <label>[CAPITALIZE]$LOCALIZE[31198][/CAPITALIZE]</label>
+                    <texturenofocus></texturenofocus>
+                    <texturefocus></texturefocus>
+                    <focusedcolor>$VAR[HighlightColor]</focusedcolor>
+                    <include>Defs_OptionButton</include>
+                    <onclick>RunScript(script.skin.helper.service,action=enableviews,richlayout=true)</onclick>
+					<visible>!Window.IsVisible(MyPVRChannels.xml)</visible>
+                </control>
+                <!-- Cancel -->
+                <control type="button" id="8001">
+                    <width>auto</width>
+                    <height>100%</height>
+                    <align>right</align>
+                    <label>222</label>
+                    <texturenofocus></texturenofocus>
+                    <texturefocus></texturefocus>
+                    <focusedcolor>$VAR[HighlightColor]</focusedcolor>
+                    <include>Defs_OptionButton</include>
+                    <onclick>Close</onclick>
+                </control>
+                
+            </control>
+        </control>
+    </controls>
+</window>

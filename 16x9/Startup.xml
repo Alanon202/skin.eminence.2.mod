@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <!-- startup -->
+    <onload>Skin.Reset(HideSettings)</onload>
+<!-- Modification Onload -->    
+    <onload condition="String.IsEmpty(Skin.String(HomeStyle))">Skin.SetString(HomeStyle, beveled)</onload>
+    <onload condition="!Skin.HasSetting(SkinHelper.EnablePVRThumbs)">Skin.SetBool(SkinHelper.EnablePVRThumbs)</onload>
+    <onload condition="Skin.String(SplashScreen)">RunScript(script.skin.helper.service,action=splashscreen,file=$INFO[Skin.String(SplashScreen)],duration=5)</onload>
+    <onload condition="!Skin.String(SplashScreen)">ReplaceWindow($INFO[System.StartupWindow])</onload>
+    <controls>
+    <!-- video control for splash -->
+<control type="videowindow">
+    <width>100%</width>
+    <height>100%</height>
+</control>
+<!-- image control for splash -->
+<control type="image">
+    <width>100%</width>
+    <height>100%</height>
+    <aspectratio>keep</aspectratio>
+    <texture background="true">$INFO[Window(Home).Property(SkinHelper.SplashScreen)]</texture>
+</control>
+</controls>
+    
+</window>
+

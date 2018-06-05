@@ -1,0 +1,1480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="Viewtype_List">
+        <control type="group">
+            <visible>Control.IsVisible(550)</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <left>side</left>
+            <right>side</right>
+            <top>top</top>
+            <height>height</height>
+            <include content="Object_Poster">
+                <param name="left" value="posterx" />
+                <param name="width" value="posterw" />
+            </include>
+            <include content="View_List">
+                <param name="viewlabel" value="31605" />
+                <param name="posx" value="0" />
+                <param name="width" value="listw" />
+                <param name="id" value="550" />
+				<param name="condition" value="[Container.Content(movies) + [String.IsEqual(Skin.String(Skin.ForcedView.movies),$LOCALIZE[31605]) | String.IsEmpty(Skin.String(Skin.ForcedView.movies)) ]] | [Container.Content(sets) + [String.IsEqual(Skin.String(Skin.ForcedView.sets),$LOCALIZE[31605]) | String.IsEmpty(Skin.String(Skin.ForcedView.sets)) ]] | [Container.Content(tvshows) + [String.IsEqual(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[31605]) | String.IsEmpty(Skin.String(Skin.ForcedView.tvshows)) ]] | [Container.Content(seasons) + [String.IsEqual(Skin.String(Skin.ForcedView.seasons),$LOCALIZE[31605]) | String.IsEmpty(Skin.String(Skin.ForcedView.seasons)) ]] | [Container.Content(episodes) + [String.IsEqual(Skin.String(Skin.ForcedView.episodes),$LOCALIZE[31605]) | String.IsEmpty(Skin.String(Skin.ForcedView.episodes)) ]] | [Container.Content(actors) + [String.IsEqual(Skin.String(Skin.ForcedView.actors),$LOCALIZE[31605]) | String.IsEmpty(Skin.String(Skin.ForcedView.actors)) ]] | [Container.Content(countries) + [String.IsEqual(Skin.String(Skin.ForcedView.countries),$LOCALIZE[31605]) | String.IsEmpty(Skin.String(Skin.ForcedView.countries)) ]] | [Container.Content(playlists) + [String.IsEqual(Skin.String(Skin.ForcedView.playlists),$LOCALIZE[31605]) | String.IsEmpty(Skin.String(Skin.ForcedView.playlists)) ]] | [Container.Content(directors) + [String.IsEqual(Skin.String(Skin.ForcedView.directors),$LOCALIZE[31605]) | String.IsEmpty(Skin.String(Skin.ForcedView.directors)) ]] | [Container.Content(files) + [String.IsEqual(Skin.String(Skin.ForcedView.files),$LOCALIZE[31605]) | String.IsEmpty(Skin.String(Skin.ForcedView.files)) ]]"/>
+            </include>
+            <control type="group">
+                <width>listw</width>
+                <include>Object_Arrows_Vertical</include>
+				<include>Object_Scrollbar</include>
+				<include>Object_Scrollbar_Alphabet</include>
+            </control>
+        </control>
+    </include>
+	
+    <include name="Viewtype_List2">
+        <control type="group">
+            <visible>Control.IsVisible(549)</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <left>side</left>
+            <right>side</right>
+            <top>top</top>
+            <height>height</height>
+            <include content="Object_Poster">
+                <param name="left" value="-4" />
+                <param name="width" value="posterw" />
+            </include>
+            <include content="View_List">
+                <param name="viewlabel" value="31813" />
+                <param name="posx" value="480" />
+                <param name="width" value="listw" />
+                <param name="id" value="549" />
+				<param name="condition" value="[Container.Content(movies) + [String.IsEqual(Skin.String(Skin.ForcedView.movies),$LOCALIZE[31813]) | String.IsEmpty(Skin.String(Skin.ForcedView.movies)) ]] | [Container.Content(sets) + [String.IsEqual(Skin.String(Skin.ForcedView.sets),$LOCALIZE[31813]) | String.IsEmpty(Skin.String(Skin.ForcedView.sets)) ]] | [Container.Content(tvshows) + [String.IsEqual(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[31813]) | String.IsEmpty(Skin.String(Skin.ForcedView.tvshows)) ]] | [Container.Content(seasons) + [String.IsEqual(Skin.String(Skin.ForcedView.seasons),$LOCALIZE[31813]) | String.IsEmpty(Skin.String(Skin.ForcedView.seasons)) ]] | [Container.Content(episodes) + [String.IsEqual(Skin.String(Skin.ForcedView.episodes),$LOCALIZE[31813]) | String.IsEmpty(Skin.String(Skin.ForcedView.episodes)) ]] | [Container.Content(actors) + [String.IsEqual(Skin.String(Skin.ForcedView.actors),$LOCALIZE[31813]) | String.IsEmpty(Skin.String(Skin.ForcedView.actors)) ]] | [Container.Content(countries) + [String.IsEqual(Skin.String(Skin.ForcedView.countries),$LOCALIZE[31813]) | String.IsEmpty(Skin.String(Skin.ForcedView.countries)) ]] | [Container.Content(playlists) + [String.IsEqual(Skin.String(Skin.ForcedView.playlists),$LOCALIZE[31813]) | String.IsEmpty(Skin.String(Skin.ForcedView.playlists)) ]] | [Container.Content(directors) + [String.IsEqual(Skin.String(Skin.ForcedView.directors),$LOCALIZE[31813]) | String.IsEmpty(Skin.String(Skin.ForcedView.directors)) ]] | [Container.Content(files) + [String.IsEqual(Skin.String(Skin.ForcedView.files),$LOCALIZE[31813]) | String.IsEmpty(Skin.String(Skin.ForcedView.files)) ]]"/>
+            </include>
+            <control type="group">
+                <width>listw</width>
+				<left>480</left>
+                <include>Object_Arrows_Vertical</include>
+				<include>Object_Scrollbar</include>
+				<include>Object_Scrollbar_Alphabet</include>
+            </control>
+        </control>
+    </include>	
+
+    <include name="Viewtype_PlainList">
+        <control type="group">
+            <visible>Control.IsVisible(552)</visible>
+            <left>side</left>
+            <right>side</right>
+            <top>top</top>
+            <height>height</height>
+            <include content="View_List">
+                <param name="viewlabel" value="31205" />
+                <param name="posx" value="0" />
+                <param name="width" value="1880" />
+                <param name="id" value="552" />
+				<param name="condition" value="[Container.Content(movies) + [String.IsEqual(Skin.String(Skin.ForcedView.movies),$LOCALIZE[31205]) | String.IsEmpty(Skin.String(Skin.ForcedView.movies)) ]] | [Container.Content(sets) + [String.IsEqual(Skin.String(Skin.ForcedView.sets),$LOCALIZE[31205]) | String.IsEmpty(Skin.String(Skin.ForcedView.sets)) ]] | [Container.Content(tvshows) + [String.IsEqual(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[31205]) | String.IsEmpty(Skin.String(Skin.ForcedView.tvshows)) ]] | [Container.Content(seasons) + [String.IsEqual(Skin.String(Skin.ForcedView.seasons),$LOCALIZE[31205]) | String.IsEmpty(Skin.String(Skin.ForcedView.seasons)) ]] | [Container.Content(episodes) + [String.IsEqual(Skin.String(Skin.ForcedView.episodes),$LOCALIZE[31205]) | String.IsEmpty(Skin.String(Skin.ForcedView.episodes)) ]] | [Container.Content(actors) + [String.IsEqual(Skin.String(Skin.ForcedView.actors),$LOCALIZE[31205]) | String.IsEmpty(Skin.String(Skin.ForcedView.actors)) ]] | [Container.Content(artists) + [String.IsEqual(Skin.String(Skin.ForcedView.artists),$LOCALIZE[31205]) | String.IsEmpty(Skin.String(Skin.ForcedView.artists)) ]] | [Container.Content(albums) + [String.IsEqual(Skin.String(Skin.ForcedView.albums),$LOCALIZE[31205]) | String.IsEmpty(Skin.String(Skin.ForcedView.albums)) ]] | [Container.Content(songs) + [String.IsEqual(Skin.String(Skin.ForcedView.songs),$LOCALIZE[31205]) | String.IsEmpty(Skin.String(Skin.ForcedView.songs)) ]] | [Container.Content(addons) + [String.IsEqual(Skin.String(Skin.ForcedView.addons),$LOCALIZE[31205]) | String.IsEmpty(Skin.String(Skin.ForcedView.addons)) ]] | [Container.Content(genres) + [String.IsEqual(Skin.String(Skin.ForcedView.genres),$LOCALIZE[31205]) | String.IsEmpty(Skin.String(Skin.ForcedView.genres)) ]] | [Container.Content(images) + [String.IsEqual(Skin.String(Skin.ForcedView.images),$LOCALIZE[31205]) | String.IsEmpty(Skin.String(Skin.ForcedView.images)) ]] | [Container.Content(videos) + [String.IsEqual(Skin.String(Skin.ForcedView.videos),$LOCALIZE[31205]) | String.IsEmpty(Skin.String(Skin.ForcedView.videos)) ]] | [Container.Content(games) + [String.IsEqual(Skin.String(Skin.ForcedView.games),$LOCALIZE[31205]) | String.IsEmpty(Skin.String(Skin.ForcedView.games)) ]] | [Container.Content(tags) + [String.IsEqual(Skin.String(Skin.ForcedView.tags),$LOCALIZE[31205]) | String.IsEmpty(Skin.String(Skin.ForcedView.tags)) ]] | [Container.Content(years) + [String.IsEqual(Skin.String(Skin.ForcedView.years),$LOCALIZE[31205]) | String.IsEmpty(Skin.String(Skin.ForcedView.years)) ]] | [Container.Content(countries) + [String.IsEqual(Skin.String(Skin.ForcedView.countries),$LOCALIZE[31205]) | String.IsEmpty(Skin.String(Skin.ForcedView.countries)) ]] | [Container.Content(studios) + [String.IsEqual(Skin.String(Skin.ForcedView.studios),$LOCALIZE[31205]) | String.IsEmpty(Skin.String(Skin.ForcedView.studios)) ]] | [Container.Content(playlists) + [String.IsEqual(Skin.String(Skin.ForcedView.playlists),$LOCALIZE[31205]) | String.IsEmpty(Skin.String(Skin.ForcedView.playlists)) ]] | [Container.Content(musicvideos) + [String.IsEqual(Skin.String(Skin.ForcedView.musicvideos),$LOCALIZE[31205]) | String.IsEmpty(Skin.String(Skin.ForcedView.musicvideos)) ]] | [Container.Content(directors) + [String.IsEqual(Skin.String(Skin.ForcedView.directors),$LOCALIZE[31205]) | String.IsEmpty(Skin.String(Skin.ForcedView.directors)) ]] | [Container.Content(files) + [String.IsEqual(Skin.String(Skin.ForcedView.files),$LOCALIZE[31205]) | String.IsEmpty(Skin.String(Skin.ForcedView.files)) ]] | [Container.Content(mixed) + [String.IsEqual(Skin.String(Skin.ForcedView.mixed),$LOCALIZE[31205]) | String.IsEmpty(Skin.String(Skin.ForcedView.mixed)) ]] | [Container.Content(unknown) + [String.IsEqual(Skin.String(Skin.ForcedView.unknown),$LOCALIZE[31205]) | String.IsEmpty(Skin.String(Skin.ForcedView.unknown)) ]]" />
+            </include>
+			<include content="Object_Line">
+				<param name="width" value="1880" />
+				<param name="label" value="$INFO[Control.GetLabel(3),, ]$INFO[Control.GetLabel(4),[COLOR=PosterBorder]-[/COLOR] , ]" />
+			</include>	
+            <control type="group">
+                <width>1880</width>
+				<include>Object_Scrollbar</include>
+				<include>Object_Scrollbar_Alphabet</include>
+                <include>Object_Arrows_Vertical</include>
+            </control>			
+        </control>
+    </include>	
+
+    <include name="Viewtype_SquareList">
+        <control type="group">
+            <visible>Control.IsVisible(50)</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <left>side</left>
+            <right>side</right>
+            <top>top</top>
+            <height>height</height>
+            <include content="Object_Poster">
+                <param name="left" value="1190" />
+                <param name="width" value="690" />
+            </include>
+            <include content="View_List">
+                <param name="viewlabel" value="535" />
+                <param name="posx" value="0" />
+                <param name="width" value="1170" />
+                <param name="id" value="50" />
+				<param name="condition" value="[Container.Content(actors) + [String.IsEqual(Skin.String(Skin.ForcedView.actors),$LOCALIZE[535]) | String.IsEmpty(Skin.String(Skin.ForcedView.actors)) ]] | [Container.Content(artists) + [String.IsEqual(Skin.String(Skin.ForcedView.artists),$LOCALIZE[535]) | String.IsEmpty(Skin.String(Skin.ForcedView.artists)) ]] | [Container.Content(albums) + [String.IsEqual(Skin.String(Skin.ForcedView.albums),$LOCALIZE[535]) | String.IsEmpty(Skin.String(Skin.ForcedView.albums)) ]] | [Container.Content(songs) + [String.IsEqual(Skin.String(Skin.ForcedView.songs),$LOCALIZE[535]) | String.IsEmpty(Skin.String(Skin.ForcedView.songs)) ]] | [Container.Content(addons) + [String.IsEqual(Skin.String(Skin.ForcedView.addons),$LOCALIZE[535]) | String.IsEmpty(Skin.String(Skin.ForcedView.addons)) ]] | [Container.Content(genres) + [String.IsEqual(Skin.String(Skin.ForcedView.genres),$LOCALIZE[535]) | String.IsEmpty(Skin.String(Skin.ForcedView.genres)) ]] | [Container.Content(images) + [String.IsEqual(Skin.String(Skin.ForcedView.images),$LOCALIZE[535]) | String.IsEmpty(Skin.String(Skin.ForcedView.images)) ]] | [Container.Content(videos) + [String.IsEqual(Skin.String(Skin.ForcedView.videos),$LOCALIZE[535]) | String.IsEmpty(Skin.String(Skin.ForcedView.videos)) ]] | [Container.Content(games) + [String.IsEqual(Skin.String(Skin.ForcedView.games),$LOCALIZE[535]) | String.IsEmpty(Skin.String(Skin.ForcedView.games)) ]] | [Container.Content() + [String.IsEqual(Skin.String(Skin.ForcedView.),$LOCALIZE[535]) | String.IsEmpty(Skin.String(Skin.ForcedView.)) ]] | [Container.Content(years) + [String.IsEqual(Skin.String(Skin.ForcedView.years),$LOCALIZE[535]) | String.IsEmpty(Skin.String(Skin.ForcedView.years)) ]] | [Container.Content(studios) + [String.IsEqual(Skin.String(Skin.ForcedView.studios),$LOCALIZE[535]) | String.IsEmpty(Skin.String(Skin.ForcedView.studios)) ]] | [Container.Content(musicvideos) + [String.IsEqual(Skin.String(Skin.ForcedView.musicvideos),$LOCALIZE[535]) | String.IsEmpty(Skin.String(Skin.ForcedView.musicvideos)) ]] | [Container.Content(unknown) + [String.IsEqual(Skin.String(Skin.ForcedView.unknown),$LOCALIZE[535]) | String.IsEmpty(Skin.String(Skin.ForcedView.unknown)) ]]" />
+            </include>
+            <control type="group">
+                <width>1180</width>
+                <include>Object_Arrows_Vertical</include>
+				<include>Object_Scrollbar</include>
+				<include>Object_Scrollbar_Alphabet</include>
+            </control>
+        </control>
+    </include>
+    <!-- INFO LIST -->
+    <include name="Viewtype_InfoList">
+        <control type="group">
+            <visible>Control.IsVisible(508)</visible>
+            <left>side</left>
+            <right>side</right>
+            <top>top</top>
+            <height>height</height>
+            <include content="Object_Line">
+                <param name="width" value="listw" />
+                <param name="label" value="$INFO[Control.GetLabel(3),, ]$INFO[Control.GetLabel(4),[COLOR=PosterBorder]-[/COLOR] , ]" />
+            </include>
+            <include content="Object_Poster">
+                <param name="left" value="posterx" />
+                <param name="width" value="posterw" />
+            </include>
+            <include content="View_InfoList">
+                <param name="id" value="508" />
+                <param name="width" value="listw" />
+                <param name="name" value="31192" />
+				<param name="condition" value="[Container.Content(movies) + [String.IsEqual(Skin.String(Skin.ForcedView.movies),$LOCALIZE[31192]) | String.IsEmpty(Skin.String(Skin.ForcedView.movies)) ]] | [Container.Content(sets) + [String.IsEqual(Skin.String(Skin.ForcedView.sets),$LOCALIZE[31192]) | String.IsEmpty(Skin.String(Skin.ForcedView.sets)) ]] | [Container.Content(tvshows) + [String.IsEqual(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[31192]) | String.IsEmpty(Skin.String(Skin.ForcedView.tvshows)) ]] | [Container.Content(seasons) + [String.IsEqual(Skin.String(Skin.ForcedView.seasons),$LOCALIZE[31192]) | String.IsEmpty(Skin.String(Skin.ForcedView.seasons)) ]] | [Container.Content(episodes) + [String.IsEqual(Skin.String(Skin.ForcedView.episodes),$LOCALIZE[31192]) | String.IsEmpty(Skin.String(Skin.ForcedView.episodes)) ]] | [Container.Content(videos) + [String.IsEqual(Skin.String(Skin.ForcedView.videos),$LOCALIZE[31192]) | String.IsEmpty(Skin.String(Skin.ForcedView.videos)) ]] | [Container.Content(artists) + [String.IsEqual(Skin.String(Skin.ForcedView.artists),$LOCALIZE[31192]) | String.IsEmpty(Skin.String(Skin.ForcedView.artists)) ]] | [Container.Content(albums) + [String.IsEqual(Skin.String(Skin.ForcedView.albums),$LOCALIZE[31192]) | String.IsEmpty(Skin.String(Skin.ForcedView.albums)) ]] | [Container.Content(songs) + [String.IsEqual(Skin.String(Skin.ForcedView.songs),$LOCALIZE[31192]) | String.IsEmpty(Skin.String(Skin.ForcedView.songs)) ]]" />
+        <!--    <param name="condition" value="Container.Content(seasons) | Container.Content(sets) | Container.Content(episodes) | Container.Content(tvshows) | Container.Content(movies)" /> -->
+            </include>
+        </control>
+    </include>
+
+    <include name="Viewtype_InfoList2">
+        <control type="group">
+            <visible>Control.IsVisible(509)</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <left>side</left>
+            <right>side</right>
+            <top>top</top>
+            <height>height</height>
+            <include content="Object_Line">
+                <param name="width" value="1880" />
+                <param name="label" value="$INFO[Control.GetLabel(3),, ]$INFO[Control.GetLabel(4),[COLOR=PosterBorder]-[/COLOR] , ]" />
+            </include>
+            <include content="View_InfoList">
+                <param name="id" value="509" />
+                <param name="width" value="1880" />             
+                <param name="name" value="31646" />
+				<param name="condition" value="[Container.Content(movies) + [String.IsEqual(Skin.String(Skin.ForcedView.movies),$LOCALIZE[31646]) | String.IsEmpty(Skin.String(Skin.ForcedView.movies)) ]] | [Container.Content(sets) + [String.IsEqual(Skin.String(Skin.ForcedView.sets),$LOCALIZE[31646]) | String.IsEmpty(Skin.String(Skin.ForcedView.sets)) ]] | [Container.Content(tvshows) + [String.IsEqual(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[31646]) | String.IsEmpty(Skin.String(Skin.ForcedView.tvshows)) ]] | [Container.Content(seasons) + [String.IsEqual(Skin.String(Skin.ForcedView.seasons),$LOCALIZE[31646]) | String.IsEmpty(Skin.String(Skin.ForcedView.seasons)) ]] | [Container.Content(episodes) + [String.IsEqual(Skin.String(Skin.ForcedView.episodes),$LOCALIZE[31646]) | String.IsEmpty(Skin.String(Skin.ForcedView.episodes)) ]] | [Container.Content(videos) + [String.IsEqual(Skin.String(Skin.ForcedView.videos),$LOCALIZE[31646]) | String.IsEmpty(Skin.String(Skin.ForcedView.videos)) ]] | [Container.Content(artists) + [String.IsEqual(Skin.String(Skin.ForcedView.artists),$LOCALIZE[31646]) | String.IsEmpty(Skin.String(Skin.ForcedView.artists)) ]] | [Container.Content(albums) + [String.IsEqual(Skin.String(Skin.ForcedView.albums),$LOCALIZE[31646]) | String.IsEmpty(Skin.String(Skin.ForcedView.albums)) ]] | [Container.Content(songs) + [String.IsEqual(Skin.String(Skin.ForcedView.songs),$LOCALIZE[31646]) | String.IsEmpty(Skin.String(Skin.ForcedView.songs)) ]]" />
+        <!--    <param name="condition" value="Container.Content(seasons) | Container.Content(sets) | Container.Content(episodes) | Container.Content(tvshows) | Container.Content(movies)" /> -->
+            </include>
+        </control>
+    </include>
+
+    <include name="View_InfoList">
+        <control type="group">
+			<include>Object_Scrollbar</include>
+			<include>Object_Scrollbar_Alphabet</include>
+			<include>Animation_FadeSlide_Left</include>
+            <control type="group">
+			<include condition="Skin.HasSetting(darkoverlay)">Object_Background2</include>
+                <top>0</top>
+                <left>0</left>
+                <width>$PARAM[width]</width>
+                <height>335</height>
+                <control type="group">
+                    <left>0</left>
+                    <right>0</right>
+                    <top>0</top>
+                    <bottom>0</bottom>
+                    <include>Object_Background</include>
+					<visible>!Skin.HasSetting(darkoverlay)</visible>
+                </control>
+                <control type="image">
+                    <left>pad</left>
+                    <width>560</width>
+                    <top>pad</top>
+                    <bottom>pad</bottom>
+                    <fadetime>200</fadetime>
+                    <aspectratio>scale</aspectratio>
+                    <texture>$VAR[Image_Thumb]</texture>
+                    <visible>!Container.Content(tvshows) + ![Container.Content(albums) | Container.Content(songs)]</visible>
+                </control>
+                <control type="image">
+                    <left>pad</left>
+                    <width>305</width>
+                    <top>pad</top>
+                    <bottom>pad</bottom>
+                    <fadetime>200</fadetime>
+                    <aspectratio>scale</aspectratio>
+                    <texture>$VAR[Image_Thumb]</texture>
+                    <visible>!Container.Content(tvshows) + [Container.Content(albums) | Container.Content(songs)]</visible>
+                </control>				
+                <control type="image">
+                    <left>pad</left>
+                    <width>560</width>
+                    <top>pad</top>
+                    <bottom>pad</bottom>
+                    <fadetime>200</fadetime>
+                    <aspectratio>scale</aspectratio>
+                    <texture>$VAR[Image_Thumb2]</texture>
+                    <visible>Container.Content(tvshows)</visible>
+                </control>               
+                <control type="image">
+                    <right>20</right>
+                    <top>20</top>
+                    <height>32</height>
+                    <width>32</width>
+                    <texture colordiffuse="$VAR[Indicators_SecondaryColor]">$VAR[Image_Indicator_Back]</texture>
+                    <visible>!String.IsEmpty(ListItem.Overlay)</visible>
+                </control>
+                <control type="image">
+                    <right>20</right>
+                    <top>20</top>
+                    <height>32</height>
+                    <width>32</width>                
+                    <texture colordiffuse="$VAR[Indicators_PrimaryColor]">$VAR[Image_Indicator]</texture>
+                    <visible>!String.IsEmpty(ListItem.Overlay)</visible>
+                </control>
+                <control type="grouplist">
+					<visible>Container.Content(albums) | Container.Content(songs)</visible>
+                    <usecontrolcoords>true</usecontrolcoords>
+                    <itemgap>pad</itemgap>
+                    <orientation>vertical</orientation>
+                    <left>325</left>
+                    <right>pad</right>
+                    <top>pad</top>
+                    <bottom>pad</bottom>
+                    <control type="label">
+                        <top>pad</top>
+                        <left>pad</left>
+                        <right>pad</right>
+                        <height>36</height>
+                        <font>Font-InfoBox-Title</font>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                    <control type="label">
+                        <left>pad</left>
+                        <right>pad</right>
+                        <height>24</height>
+                        <textcolor>$VAR[HighlightColor2]</textcolor>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <label>$VAR[Label_Genre,[UPPERCASE],[/UPPERCASE]]</label>
+                    </control>
+                    <control type="textbox">
+                        <top>7</top>
+                        <left>pad</left>
+                        <right>pad</right>
+                        <height>154</height>
+                        <font>Font-ListInfo</font>
+                        <align>justify</align>
+                        <label>$VAR[Label_Plot]</label>
+                    </control>
+                    <control type="label">
+                        <top>13</top>
+                        <left>pad</left>
+                        <right>pad</right>
+                        <height>20</height>
+                        <align>right</align>
+						<scroll>yes</scroll>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <label>$VAR[Label_ExtraInfo_Icons]</label>
+                    </control>
+                </control>
+                <control type="grouplist">
+					<visible>!Container.Content(albums) + !Container.Content(songs)</visible>
+                    <usecontrolcoords>true</usecontrolcoords>
+                    <itemgap>pad</itemgap>
+                    <orientation>vertical</orientation>
+                    <left>580</left>
+                    <right>pad</right>
+                    <top>pad</top>
+                    <bottom>pad</bottom>
+                    <control type="label">
+                        <top>pad</top>
+                        <left>pad</left>
+                        <right>pad</right>
+                        <height>36</height>
+                        <font>Font-InfoBox-Title</font>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                    <control type="label">
+                        <left>pad</left>
+                        <right>pad</right>
+                        <height>24</height>
+                        <textcolor>$VAR[HighlightColor2]</textcolor>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <label>$VAR[Label_Genre,[UPPERCASE],[/UPPERCASE]]</label>
+                    </control>
+                    <control type="textbox">
+                        <top>7</top>
+                        <left>pad</left>
+                        <right>pad</right>
+                        <height>154</height>
+                        <font>Font-ListInfo</font>
+                        <align>justify</align>
+                        <label>$VAR[Label_Plot]</label>
+                    </control>
+                    <control type="label">
+                        <top>13</top>
+                        <left>pad</left>
+                        <right>pad</right>
+                        <height>20</height>
+                        <align>right</align>
+						<scroll>yes</scroll>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <label>$VAR[Label_ExtraInfo_Icons]</label>
+                    </control>
+                </control>            
+			</control>
+			<control type="group">
+                <left>0</left>
+                <width>$PARAM[width]</width>
+                <top>345</top>
+                <height>345</height>
+				<visible>!Skin.HasSetting(darkoverlay)</visible>
+                <include>Object_Background</include>
+            </control>
+			<control type="group">
+				<include>Object_Background2</include>
+				<width>$PARAM[width]</width>
+				<top>345</top>
+				<height>345</height>
+				<visible>Skin.HasSetting(darkoverlay)</visible>
+			</control>
+            <control type="fixedlist" id="$PARAM[id]">
+			<include condition="Skin.HasSetting(darkoverlay)">Object_Background2</include>
+                <top>345</top>
+                <left>0</left>
+                <width>$PARAM[width]</width>
+                <height>345</height>
+                <onup>$PARAM[id]</onup>
+                <ondown>$PARAM[id]</ondown>
+                <onleft>60</onleft>
+                <onright condition="!Skin.HasSetting(KioskMode)">9000</onright>
+				<onback condition="Skin.HasSetting(backoption) + !String.IsEqual(Window(home).Property(HubReturn),Home)">ActivateWindow($INFO[Window(home).Property(HubReturn)])</onback>
+                <pagecontrol>60</pagecontrol>
+                <focusposition>2</focusposition>
+                <movement>2</movement>
+                <preloaditems>2</preloaditems>
+                <orientation>vertical</orientation>
+                <viewtype label="$PARAM[name]">list</viewtype>
+                <scrolltime tween="quadratic">400</scrolltime>
+                <visible>$PARAM[condition]</visible>
+                <itemlayout height="69" width="$PARAM[width]">
+                    <include>View_List_Itemlayout</include>
+                </itemlayout>
+
+                <focusedlayout height="69" width="$PARAM[width]">
+                    <include>View_List_Focusedlayout</include>
+                </focusedlayout>
+            </control>
+        </control>
+    </include>
+    <!-- INFO LIST 2 -->
+    <include name="Viewtype_InfoList3">
+        <control type="group">
+            <visible>Control.IsVisible(553)</visible>
+            <control type="group">
+                <left>side</left>
+                <right>side</right>
+                <top>top</top>
+                <height>720</height>
+                <control type="group">
+                    <top>-10</top>
+                    <left>-10</left>
+                    <right>-10</right>
+                    <bottom>-10</bottom>
+                    <include content="View_InfoList2">
+                        <param name="id" value="553" />
+                        <param name="name" value="$LOCALIZE[31206]" />
+						<param name="condition" value="[Container.Content(movies) + [String.IsEqual(Skin.String(Skin.ForcedView.movies),$LOCALIZE[31206]) | String.IsEmpty(Skin.String(Skin.ForcedView.movies)) ]] | [Container.Content(sets) + [String.IsEqual(Skin.String(Skin.ForcedView.sets),$LOCALIZE[31206]) | String.IsEmpty(Skin.String(Skin.ForcedView.sets)) ]] | [Container.Content(tvshows) + [String.IsEqual(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[31206]) | String.IsEmpty(Skin.String(Skin.ForcedView.tvshows)) ]] | [Container.Content(seasons) + [String.IsEqual(Skin.String(Skin.ForcedView.seasons),$LOCALIZE[31206]) | String.IsEmpty(Skin.String(Skin.ForcedView.seasons)) ]] | [Container.Content(episodes) + [String.IsEqual(Skin.String(Skin.ForcedView.episodes),$LOCALIZE[31206]) | String.IsEmpty(Skin.String(Skin.ForcedView.episodes)) ]] | [Container.Content(videos) + [String.IsEqual(Skin.String(Skin.ForcedView.videos),$LOCALIZE[31206]) | String.IsEmpty(Skin.String(Skin.ForcedView.videos)) ]] | [Container.Content(artists) + [String.IsEqual(Skin.String(Skin.ForcedView.artists),$LOCALIZE[31206]) | String.IsEmpty(Skin.String(Skin.ForcedView.artists)) ]] | [Container.Content(albums) + [String.IsEqual(Skin.String(Skin.ForcedView.albums),$LOCALIZE[31206]) | String.IsEmpty(Skin.String(Skin.ForcedView.albums)) ]]" />
+                    </include>
+                </control>
+				<include content="Object_Line">
+					<param name="width" value="1880" />
+					<param name="label" value="$INFO[Control.GetLabel(3),, ]$INFO[Control.GetLabel(4),[COLOR=PosterBorder]-[/COLOR] , ]" />
+				</include>				
+            </control>
+        </control>
+    </include>
+
+    <include name="View_InfoList2_ItemLayout">
+        <control type="group">
+            <left>pad</left>
+            <right>pad</right>
+            <top>pad</top>
+            <bottom>pad</bottom>
+            <include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+			<include condition="Skin.HasSetting(darkoverlay)">Object_Background2</include>
+            <control type="group">
+                <width>622</width>
+                <control type="image">
+                    <texture colordiffuse="00FFFFFF">common/white.png</texture>
+                </control>
+                <control type="image">
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true">$VAR[Image_Thumb2]</texture>
+                    <visible>Container.Content(tvshows)</visible>
+                </control>
+                <control type="image">
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true">$VAR[Image_Thumb]</texture>
+                    <visible>!Container.Content(tvshows)</visible>
+                </control>				
+            </control>
+            <control type="group">
+                <left>622</left>
+                <control type="label">
+                    <top>20</top>
+                    <left>30</left>
+                    <right>70</right>
+                    <height>36</height>
+                    <textcolor>ListLabel</textcolor>
+                    <font>Font-InfoBox-Title</font>
+                    <label>$INFO[ListItem.Label]</label>
+                </control>
+                <control type="label">
+                    <top>70</top>
+                    <left>30</left>
+                    <right>30</right>
+                    <height>24</height>
+                    <textcolor>$VAR[HighlightColor2]</textcolor>
+                    <font>Font-ListInfo-Small-Bold</font>
+                    <label>$VAR[Label_Genre,[UPPERCASE],[/UPPERCASE]]</label>
+                </control>
+                <control type="textbox">
+                    <top>115</top>
+                    <left>30</left>
+                    <right>30</right>
+                    <height>154</height>
+                    <font>Font-ListInfo</font>
+                    <align>justify</align>
+                    <autoscroll>false</autoscroll>
+                    <textcolor>ListLabel</textcolor>
+                    <label>$VAR[Label_Plot]</label>
+                </control>
+                <control type="label">
+                    <bottom>25</bottom>
+                    <left>30</left>
+                    <right>30</right>
+                    <height>20</height>
+                    <align>right</align>
+					<scroll>yes</scroll>
+                    <textcolor>ListLabel</textcolor>
+                    <font>Font-ListInfo-Small-Bold</font>
+                    <label>$VAR[Label_ExtraInfo_Icons]</label>
+                </control>
+                <control type="image">
+                    <right>20</right>
+                    <top>20</top>
+                    <height>32</height>
+                    <width>32</width>
+                    <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
+                    <visible>!String.IsEmpty(ListItem.Overlay)</visible>
+                </control>
+            </control>
+        </control> 
+    </include>
+
+    <include name="View_InfoList2">
+            <control type="group">
+				<include>Object_Scrollbar</include>
+				<include>Animation_FadeSlide_Left</include>
+                <control type="list" id="$PARAM[id]">
+                    <onright condition="!Skin.HasSetting(KioskMode)">9000</onright>
+					<onback condition="Skin.HasSetting(backoption) + !String.IsEqual(Window(home).Property(HubReturn),Home)">ActivateWindow($INFO[Window(home).Property(HubReturn)])</onback>                    <onleft>60</onleft>
+                    <pagecontrol>60</pagecontrol>
+                    <preloaditems>2</preloaditems>
+                    <orientation>vertical</orientation>
+                    <viewtype label="$PARAM[name]">wide</viewtype>
+                    <scrolltime tween="quadratic">400</scrolltime>
+                    <visible>$PARAM[condition]</visible>
+                    <itemlayout height="370" width="1900">
+                        <include>View_InfoList2_ItemLayout</include>
+                    </itemlayout>
+                    <focusedlayout height="370" width="1900">
+                        <control type="group">
+                            <visible>!Control.HasFocus($PARAM[id])</visible>
+                            <include>View_InfoList2_ItemLayout</include>
+                        </control>
+                        <control type="group">
+                            <visible>Control.HasFocus($PARAM[id])</visible>
+                            <left>pad</left>
+                            <right>pad</right>
+                            <top>pad</top>
+                            <bottom>pad</bottom>
+                            <include>Object_Background</include>
+                            <control type="image">
+                                <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                            </control>
+                            <control type="group">
+                                <width>622</width>
+                                <control type="image">
+                                    <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                                </control>
+							<control type="image">
+								<aspectratio>keep</aspectratio>
+								<texture background="true">$VAR[Image_Thumb2]</texture>
+								<visible>Container.Content(tvshows)</visible>
+							</control>
+							<control type="image">
+								<aspectratio>keep</aspectratio>
+								<texture background="true">$VAR[Image_Thumb]</texture>
+								<visible>!Container.Content(tvshows)</visible>
+							</control>				
+                            </control>
+                            <control type="group">
+                                <left>622</left>
+                                <control type="label">
+                                    <top>20</top>
+                                    <left>30</left>
+                                    <right>70</right>
+                                    <height>36</height>
+                                    <textcolor>Selected</textcolor>
+                                    <font>Font-InfoBox-Title</font>
+                                    <label>$INFO[ListItem.Label]</label>
+                                </control>
+                                <control type="label">
+                                    <top>70</top>
+                                    <left>30</left>
+                                    <right>30</right>
+                                    <height>24</height>
+                                    <textcolor>Selected</textcolor>
+                                    <font>Font-ListInfo-Small-Bold</font>
+                                    <label>$VAR[Label_Genre,[UPPERCASE],[/UPPERCASE]]</label>
+                                </control>
+                                <control type="textbox">
+                                    <top>115</top>
+                                    <left>30</left>
+                                    <right>30</right>
+                                    <height>154</height>
+                                    <font>Font-ListInfo</font>
+                                    <align>justify</align>
+                                    <textcolor>Selected</textcolor>
+                                    <label>$VAR[Label_Plot]</label>
+                                </control>
+                                <control type="label">
+                                    <bottom>25</bottom>
+                                    <left>30</left>
+                                    <right>30</right>
+                                    <height>20</height>
+                                    <align>right</align>
+									<scroll>yes</scroll>
+                                    <textcolor>Selected</textcolor>
+                                    <font>Font-ListInfo-Small-Bold</font>
+                                    <label>$VAR[Label_ExtraInfo_Icons]</label>
+                                </control>
+                                <control type="image">
+                                    <right>20</right>
+                                    <top>20</top>
+                                    <height>32</height>
+                                    <width>32</width>
+                                    <texture colordiffuse="Selected">$VAR[Image_Indicator]</texture>
+                                    <visible>!String.IsEmpty(ListItem.Overlay)</visible>
+                                </control>
+                            </control>
+                        </control>
+                    </focusedlayout>
+                </control>
+				<control type="group">
+					<bottom>35</bottom>
+					<include>Object_Scrollbar_Alphabet</include>
+				</control>
+			</control>
+    </include>
+	<!-- MEDIA INFO -->
+    <include name="Viewtype_MediaInfo">
+        <control type="group">
+            <visible>Control.IsVisible(54)</visible>
+            <left>side</left>
+            <right>side</right>
+            <top>top</top>
+            <height>height</height>
+            <include content="View_List">
+                <param name="viewlabel" value="31645" />
+                <param name="posx" value="0" />
+                <param name="width" value="1130" />
+                <param name="id" value="54" />
+				<param name="condition" value="[Container.Content(movies) + [String.IsEqual(Skin.String(Skin.ForcedView.movies),$LOCALIZE[31645]) | String.IsEmpty(Skin.String(Skin.ForcedView.movies)) ]] | [Container.Content(sets) + [String.IsEqual(Skin.String(Skin.ForcedView.sets),$LOCALIZE[31645]) | String.IsEmpty(Skin.String(Skin.ForcedView.sets)) ]] | [Container.Content(tvshows) + [String.IsEqual(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[31645]) | String.IsEmpty(Skin.String(Skin.ForcedView.tvshows)) ]] | [Container.Content(seasons) + [String.IsEqual(Skin.String(Skin.ForcedView.seasons),$LOCALIZE[31645]) | String.IsEmpty(Skin.String(Skin.ForcedView.seasons)) ]] | [Container.Content(episodes) + [String.IsEqual(Skin.String(Skin.ForcedView.episodes),$LOCALIZE[31645]) | String.IsEmpty(Skin.String(Skin.ForcedView.episodes)) ]] | [Container.Content(videos) + [String.IsEqual(Skin.String(Skin.ForcedView.videos),$LOCALIZE[31645]) | String.IsEmpty(Skin.String(Skin.ForcedView.videos)) ]] | [Container.Content(artists) + [String.IsEqual(Skin.String(Skin.ForcedView.artists),$LOCALIZE[31645]) | String.IsEmpty(Skin.String(Skin.ForcedView.artists)) ]] | [Container.Content(albums) + [String.IsEqual(Skin.String(Skin.ForcedView.albums),$LOCALIZE[31645]) | String.IsEmpty(Skin.String(Skin.ForcedView.albums)) ]] | [Container.Content(songs) + [String.IsEqual(Skin.String(Skin.ForcedView.songs),$LOCALIZE[31645]) | String.IsEmpty(Skin.String(Skin.ForcedView.songs)) ]]" />
+        <!--    <param name="condition" value="Container.Content(seasons) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(sets)" /> -->
+            </include>
+            <include>Object_ExtraInfo</include>
+            <control type="group">
+                <width>1130</width>
+                <include>Object_Arrows_Vertical</include>
+				<include>Object_Scrollbar</include>
+				<include>Object_Scrollbar_Alphabet</include>
+            </control>
+        </control>
+    </include>
+    <!-- MEDIA INFO 2 -->
+    <include name="Viewtype_MediaInfo2">
+        <control type="group">
+            <visible>Control.IsVisible(502)</visible>
+            <left>side</left>
+            <right>side</right>
+            <top>top</top>
+            <height>height</height>
+            <include content="View_List">
+                <param name="viewlabel" value="31143" />
+                <param name="posx" value="0" />
+                <param name="width" value="850" />
+                <param name="id" value="502" />
+                <param name="label3" value="true" />
+				<param name="condition" value="[Container.Content(movies) + [String.IsEqual(Skin.String(Skin.ForcedView.movies),$LOCALIZE[31143]) | String.IsEmpty(Skin.String(Skin.ForcedView.movies)) ]] | [Container.Content(sets) + [String.IsEqual(Skin.String(Skin.ForcedView.sets),$LOCALIZE[31143]) | String.IsEmpty(Skin.String(Skin.ForcedView.sets)) ]] | [Container.Content(tvshows) + [String.IsEqual(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[31143]) | String.IsEmpty(Skin.String(Skin.ForcedView.tvshows)) ]] | [Container.Content(seasons) + [String.IsEqual(Skin.String(Skin.ForcedView.seasons),$LOCALIZE[31143]) | String.IsEmpty(Skin.String(Skin.ForcedView.seasons)) ]] | [Container.Content(episodes) + [String.IsEqual(Skin.String(Skin.ForcedView.episodes),$LOCALIZE[31143]) | String.IsEmpty(Skin.String(Skin.ForcedView.episodes)) ]] | [Container.Content(videos) + [String.IsEqual(Skin.String(Skin.ForcedView.videos),$LOCALIZE[31143]) | String.IsEmpty(Skin.String(Skin.ForcedView.videos)) ]] | [Container.Content(artists) + [String.IsEqual(Skin.String(Skin.ForcedView.artists),$LOCALIZE[31143]) | String.IsEmpty(Skin.String(Skin.ForcedView.artists)) ]] | [Container.Content(albums) + [String.IsEqual(Skin.String(Skin.ForcedView.albums),$LOCALIZE[31143]) | String.IsEmpty(Skin.String(Skin.ForcedView.albums)) ]] | [Container.Content(songs) + [String.IsEqual(Skin.String(Skin.ForcedView.songs),$LOCALIZE[31143]) | String.IsEmpty(Skin.String(Skin.ForcedView.songs)) ]]" />
+        <!--    <param name="condition" value="Container.Content(seasons) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(sets)" /> -->
+            </include>
+            <include>Object_ExtraInfo2</include>
+            <control type="group">
+                <left>0</left>
+                <width>850</width>
+                <include>Object_Arrows_Vertical</include>
+				<include>Object_Scrollbar</include>
+				<include>Object_Scrollbar_Alphabet</include>
+				<include>Animation_FadeSlide_Left</include>
+            </control>
+        </control>
+    </include>
+    <!-- MEDIA INFO 3 -->
+    <include name="Viewtype_MediaInfo3">
+        <control type="group">
+            <visible>Control.IsVisible(503)</visible>
+            <left>side</left>
+            <right>side</right>
+            <top>top</top>
+            <height>height</height>
+            <include content="View_List">
+                <param name="viewlabel" value="31148" />
+                <param name="posx" value="0" />
+                <param name="width" value="653" />
+                <param name="id" value="503" />
+                <param name="label3" value="false" />
+				<param name="condition" value="[Container.Content(movies) + [String.IsEqual(Skin.String(Skin.ForcedView.movies),$LOCALIZE[31148]) | String.IsEmpty(Skin.String(Skin.ForcedView.movies)) ]] | [Container.Content(sets) + [String.IsEqual(Skin.String(Skin.ForcedView.sets),$LOCALIZE[31148]) | String.IsEmpty(Skin.String(Skin.ForcedView.sets)) ]] | [Container.Content(tvshows) + [String.IsEqual(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[31148]) | String.IsEmpty(Skin.String(Skin.ForcedView.tvshows)) ]] | [Container.Content(seasons) + [String.IsEqual(Skin.String(Skin.ForcedView.seasons),$LOCALIZE[31148]) | String.IsEmpty(Skin.String(Skin.ForcedView.seasons)) ]] | [Container.Content(episodes) + [String.IsEqual(Skin.String(Skin.ForcedView.episodes),$LOCALIZE[31148]) | String.IsEmpty(Skin.String(Skin.ForcedView.episodes)) ]] | [Container.Content(videos) + [String.IsEqual(Skin.String(Skin.ForcedView.videos),$LOCALIZE[31148]) | String.IsEmpty(Skin.String(Skin.ForcedView.videos)) ]] | [Container.Content(artists) + [String.IsEqual(Skin.String(Skin.ForcedView.artists),$LOCALIZE[31148]) | String.IsEmpty(Skin.String(Skin.ForcedView.artists)) ]] | [Container.Content(albums) + [String.IsEqual(Skin.String(Skin.ForcedView.albums),$LOCALIZE[31148]) | String.IsEmpty(Skin.String(Skin.ForcedView.albums)) ]] | [Container.Content(songs) + [String.IsEqual(Skin.String(Skin.ForcedView.songs),$LOCALIZE[31148]) | String.IsEmpty(Skin.String(Skin.ForcedView.songs)) ]]" />
+         <!--   <param name="condition" value="Container.Content(seasons) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(sets)" /> -->
+            </include>
+            <include content="Object_Poster">
+                <param name="left" value="1413" />
+                <param name="width" value="posterw" />
+            </include>
+            <include content="Object_ExtraInfo">
+                <param name="left" value="663" />
+            </include>
+            <control type="group">
+                <left>0</left>
+                <width>653</width>
+                <include>Object_Arrows_Vertical</include>
+				<include>Object_Scrollbar</include>
+				<include>Object_Scrollbar_Alphabet</include>
+				<include>Animation_FadeSlide_Left</include>
+            </control>
+        </control>
+    </include>
+    <!-- MEDIA INFO 3 -->
+    <include name="Viewtype_MediaInfo4">
+        <control type="group">
+            <visible>Control.IsVisible(548)</visible>
+            <left>side</left>
+            <right>side</right>
+            <top>top</top>
+            <height>height</height>
+            <include content="View_List">
+                <param name="viewlabel" value="31814" />
+                <param name="posx" value="480" />
+                <param name="width" value="653" />
+                <param name="id" value="548" />
+                <param name="label3" value="false" />
+				<param name="condition" value="[Container.Content(movies) + [String.IsEqual(Skin.String(Skin.ForcedView.movies),$LOCALIZE[31814]) | String.IsEmpty(Skin.String(Skin.ForcedView.movies)) ]] | [Container.Content(sets) + [String.IsEqual(Skin.String(Skin.ForcedView.sets),$LOCALIZE[31814]) | String.IsEmpty(Skin.String(Skin.ForcedView.sets)) ]] | [Container.Content(tvshows) + [String.IsEqual(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[31814]) | String.IsEmpty(Skin.String(Skin.ForcedView.tvshows)) ]] | [Container.Content(seasons) + [String.IsEqual(Skin.String(Skin.ForcedView.seasons),$LOCALIZE[31814]) | String.IsEmpty(Skin.String(Skin.ForcedView.seasons)) ]] | [Container.Content(episodes) + [String.IsEqual(Skin.String(Skin.ForcedView.episodes),$LOCALIZE[31814]) | String.IsEmpty(Skin.String(Skin.ForcedView.episodes)) ]] | [Container.Content(videos) + [String.IsEqual(Skin.String(Skin.ForcedView.videos),$LOCALIZE[31814]) | String.IsEmpty(Skin.String(Skin.ForcedView.videos)) ]] | [Container.Content(artists) + [String.IsEqual(Skin.String(Skin.ForcedView.artists),$LOCALIZE[31814]) | String.IsEmpty(Skin.String(Skin.ForcedView.artists)) ]] | [Container.Content(albums) + [String.IsEqual(Skin.String(Skin.ForcedView.albums),$LOCALIZE[31814]) | String.IsEmpty(Skin.String(Skin.ForcedView.albums)) ]] | [Container.Content(songs) + [String.IsEqual(Skin.String(Skin.ForcedView.songs),$LOCALIZE[31814]) | String.IsEmpty(Skin.String(Skin.ForcedView.songs)) ]]" />
+         <!--   <param name="condition" value="Container.Content(seasons) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(sets)" /> -->
+            </include>
+            <include content="Object_Poster">
+                <param name="left" value="-5" />
+                <param name="width" value="posterw" />
+            </include>
+            <include content="Object_ExtraInfo">
+                <param name="left" value="1148" />
+            </include>
+            <control type="group">
+                <left>480</left>
+                <width>653</width>
+                <include>Object_Arrows_Vertical</include>
+				<include>Object_Scrollbar</include>
+				<include>Object_Scrollbar_Alphabet</include>
+				<include>Animation_FadeSlide_Left</include>
+            </control>
+        </control>
+    </include>	
+    <!-- FANART LIST -->
+    <include name="Viewtype_FanartList">
+        <control type="group">
+            <visible>Control.IsVisible(506)</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <left>side</left>
+            <right>side</right>
+            <top>top</top>
+            <height>height</height>
+            <control type="group">
+				<top>-10</top>
+                <right>-10</right>
+                <width>1221</width>
+                <include>View_BigWide_Fanart</include>
+                <include>View_BigWide_Info</include>
+            </control>
+            <control type="group">
+                <right>0</right>
+                <width>1211</width>
+                <include content="Object_Line">
+                    <param name="width" value="1211" />
+                    <param name="label" value="19033" />
+                </include>
+            </control>
+            <include content="View_List">
+                <param name="viewlabel" value="31164" />
+                <param name="posx" value="0" />
+                <param name="width" value="659" />
+                <param name="id" value="506" />
+                <param name="label3" value="false" />
+				<param name="condition" value="[Container.Content(movies) + [String.IsEqual(Skin.String(Skin.ForcedView.movies),$LOCALIZE[31164]) | String.IsEmpty(Skin.String(Skin.ForcedView.movies)) ]] | [Container.Content(sets) + [String.IsEqual(Skin.String(Skin.ForcedView.sets),$LOCALIZE[31164]) | String.IsEmpty(Skin.String(Skin.ForcedView.sets)) ]] | [Container.Content(tvshows) + [String.IsEqual(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[31164]) | String.IsEmpty(Skin.String(Skin.ForcedView.tvshows)) ]] | [Container.Content(seasons) + [String.IsEqual(Skin.String(Skin.ForcedView.seasons),$LOCALIZE[31164]) | String.IsEmpty(Skin.String(Skin.ForcedView.seasons)) ]] | [Container.Content(episodes) + [String.IsEqual(Skin.String(Skin.ForcedView.episodes),$LOCALIZE[31164]) | String.IsEmpty(Skin.String(Skin.ForcedView.episodes)) ]] | [Container.Content(artists) + [String.IsEqual(Skin.String(Skin.ForcedView.artists),$LOCALIZE[31164]) | String.IsEmpty(Skin.String(Skin.ForcedView.artists)) ]] | [Container.Content(albums) + [String.IsEqual(Skin.String(Skin.ForcedView.albums),$LOCALIZE[31164]) | String.IsEmpty(Skin.String(Skin.ForcedView.albums)) ]] | [Container.Content(songs) + [String.IsEqual(Skin.String(Skin.ForcedView.songs),$LOCALIZE[31164]) | String.IsEmpty(Skin.String(Skin.ForcedView.songs)) ]] | [Container.Content(addons) + [String.IsEqual(Skin.String(Skin.ForcedView.addons),$LOCALIZE[31164]) | String.IsEmpty(Skin.String(Skin.ForcedView.addons)) ]] | [Container.Content(images) + [String.IsEqual(Skin.String(Skin.ForcedView.images),$LOCALIZE[31164]) | String.IsEmpty(Skin.String(Skin.ForcedView.images)) ]] | [Container.Content(videos) + [String.IsEqual(Skin.String(Skin.ForcedView.videos),$LOCALIZE[31164]) | String.IsEmpty(Skin.String(Skin.ForcedView.videos)) ]] | [Container.Content(musicvideos) + [String.IsEqual(Skin.String(Skin.ForcedView.musicvideos),$LOCALIZE[31164]) | String.IsEmpty(Skin.String(Skin.ForcedView.musicvideos)) ]]" />
+                <!--<param name="condition" value="Container.Content(seasons) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(sets)" />-->
+            </include>
+            <control type="group">
+                <width>659</width>
+                <include>Object_Arrows_Vertical</include>
+				<include>Object_Scrollbar</include>
+				<include>Object_Scrollbar_Alphabet</include>
+            </control>
+        </control>
+    </include>
+    <!-- PANEL LIST -->
+    <include name="Viewtype_PanelList">
+        <control type="group">
+            <visible>Control.IsVisible(58)</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <left>side</left>
+            <right>side</right>
+            <top>top</top>
+            <height>height</height>
+            <include content="Object_Line">
+                <param name="width" value="1880" />
+                <param name="label" value="$INFO[Control.GetLabel(3),, ]$INFO[Control.GetLabel(4),[COLOR=PosterBorder]-[/COLOR] , ]" />
+            </include>
+            <include content="View_BigList">
+                <param name="id" value="58" />
+                <param name="width" value="630" />
+				<param name="condition" value="[Container.Content(movies) + [String.IsEqual(Skin.String(Skin.ForcedView.movies),$LOCALIZE[31137]) | String.IsEmpty(Skin.String(Skin.ForcedView.movies)) ]] | [Container.Content(sets) + [String.IsEqual(Skin.String(Skin.ForcedView.sets),$LOCALIZE[31137]) | String.IsEmpty(Skin.String(Skin.ForcedView.sets)) ]] | [Container.Content(tvshows) + [String.IsEqual(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[31137]) | String.IsEmpty(Skin.String(Skin.ForcedView.tvshows)) ]] | [Container.Content(seasons) + [String.IsEqual(Skin.String(Skin.ForcedView.seasons),$LOCALIZE[31137]) | String.IsEmpty(Skin.String(Skin.ForcedView.seasons)) ]] | [Container.Content(episodes) + [String.IsEqual(Skin.String(Skin.ForcedView.episodes),$LOCALIZE[31137]) | String.IsEmpty(Skin.String(Skin.ForcedView.episodes)) ]] | [Container.Content(actors) + [String.IsEqual(Skin.String(Skin.ForcedView.actors),$LOCALIZE[31137]) | String.IsEmpty(Skin.String(Skin.ForcedView.actors)) ]] | [Container.Content(artists) + [String.IsEqual(Skin.String(Skin.ForcedView.artists),$LOCALIZE[31137]) | String.IsEmpty(Skin.String(Skin.ForcedView.artists)) ]] | [Container.Content(albums) + [String.IsEqual(Skin.String(Skin.ForcedView.albums),$LOCALIZE[31137]) | String.IsEmpty(Skin.String(Skin.ForcedView.albums)) ]] | [Container.Content(songs) + [String.IsEqual(Skin.String(Skin.ForcedView.songs),$LOCALIZE[31137]) | String.IsEmpty(Skin.String(Skin.ForcedView.songs)) ]] | [Container.Content(addons) + [String.IsEqual(Skin.String(Skin.ForcedView.addons),$LOCALIZE[31137]) | String.IsEmpty(Skin.String(Skin.ForcedView.addons)) ]] | [Container.Content(genres) + [String.IsEqual(Skin.String(Skin.ForcedView.genres),$LOCALIZE[31137]) | String.IsEmpty(Skin.String(Skin.ForcedView.genres)) ]] | [Container.Content(images) + [String.IsEqual(Skin.String(Skin.ForcedView.images),$LOCALIZE[31137]) | String.IsEmpty(Skin.String(Skin.ForcedView.images)) ]] | [Container.Content(videos) + [String.IsEqual(Skin.String(Skin.ForcedView.videos),$LOCALIZE[31137]) | String.IsEmpty(Skin.String(Skin.ForcedView.videos)) ]] | [Container.Content(games) + [String.IsEqual(Skin.String(Skin.ForcedView.games),$LOCALIZE[31137]) | String.IsEmpty(Skin.String(Skin.ForcedView.games)) ]] | [Container.Content(tags) + [String.IsEqual(Skin.String(Skin.ForcedView.tags),$LOCALIZE[31137]) | String.IsEmpty(Skin.String(Skin.ForcedView.tags)) ]] | [Container.Content(years) + [String.IsEqual(Skin.String(Skin.ForcedView.years),$LOCALIZE[31137]) | String.IsEmpty(Skin.String(Skin.ForcedView.years)) ]] | [Container.Content(countries) + [String.IsEqual(Skin.String(Skin.ForcedView.countries),$LOCALIZE[31137]) | String.IsEmpty(Skin.String(Skin.ForcedView.countries)) ]] | [Container.Content(studios) + [String.IsEqual(Skin.String(Skin.ForcedView.studios),$LOCALIZE[31137]) | String.IsEmpty(Skin.String(Skin.ForcedView.studios)) ]] | [Container.Content(playlists) + [String.IsEqual(Skin.String(Skin.ForcedView.playlists),$LOCALIZE[31137]) | String.IsEmpty(Skin.String(Skin.ForcedView.playlists)) ]] | [Container.Content(musicvideos) + [String.IsEqual(Skin.String(Skin.ForcedView.musicvideos),$LOCALIZE[31137]) | String.IsEmpty(Skin.String(Skin.ForcedView.musicvideos)) ]] | [Container.Content(directors) + [String.IsEqual(Skin.String(Skin.ForcedView.directors),$LOCALIZE[31137]) | String.IsEmpty(Skin.String(Skin.ForcedView.directors)) ]] | [Container.Content(files) + [String.IsEqual(Skin.String(Skin.ForcedView.files),$LOCALIZE[31137]) | String.IsEmpty(Skin.String(Skin.ForcedView.files)) ]] | [Container.Content(mixed) + [String.IsEqual(Skin.String(Skin.ForcedView.mixed),$LOCALIZE[31137]) | String.IsEmpty(Skin.String(Skin.ForcedView.mixed)) ]] | [Container.Content(unknown) + [String.IsEqual(Skin.String(Skin.ForcedView.unknown),$LOCALIZE[31137]) | String.IsEmpty(Skin.String(Skin.ForcedView.unknown)) ]]" />
+                <param name="name" value="31137" />
+            </include>
+            <include>Object_Scrollbar</include>
+			<include>Object_Scrollbar_Alphabet</include>
+            <include>Object_Arrows_Vertical</include>
+        </control>
+    </include>
+    <!-- BIG LIST -->
+    <include name="Viewtype_BigList">
+        <control type="group">
+            <visible>Control.IsVisible(57)</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <left>side</left>
+            <right>0</right>
+            <top>top</top>
+            <height>height</height>
+            <include content="Object_Line">
+                <param name="width" value="1880" />
+                <param name="label" value="$INFO[Control.GetLabel(3),, ]$INFO[Control.GetLabel(4),[COLOR=PosterBorder]-[/COLOR] , ]" />
+            </include>
+            <include content="View_BigList">
+                <param name="id" value="57" />
+                <param name="width" value="1890" />
+				<param name="condition" value="[Container.Content(movies) + [String.IsEqual(Skin.String(Skin.ForcedView.movies),$LOCALIZE[537]) | String.IsEmpty(Skin.String(Skin.ForcedView.movies)) ]] | [Container.Content(sets) + [String.IsEqual(Skin.String(Skin.ForcedView.sets),$LOCALIZE[537]) | String.IsEmpty(Skin.String(Skin.ForcedView.sets)) ]] | [Container.Content(tvshows) + [String.IsEqual(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[537]) | String.IsEmpty(Skin.String(Skin.ForcedView.tvshows)) ]] | [Container.Content(seasons) + [String.IsEqual(Skin.String(Skin.ForcedView.seasons),$LOCALIZE[537]) | String.IsEmpty(Skin.String(Skin.ForcedView.seasons)) ]] | [Container.Content(episodes) + [String.IsEqual(Skin.String(Skin.ForcedView.episodes),$LOCALIZE[537]) | String.IsEmpty(Skin.String(Skin.ForcedView.episodes)) ]] | [Container.Content(actors) + [String.IsEqual(Skin.String(Skin.ForcedView.actors),$LOCALIZE[537]) | String.IsEmpty(Skin.String(Skin.ForcedView.actors)) ]] | [Container.Content(artists) + [String.IsEqual(Skin.String(Skin.ForcedView.artists),$LOCALIZE[537]) | String.IsEmpty(Skin.String(Skin.ForcedView.artists)) ]] | [Container.Content(albums) + [String.IsEqual(Skin.String(Skin.ForcedView.albums),$LOCALIZE[537]) | String.IsEmpty(Skin.String(Skin.ForcedView.albums)) ]] | [Container.Content(songs) + [String.IsEqual(Skin.String(Skin.ForcedView.songs),$LOCALIZE[537]) | String.IsEmpty(Skin.String(Skin.ForcedView.songs)) ]] | [Container.Content(addons) + [String.IsEqual(Skin.String(Skin.ForcedView.addons),$LOCALIZE[537]) | String.IsEmpty(Skin.String(Skin.ForcedView.addons)) ]] | [Container.Content(genres) + [String.IsEqual(Skin.String(Skin.ForcedView.genres),$LOCALIZE[537]) | String.IsEmpty(Skin.String(Skin.ForcedView.genres)) ]] | [Container.Content(images) + [String.IsEqual(Skin.String(Skin.ForcedView.images),$LOCALIZE[537]) | String.IsEmpty(Skin.String(Skin.ForcedView.images)) ]] | [Container.Content(videos) + [String.IsEqual(Skin.String(Skin.ForcedView.videos),$LOCALIZE[537]) | String.IsEmpty(Skin.String(Skin.ForcedView.videos)) ]] | [Container.Content(games) + [String.IsEqual(Skin.String(Skin.ForcedView.games),$LOCALIZE[537]) | String.IsEmpty(Skin.String(Skin.ForcedView.games)) ]] | [Container.Content(tags) + [String.IsEqual(Skin.String(Skin.ForcedView.tags),$LOCALIZE[537]) | String.IsEmpty(Skin.String(Skin.ForcedView.tags)) ]] | [Container.Content(years) + [String.IsEqual(Skin.String(Skin.ForcedView.years),$LOCALIZE[537]) | String.IsEmpty(Skin.String(Skin.ForcedView.years)) ]] | [Container.Content(countries) + [String.IsEqual(Skin.String(Skin.ForcedView.countries),$LOCALIZE[537]) | String.IsEmpty(Skin.String(Skin.ForcedView.countries)) ]] | [Container.Content(studios) + [String.IsEqual(Skin.String(Skin.ForcedView.studios),$LOCALIZE[537]) | String.IsEmpty(Skin.String(Skin.ForcedView.studios)) ]] | [Container.Content(playlists) + [String.IsEqual(Skin.String(Skin.ForcedView.playlists),$LOCALIZE[537]) | String.IsEmpty(Skin.String(Skin.ForcedView.playlists)) ]] | [Container.Content(musicvideos) + [String.IsEqual(Skin.String(Skin.ForcedView.musicvideos),$LOCALIZE[537]) | String.IsEmpty(Skin.String(Skin.ForcedView.musicvideos)) ]] | [Container.Content(directors) + [String.IsEqual(Skin.String(Skin.ForcedView.directors),$LOCALIZE[537]) | String.IsEmpty(Skin.String(Skin.ForcedView.directors)) ]] | [Container.Content(files) + [String.IsEqual(Skin.String(Skin.ForcedView.files),$LOCALIZE[537]) | String.IsEmpty(Skin.String(Skin.ForcedView.files)) ]] | [Container.Content(mixed) + [String.IsEqual(Skin.String(Skin.ForcedView.mixed),$LOCALIZE[537]) | String.IsEmpty(Skin.String(Skin.ForcedView.mixed)) ]] | [Container.Content(unknown) + [String.IsEqual(Skin.String(Skin.ForcedView.unknown),$LOCALIZE[537]) | String.IsEmpty(Skin.String(Skin.ForcedView.unknown)) ]]" />
+                <param name="name" value="537" />
+            </include>
+            <include>Object_Scrollbar</include>
+			<include>Object_Scrollbar_Alphabet</include>
+            <include>Object_Arrows_Vertical</include>
+        </control>
+    </include>
+    <!-- BIG LIST INFO -->
+    <include name="Viewtype_BigListInfo">
+        <control type="group">
+            <visible>Control.IsVisible(501)</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <left>side</left>
+            <right>0</right>
+            <top>top</top>
+            <height>height</height>
+            <include content="Object_Line">
+                <param name="width" value="1130" />
+                <param name="label" value="$INFO[Control.GetLabel(3),, ]$INFO[Control.GetLabel(4),[COLOR=PosterBorder]-[/COLOR] , ]" />
+            </include>
+            <include content="View_BigList">
+                <param name="id" value="501" />
+                <param name="width" value="1140" />
+				<param name="name" value="31142" />
+				<param name="condition" value="[Container.Content(movies) + [String.IsEqual(Skin.String(Skin.ForcedView.movies),$LOCALIZE[31142]) | String.IsEmpty(Skin.String(Skin.ForcedView.movies)) ]] | [Container.Content(sets) + [String.IsEqual(Skin.String(Skin.ForcedView.sets),$LOCALIZE[31142]) | String.IsEmpty(Skin.String(Skin.ForcedView.sets)) ]] | [Container.Content(tvshows) + [String.IsEqual(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[31142]) | String.IsEmpty(Skin.String(Skin.ForcedView.tvshows)) ]] | [Container.Content(seasons) + [String.IsEqual(Skin.String(Skin.ForcedView.seasons),$LOCALIZE[31142]) | String.IsEmpty(Skin.String(Skin.ForcedView.seasons)) ]] | [Container.Content(episodes) + [String.IsEqual(Skin.String(Skin.ForcedView.episodes),$LOCALIZE[31142]) | String.IsEmpty(Skin.String(Skin.ForcedView.episodes)) ]]" />
+        <!--    <param name="condition" value="Container.Content(movies) | Container.Content(episodes) | Container.Content(seasons) | Container.Content(sets) | Container.Content(tvshows)" /> -->
+            </include>
+            <include>Object_ExtraInfo</include>
+            <include>Object_Scrollbar</include>
+			<include>Object_Scrollbar_Alphabet</include>
+            <control type="group">
+                <width>1140</width>
+                <include>Object_Arrows_Vertical</include>
+            </control>
+        </control>
+    </include>
+
+    <include name="View_BigList">
+        <control type="group">
+            <control type="panel" id="$PARAM[id]">
+                <width>1890</width>           
+                <height>690</height>
+                <onup>$PARAM[id]</onup>
+                <ondown>$PARAM[id]</ondown>
+                <onright condition="!Skin.HasSetting(KioskMode)">9000</onright>
+				<onback condition="Skin.HasSetting(backoption) + !String.IsEqual(Window(home).Property(HubReturn),Home)">ActivateWindow($INFO[Window(home).Property(HubReturn)])</onback>
+                <onleft>60</onleft>
+                <pagecontrol>60</pagecontrol>
+                <preloaditems>2</preloaditems>
+                <orientation>vertical</orientation>
+                <viewtype label="$PARAM[name]">biglist</viewtype>
+                <scrolltime tween="quadratic">400</scrolltime>
+                <visible>$PARAM[condition]</visible>
+                <itemlayout height="140" width="$PARAM[width]">
+                    <control type="group">
+						<include condition="Skin.HasSetting(darkoverlay)">Object_Background2</include>
+                        <left>pad</left>
+						<top>pad</top>
+                        <right>pad</right>
+                        <bottom>pad</bottom>
+                        <control type="group">
+                            <width>100%</width>
+                            <height>100%</height>
+							<visible>!Skin.HasSetting(darkoverlay)</visible>
+                            <include>Object_Background</include>
+                        </control>
+                        <control type="image">
+                            <left>side</left>
+                            <width>110</width>
+                            <top>pad</top>
+                            <bottom>pad</bottom>
+                            <aspectratio>keep</aspectratio>
+                            <texture background="true">$INFO[ListItem.Icon]</texture>
+                        </control>                      
+                        <control type="image">
+                            <right>30</right>
+                            <centertop>65</centertop>
+                            <height>32</height>
+                            <width>32</width>                            
+                            <texture colordiffuse="$VAR[Indicators_SecondaryColor]">$VAR[Image_Indicator_Back]</texture>
+                            <visible>!String.IsEmpty(ListItem.Overlay)</visible>
+                        </control>                        
+                        <control type="image">
+                            <right>30</right>
+                            <centertop>65</centertop>
+                            <height>32</height>
+                            <width>32</width>                          
+                            <texture colordiffuse="$VAR[Indicators_PrimaryColor]">$VAR[Image_Indicator]</texture>
+                            <visible>!String.IsEmpty(ListItem.Overlay)</visible>
+                        </control>
+                        <control type="label">
+                            <left>160</left>
+                            <right>80</right>
+                            <height>100%</height>
+                            <aligny>center</aligny>
+                            <label>$INFO[ListItem.Label]</label>
+                            <visible>!Integer.IsGreater(ListItem.Rating,0) + String.IsEmpty(ListItem.Label2)</visible>
+                        </control>
+                        <control type="label">
+                            <left>160</left>
+                            <right>80</right>
+                            <top>28</top>
+                            <height>30</height>
+                            <label>$INFO[ListItem.Label]</label>
+                            <visible>Integer.IsGreater(ListItem.Rating,0) | !String.IsEmpty(ListItem.Label2)</visible>
+                        </control>
+                        <control type="label">
+                            <left>160</left>
+                            <right>80</right>
+                            <bottom>32</bottom>
+                            <height>30</height>
+                            <font>Font-ListInfo</font>                          
+                            <label>$INFO[ListItem.Rating]$VAR[Label_Label3,  •  ,]</label>
+                            <visible>Integer.IsGreater(ListItem.Rating,0) | !String.IsEmpty(ListItem.Label2)</visible>                      
+                            <visible>!Skin.HasSetting(disable.rating)</visible>
+                        </control>                   
+                        <control type="label">
+                            <left>160</left>
+                            <right>80</right>
+                            <bottom>32</bottom>
+                            <height>30</height>
+                            <font>Font-ListInfo</font>
+                            <label>$VAR[Label_Label3]</label>
+                            <visible>Integer.IsGreater(ListItem.Rating,0) | !String.IsEmpty(ListItem.Label2)</visible>
+                            <visible>Skin.HasSetting(disable.rating)</visible>
+                        </control>						
+                    </control>
+                </itemlayout>
+
+                <focusedlayout height="140" width="$PARAM[width]">
+                    <control type="group">
+					<!--<include condition="Skin.HasSetting(darkoverlay)">Object_Background2</include>-->
+                        <left>0</left>
+                        <right>pad</right>
+                        <bottom>pad</bottom>
+                        <control type="image">
+                            <width>100%</width>
+                            <height>100%</height>
+<!--GENERAL FOCUSED MENU COLOR SETTTING IS HERE! DO NOT CHANGE!-->
+                            <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+							<!--<visible>!Skin.HasSetting(darkoverlay)</visible>-->
+                        </control>
+                        <control type="image">
+                            <left>side</left>
+                            <width>110</width>
+                            <top>pad</top>
+                            <bottom>pad</bottom>
+                            <aspectratio>keep</aspectratio>
+                            <texture background="true">$INFO[ListItem.Icon]</texture>
+                        </control>                  
+                        <control type="image">
+                            <right>30</right>
+                            <centertop>65</centertop>
+                            <height>32</height>
+                            <width>32</width>                            
+                            <texture colordiffuse="$VAR[Indicators_SecondaryColor]">$VAR[Image_Indicator_Back]</texture>
+                            <visible>!String.IsEmpty(ListItem.Overlay)</visible>
+                        </control>
+                        <control type="image">
+                            <right>30</right>
+                            <centertop>65</centertop>
+                            <height>32</height>
+                            <width>32</width>                      
+                            <texture colordiffuse="$VAR[Indicators_PrimaryColor]">$VAR[Image_Indicator]</texture>
+                            <visible>!String.IsEmpty(ListItem.Overlay)</visible>
+                        </control>
+                        <control type="label">
+                            <left>160</left>
+                            <right>80</right>
+                            <height>100%</height>
+                            <aligny>center</aligny>
+                            <textcolor>Selected</textcolor>
+                            <label>$INFO[ListItem.Label]</label>
+                            <visible>!Integer.IsGreater(ListItem.Rating,0) + String.IsEmpty(ListItem.Label2)</visible>
+                        </control>
+                        <control type="label">
+                            <left>160</left>
+                            <right>80</right>
+                            <top>28</top>
+                            <height>30</height>
+                            <textcolor>Selected</textcolor>
+                            <label>$INFO[ListItem.Label]</label>
+                            <visible>Integer.IsGreater(ListItem.Rating,0) | !String.IsEmpty(ListItem.Label2)</visible>                            
+                        </control>
+                        <control type="label">
+                            <left>160</left>
+                            <right>80</right>
+                            <bottom>32</bottom>
+                            <height>30</height>
+                            <textcolor>Selected</textcolor>
+                            <font>Font-ListInfo</font>                           
+                            <label>$INFO[ListItem.Rating]$VAR[Label_Label3,  •  ,]</label>
+                            <visible>Integer.IsGreater(ListItem.Rating,0) | !String.IsEmpty(ListItem.Label2)</visible>                     
+                            <visible>!Skin.HasSetting(disable.rating)</visible>                            
+                        </control>                     
+                        <control type="label">
+                            <left>160</left>
+                            <right>80</right>
+                            <bottom>32</bottom>
+                            <height>30</height>
+                            <textcolor>Selected</textcolor>
+                            <font>Font-ListInfo</font>
+                            <label>$VAR[Label_Label3]</label>
+                            <visible>Integer.IsGreater(ListItem.Rating,0) | !String.IsEmpty(ListItem.Label2)</visible>                          
+                            <visible>Skin.HasSetting(disable.rating)</visible>
+                        </control>
+                    </control>
+                </focusedlayout>
+            </control>
+        </control>
+    </include>
+    <!-- LIST INCLUDE -->
+    <include name="View_List_Itemlayout">
+        <control type="label">
+            <left>30</left>
+            <right>30</right>
+            <top>0</top>
+            <height>100%</height>
+            <align>left</align>
+            <font>Font-ListInfo</font>
+            <label>$INFO[ListItem.Year]</label>
+            <visible>Container.Content(movies)</visible>
+        </control>
+        <control type="label">
+            <left>130</left>
+            <right>70</right>
+            <top>0</top>
+            <height>100%</height>
+            <label>$INFO[ListItem.Label]</label>
+            <visible>Container.Content(movies)</visible>
+        </control>
+        <control type="label">
+            <left>30</left>
+            <right>30</right>
+            <top>0</top>
+            <height>100%</height>
+            <label>$INFO[ListItem.Label]</label>
+            <visible>!Container.Content(movies)</visible>
+        </control>
+        <control type="label">
+            <left>30</left>          
+            <right>170</right>
+            <top>0</top>
+            <height>100%</height>
+            <align>right</align>
+            <font>Font-ListInfo</font>
+            <label>$VAR[Label_Label3]</label>
+            <visible>!String.IsEmpty(ListItem.Overlay)</visible>
+            <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
+        </control>       
+        <control type="image">
+            <right>30</right>
+            <centertop>50%</centertop>
+            <height>32</height>
+            <width>32</width>
+            <texture colordiffuse="$VAR[Indicators_SecondaryColor]">$VAR[Image_Indicator_Back]</texture>
+            <visible>!String.IsEmpty(ListItem.Overlay)</visible>
+            <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
+        </control>
+        <control type="image">          
+            <right>30</right>
+            <centertop>50%</centertop>
+            <height>32</height>
+            <width>32</width>                            
+            <texture colordiffuse="$VAR[Indicators_PrimaryColor]">$VAR[Image_Indicator]</texture>
+            <visible>!String.IsEmpty(ListItem.Overlay)</visible>
+            <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
+        </control>         
+        <control type="image">
+            <right>30</right>
+            <centertop>50%</centertop>
+            <height>32</height>
+            <width>32</width>
+            <texture colordiffuse="$VAR[Indicators_SecondaryColor]">$VAR[Image_Indicator_Back]</texture>
+            <visible>!String.IsEmpty(ListItem.Overlay)</visible>
+            <visible>Container.Content(seasons) | Container.Content(sets)</visible>
+        </control>
+        <control type="image">
+            <right>30</right>
+            <centertop>50%</centertop>
+            <height>32</height>
+            <width>32</width>                          
+            <texture colordiffuse="$VAR[Indicators_PrimaryColor]">$VAR[Image_Indicator]</texture>
+            <visible>!String.IsEmpty(ListItem.Overlay)</visible>
+            <visible>Container.Content(seasons) | Container.Content(sets)</visible>
+        </control>
+        <control type="label">
+            <left>30</left>          
+            <right>95</right>
+            <top>0</top>
+            <height>100%</height>
+            <align>right</align>
+            <font>Font-ListInfo</font>
+            <label fallback="0.0">$INFO[ListItem.Rating]</label>           
+            <visible>!Skin.HasSetting(disable.rating)</visible>
+            <visible>!String.IsEmpty(ListItem.Overlay)</visible>
+            <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
+        </control>
+        <control type="label">
+            <left>30</left>
+            <right>190</right>
+            <top>0</top>
+            <height>100%</height>
+            <align>right</align>
+			<font>Font-ListInfo</font>
+            <textcolor>ListLabel</textcolor>
+            <label>$INFO[ListItem.Label2]</label>
+            <visible>Skin.HasSetting(showuserratings) + String.IsEmpty(ListItem.Overlay) + [Container.Content(songs) | Container.Content(albums)]</visible>
+        </control>
+        <control type="label">
+             <left>30</left>
+             <right>30</right>
+             <top>0</top>
+             <height>100%</height>
+             <align>right</align>
+             <textcolor>ListLabel</textcolor>
+             <font>Font-ListInfo</font>
+             <label>$INFO[ListItem.Label2]</label>
+            <visible>String.IsEmpty(ListItem.Overlay) + [!Skin.HasSetting(showuserratings) | ![Container.Content(songs) | Container.Content(albums)]]</visible>
+        </control>			
+		<control type="image">
+			<centertop>50%</centertop>
+			<width>180</width>
+			<height>90</height>
+			<right>0</right>
+			<aspectratio>keep</aspectratio>
+			<texture colordiffuse="ListLabel">$VAR[Image_UserRatingStar,indicator/videorating/,.png]</texture>
+			<visible>!String.IsEmpty(ListItem.UserRating) + Skin.HasSetting(showuserratings) + [Container.Content(songs) | Container.Content(albums)]</visible>
+		</control>
+    </include>
+
+    <include name="View_List_Focusedlayout">
+        <control type="image">
+            <width>100%</width>
+            <height>100%</height>
+            <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+        </control>
+        <control type="label">
+            <left>30</left>
+            <right>30</right>
+            <top>0</top>
+            <height>100%</height>
+            <align>left</align>
+            <font>Font-ListInfo</font>
+            <textcolor>Selected</textcolor>
+            <label>$INFO[ListItem.Year]</label>
+            <visible>Container.Content(movies)</visible>
+        </control>
+        <control type="label">
+            <left>130</left>
+            <right>70</right>
+            <top>0</top>
+            <height>100%</height>
+            <label>$INFO[ListItem.Label]</label>
+            <textcolor>Selected</textcolor>
+            <visible>Container.Content(movies)</visible>
+        </control>
+        <control type="label">
+            <left>30</left>
+            <right>30</right>
+            <top>0</top>
+            <height>100%</height>
+            <label>$INFO[ListItem.Label]</label>
+            <textcolor>Selected</textcolor>
+            <visible>!Container.Content(movies)</visible>
+        </control>
+        <control type="label">
+            <textcolor>Selected</textcolor>
+            <left>30</left>          
+            <right>170</right>
+            <top>0</top>
+            <height>100%</height>
+            <align>right</align>
+            <font>Font-ListInfo</font>
+            <label>$VAR[Label_Label3]</label>
+            <visible>!String.IsEmpty(ListItem.Overlay)</visible>
+            <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
+        </control>       
+        <control type="image">          
+            <right>30</right>
+            <centertop>50%</centertop>
+            <height>32</height>
+            <width>32</width>
+            <texture colordiffuse="$VAR[Indicators_SecondaryColor]">$VAR[Image_Indicator_Back]</texture>
+            <visible>!String.IsEmpty(ListItem.Overlay)</visible>
+            <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
+        </control>
+        <control type="image">       
+            <right>30</right>
+            <centertop>50%</centertop>
+            <height>32</height>
+            <width>32</width>                           
+            <texture colordiffuse="$VAR[Indicators_PrimaryColor]">$VAR[Image_Indicator]</texture>
+            <visible>!String.IsEmpty(ListItem.Overlay)</visible>
+            <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
+        </control>        
+        <control type="image">
+            <right>30</right>
+            <centertop>50%</centertop>
+            <height>32</height>
+            <width>32</width>
+            <texture colordiffuse="$VAR[Indicators_SecondaryColor]">$VAR[Image_Indicator_Back]</texture>
+            <visible>!String.IsEmpty(ListItem.Overlay)</visible>
+            <visible>Container.Content(seasons) | Container.Content(sets)</visible>
+        </control>
+        <control type="image">
+            <right>30</right>
+            <centertop>50%</centertop>
+            <height>32</height>
+            <width>32</width>                         
+            <texture colordiffuse="$VAR[Indicators_PrimaryColor]">$VAR[Image_Indicator]</texture>
+            <visible>!String.IsEmpty(ListItem.Overlay)</visible>
+            <visible>Container.Content(seasons) | Container.Content(sets)</visible>
+        </control>
+        <control type="label">
+            <textcolor>Selected</textcolor>
+            <left>30</left>         
+            <right>95</right>
+            <top>0</top>
+            <height>100%</height>
+            <align>right</align>
+            <font>Font-ListInfo</font>
+            <label fallback="0.0">$INFO[ListItem.Rating]</label>           
+            <visible>!Skin.HasSetting(disable.rating)</visible>            
+            <visible>!String.IsEmpty(ListItem.Overlay)</visible>
+            <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
+        </control>
+        <control type="label">
+            <left>30</left>
+            <right>190</right>
+            <top>0</top>
+            <height>100%</height>
+            <align>right</align>
+			<font>Font-ListInfo</font>
+            <textcolor>ListLabel</textcolor>
+            <label>$INFO[ListItem.Label2]</label>
+            <visible>Skin.HasSetting(showuserratings) + String.IsEmpty(ListItem.Overlay) + [Container.Content(songs) | Container.Content(albums)]</visible>
+        </control>
+        <control type="label">
+            <left>30</left>
+             <right>30</right>
+             <top>0</top>
+             <height>100%</height>
+             <align>right</align>
+             <textcolor>ListLabel</textcolor>
+             <font>Font-ListInfo</font>
+             <label>$INFO[ListItem.Label2]</label>
+            <visible>String.IsEmpty(ListItem.Overlay) + [!Skin.HasSetting(showuserratings) | ![Container.Content(songs) | Container.Content(albums)]]</visible>
+        </control>			
+		<control type="image">
+			<centertop>50%</centertop>
+			<width>180</width>
+			<height>90</height>
+			<right>0</right>
+			<aspectratio>keep</aspectratio>
+			<texture colordiffuse="ListLabel">$VAR[Image_UserRatingStar,indicator/videorating/,.png]</texture>
+			<visible>!String.IsEmpty(ListItem.UserRating) + Skin.HasSetting(showuserratings) + [Container.Content(songs) | Container.Content(albums)]</visible>
+		</control>
+    </include>
+
+    <include name="View_List">
+        <param name="label3" default="true" />
+        <definition>
+            <control type="group">
+                <left>$PARAM[posx]</left>
+                <width>$PARAM[width]</width>
+                <include content="Object_Line">
+                    <param name="width" value="$PARAM[width]" />
+                    <param name="label" value="$INFO[Control.GetLabel(3),, ]$INFO[Control.GetLabel(4),[COLOR=PosterBorder]-[/COLOR] , ]" />
+                </include>
+				<control type="group">
+					<include>Object_Background2</include>
+					<width>$PARAM[width]</width>
+                    <height>height</height>
+					<visible>Skin.HasSetting(darkoverlay) + !Window.IsVisible(AddonBrowser.xml)</visible>
+				</control>
+				<control type="group">
+                    <width>$PARAM[width]</width>
+                    <height>height</height>
+                    <include>Object_Background</include>
+					<visible>!Skin.HasSetting(darkoverlay) + !Window.IsVisible(AddonBrowser.xml) | Window.IsVisible(AddonBrowser.xml)</visible>
+                </control>
+				<include>Animation_FadeSlide_Left</include>
+                <control type="panel" id="$PARAM[id]">
+                    <top>0</top>
+                    <left>0</left>
+                    <width>$PARAM[width]</width>
+                    <height>height</height>
+                    <onup>$PARAM[id]</onup>
+                    <ondown>$PARAM[id]</ondown>
+                    <onleft>60</onleft>
+                    <onright condition="!Skin.HasSetting(KioskMode)">9000</onright>
+					<onback condition="Skin.HasSetting(backoption) + !String.IsEqual(Window(home).Property(HubReturn),Home)">ActivateWindow($INFO[Window(home).Property(HubReturn)])</onback>
+                    <pagecontrol>60</pagecontrol>
+                    <orientation>vertical</orientation>
+                    <viewtype label="$PARAM[viewlabel]">list</viewtype>
+                    <scrolltime tween="quadratic">400</scrolltime>
+                    <visible>$PARAM[condition]</visible>
+                    <itemlayout height="69" width="$PARAM[width]" condition="$PARAM[label3]">
+                     <include>View_List_Itemlayout</include>   
+                    </itemlayout>
+                    <focusedlayout height="69" width="$PARAM[width]" condition="$PARAM[label3]">
+                     <include>View_List_Focusedlayout</include>				 
+                    </focusedlayout>
+                    <itemlayout height="69" width="$PARAM[width]" condition="!$PARAM[label3]">
+                        <control type="label">
+                            <left>80</left>
+                            <right>30</right>
+                            <top>0</top>
+                            <height>100%</height>
+                            <label>$INFO[ListItem.Label]</label>
+                        </control>                      
+                        <control type="image">
+                            <centerleft>40</centerleft>
+                            <centertop>50%</centertop>
+                            <height>32</height>
+                            <width>32</width>
+                            <texture colordiffuse="$VAR[Indicators_SecondaryColor]">$VAR[Image_Indicator_Back]</texture>
+                            <visible>!String.IsEmpty(ListItem.Overlay)</visible>
+                        </control>
+                        <control type="image">
+                            <centerleft>40</centerleft>
+                            <centertop>50%</centertop>
+                            <height>32</height>
+                            <width>32</width>
+                            <texture colordiffuse="$VAR[Indicators_PrimaryColor]">$VAR[Image_Indicator]</texture>
+                            <visible>!String.IsEmpty(ListItem.Overlay)</visible>
+                        </control>
+                        <control type="label">
+                            <left>30</left>
+                            <right>30</right>
+                            <top>0</top>
+                            <height>100%</height>
+                            <align>right</align>
+                            <font>Font-ListInfo</font>
+                            <label>$INFO[ListItem.Label2]</label>                    
+                            <visible>!Skin.HasSetting(disable.rating)</visible>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout height="69" width="$PARAM[width]" condition="!$PARAM[label3]">
+                        <control type="image">
+                            <width>100%</width>
+                            <height>100%</height>
+                            <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                        </control>
+                        <control type="label">
+                            <left>80</left>
+                            <right>30</right>
+                            <top>0</top>
+                            <height>100%</height>
+                            <textcolor>Selected</textcolor>
+                            <label>$INFO[ListItem.Label]</label>
+                        </control>                      
+                        <control type="image">
+                            <centerleft>40</centerleft>
+                            <centertop>50%</centertop>
+                            <height>32</height>
+                            <width>32</width>
+                            <texture colordiffuse="$VAR[Indicators_SecondaryColor]">$VAR[Image_Indicator_Back]</texture>
+                            <visible>!String.IsEmpty(ListItem.Overlay)</visible>
+                        </control>
+                        <control type="image">
+                            <centerleft>40</centerleft>
+                            <centertop>50%</centertop>
+                            <height>32</height>
+                            <width>32</width>                           
+                            <texture colordiffuse="$VAR[Indicators_PrimaryColor]">$VAR[Image_Indicator]</texture>
+                            <visible>!String.IsEmpty(ListItem.Overlay)</visible>
+                        </control>
+                        <control type="label">
+                            <left>30</left>
+                            <right>30</right>
+                            <top>0</top>
+                            <height>100%</height>
+                            <align>right</align>
+                            <font>Font-ListInfo</font>
+                            <textcolor>Selected</textcolor>
+                            <label>$INFO[ListItem.Label2]</label>              
+                            <visible>!Skin.HasSetting(disable.rating)</visible>                            
+                        </control>
+                    </focusedlayout>
+                </control>
+            </control>
+        </definition>
+    </include>	
+    <!-- FANART LIST -->
+    <include name="Viewtype_FanartLogo">
+        <control type="group">
+            <visible>Control.IsVisible(159)</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <left>side</left>
+            <right>side</right>
+            <top>top</top>
+            <height>height</height>
+            <control type="group">
+                <right>-10</right>
+                <width>1221</width>
+                <include>View_BigWide_Fanart</include>
+                <include>View_BigWide_Info</include>
+            </control>
+            <control type="group">
+				<top>pad</top>
+                <right>0</right>
+                <width>1211</width>
+                <include content="Object_Line">
+                    <param name="width" value="1211" />
+                    <param name="label" value="19033" />
+                </include>
+            </control>
+            <include content="View_FanartLogo">
+                <param name="viewlabel" value="31742" />
+                <param name="posx" value="0" />
+                <param name="width" value="659" />
+                <param name="id" value="159" />
+				<param name="condition" value="[Container.Content(movies) + [String.IsEqual(Skin.String(Skin.ForcedView.movies),$LOCALIZE[31742]) | String.IsEmpty(Skin.String(Skin.ForcedView.movies)) ]] | [Container.Content(sets) + [String.IsEqual(Skin.String(Skin.ForcedView.sets),$LOCALIZE[31742]) | String.IsEmpty(Skin.String(Skin.ForcedView.sets)) ]] | [Container.Content(tvshows) + [String.IsEqual(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[31742]) | String.IsEmpty(Skin.String(Skin.ForcedView.tvshows)) ]]" />
+            </include>
+			<include>Object_Scrollbar</include>
+			<include>Object_Scrollbar_Alphabet</include>
+            <control type="group">
+                <width>659</width>
+                <include>Object_Arrows_Vertical</include>
+            </control>
+        </control>
+    </include>
+    
+    <include name="View_FanartLogo">
+        <definition>
+            <control type="group">
+                <left>$PARAM[posx]</left>
+                <width>$PARAM[width]</width>
+				<visible>$PARAM[condition]</visible>
+				<top>pad</top>
+                <include content="Object_Line">
+                    <param name="width" value="$PARAM[width]" />
+                    <param name="label" value="$INFO[Control.GetLabel(3),, ]$INFO[Control.GetLabel(4),[COLOR=PosterBorder]-[/COLOR] , ]" />
+                </include>
+				<include condition="Skin.HasSetting(darkoverlay)">Object_Background2</include>
+                <control type="group">
+                    <width>$PARAM[width]</width>
+                    <height>height</height>
+					<visible>!Skin.HasSetting(darkoverlay)</visible>
+                    <include>Object_Background</include>
+                </control>
+                <include>Object_Scrollbar</include>
+				<include>Object_Scrollbar_Alphabet</include>
+                <control type="panel" id="$PARAM[id]">
+                    <top>0</top>
+                    <left>0</left>
+                    <width>$PARAM[width]</width>
+                    <height>height</height>
+                    <onup>$PARAM[id]</onup>
+                    <ondown>$PARAM[id]</ondown>
+                    <onleft>60</onleft>
+                    <onright condition="!Skin.HasSetting(KioskMode)">9000</onright>
+					<onback condition="Skin.HasSetting(backoption) + !String.IsEqual(Window(home).Property(HubReturn),Home)">ActivateWindow($INFO[Window(home).Property(HubReturn)])</onback>
+                    <pagecontrol>60</pagecontrol>
+                    <orientation>vertical</orientation>
+                    <viewtype label="$PARAM[viewlabel]">list</viewtype>
+                    <scrolltime tween="quadratic">400</scrolltime>
+                    <visible>$PARAM[condition]</visible>
+                    <itemlayout height="height" width="$PARAM[width]">
+                    </itemlayout>
+                    <focusedlayout height="height" width="$PARAM[width]">
+                        <control type="image">
+                            <centertop>50%</centertop>
+                            <centerleft>50%</centerleft>
+                            <width>500</width>             
+                            <height>188</height>
+                            <texture>$INFO[ListItem.Art(clearlogo)]</texture>
+                        </control>
+                        <control type="image">
+                            <centertop>50%</centertop>
+                            <centerleft>50%</centerleft>
+                            <width>500</width>             
+                            <height>188</height>
+                            <texture>$INFO[ListItem.Art(tvshow.clearlogo)]</texture>
+                        </control>
+                        <control type="label">
+                            <align>center</align>
+                            <aligny>center</aligny>
+                            <posx>30</posx>
+                            <width>600</width>    
+                            <scroll>yes</scroll>         
+                            <height>height</height>
+                            <font>Font-View</font>
+                            <label>$INFO[ListItem.Label]</label>
+                            <visible>String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
+                        </control>
+                   </focusedlayout>
+                </control>
+            </control>
+        </definition>
+    </include>
+
+</includes>

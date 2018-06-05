@@ -1,0 +1,150 @@
+<includes>
+
+    <include file="Defaults.xml" />
+    <include file="Includes_Animation.xml" />
+    <include file="Includes_Colors.xml" />
+    <include file="Includes_Defs.xml" />
+    <include file="Includes_Dialog.xml" />
+    <include file="Includes_Furniture.xml" />
+    <include file="Includes_Home.xml" />
+    <include file="Includes_Info.xml" />
+    <include file="Includes_Image.xml" />
+    <include file="Includes_Label.xml" />
+    <include file="Includes_Object.xml" />
+    <include file="Includes_PVR.xml" />
+    <include file="Includes_Window.xml" />
+	<include file="Includes_Lyrics.xml" />
+    <include file="script-skinshortcuts-includes.xml"/>
+	<include file="Viewtype_BigIcon.xml" />
+    <include file="Viewtype_List.xml" />
+    <include file="Viewtype_Icon.xml" />
+    <include file="Viewtype_Wide.xml" />
+    <include file="Viewtype_ShowCase.xml" />
+	<include file="Viewtype_FanArtIcons.xml" />
+	<include file="Viewtype_Netflix.xml" />
+	<include file="Viewtype_RightList.xml" />
+	
+    <!-- GLOBALS -->
+    <include name="GlobalOverlay">
+        <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>100%</width>
+            <height>100%</height>
+            <texture colordiffuse="9f000000">common/white.png</texture>
+            <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
+            <animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+        </control>
+    </include>
+    <include name="GlobalInfoOverlay">
+        <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>100%</width>
+            <height>100%</height>
+            <texture colordiffuse="9f000000">common/white.png</texture>
+            <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
+            <animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+            <visible>Window.IsVisible(DialogPVRRecordingInfo.xml) | Window.IsVisible(DialogPVRGuideInfo.xml) | Window.IsVisible(DialogMusicInfo.xml) | Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogAddonInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)</visible>
+        </control>
+    </include>
+
+    <!-- VARS -->
+    <variable name="HighlightColor">
+        <value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(MusicVisualisation.xml)] + !String.IsEmpty(Skin.String(HighlightColor))">$INFO[Skin.String(HighlightColor)]</value>
+        <value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(MusicVisualisation.xml)]">Highlight</value>
+        <value condition="Skin.HasSetting(home.tilecolor) + !String.IsEmpty(Window(home).Property(HighlightColor))">$INFO[Window(home).Property(HighlightColor)]</value>
+        <value condition="!String.IsEmpty(Skin.String(HighlightColor))">$INFO[Skin.String(HighlightColor)]</value>
+        <value>Highlight</value>
+    </variable>
+    <variable name="HighlightColor2">
+        <value condition="!String.IsEmpty(Skin.String(HighlightColor2))">$INFO[Skin.String(HighlightColor2)]</value>
+        <value>Highlight2</value>
+    </variable>
+    <variable name="PanelColour">
+		<value condition="Skin.HasSetting(darkoverlay) + String.IsEqual(Skin.CurrentColourTheme, Light)">66ffffff</value>
+        <value condition="!Skin.HasSetting(darkoverlay) + !String.IsEmpty(Skin.String(PanelColour))">$INFO[Skin.String(PanelColour)]</value>
+        <value>ObjectBackground</value>
+    </variable>	
+    <variable name="Background_Color">
+        <value condition="String.IsEmpty(Skin.String(BackgroundColor)) + String.IsEqual(Skin.CurrentColourTheme,SKINDEFAULT)">e2181818</value>
+        <value condition="String.IsEmpty(Skin.String(BackgroundColor)) + String.IsEqual(Skin.CurrentColourTheme,Light)">e2ffffff</value>
+        <value>$INFO[Skin.String(BackgroundColor)]</value>
+    </variable>
+    <variable name="Background_Color_Settings">
+		<value condition="!Skin.HasSetting(darkensettings) + [Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(Settings.xml) | Window.IsVisible(SettingsProfile.xml) | Window.IsVisible(SettingsSystemInfo.xml) | Window.IsVisible(SkinSettings.xml) | Window.IsVisible(AddonBrowser.xml)]">$VAR[Background_Color]</value>       
+        <value condition="Skin.HasSetting(darkensettings) + [Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(Settings.xml) | Window.IsVisible(SettingsProfile.xml) | Window.IsVisible(SettingsSystemInfo.xml) | Window.IsVisible(SkinSettings.xml) | Window.IsVisible(AddonBrowser.xml)]">FanartFade</value>
+		<value>$VAR[Background_Color]</value>
+    </variable> 	
+    <variable name="HomeBar_Color">
+        <value condition="String.IsEmpty(Skin.String(HomeBarColor))">HomeBarBG</value>
+        <value>$INFO[Skin.String(HomeBarColor)]</value>
+    </variable>
+    <variable name="OSD_Color">
+        <value condition="String.IsEmpty(Skin.String(OSDColor))">HomeBarBG</value>
+		<value condition="String.IsEqual(Skin.CurrentColourTheme,Light) + String.IsEqual(Skin.String(OSDColor),$LOCALIZE[31212])">e5dfdfdf</value>
+		<value condition="String.IsEqual(Skin.CurrentColourTheme,Light) + String.IsEqual(Skin.String(OSDColor),$LOCALIZE[31213])">ccdfdfdf</value>
+		<value condition="String.IsEqual(Skin.CurrentColourTheme,Light) + String.IsEqual(Skin.String(OSDColor),$LOCALIZE[31214])">b3dfdfdf</value>
+		<value condition="String.IsEqual(Skin.CurrentColourTheme,Light) + String.IsEqual(Skin.String(OSDColor),$LOCALIZE[31215])">98dfdfdf</value>
+		<value condition="String.IsEqual(Skin.String(OSDColor),$LOCALIZE[31212])">e5181818</value>
+		<value condition="String.IsEqual(Skin.String(OSDColor),$LOCALIZE[31213])">cc181818</value>
+		<value condition="String.IsEqual(Skin.String(OSDColor),$LOCALIZE[31214])">b3181818</value>
+		<value condition="String.IsEqual(Skin.String(OSDColor),$LOCALIZE[31215])">98181818</value>
+    </variable> 	
+    <variable name="Widget_PrimaryColor">
+        <value condition="String.IsEmpty(Skin.String(WidgetPrimaryColor))">HomeWidgetBG</value>
+        <value>$INFO[Skin.String(WidgetPrimaryColor)]</value>
+    </variable>   
+    <variable name="Widget_SecondaryColor">
+        <value condition="String.IsEmpty(Skin.String(WidgetSecondaryColor))">HomeWidgetBG</value>
+        <value>$INFO[Skin.String(WidgetSecondaryColor)]</value>
+    </variable>
+    <variable name="Indicators_PrimaryColor">
+        <value condition="String.IsEmpty(Skin.String(IndicatorsPrimaryColor))">Indicator</value>
+        <value>$INFO[Skin.String(IndicatorsPrimaryColor)]</value>
+    </variable>
+    <variable name="Indicators_SecondaryColor">
+        <value condition="String.IsEmpty(Skin.String(IndicatorsSecondaryColor))">IndicatorBack</value>
+        <value>$INFO[Skin.String(IndicatorsSecondaryColor)]</value>
+    </variable>                       
+
+    <!-- DBUG INCLUDS -->
+    <include name="WindowID">
+        <width>780</width>
+        <height>21</height>
+        <textcolor>ff0000dd</textcolor>
+        <shadowcolor>ff000000</shadowcolor>
+        <align>left</align>
+    </include>
+
+    <include name="DialogID">
+        <width>780</width>
+        <height>21</height>
+        <textcolor>ff00dd00</textcolor>
+        <shadowcolor>ff000000</shadowcolor>
+        <align>left</align>
+    </include>
+
+    <include name="PathID">
+        <posx>15r</posx>
+        <posy>15</posy>
+        <width>780</width>
+        <height>21</height>
+        <textcolor>ff0000dd</textcolor>
+        <shadowcolor>ff000000</shadowcolor>
+        <align>right</align>
+    </include>
+
+    <include name="ControlID">
+        <posx>15r</posx>
+        <posy>48</posy>
+        <width>780</width>
+        <height>21</height>
+        <textcolor>ffdd0000</textcolor>
+        <shadowcolor>ff000000</shadowcolor>
+        <align>right</align>
+    </include>
+
+</includes>

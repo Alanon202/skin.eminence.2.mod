@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+    <defaultcontrol always="true">500</defaultcontrol>
+    <views>500</views>
+    <controls>
+
+        <!-- Background -->
+        <include>Furniture_Background</include>
+        <include>Furniture_RSS</include> 
+        
+        <control type="group">
+            <visible>Control.IsVisible(500)</visible>
+            <include>Animation_Info</include>
+            <include>Animation_FadeOut</include>
+            <left>side</left>
+            <right>side</right>
+            <top>top</top>
+            <height>height</height>
+            <include content="Object_Line">
+                <param name="width" value="1205" />
+                <param name="label" value="$INFO[Window.Property(Sort_Label),$ADDON[script.extendedinfo 32104]: , ]$INFO[Window.Property(Order_Label),[COLOR=PosterBorder]-[/COLOR] , ]" />
+            </include>
+            <include content="View_Icon">
+                <param name="id" value="500" />
+                <param name="name" value="31141" />
+                <param name="width" value="1215" />
+                <param name="condition" value="true" />
+                <param name="updownid" value="false" />
+                <param name="onup" value="700" />
+                <param name="ondown" value="600" />
+                <param name="posx" value="0" />
+                <param name="posy" value="-5" />
+                <param name="height" value="700" />
+                <param name="infovisible" value="true" />
+            </include>
+            <control type="group">
+                <right>0</right>
+                <width>665</width>
+                <height>690</height>
+                <include content="Object_Line">
+                    <param name="width" value="665" />
+                    <param name="label" value="19033" />
+                </include>
+                <control type="group">
+                    <width>100%</width>
+                    <height>100%</height>
+                    <visible>!Skin.HasSetting(darkoverlay)</visible>
+                    <include>Object_Background</include>
+                </control>
+                <control type="group">
+                    <width>100%</width>
+                    <height>100%</height>
+                    <visible>Skin.HasSetting(darkoverlay)</visible>
+					<include>Object_Background2</include>
+                </control>
+                <control type="grouplist">
+                    <usecontrolcoords>true</usecontrolcoords>
+                    <itemgap>pad</itemgap>
+                    <orientation>vertical</orientation>
+                    <left>pad</left>
+                    <right>pad</right>
+                    <top>pad</top>
+                    <bottom>pad</bottom>
+                    <control type="image">
+                        <width>100%</width>
+                        <height>363</height>
+                        <aspectratio>scale</aspectratio>
+                        <fadetime>200</fadetime>
+                        <texture background="true">$INFO[Container(500).ListItem.Art(fanart_small)]</texture>
+                    </control>
+                    <control type="label">
+                        <top>pad</top>
+                        <left>pad</left>
+                        <right>pad</right>
+                        <height>32</height>
+                        <scroll>yes</scroll>
+                        <font>Font-Button-Black</font>
+                        <label>$INFO[Container(500).ListItem.Label]</label>
+                    </control>
+                    <control type="label">
+                        <left>pad</left>
+                        <right>pad</right>
+                        <height>24</height>
+                        <textcolor>$VAR[HighlightColor2]</textcolor>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <scroll>yes</scroll>
+                        <label>$INFO[Container(500).ListItem.Genre,[UPPERCASE],[/UPPERCASE]]</label>
+                        <visible>!String.IsEmpty(Container(500).ListItem.Genre)</visible>
+                    </control>
+                    <control type="textbox">
+                        <left>pad</left>
+                        <right>pad</right>
+                        <height>154</height>
+                        <font>Font-ListInfo</font>
+                        <align>justify</align>
+                        <label>$INFO[Container(500).ListItem.Plot]</label>
+                        <visible>!String.IsEmpty(Container(500).ListItem.Genre)</visible>
+                    </control>
+                    <control type="textbox">
+                        <left>pad</left>
+                        <right>pad</right>
+                        <height>190</height>
+                        <font>Font-ListInfo</font>
+                        <align>justify</align>
+                        <label>$INFO[Container(500).ListItem.Plot]</label>
+                        <visible>String.IsEmpty(Container(500).ListItem.Genre)</visible>
+                    </control>
+                    <control type="label">
+                        <left>pad</left>
+                        <right>pad</right>
+                        <height>40</height>
+                        <align>right</align>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <label>$INFO[Container(500).ListItem.Year]$INFO[Container(500).ListItem.Rating,  •  ,]</label>
+<!-- Ajout Visible -->                        
+                        <visible>!Skin.HasSetting(disable.rating)</visible>
+                    </control>
+<!-- Ajout Control -->                    
+                    <control type="label">
+                        <left>pad</left>
+                        <right>pad</right>
+                        <height>24</height>
+                        <align>right</align>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <label>$INFO[Container(500).ListItem.Year]</label>
+                        <visible>Skin.HasSetting(disable.rating)</visible>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <width>1180</width>
+                <include>Object_Arrows_Vertical</include>
+            </control>
+        </control>
+
+        <include>Furniture_TopBar</include>
+		<include>QuickNav</include>
+
+        <!-- Menu -->
+        <control type="group">
+            <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
+            <include>Dialog_Top</include>
+            <include>Dialog_Background</include>
+            <include content="Dialog_Top_IconHeader">
+                <param name="label" value="$LOCALIZE[31068]" />
+                <param name="icon" value="special://skin/extras/icons/settings.png" />
+            </include>
+            <include content="Dialog_Top_Arrows">
+                <param name="id" value="9000" />
+            </include>
+
+            <control type="grouplist" id="9000">
+				<onup>SetProperty(quicknavsetup,1,home)</onup>
+				<onup>9987</onup>
+                <ondown>500</ondown>
+                <include>Dialog_Top_GroupList</include>
+                <defaultcontrol always="true">3</defaultcontrol>
+                <control type="button" id="6000">
+                    <include>Defs_OptionButton2</include>
+                    <label>19140</label>
+                </control>
+                <control type="button" id="7000">
+                    <include>Defs_OptionButton2</include>
+                    <label>$ADDON[script.extendedinfo 32024]</label>
+                </control>
+                <control type="button" id="5007">
+                    <include>Defs_OptionButton2</include>
+                    <label>$LOCALIZE[467]:</label>
+                    <label2>$INFO[Window.Property(Type)]</label2>
+                </control>
+                <control type="button" id="5001">
+                    <include>Defs_OptionButton2</include>
+                    <label>$ADDON[script.extendedinfo 32104]</label>
+                    <label2>$INFO[Window.Property(Sort_Label)]</label2>
+                </control>
+                <control type="button" id="5004">
+                    <include>Defs_OptionButton2</include>
+                    <label>$ADDON[script.extendedinfo 32128]</label>
+                    <label2>$INFO[Window.Property(Order_Label)]</label2>
+                </control>
+                <control type="label" id="5333">
+                    <textoffsetx>30</textoffsetx>
+                    <font>Font-ListInfo-Small-Bold</font>
+                    <include>Defs_OptionButton2</include>
+                    <label>$ADDON[script.extendedinfo 32023]</label>
+                    <visible>false</visible>
+                </control>
+                <control type="button" id="5002">
+                    <include>Defs_OptionButton2</include>
+                    <label>$LOCALIZE[515]</label>
+                </control>
+                <control type="button" id="5003">
+                    <label>$LOCALIZE[172]</label>
+                    <include>Defs_OptionButton2</include>
+                </control>
+                <control type="button" id="5006">
+                    <label>$ADDON[script.extendedinfo 32127]</label>
+                    <include>Defs_OptionButton2</include>
+                </control>
+                <control type="button" id="5008">
+                    <label>$ADDON[script.extendedinfo 32126]</label>
+                    <include>Defs_OptionButton2</include>
+                </control>
+                <control type="button" id="5009">
+                    <label>$ADDON[script.extendedinfo 32114]</label>
+                    <include>Defs_OptionButton2</include>
+                </control>
+                <control type="button" id="5010">
+                    <label>$LOCALIZE[572]</label>
+                    <include>Defs_OptionButton2</include>
+                </control>
+                <control type="button" id="5012">
+                    <label>$ADDON[script.extendedinfo 32111]</label>
+                    <include>Defs_OptionButton2</include>
+                </control>
+                <control type="button" id="5005">
+                    <label>$ADDON[script.extendedinfo 32022]</label>
+                    <include>Defs_OptionButton2</include>
+                </control>
+            </control>
+
+        </control>
+
+        <!-- NEXT PREVIOUS PAGE CONTROLS -->
+        <control type="button" id="600">
+            <onfocus>SetFocus(500)</onfocus>
+            <width>1</width>
+            <height>1</height>
+            <posx>-1000</posx>
+        </control>
+        <control type="button" id="700">
+            <onfocus>SetFocus(500)</onfocus>
+            <width>1</width>
+            <height>1</height>
+            <posx>-1000</posx>
+        </control>
+       
+    </controls>
+</window>

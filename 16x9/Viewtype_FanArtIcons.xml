@@ -1,0 +1,812 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<includes>
+	<include name="Viewtype_FanArtIcons">
+        <control type="group">
+            <!-- <visible>Control.IsVisible(514) + [[Container.Content(tvshows) + [String.IsEqual(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[31284]) | String.IsEmpty(Skin.String(Skin.ForcedView.tvshows))]] | [Container.Content(movies) + [String.IsEqual(Skin.String(Skin.ForcedView.movies),$LOCALIZE[31284]) | String.IsEmpty(Skin.String(Skin.ForcedView.movies))]] | [Container.Content(sets) + [String.IsEqual(Skin.String(Skin.ForcedView.sets),$LOCALIZE[31284]) | String.IsEmpty(Skin.String(Skin.ForcedView.sets))]] | [Container.Content(seasons) + [String.IsEqual(Skin.String(Skin.ForcedView.seasons),$LOCALIZE[31284]) | String.IsEmpty(Skin.String(Skin.ForcedView.seasons))]]]</visible> -->
+            <left>0</left>
+            <right>0</right>
+            <top>0</top>
+            <height>1080</height>
+			<visible>Control.IsVisible(514)</visible>
+			<include content="Object_Line">
+                <param name="width" value="1879" />
+                <param name="label" value="$INFO[Control.GetLabel(3),, ]$INFO[Control.GetLabel(4),[COLOR=PosterBorder]-[/COLOR] , ]" />
+            </include>
+			<control type="image">
+				<height>1080</height>
+				<width>1920</width>
+                <texture background="true">common/black.png</texture>
+				<visible>String.IsEqual(Skin.CurrentColourTheme,SKINDEFAULT)</visible>
+			</control>
+			<control type="image">
+				<height>1080</height>
+				<width>1920</width>
+                <texture background="true">common/white.png</texture>
+				<visible>String.IsEqual(Skin.CurrentColourTheme, Light)</visible>
+			</control>
+			<control type="image">
+				<height>1080</height>
+				<width>1920</width>
+				<aspectratio align="center">scale</aspectratio>
+				<texture background="true">$INFO[Window(Home).Property(ImageFilter)]</texture>
+				<fadetime>100</fadetime>
+				<visible>System.HasAddon(script.toolbox) + Skin.HasSetting(UseBlur)</visible>
+			</control>			
+			<control type="multiimage">
+				<top>0</top>
+                <left>0</left>
+                <width>1351</width>
+                <height>760</height>
+				<randomize>true</randomize>
+				<loop>yes</loop>
+				<imagepath background="true">$VAR[Image_Background]</imagepath>
+				<aspectratio>scale</aspectratio>
+				<fadetime>300</fadetime>
+				<include condition="String.IsEmpty(Skin.String(RotationLimit))">RotationLimit1</include>
+                <include condition="String.IsEqual(Skin.String(RotationLimit),1)">RotationLimit1</include>
+                <include condition="String.IsEqual(Skin.String(RotationLimit),2)">RotationLimit2</include>
+                <include condition="String.IsEqual(Skin.String(RotationLimit),3)">RotationLimit3</include>
+                <include condition="String.IsEqual(Skin.String(RotationLimit),4)">RotationLimit4</include>
+                <include condition="String.IsEqual(Skin.String(RotationLimit),5)">RotationLimit5</include>
+                <include condition="String.IsEqual(Skin.String(RotationLimit),6)">RotationLimit6</include>
+                <include condition="String.IsEqual(Skin.String(RotationLimit),7)">RotationLimit7</include>
+                <include condition="String.IsEqual(Skin.String(RotationLimit),8)">RotationLimit8</include>
+                <include condition="String.IsEqual(Skin.String(RotationLimit),9)">RotationLimit9</include>
+                <include condition="String.IsEqual(Skin.String(RotationLimit),10)">RotationLimit10</include>
+                <include condition="String.IsEqual(Skin.String(RotationLimit),11)">RotationLimit11</include>
+                <include condition="String.IsEqual(Skin.String(RotationLimit),12)">RotationLimit12</include>
+			</control>
+			<control type="videowindow">
+				<visible>Skin.HasSetting(background.showvideo)</visible>
+				<visible>Player.HasVideo</visible>
+				<visible>!Window.IsVisible(weather)</visible>
+				<top>0</top>
+                <left>0</left>
+                <width>1351</width>
+                <height>760</height>
+			</control>
+			<control type="group">
+				<visible>Player.HasAudio | Player.HasVideo</visible>
+				<top>725</top>
+				<width>1351</width>
+				<height>34</height>
+				<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+				<include condition="Skin.HasSetting(darkoverlay)">Object_Background2</include>
+				<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+				<include condition="Skin.HasSetting(darkoverlay)">Object_Background2</include>
+				<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+				<include condition="Skin.HasSetting(darkoverlay)">Object_Background2</include>
+				<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+				<include condition="Skin.HasSetting(darkoverlay)">Object_Background2</include>
+				<control type="label">
+					<bottom>2</bottom>
+					<left>2</left>
+					<right>side</right>
+					<height>32</height>         
+					<width>1349</width>            
+					<scroll>yes</scroll>
+					<font>Font-ListInfo-Small-Bold</font>
+					<textcolor>LineLabel</textcolor>
+					<label>$VAR[Label_RSS]</label>  
+				</control>
+			</control>
+            <control type="group">
+				<top>0</top>
+                <right>0</right>
+				<width>571</width>
+                <control type="grouplist">
+                    <itemgap>0</itemgap>
+                    <orientation>vertical</orientation>
+                    <left>pad</left>
+                    <right>pad</right>
+                    <top>10</top>
+                    <bottom>pad</bottom>
+                    <control type="label">
+                        <height>50</height>
+                        <align>center</align>
+                        <font>Font-WidgetInfoTitle</font>
+                        <label>$INFO[ListItem.Label]</label>
+						<scroll>true</scroll>
+                    </control>
+                    <control type="label">
+                        <height>32</height>
+                        <align>center</align>
+                        <textcolor>$VAR[HighlightColor2]</textcolor>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <label>$INFO[ListItem.Studio]</label>
+                    </control>		
+					<control type="label">
+                        <height>32</height>
+                        <align>center</align>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <label>$VAR[Label_Genre,[UPPERCASE],[/UPPERCASE]]</label>
+						<scroll>true</scroll>
+                    </control>
+					<control type="grouplist">
+						<itemgap>0</itemgap>
+						<orientation>horizontal</orientation>
+						<height>40</height>
+						<width>571</width>
+						<control type="label">
+							<height>40</height>
+							<width>190</width>
+							<font>Font-ListInfo-Small-Bold</font>
+							<label>Year: $INFO[ListItem.Year]</label>
+							<visible>!String.IsEmpty(ListItem.Year)</visible>
+						</control>
+						<control type="label">
+							<height>40</height>
+							<width>125</width>
+							<font>Font-ListInfo-Small-Bold</font>
+							<label>Episodes:</label>
+							<visible>!String.IsEmpty(ListItem.Property(TotalEpisodes))</visible>
+						</control>
+						<control type="label">
+							<height>40</height>
+							<width>100</width>
+							<font>Font-ListInfo-Small-Bold</font>
+							<label>$INFO[ListItem.Property(TotalEpisodes)]</label>
+							<textcolor>$VAR[HighlightColor2]</textcolor>
+							<visible>!String.IsEmpty(ListItem.Property(TotalEpisodes))</visible>
+						</control>
+						<control type="label">
+							<height>40</height>
+							<width>100</width>
+							<font>Font-ListInfo-Small-Bold</font>
+							<label>($INFO[ListItem.Property(UnWatchedEpisodes)])</label>
+							<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),number)</visible>
+						</control>
+					</control>
+                    <control type="textbox">
+                        <height>593</height>
+                        <font>Font-ListInfo</font>
+                        <align>justify</align>
+                        <label>$VAR[Label_Plot]</label>
+						<scrolltime>200</scrolltime>
+						<autoscroll delay="8000" time="1000" repeat="15000">true</autoscroll>
+                    </control>
+                </control>
+            </control>
+			<control type="group">
+				<visible>!Skin.HasSetting(disable.clockheader)</visible> 
+				<top>0</top>
+                <left>0</left>
+				<width>190</width>
+				<height>50</height>
+				<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+				<include condition="Skin.HasSetting(darkoverlay)">Object_Background2</include>
+				<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+				<include condition="Skin.HasSetting(darkoverlay)">Object_Background2</include>
+				<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+				<include condition="Skin.HasSetting(darkoverlay)">Object_Background2</include>
+				<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+				<include condition="Skin.HasSetting(darkoverlay)">Object_Background2</include>
+				<control type="button" id="9986">
+					<top>0</top>
+					<left>100</left>
+					<right>100</right>
+					<height>185</height>
+					<visible allowhiddenfocus="true">!Window.IsVisible(Home.xml) + Integer.IsGreater(Container(9987).NumItems,0)</visible>
+					<onback>ClearProperty(quicknavsetup,home)</onback>
+					<onback>50</onback>
+					<onfocus>SetProperty(quicknavsetup,1,home)</onfocus>
+					<onfocus>9987</onfocus>
+					<onunfocus>ClearProperty(quicknavsetup,home)</onunfocus>
+				</control>				
+				<control type="label">
+					<posx>190</posx>
+					<posy>-10</posy>
+					<width>150</width>
+					<height>100</height>
+					<font>Font-WidgetInfoTitle</font>
+					<align>right</align>
+					<aligny>top</aligny>
+					<label>$INFO[System.Time(hh:mm)]</label>
+					<textcolor>$VAR[Furniture_TopBar_MainLabel_Color]</textcolor>
+					<animation effect="slide" start="0" end="-58" condition="!String.IsEmpty(System.Time(xx))">Conditional</animation>
+					<visible>String.IsEmpty(Window(home).Property(submenumouse)) + ![Control.HasFocus(9000) + Window.IsVisible(DialogButtonMenu.xml)] + !Window.IsVisible(Custom_Password.xml)</visible>
+				</control>
+				<control type="label">
+					<posx>180</posx>
+					<posy>15</posy>
+					<width>50</width>
+					<height>100</height>
+					<aligny>top</aligny>
+					<font>Font-ListInfo-Small-Bold</font>
+					<textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
+					<align>right</align>
+					<label>$INFO[System.Time(xx)]</label>
+					<visible>String.IsEmpty(Window(home).Property(submenumouse)) + !String.IsEmpty(System.Time(xx)) + ![Control.HasFocus(9000) + Window.IsVisible(DialogButtonMenu.xml)] + !Window.IsVisible(Custom_Password.xml)</visible>
+				</control>
+			</control>
+        </control>
+		<control type="wraplist" id="514">
+			<visible>[Container.Content(tvshows) + [String.IsEqual(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[31284]) | String.IsEmpty(Skin.String(Skin.ForcedView.tvshows)) ]] | [Container.Content(seasons) + [String.IsEqual(Skin.String(Skin.ForcedView.seasons),$LOCALIZE[31284]) | String.IsEmpty(Skin.String(Skin.ForcedView.seasons)) ]] | [Container.Content(episodes) + [String.IsEqual(Skin.String(Skin.ForcedView.episodes),$LOCALIZE[31284]) | String.IsEmpty(Skin.String(Skin.ForcedView.episodes)) ]] | [Container.Content(videos) + [String.IsEqual(Skin.String(Skin.ForcedView.videos),$LOCALIZE[31284]) | String.IsEmpty(Skin.String(Skin.ForcedView.videos)) ]] | [Container.Content(movies) + [String.IsEqual(Skin.String(Skin.ForcedView.movies),$LOCALIZE[31284]) | String.IsEmpty(Skin.String(Skin.ForcedView.movies))]] | [Container.Content(sets) + [String.IsEqual(Skin.String(Skin.ForcedView.sets),$LOCALIZE[31284]) | String.IsEmpty(Skin.String(Skin.ForcedView.sets))]]</visible>
+			<top>740</top>		
+			<centerleft>50%</centerleft>
+			<width>1920</width>
+			<onup condition="!Skin.HasSetting(global.kioskmode)">9000</onup>
+			<onback condition="Skin.HasSetting(backoption) + !String.IsEqual(Window(home).Property(HubReturn),Home)">ActivateWindow($INFO[Window(home).Property(HubReturn)])</onback>
+			<ondown>61</ondown>
+			<onleft>514</onleft>
+			<onright>514</onright>
+			<focusposition>4</focusposition>
+			<movement>0</movement>
+			<preloaditems>0</preloaditems>
+			<pagecontrol>61</pagecontrol>
+			<orientation>horizontal</orientation>
+			<viewtype label="31284">bigicon</viewtype>
+			<scrolltime tween="sine">200</scrolltime>
+			<itemlayout width="214" height="321">
+				<control type="group">
+					<top>side</top>
+					<left>0</left>
+					<right>0</right>
+					<height>321</height>
+					<control type="image">
+						<include condition="Skin.HasSetting(lightshadows) + !String.IsEqual(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>
+						<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
+						<texture background="true">$VAR[Image_Poster]</texture>
+					</control>
+					<control type="group">
+						<right>0</right>
+						<top>0</top>
+						<height>321</height>
+						<width>214</width>
+						<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+						<include condition="Skin.HasSetting(darkoverlay)">Object_Background2</include>
+						<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+						<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+						<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>						
+						<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png) + Skin.HasSetting(shadewatched)</visible>
+					</control>
+					<control type="image">
+						<right>5</right>
+						<top>15</top>
+						<height>32</height>
+						<width>32</width>
+						<texture colordiffuse="$VAR[Indicators_SecondaryColor]">$VAR[Image_Indicator_Back]</texture>
+						<visible>!String.IsEmpty(ListItem.Overlay)</visible>
+					</control>						
+					<control type="image">
+						<right>5</right>
+						<top>15</top>
+						<height>32</height>
+						<width>32</width>
+						<texture colordiffuse="$VAR[Indicators_PrimaryColor]">$VAR[Image_Indicator]</texture>
+						<visible>!String.IsEmpty(ListItem.Overlay)</visible>
+					</control>
+				</control>
+			</itemlayout>
+			<focusedlayout width="214" height="321">
+				<control type="group">
+					<top>side</top>
+					<left>0</left>
+					<right>0</right>
+					<height>321</height>
+					<include condition="System.HasAddon(script.toolbox) + Skin.HasSetting(UseBlur)">Background_Blur</include>
+					<control type="image">
+						<include condition="Skin.HasSetting(lightshadows) + !String.IsEqual(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>
+						<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
+						<texture background="true">$VAR[Image_Poster]</texture>
+					</control>
+					<control type="group">
+						<right>0</right>
+						<top>0</top>
+						<height>321</height>
+						<width>214</width>
+						<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+						<include condition="Skin.HasSetting(darkoverlay)">Object_Background2</include>
+						<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+						<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+						<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>						
+						<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png) + Skin.HasSetting(shadewatched)</visible>
+					</control>
+					<control type="image">
+						<right>5</right>
+						<top>15</top>
+						<height>32</height>
+						<width>32</width>
+						<texture colordiffuse="$VAR[Indicators_SecondaryColor]">$VAR[Image_Indicator_Back]</texture>
+						<visible>!String.IsEmpty(ListItem.Overlay)</visible>
+					</control>								
+					<control type="image">
+						<right>5</right>
+						<top>15</top>
+						<height>32</height>
+						<width>32</width>
+						<texture colordiffuse="$VAR[Indicators_PrimaryColor]">$VAR[Image_Indicator]</texture>
+						<visible>!String.IsEmpty(ListItem.Overlay)</visible>
+					</control>
+					<control type="label">
+						<bottom>2</bottom>
+						<left>2</left>
+						<height>30</height>
+						<align>left</align>
+						<font>Font-ListInfo-Small-Bold</font>
+						<label>$VAR[Label_Duration]</label>
+						<scroll>true</scroll>
+					</control>					
+					<control type="image">
+						<left>-10</left>
+						<right>-10</right>
+						<top>-10</top>
+						<bottom>-10</bottom>
+						<texture colordiffuse="$VAR[HighlightColor]" border="12">common/border.png</texture>
+						<visible>Control.HasFocus(514)</visible>
+					</control>
+				</control>
+			</focusedlayout>
+        </control>
+		<control type="scrollbar" id="61">   
+			<visible>Control.IsVisible(514) + Skin.HasSetting(showscrollbars)</visible>
+            <onup>50</onup>
+			<ondown condition="Skin.HasSetting(AlphabetScrollbar)">6015</ondown>
+            <ondown condition="!Skin.HasSetting(AlphabetScrollbar) + !String.IsEqual(Window(home).Property(HubReturn),Home)">ActivateWindow($INFO[Window(home).Property(HubReturn)])</ondown>				
+            <top>1070</top>
+            <orientation>horizontal</orientation>
+            <width>1920</width>
+            <height>8</height>
+            <animation effect="fade" condition="!Control.HasFocus(61) + !Container.Scrolling" time="200" start="100" end="0">Conditional</animation>
+        </control>
+		<control type="group">
+			<top>609</top>
+			<width>1880</width>
+            <height>50</height>
+			<include>Object_Scrollbar_Alphabet</include>
+		</control>
+		<control type="group">
+			<visible>String.IsEqual(Container.SortMethod,title) + Control.IsVisible(514) + Skin.HasSetting(showscrollbars)</visible>
+			<animation effect="fade" condition="!Control.HasFocus(61) + !Container.Scrolling" time="200" start="100" end="0">Conditional</animation>
+			<right>681</right>
+			<top>0</top>
+			<height>50</height>
+			<width>25</width>
+			<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+			<include condition="Skin.HasSetting(darkoverlay)">Object_Background2</include>
+			<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+			<include condition="Skin.HasSetting(darkoverlay)">Object_Background2</include>
+			<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+			<include condition="Skin.HasSetting(darkoverlay)">Object_Background2</include>
+			<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+			<include condition="Skin.HasSetting(darkoverlay)">Object_Background2</include>
+			<control type="label">
+				<height>50</height>
+				<align>center</align>
+				<font>Font-ListInfo-Small-Bold</font>
+				<label>$INFO[ListItem.SortLetter]</label>
+			</control>
+		</control>
+		<control type="group">
+			<visible>Control.IsVisible(514) + Skin.HasSetting(showscrollbars)</visible>
+			<animation effect="fade" condition="!Control.HasFocus(61) + !Container.Scrolling" time="200" start="100" end="0">Conditional</animation>
+			<right>571</right>
+			<top>0</top>
+			<height>50</height>
+			<width>110</width>
+			<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+			<include condition="Skin.HasSetting(darkoverlay)">Object_Background2</include>
+			<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+			<include condition="Skin.HasSetting(darkoverlay)">Object_Background2</include>
+			<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+			<include condition="Skin.HasSetting(darkoverlay)">Object_Background2</include>
+			<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+			<include condition="Skin.HasSetting(darkoverlay)">Object_Background2</include>
+			<control type="label">
+				<height>50</height>
+				<align>center</align>
+				<font>Font-ListInfo-Small-Bold</font>
+				<label>$INFO[Container(514).CurrentItem]/$INFO[Container(514).NumItems]</label>
+				<scroll>true</scroll>
+			</control>
+		</control>
+		<control type="group">
+			<visible>String.IsEqual(Container.SortMethod,year) + Control.IsVisible(514) + Skin.HasSetting(showscrollbars)</visible>
+			<animation effect="fade" condition="!Control.HasFocus(61) + !Container.Scrolling" time="200" start="100" end="0">Conditional</animation>
+			<right>681</right>
+			<top>0</top>
+			<height>50</height>
+			<width>70</width>
+			<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+			<include condition="Skin.HasSetting(darkoverlay)">Object_Background2</include>
+			<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+			<include condition="Skin.HasSetting(darkoverlay)">Object_Background2</include>
+			<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+			<include condition="Skin.HasSetting(darkoverlay)">Object_Background2</include>
+			<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+			<include condition="Skin.HasSetting(darkoverlay)">Object_Background2</include>
+			<control type="label">
+				<height>50</height>
+				<align>center</align>
+				<font>Font-ListInfo-Small-Bold</font>
+				<label>$INFO[ListItem.Year]</label>
+			</control>
+		</control>
+		<include>QuickNav</include>    
+	</include>
+	<include name="Viewtype_FanArtIconsEp">
+		<control type="group">
+			<!-- <visible>Control.IsVisible(513) + [[Container.Content(episodes) + [String.IsEqual(Skin.String(Skin.ForcedView.episodes),$LOCALIZE[31285]) | String.IsEmpty(Skin.String(Skin.ForcedView.episodes)) ]] | [Container.Content(videos) + [String.IsEqual(Skin.String(Skin.ForcedView.videos),$LOCALIZE[31285]) | String.IsEmpty(Skin.String(Skin.ForcedView.videos)) ]] | [Container.Content(musicvideos) + [String.IsEqual(Skin.String(Skin.ForcedView.musicvideos),$LOCALIZE[31285]) | String.IsEmpty(Skin.String(Skin.ForcedView.musicvideos)) ]]]</visible> -->
+			<left>0</left>
+            <right>0</right>
+            <top>0</top>
+            <height>1080</height>
+			<visible>Control.IsVisible(513)</visible>
+			<control type="image">
+				<height>1080</height>
+				<width>1920</width>
+                <texture background="true">common/black.png</texture>
+			</control>
+			<control type="multiimage">
+				<top>0</top>
+                <left>0</left>
+                <width>1920</width>
+                <height>1080</height>
+				<randomize>true</randomize>
+				<loop>yes</loop>
+				<imagepath background="true">$VAR[Image_Background]</imagepath>
+				<aspectratio>scale</aspectratio>
+				<fadetime>300</fadetime>
+                <include condition="String.IsEmpty(Skin.String(RotationLimit))">RotationLimit1</include>
+                <include condition="String.IsEqual(Skin.String(RotationLimit),1)">RotationLimit1</include>
+                <include condition="String.IsEqual(Skin.String(RotationLimit),2)">RotationLimit2</include>
+                <include condition="String.IsEqual(Skin.String(RotationLimit),3)">RotationLimit3</include>
+                <include condition="String.IsEqual(Skin.String(RotationLimit),4)">RotationLimit4</include>
+                <include condition="String.IsEqual(Skin.String(RotationLimit),5)">RotationLimit5</include>
+                <include condition="String.IsEqual(Skin.String(RotationLimit),6)">RotationLimit6</include>
+                <include condition="String.IsEqual(Skin.String(RotationLimit),7)">RotationLimit7</include>
+                <include condition="String.IsEqual(Skin.String(RotationLimit),8)">RotationLimit8</include>
+                <include condition="String.IsEqual(Skin.String(RotationLimit),9)">RotationLimit9</include>
+                <include condition="String.IsEqual(Skin.String(RotationLimit),10)">RotationLimit10</include>
+                <include condition="String.IsEqual(Skin.String(RotationLimit),11)">RotationLimit11</include>
+                <include condition="String.IsEqual(Skin.String(RotationLimit),12)">RotationLimit12</include>				
+			</control>
+			<control type="videowindow">
+				<visible>Skin.HasSetting(background.showvideo)</visible>
+				<visible>Player.HasVideo</visible>
+				<visible>!Window.IsVisible(weather)</visible>
+				<top>0</top>
+                <left>0</left>
+                <width>1920</width>
+                <height>1080</height>
+			</control>
+			<control type="group">
+				<height>55</height>
+				<align>center</align>
+				<visible>!String.IsEmpty(ListItem.Title)</visible>
+				<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+				<include condition="Skin.HasSetting(darkoverlay)">Object_Background2</include>
+				<control type="label">
+					<height>50</height>
+					<width>1540</width>
+					<left>190</left>
+					<align>center</align>
+					<font>Font-WidgetInfoTitle</font>
+					<label>Ep: $INFO[ListItem.episode] $INFO[ListItem.Title]</label>
+					<scroll>true</scroll>
+				</control>
+			</control>
+			<control type="group">
+				<visible>!Skin.HasSetting(disable.clockheader)</visible> 
+				<top>0</top>
+                <left>0</left>
+				<width>190</width>
+				<height>55</height>
+				<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+				<include condition="Skin.HasSetting(darkoverlay)">Object_Background2</include>
+				<control type="label">
+					<posx>190</posx>
+					<posy>-7</posy>
+					<width>150</width>
+					<height>100</height>
+					<font>Font-WidgetInfoTitle</font>
+					<align>right</align>
+					<aligny>top</aligny>
+					<label>$INFO[System.Time(hh:mm)]</label>
+					<textcolor>$VAR[Furniture_TopBar_MainLabel_Color]</textcolor>
+					<animation effect="slide" start="0" end="-58" condition="!String.IsEmpty(System.Time(xx))">Conditional</animation>
+					<visible>String.IsEmpty(Window(home).Property(submenumouse)) + ![Control.HasFocus(9000) + Window.IsVisible(DialogButtonMenu.xml)] + !Window.IsVisible(Custom_Password.xml)</visible>
+				</control>
+				<control type="label">
+					<posx>180</posx>
+					<posy>18</posy>
+					<width>50</width>
+					<height>100</height>
+					<aligny>top</aligny>
+					<font>Font-ListInfo-Small-Bold</font>
+					<textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
+					<align>right</align>
+					<label>$INFO[System.Time(xx)]</label>
+					<visible>String.IsEmpty(Window(home).Property(submenumouse)) + !String.IsEmpty(System.Time(xx)) + ![Control.HasFocus(9000) + Window.IsVisible(DialogButtonMenu.xml)] + !Window.IsVisible(Custom_Password.xml)</visible>
+				</control>				
+			</control>
+			<control type="button" id="9986">
+				<top>0</top>
+				<left>100</left>
+				<right>100</right>
+				<height>185</height>
+				<visible allowhiddenfocus="true">!Window.IsVisible(Home.xml) + Integer.IsGreater(Container(9987).NumItems,0)</visible>
+				<onback>ClearProperty(quicknavsetup,home)</onback>
+				<onback>50</onback>
+				<onfocus>SetProperty(quicknavsetup,1,home)</onfocus>
+				<onfocus>9987</onfocus>
+				<onunfocus>ClearProperty(quicknavsetup,home)</onunfocus>
+			</control>			
+		</control>
+		<control type="wraplist" id="513">
+			<visible>[Container.Content(episodes) + [String.IsEqual(Skin.String(Skin.ForcedView.episodes),$LOCALIZE[31285]) | String.IsEmpty(Skin.String(Skin.ForcedView.episodes)) ]] | [Container.Content(videos) + [String.IsEqual(Skin.String(Skin.ForcedView.videos),$LOCALIZE[31285]) | String.IsEmpty(Skin.String(Skin.ForcedView.videos)) ]] | [Container.Content(musicvideos) + [String.IsEqual(Skin.String(Skin.ForcedView.musicvideos),$LOCALIZE[31285]) | String.IsEmpty(Skin.String(Skin.ForcedView.musicvideos)) ]]</visible>
+			<top>844</top>		
+			<centerleft>50%</centerleft>
+			<width>1920</width>
+			<onup condition="!Skin.HasSetting(global.kioskmode)">9000</onup>
+			<onback condition="Skin.HasSetting(backoption) + !String.IsEqual(Window(home).Property(HubReturn),Home)">ActivateWindow($INFO[Window(home).Property(HubReturn)])</onback>
+			<ondown>61</ondown>
+			<onleft>513</onleft>
+			<onright>513</onright>
+			<focusposition>2</focusposition>
+			<movement>2</movement>
+			<preloaditems>0</preloaditems>
+			<pagecontrol>61</pagecontrol>
+			<orientation>horizontal</orientation>
+			<viewtype label="31285">bigicon</viewtype>
+			<scrolltime tween="quadratic">400</scrolltime>
+			<itemlayout width="384" height="216">
+				<control type="group">
+					<top>side</top>
+					<left>0</left>
+					<right>0</right>
+					<height>216</height>
+					<control type="image">
+						<include condition="Skin.HasSetting(lightshadows) + !String.IsEqual(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>
+						<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
+						<texture background="true">$VAR[Image_Thumb2]</texture>
+					</control>
+					<control type="group">
+						<right>0</right>
+						<top>0</top>
+						<height>216</height>
+						<width>384</width>
+						<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+						<include condition="Skin.HasSetting(darkoverlay)">Object_Background2</include>
+						<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+						<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+						<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>						
+						<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png) + Skin.HasSetting(shadewatched)</visible>
+					</control>
+					<control type="image">
+						<right>5</right>
+						<top>15</top>
+						<height>32</height>
+						<width>32</width>
+						<texture colordiffuse="$VAR[Indicators_SecondaryColor]">$VAR[Image_Indicator_Back]</texture>
+						<visible>!String.IsEmpty(ListItem.Overlay)</visible>
+					</control>						
+					<control type="image">
+						<right>5</right>
+						<top>15</top>
+						<height>32</height>
+						<width>32</width>
+						<texture colordiffuse="$VAR[Indicators_PrimaryColor]">$VAR[Image_Indicator]</texture>
+						<visible>!String.IsEmpty(ListItem.Overlay)</visible>
+					</control>
+				</control>
+			</itemlayout>
+			<focusedlayout width="384" height="216">
+				<control type="group">
+					<top>side</top>
+					<left>0</left>
+					<right>0</right>
+					<height>216</height>
+					<control type="image">
+						<include condition="Skin.HasSetting(lightshadows) + !String.IsEqual(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>
+						<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
+						<texture background="true">$VAR[Image_Thumb2]</texture>
+					</control>
+					<control type="group">
+						<right>0</right>
+						<top>0</top>
+						<height>216</height>
+						<width>384</width>
+						<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+						<include condition="Skin.HasSetting(darkoverlay)">Object_Background2</include>
+						<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+						<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+						<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+						<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png) + Skin.HasSetting(shadewatched)</visible>
+					</control>
+					<control type="image">
+						<right>5</right>
+						<top>15</top>
+						<height>32</height>
+						<width>32</width>
+						<texture colordiffuse="$VAR[Indicators_SecondaryColor]">$VAR[Image_Indicator_Back]</texture>
+						<visible>!String.IsEmpty(ListItem.Overlay)</visible>
+					</control>								
+					<control type="image">
+						<right>5</right>
+						<top>15</top>
+						<height>32</height>
+						<width>32</width>
+						<texture colordiffuse="$VAR[Indicators_PrimaryColor]">$VAR[Image_Indicator]</texture>
+						<visible>!String.IsEmpty(ListItem.Overlay)</visible>
+					</control>
+					<control type="image">
+						<left>-10</left>
+						<right>-10</right>
+						<top>-10</top>
+						<bottom>-10</bottom>
+						<texture colordiffuse="$VAR[HighlightColor]" border="12">common/border.png</texture>
+						<visible>Control.HasFocus(513)</visible>
+					</control>
+					<control type="group">
+						<left>5</left>
+						<top>15</top>
+						<width>73</width>               
+						<height>50</height>
+						<control type="image">           
+							<texture colordiffuse="LineLabel" fallback="$VAR[MediaFlagsPathVar]/fallback_source.png">$VAR[MediaFlagsPathVar]/bluray.png</texture>
+							<visible>Skin.HasSetting(furniture.showflags) + [String.Contains(ListItem.FilenameAndPath,bluray) | String.Contains(ListItem.FilenameAndPath,bdrip) | String.Contains(ListItem.FilenameAndPath,bd25) | String.Contains(ListItem.FilenameAndPath,bd50) | String.Contains(ListItem.FilenameAndPath,brrip)]</visible>
+						</control>
+						<control type="image">              
+							<texture colordiffuse="LineLabel" fallback="$VAR[MediaFlagsPathVar]/fallback_source.png">$VAR[MediaFlagsPathVar]/hddvd.png</texture>
+							<visible>Skin.HasSetting(furniture.showflags) + String.Contains(ListItem.FilenameAndPath,hddvd)</visible>
+						</control>
+						<control type="image">              
+							<texture colordiffuse="LineLabel" fallback="$VAR[MediaFlagsPathVar]/fallback_source.png">$VAR[MediaFlagsPathVar]/dvd.png</texture>
+							<visible>Skin.HasSetting(furniture.showflags) + String.Contains(ListItem.FilenameAndPath,dvd) + !String.Contains(ListItem.FilenameAndPath,hddvd)</visible>
+						</control>
+						<control type="image">               
+							<texture colordiffuse="LineLabel" fallback="$VAR[MediaFlagsPathVar]/fallback_source.png">$VAR[MediaFlagsPathVar]/hdtv.png</texture>
+							<visible>Skin.HasSetting(furniture.showflags) + String.Contains(ListItem.FilenameAndPath,hdtv)</visible>
+						</control>
+						<control type="image">               
+							<texture colordiffuse="LineLabel" fallback="$VAR[MediaFlagsPathVar]/fallback_source.png">$VAR[MediaFlagsPathVar]/sdtv.png</texture>
+							<visible>Skin.HasSetting(furniture.showflags) + String.Contains(ListItem.FilenameAndPath,sdtv)</visible>
+						</control>				
+						<control type="image">               
+							<texture colordiffuse="LineLabel" fallback="$VAR[MediaFlagsPathVar]/fallback_source.png">$VAR[MediaFlagsPathVar]/web-dl.png</texture>
+							<visible>Skin.HasSetting(furniture.showflags) + String.Contains(ListItem.FilenameAndPath,web)</visible>
+						</control>				
+						<control type="image">              
+							<aspectratio>keep</aspectratio>
+							<visible>Skin.HasSetting(furniture.showflags) + ListItem.IsStereoscopic</visible>
+							<texture colordiffuse="LineLabel" fallback="$VAR[MediaFlagsPathVar]/fallback_source.png">$VAR[MediaFlagsPathVar]/3D.png</texture>
+						</control>
+					</control>
+					<control type="label">
+						<bottom>0</bottom>
+						<left>2</left>
+						<height>30</height>
+						<align>left</align>
+						<font>Font-ListInfo-Small-Bold</font>
+						<label>$VAR[Label_Duration]</label>
+						<scroll>true</scroll>
+					</control>
+					<control type="image">
+						<bottom>30</bottom>
+						<right>0</right>					
+						<width>78</width>      
+						<height>30</height>
+						<aspectratio>keep</aspectratio>
+						<texture colordiffuse="LineLabel" fallback="indicator/fallback_channels.png">$INFO[ListItem.AudioChannels,indicator/channels/,.png]</texture>
+						<visible>Skin.HasSetting(furniture.showflags) + !String.IsEmpty(ListItem.AudioChannels)</visible>
+					</control>
+					<control type="image">
+						<bottom>30</bottom>
+						<right>78</right>					
+						<width>78</width>      
+						<height>30</height>
+						<aspectratio>keep</aspectratio>
+						<texture colordiffuse="LineLabel" fallback="indicator/fallback_audio.png">$INFO[ListItem.AudioCodec,indicator/audio/,.png]</texture>
+						<visible>Skin.HasSetting(furniture.showflags) + !String.IsEmpty(ListItem.AudioCodec)</visible>
+					</control>
+					<control type="image">
+						<bottom>0</bottom>
+						<right>0</right>						
+						<width>78</width>               
+						<height>30</height>
+						<aspectratio>keep</aspectratio>                
+						<texture colordiffuse="LineLabel" fallback="indicator/fallback_resolution.png">$INFO[ListItem.VideoResolution,indicator/resolution/,.png]</texture>
+						<visible>Skin.HasSetting(furniture.showflags) + !String.IsEmpty(ListItem.VideoResolution)</visible>
+					</control>
+					<control type="image">
+						<bottom>0</bottom>
+						<right>78</right>	
+						<width>78</width>
+						<height>30</height>
+						<aspectratio>keep</aspectratio>
+						<texture colordiffuse="LineLabel" fallback="indicator/fallback_video.png">$INFO[ListItem.VideoCodec,indicator/video/,.png]</texture>
+						<visible>Skin.HasSetting(furniture.showflags) + !String.IsEmpty(ListItem.VideoCodec)</visible>
+					</control>  
+				</control>
+			</focusedlayout>
+        </control>
+		<control type="scrollbar" id="61">   
+			<visible>Control.IsVisible(513) + Skin.HasSetting(showscrollbars)</visible>
+            <onup>50</onup>
+			<ondown condition="Skin.HasSetting(AlphabetScrollbar)">6015</ondown>
+            <ondown condition="!Skin.HasSetting(AlphabetScrollbar) + !String.IsEqual(Window(home).Property(HubReturn),Home)">ActivateWindow($INFO[Window(home).Property(HubReturn)])</ondown>				
+            <top>854</top>
+            <orientation>horizontal</orientation>
+            <width>1920</width>
+            <height>8</height>
+            <animation effect="fade" condition="!Control.HasFocus(61) + !Container.Scrolling" time="200" start="100" end="0">Conditional</animation>
+        </control>
+		<control type="group">
+			<visible>Control.IsVisible(513) + Skin.HasSetting(showscrollbars)</visible>
+			<animation effect="fade" condition="!Control.HasFocus(61) + !Container.Scrolling" time="200" start="100" end="0">Conditional</animation>
+			<right>0</right>
+			<top>804</top>
+			<height>50</height>
+			<width>200</width>
+			<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+			<include condition="Skin.HasSetting(darkoverlay)">Object_Background2</include>
+			<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+			<include condition="Skin.HasSetting(darkoverlay)">Object_Background2</include>
+			<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+			<include condition="Skin.HasSetting(darkoverlay)">Object_Background2</include>
+			<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+			<include condition="Skin.HasSetting(darkoverlay)">Object_Background2</include>
+			<control type="label">
+				<height>50</height>
+				<align>center</align>
+				<font>Font-ListInfo-Small-Bold</font>
+				<label>$INFO[Container(513).CurrentItem]/$INFO[Container(513).NumItems]</label>
+				<scroll>true</scroll>
+			</control>
+		</control>
+		<control type="group">
+			<visible>[Player.HasAudio | Player.HasVideo] + Control.HasFocus(61) + Control.IsVisible(513)</visible>
+			<top>820</top>
+			<width>1720</width>
+            <height>34</height>
+			<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+			<include condition="Skin.HasSetting(darkoverlay)">Object_Background2</include>
+			<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+			<include condition="Skin.HasSetting(darkoverlay)">Object_Background2</include>
+			<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+			<include condition="Skin.HasSetting(darkoverlay)">Object_Background2</include>
+			<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+			<include condition="Skin.HasSetting(darkoverlay)">Object_Background2</include>
+			<control type="label">
+				<bottom>2</bottom>
+                <left>2</left>
+                <right>side</right>
+                <height>32</height>         
+                <width>1718</width>            
+                <scroll>yes</scroll>
+                <font>Font-ListInfo-Small-Bold</font>
+                <textcolor>LineLabel</textcolor>
+                <label>$VAR[Label_RSS]</label>  
+			</control>
+		</control>
+		<control type="group">
+			<visible>[Player.HasAudio | Player.HasVideo] + !Control.HasFocus(61) + Control.IsVisible(513)</visible>
+			<top>820</top>
+			<width>1920</width>
+            <height>34</height>
+			<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+			<include condition="Skin.HasSetting(darkoverlay)">Object_Background2</include>
+			<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+			<include condition="Skin.HasSetting(darkoverlay)">Object_Background2</include>
+			<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+			<include condition="Skin.HasSetting(darkoverlay)">Object_Background2</include>
+			<include condition="!Skin.HasSetting(darkoverlay)">Object_Background</include>
+			<include condition="Skin.HasSetting(darkoverlay)">Object_Background2</include>
+			<control type="label">
+				<bottom>2</bottom>
+                <left>2</left>
+                <right>side</right>
+                <height>32</height>         
+                <width>1918</width>            
+                <scroll>yes</scroll>
+                <font>Font-ListInfo-Small-Bold</font>
+                <textcolor>LineLabel</textcolor>
+                <label>$VAR[Label_RSS]</label>  
+			</control>
+		</control>
+		<include>QuickNav</include> 
+	</include>
+</includes>
+

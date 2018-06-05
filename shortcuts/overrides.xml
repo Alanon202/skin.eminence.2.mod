@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<overrides>
+
+<!-- Ajout Shortcut -->
+    <shortcut label="20183" type="$LOCALIZE[32054]" grouping="commands" icon="special://skin/extras/icons/power.png">ReloadSkin()</shortcut>
+
+    <!-- WIDGET DEFAULTS -->
+<!-- Modification Widget -->  
+    <widget label="31189" icon="special://skin/extras/icons/none.png" path="">None</widget>
+    <widget label="8" icon="special://skin/extras/icons/sun.png"  condition="!String.IsEmpty(Skin.String(weather.fanart.name))">Weather</widget>
+    <widgetPlaylists>True</widgetPlaylists>
+        
+    <!-- BACKGROUND SETTINGS -->
+    <backgroundBrowse>True</backgroundBrowse>
+    <background label="::PLAYLIST::">playlistBackground</background>
+    
+    <!-- REMOVE SETTINGS WARNING -->
+    <warn heading="31103" message="31104">ActivateWindow(Settings)</warn>
+
+    <!-- ADDITIONAL ON CLICK -->
+    <!-- Hack for Kaitoast and ExtendedProgress -->
+    <groupoverride group="mainmenu" condition="String.Contains(Container(9000).ListItem.Property(path),ActivateWindow,left) + !String.Contains(Container(9000).ListItem.Property(path),DialogFavourites) + !String.Contains(Container(9000).ListItem.Property(path),DialogButtonMenu) + !String.Contains(Container(9000).ListItem.Property(path),shutdownmenu) + !String.Contains(Container(9000).ListItem.Property(path),favourites)">SetProperty(FO9001,2,home)</groupoverride>
+
+    <!-- Need to Fix this -->
+    <groupoverride group="submenu" condition="String.Contains(Container(9002).ListItem.Property(path),ActivateWindow,left)">SetProperty(FO9001,2,home)</groupoverride>
+    
+    <!-- For Player Controls -->
+    <groupoverride group="mainmenu" condition="Window.IsActive(PlayerControls.xml)">Close</groupoverride>
+
+    <!-- For Power Menu -->
+    <groupoverride group="powermenu" condition="Window.IsActive(DialogButtonMenu.xml)">Close</groupoverride>
+
+    <!-- ICON DIRECTORY -->
+    <thumbnailBrowseDefault>special://skin/extras/icons/</thumbnailBrowseDefault>
+	
+	<!-- <property property="hubwidgetart" label="31828">Fanart</property> -->
+	<!-- <property property="hubwidgetart" label="31267">Landscape</property> -->
+	<!-- <property property="hubwidgetart" label="31647">Thumbs</property> -->
+	<!-- <property property="hubwidgetart" label="31651">Posters</property> -->
+	<!-- <property property="hubwidgetart" label="31824">No Widget</property> -->
+
+	<!-- <propertySettings property="hubwidgetart" buttonID="9501" /> -->
+	<!-- <propertySettings property="hubwidgetart" buttonID="9502" /> -->
+	<!-- <propertySettings property="hubwidgetart" buttonID="9503" /> -->
+	<!-- <propertySettings property="hubwidgetart" buttonID="9504" /> -->
+	<!-- <propertySettings property="hubwidgetart" buttonID="9505" /> -->
+	<!-- <propertySettings property="hubwidgetart" buttonID="9506" /> -->
+	<!-- <propertySettings property="hubwidgetart" buttonID="9507" /> -->
+	<!-- <propertySettings property="hubwidgetart" buttonID="9508" /> -->
+	<!-- <propertySettings property="hubwidgetart" buttonID="9509" /> -->
+	<!-- <propertySettings property="hubwidgetart" buttonID="9510" /> -->
+	<!-- <propertySettings property="hubwidgetart" buttonID="9511" /> -->
+	<!-- <propertySettings property="hubwidgetart" buttonID="9512" /> -->
+	<!-- <propertySettings property="hubwidgetart" buttonID="9513" /> -->
+	<!-- <propertySettings property="hubwidgetart" buttonID="9514" /> -->
+	<!-- <propertySettings property="hubwidgetart" buttonID="9515" /> -->
+	
+    <!-- ICON OVERRIDES -->
+<!-- Ajout Icon -->    
+    <icon labelID="31185">special://skin/extras/icons/none.png</icon>
+    <icon labelID="NatGeo">special://skin/extras/icons/natgeo.png</icon>
+    <icon labelID="Mangas">special://skin/extras/icons/mangas.png</icon>
+    <icon labelID="Kodi">special://skin/extras/icons/kodi2.png</icon>    
+    <icon labelID="Nas">special://skin/extras/icons/nas.png</icon>
+    <icon labelID="Hdd">special://skin/extras/icons/hdd.png</icon>        
+    <icon labelID="x1102">special://skin/extras/icons/tv.png</icon>
+    <icon labelID="x1101">special://skin/extras/icons/film.png</icon>
+    <icon labelID="livetv">special://skin/extras/icons/livetv.png</icon>
+    <icon labelID="radio">special://skin/extras/icons/radio.png</icon>
+    <icon labelID="weather">special://skin/extras/icons/sun.png</icon>
+    <icon labelID="settings">special://skin/extras/icons/settings.png</icon>
+    <icon labelID="13200">special://skin/extras/icons/actor.png</icon>
+    <icon labelID="10007">special://skin/extras/icons/sysinfo.png</icon>
+    <icon labelID="1036">special://skin/extras/icons/favourites.png</icon>
+    <icon labelID="626">special://skin/extras/icons/recentlyadded.png</icon>
+    <icon labelID="10504">special://skin/extras/icons/top100.png</icon>
+    <icon labelID="10505">special://skin/extras/icons/top100.png</icon>
+    <icon labelID="480">special://skin/extras/icons/eye.png</icon>
+    <icon labelID="3">special://skin/extras/icons/video-addons.png</icon>
+    <icon labelID="19020">special://skin/extras/icons/livetv.png</icon>
+    <icon labelID="2">special://skin/extras/icons/songs.png</icon>
+    <icon labelID="1">special://skin/extras/icons/pictures.png</icon>
+    <icon labelID="8">special://skin/extras/icons/sun.png</icon>
+    <icon labelID="24001">special://skin/extras/icons/addons.png</icon>
+    <icon labelID="14036">special://skin/extras/icons/network.png</icon>
+    <icon labelID="13000">special://skin/extras/icons/configure.png</icon>
+    <icon labelID="20077">special://skin/extras/icons/year.png</icon>
+    <icon labelID="13013">special://skin/extras/icons/power.png</icon>
+    <icon labelID="13005">special://skin/extras/icons/power.png</icon>
+    <icon labelID="13016">special://skin/extras/icons/power.png</icon>
+    <icon labelID="13009">special://skin/extras/icons/power.png</icon>
+    <icon labelID="13010">special://skin/extras/icons/power.png</icon>
+    <icon labelID="13011">special://skin/extras/icons/power.png</icon>
+    <icon labelID="20126">special://skin/extras/icons/power.png</icon>
+    <icon labelID="360">special://skin/extras/icons/eye.png</icon>
+    <icon labelID="13014">special://skin/extras/icons/sort-up.png</icon>
+    <icon labelID="20045">special://skin/extras/icons/artist.png</icon>
+    <icon labelID="600">special://skin/extras/icons/cd.png</icon>
+    <icon labelID="32046">special://skin/extras/icons/update.png</icon>
+    <icon labelID="32047">special://skin/extras/icons/update.png</icon>
+    <icon labelID="32055">special://skin/extras/icons/wand.png</icon>
+    <icon labelID="32056">special://skin/extras/icons/wand.png</icon>
+    <icon image="DefaultShortcut.png">special://skin/extras/icons/addon.png</icon>
+    <icon image="DefaultVideo.png">special://skin/extras/icons/video.png</icon>
+    <icon image="DefaultMovies.png">special://skin/extras/icons/film.png</icon>
+    <icon image="DefaultTVShows.png">special://skin/extras/icons/tv.png</icon>
+    <icon image="DefaultAudio.png">special://skin/extras/icons/songs.png</icon>
+    <icon image="DefaultMusicAlbums.png">special://skin/extras/icons/songs.png</icon>
+    <icon image="DefaultMusicVideos.png">special://skin/extras/icons/musicvideo.png</icon>
+    <icon image="DefaultPicture.png">special://skin/extras/icons/pictures.png</icon>
+    <icon image="DefaultProgram.png">special://skin/extras/icons/addons.png</icon>
+    <icon image="DefaultDVDFull.png">special://skin/extras/icons/cd.png</icon>
+    <icon image="DefaultFolder.png">special://skin/extras/icons/files.png</icon>
+    <icon image="UnknownUser.png">special://skin/extras/icons/actor.png</icon>
+    <icon image="DefaultVideoPlaylists.png">special://skin/extras/icons/playlist.png</icon>
+    <icon image="DefaultMusicPlaylists.png">special://skin/extras/icons/playlist.png</icon>
+    <icon image="DefaultRecentlyAddedMovies.png">special://skin/extras/icons/recentlyadded.png</icon>
+    <icon image="DefaultActor.png">special://skin/extras/icons/artist.png</icon>
+    <icon image="DefaultCountry.png">special://skin/extras/icons/world.png</icon>
+    <icon image="DefaultDirector.png">special://skin/extras/icons/director.png</icon>
+    <icon image="DefaultGenre.png">special://skin/extras/icons/genre.png</icon>
+    <icon image="DefaultMusicGenre.png">special://skin/extras/icons/audiogenre.png</icon>
+    <icon image="DefaultSets.png">special://skin/extras/icons/sets.png</icon>
+    <icon image="DefaultStudios.png">special://skin/extras/icons/director.png</icon>
+    <icon image="DefaultTags.png">special://skin/extras/icons/tags.png</icon>
+    <icon image="DefaultMovieTitle.png">special://skin/extras/icons/film.png</icon>
+    <icon image="DefaultTVShowTitle.png">special://skin/extras/icons/tv.png</icon>
+    <icon image="DefaultMusicVideoTitle.png">special://skin/extras/icons/musicvideo.png</icon>
+    <icon image="DefaultYear.png">special://skin/extras/icons/year.png</icon>
+    <icon image="DefaultRecentlyAddedEpisodes.png">special://skin/extras/icons/recentlyadded.png</icon>
+    <icon image="DefaultRecentlyAddedMusicVideos.png">special://skin/extras/icons/recentlyadded.png</icon>
+    <icon image="DefaultInProgressShows.png">special://skin/extras/icons/recentlyadded.png</icon>
+    <icon image="DefaultMusicArtists.png">special://skin/extras/icons/artist.png</icon>
+    <icon image="DefaultMusicGenres.png">special://skin/extras/icons/audiogenre.png</icon>
+    <icon image="DefaultMusicSongs.png">special://skin/extras/icons/song.png</icon>
+    <icon image="DefaultMusicYears.png">special://skin/extras/icons/years.png</icon>
+    <icon image="DefaultMusicTop100.png">special://skin/extras/icons/top100.png</icon>
+    <icon image="DefaultMusicRecentlyAdded.png">special://skin/extras/icons/recentlyadded.png</icon>
+    <icon image="DefaultMusicRecentlyPlayed.png">special://skin/extras/icons/recent.png</icon>
+    <icon image="DefaultAddonVideo.png">special://skin/extras/icons/video-addons.png</icon>
+    <icon image="DefaultAddonMusic.png">special://skin/extras/icons/songs.png</icon>
+    <icon image="DefaultAddonProgram.png">special://skin/extras/icons/addons.png</icon>
+	
+	<shortcut label="Showcase" grouping="common" thumbnail="special://skin/extras/icons/playlist.png" icon="special://skin/extras/icons/playlist.png">ActivateWindow(1131)</shortcut>
+
+    <!-- GROUPINGS -->
+    <!-- Main Grouping -->
+    <groupings>
+        
+        <node label="31139">
+            <shortcut label="31093" type="Hub 01" icon="special://skin/extras/icons/film.png">ActivateWindow(1101)</shortcut>
+            <shortcut label="31094" type="Hub 02" icon="special://skin/extras/icons/tv.png">ActivateWindow(1102)</shortcut>
+            <shortcut label="31123" type="Hub 03" icon="special://skin/extras/icons/addon.png">ActivateWindow(1103)</shortcut>
+            <shortcut label="31123" type="Hub 04" icon="special://skin/extras/icons/addon.png">ActivateWindow(1104)</shortcut>
+            <shortcut label="31123" type="Hub 05" icon="special://skin/extras/icons/addon.png">ActivateWindow(1105)</shortcut>
+            <shortcut label="31123" type="Hub 06" icon="special://skin/extras/icons/addon.png">ActivateWindow(1106)</shortcut>
+            <shortcut label="31123" type="Hub 07" icon="special://skin/extras/icons/addon.png">ActivateWindow(1107)</shortcut>
+            <shortcut label="31123" type="Hub 08" icon="special://skin/extras/icons/addon.png">ActivateWindow(1108)</shortcut>
+            <shortcut label="31123" type="Hub 09" icon="special://skin/extras/icons/addon.png">ActivateWindow(1109)</shortcut>
+            <shortcut label="31123" type="Hub 10" icon="special://skin/extras/icons/addon.png">ActivateWindow(1110)</shortcut>
+            <shortcut label="31123" type="Hub 11" icon="special://skin/extras/icons/addon.png">ActivateWindow(1111)</shortcut>
+            <shortcut label="31123" type="Hub 12" icon="special://skin/extras/icons/addon.png">ActivateWindow(1112)</shortcut>
+            <shortcut label="31123" type="Hub 13" icon="special://skin/extras/icons/addon.png">ActivateWindow(1113)</shortcut>
+            <shortcut label="31123" type="Hub 14" icon="special://skin/extras/icons/addon.png">ActivateWindow(1114)</shortcut>
+            <shortcut label="31123" type="Hub 15" icon="special://skin/extras/icons/addon.png">ActivateWindow(1115)</shortcut>
+        </node>
+        <node label="32029">
+            <content>common</content>
+            <shortcut label="$ADDON[script.skin.helper.service 32062]" type="32010" condition="System.HasAddon(script.skin.helper.service)">||BROWSE||script.skin.helper.service/?action=smartshortcuts</shortcut>
+        </node>		
+        <node label="32030">
+            <content>video</content>
+            <node label="32040">
+                <content>playlist-video</content>
+            </node>
+            <node label="32010">
+                <shortcut label="1037" type="32014" icon="DefaultAddonVideo.png">ActivateWindow(Videos,Addons,return)</shortcut>
+                <content>addon-video</content>
+            </node>
+            <node label="32075">
+                <content>videosources</content>
+                <content>upnp-video</content>
+            </node>
+        </node>
+        <node label="32031">
+            <content>music</content>
+            <node label="32040">
+                <content>playlist-audio</content>
+            </node>
+            <node label="32011">
+                <shortcut label="1038" type="32019" icon="DefaultAddonMusic.png">ActivateWindow(MusicLibrary,Addons,return)</shortcut>
+                <content>addon-audio</content>
+            </node>
+            <node label="32075">
+                <content>musicsources</content>
+                <content>upnp-music</content>
+            </node>
+        </node>
+        <node label="32017" condition="System.GetBool(pvrmanager.enabled)" version="13">
+            <content>pvr</content>
+            <node label="19023">
+                <content>pvr-tv</content>
+            </node>
+            <node label="19024">
+                <content>pvr-radio</content>
+            </node>
+        </node>
+        <node label="32017" condition="PVR.HasTVChannels" version="14">
+            <content>pvr</content>
+            <node label="19023">
+                <content>pvr-tv</content>
+            </node>
+        </node>
+        <node label="32087" condition="PVR.HasRadioChannels" version="14">
+            <content>radio</content>
+            <node label="19024">
+                <content>pvr-radio</content>
+            </node>
+        </node>
+        <node label="32020">
+            <content>picturesources</content>
+        </node>
+        <node label="32007">
+            <node label="32009">
+                <shortcut label="10001" type="32021" icon="DefaultAddonProgram.png">ActivateWindow(Programs,Addons,return)</shortcut>
+                <content>addon-program</content>
+            </node>
+            <node label="32010">
+                <shortcut label="1037" type="32014" icon="DefaultAddonVideo.png">ActivateWindow(Videos,Addons,return)</shortcut>
+                <content>addon-video</content>
+            </node>
+            <node label="32011">
+                <shortcut label="1038" type="32019" icon="DefaultAddonMusic.png">ActivateWindow(MusicLibrary,Addons,return)</shortcut>
+                <content>addon-audio</content>
+            </node>
+            <node label="32012">
+                <shortcut label="1039" type="32020" icon="DefaultAddonPicture.png">ActivateWindow(Pictures,Addons,return)</shortcut>
+                <content>addon-image</content>
+            </node>
+        </node>
+        <node label="32006">
+            <content>favourite</content>
+        </node>
+        <node label="10004">
+            <content>settings</content>
+        </node>
+        <node label="32054">
+            <content>commands</content>
+        </node>
+    </groupings>
+
+	<!-- <widget-groupings> -->
+		<!-- <shortcut label="Weather" icon="special://skin/extras/icons/sun.png" condition="!String.IsEmpty(Skin.String(weather.fanart.name))" widget="Weather">$INCLUDE[Object_WeatherOutlook]</shortcut>	 -->
+		<!-- <node label="342"> -->
+			<!-- <shortcut label="$ADDON[service.library.data.provider 32004]" condition="System.HasAddon(service.library.data.provider)" icon="logos/ldp.png" widget="library" widgetType="movies" widgetTarget="video">plugin://service.library.data.provider?type=randommovies&amp;reload=$INFO[Window.Property(randommovies)]</shortcut> -->
+			<!-- <shortcut label="$ADDON[service.library.data.provider 32005]" condition="System.HasAddon(service.library.data.provider)" icon="logos/ldp.png" widget="library" widgetType="movies" widgetTarget="video">plugin://service.library.data.provider?type=recentmovies&amp;reload=$INFO[Window.Property(recentmovies)]</shortcut> -->
+			<!-- <shortcut label="$ADDON[service.library.data.provider 32006]" condition="System.HasAddon(service.library.data.provider)" icon="logos/ldp.png" widget="library" widgetType="movies" widgetTarget="video">plugin://service.library.data.provider?type=recommendedmovies&amp;reload=$INFO[Window.Property(recommendedmovies)]</shortcut> -->
+			<!-- <shortcut label="20386" icon="logos/kodi.png" widget="library" widgetType="movies" widgetTarget="video">videodb://recentlyaddedmovies/</shortcut> -->
+			<!-- <shortcut label="20434" icon="logos/kodi-sets.png" condition="Library.HasContent(MovieSets)" widget="library" widgetType="sets" widgetTarget="video">library://video/movies/sets.xml/</shortcut> -->
+			<!-- <shortcut label="31732" icon="logos/kodi-pl.png" condition="Library.HasContent(Movies)" widget="library" widgetType="movies" widgetTarget="video">special://skin/extras/InProgressMovies.xsp</shortcut> -->
+			<!-- <shortcut label="$LOCALIZE[13409]" icon="logos/kodi-pl.png" condition="Library.HasContent(Movies)" widget="library" widgetType="movies" widgetTarget="video">special://skin/extras/Top250.xsp</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.skin.helper.widgets 32048]" condition="System.HasAddon(script.skin.helper.widgets)" icon="logos/shs-logo.png" widget="library" widgetType="movies" widgetTarget="video">plugin://script.skin.helper.widgets/?action=random&amp;mediatype=movies&amp;reload=$INFO[Window(Home).Property(widgetreload-movies)]</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.skin.helper.widgets 32038]" condition="System.HasAddon(script.skin.helper.widgets)" icon="logos/shs-logo.png" widget="library" widgetType="movies" widgetTarget="video">plugin://script.skin.helper.widgets/?action=recent&amp;mediatype=movies&amp;reload=$INFO[Window(Home).Property(widgetreload-movies)]</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.skin.helper.widgets 32046]" condition="System.HasAddon(script.skin.helper.widgets)" icon="logos/shs-logo.png" widget="library" widgetType="movies" widgetTarget="video">plugin://script.skin.helper.widgets/?action=recommended&amp;mediatype=movies&amp;reload=$INFO[Window(Home).Property(widgetreload-movies)]</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.skin.helper.widgets 32066]" condition="System.HasAddon(script.skin.helper.widgets)" icon="logos/shs-logo.png" widget="library" widgetType="movies" widgetTarget="video">plugin://script.skin.helper.widgets/?action=unwatched&amp;mediatype=movies&amp;reload=$INFO[Window(Home).Property(widgetreload-movies)]</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.skin.helper.widgets 32003]" condition="System.HasAddon(script.skin.helper.widgets)" icon="logos/shs-logo.png" widget="library" widgetType="movies" widgetTarget="video">plugin://script.skin.helper.widgets/?action=top250&amp;mediatype=movies&amp;reload=$INFO[Window(Home).Property(widgetreload-movies)]</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.skin.helper.widgets 32028]" condition="System.HasAddon(script.skin.helper.widgets)" icon="logos/shs-logo.png" widget="library" widgetType="movies" widgetTarget="video">plugin://script.skin.helper.widgets/?action=inprogress&amp;mediatype=movies&amp;reload=$INFO[Window(Home).Property(widgetreload-movies)]</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.skin.helper.widgets 32029]" condition="System.HasAddon(script.skin.helper.widgets)" icon="logos/shs-logo.png" widget="library" widgetType="movies" widgetTarget="video">plugin://script.skin.helper.widgets/?action=inprogressandrecommended&amp;mediatype=movies&amp;reload=$INFO[Window(Home).Property(widgetreload-movies)]</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.skin.helper.widgets 32006]" condition="System.HasAddon(script.skin.helper.widgets)" icon="logos/shs-logo.png" widget="library" widgetType="movies" widgetTarget="video">plugin://script.skin.helper.widgets/?action=similar&amp;mediatype=movies&amp;reload=$INFO[Window(Home).Property(widgetreload-movies)]</shortcut> -->
+			<!-- <shortcut label="31734" condition="System.HasAddon(script.skin.helper.widgets)" icon="logos/shs-logo.png" widget="library" widgetType="movies" widgetTarget="video">plugin://script.skin.helper.widgets/?action=forgenre&amp;mediatype=movies&amp;reload=$INFO[Window(Home).Property(widgetreload2)]</shortcut> -->
+			<!-- <shortcut label="$LOCALIZE[10134]" condition="System.HasAddon(script.skin.helper.widgets)" icon="logos/shs-logo.png" widget="library" widgetType="movies" widgetTarget="video">plugin://script.skin.helper.widgets/?action=favourites&amp;mediatype=movies&amp;reload=$INFO[Window(Home).Property(widgetreload-movies)]</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.extendedinfo 32047]" condition="System.HasAddon(script.extendedinfo)" icon="logos/trakt.png" widget="trakt" widgetType="movies" widgetTarget="video">plugin://script.extendedinfo?info=trendingmovies</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.extendedinfo 32042]" condition="System.HasAddon(script.extendedinfo)" icon="logos/tmdb.png" widget="tmdb" widgetType="movies" widgetTarget="video">plugin://script.extendedinfo?info=incinemamovies</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.extendedinfo 32043]" condition="System.HasAddon(script.extendedinfo)" icon="logos/tmdb.png" widget="tmdb" widgetType="movies" widgetTarget="video">plugin://script.extendedinfo?info=upcomingmovies</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.extendedinfo 32044]" condition="System.HasAddon(script.extendedinfo)" icon="logos/tmdb.png" widget="tmdb" widgetType="movies" widgetTarget="video">plugin://script.extendedinfo?info=popularmovies</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.extendedinfo 32046]" condition="System.HasAddon(script.extendedinfo)" icon="logos/tmdb.png" widget="tmdb" widgetType="movies" widgetTarget="video">plugin://script.extendedinfo?info=topratedmovies</shortcut> -->
+		<!-- </node> -->
+		<!-- <node label="20343"> -->
+			<!-- <shortcut label="$ADDON[script.skin.helper.widgets 32041]" condition="System.HasAddon(script.skin.helper.widgets)" icon="logos/shs-logo.png" widget="library" widgetType="tvshows" widgetTarget="video">plugin://script.skin.helper.widgets/?action=random&amp;mediatype=tvshows&amp;reload=$INFO[Window(Home).Property(widgetreload-tvshows)]</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.skin.helper.widgets 32045]" condition="System.HasAddon(script.skin.helper.widgets)" icon="logos/shs-logo.png" widget="library" widgetType="tvshows" widgetTarget="video">plugin://script.skin.helper.widgets/?action=recent&amp;mediatype=tvshows&amp;reload=$INFO[Window(Home).Property(widgetreload-tvshows)]</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.skin.helper.widgets 32037]" condition="System.HasAddon(script.skin.helper.widgets)" icon="logos/shs-logo.png" widget="library" widgetType="tvshows" widgetTarget="video">plugin://script.skin.helper.widgets/?action=recommended&amp;mediatype=tvshows&amp;reload=$INFO[Window(Home).Property(widgetreload-tvshows)]</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.skin.helper.widgets 32047]" condition="System.HasAddon(script.skin.helper.widgets)" icon="logos/shs-logo.png" widget="library" widgetType="tvshows" widgetTarget="video">plugin://script.skin.helper.widgets/?action=top250&amp;mediatype=tvshows&amp;reload=$INFO[Window(Home).Property(widgetreload-tvshows)]</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.skin.helper.widgets 32044]" condition="System.HasAddon(script.skin.helper.widgets)" icon="logos/shs-logo.png" widget="library" widgetType="tvshows" widgetTarget="video">plugin://script.skin.helper.widgets/?action=inprogress&amp;mediatype=tvshows&amp;reload=$INFO[Window(Home).Property(widgetreload-tvshows)]</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.skin.helper.widgets 32014]" condition="System.HasAddon(script.skin.helper.widgets)" icon="logos/shs-logo.png" widget="library" widgetType="tvshows" widgetTarget="video">plugin://script.skin.helper.widgets/?action=similar&amp;mediatype=tvshows&amp;reload=$INFO[Window(Home).Property(widgetreload-tvshows)]</shortcut> -->
+			<!-- <shortcut label="31734" condition="System.HasAddon(script.skin.helper.widgets)" icon="logos/shs-logo.png" widget="library" widgetType="tvshows" widgetTarget="video">plugin://script.skin.helper.widgets/?action=forgenre&amp;mediatype=tvshows&amp;reload=$INFO[Window(Home).Property(widgetreload2)]</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.tv.show.next.aired 32101]" condition="System.HasAddon(script.skin.helper.widgets) + System.HasAddon(script.tv.show.next.aired)" icon="logos/tsna-logo.png" widget="library" widgetType="tvshows" widgetTarget="video">plugin://script.skin.helper.widgets/?action=nextairedtvshows&amp;reload=$INFO[Window(Home).Property(widgetreload2)]</shortcut> -->
+			<!-- <shortcut label="626" icon="logos/kodi.png" condition="Library.HasContent(TVShows)" widget="library" widgetType="tvshows" widgetTarget="video">library://video/tvshows/inprogressshows.xml</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.extendedinfo 32032]" condition="System.HasAddon(script.extendedinfo)" icon="logos/trakt.png" widget="trakt" widgetType="tvshows" widgetTarget="video">plugin://script.extendedinfo?info=trendingshows</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.extendedinfo 32041]" condition="System.HasAddon(script.extendedinfo)" icon="logos/tmdb.png" widget="tmdb" widgetType="tvshows" widgetTarget="video">plugin://script.extendedinfo?info=populartvshows</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.extendedinfo 32040]" condition="System.HasAddon(script.extendedinfo)" icon="logos/tmdb.png" widget="tmdb" widgetType="tvshows" widgetTarget="video">plugin://script.extendedinfo?info=topratedtvshows</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.extendedinfo 32039]" condition="System.HasAddon(script.extendedinfo)" icon="logos/tmdb.png" widget="tmdb" widgetType="tvshows" widgetTarget="video">plugin://script.extendedinfo?info=onairtvshows</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.extendedinfo 32038]" condition="System.HasAddon(script.extendedinfo)" icon="logos/tmdb.png" widget="tmdb" widgetType="tvshows" widgetTarget="video">plugin://script.extendedinfo?info=airingtodaytvshows</shortcut> -->
+		<!-- </node> -->
+		<!-- <node label="20360"> -->
+			<!-- <shortcut label="$ADDON[service.library.data.provider 32007]" condition="System.HasAddon(service.library.data.provider)" icon="logos/ldp.png" widget="library" widgetType="episodes" widgetTarget="video">plugin://service.library.data.provider?type=randomepisodes&amp;reload=$INFO[Window.Property(widgetreload-episodes)]</shortcut> -->
+			<!-- <shortcut label="$ADDON[service.library.data.provider 32008]" condition="System.HasAddon(service.library.data.provider)" icon="logos/ldp.png" widget="library" widgetType="episodes" widgetTarget="video">plugin://service.library.data.provider?type=recentepisodes&amp;reload=$INFO[Window.Property(widgetreload-episodes)]</shortcut> -->
+			<!-- <shortcut label="$ADDON[service.library.data.provider 32010]" condition="System.HasAddon(service.library.data.provider)" icon="logos/ldp.png" widget="library" widgetType="episodes" widgetTarget="video">plugin://service.library.data.provider?type=recommendedepisodes&amp;reload=$INFO[Window.Property(widgetreload-episodes)]</shortcut> -->
+			<!-- <shortcut label="20387" icon="logos/kodi.png" widget="library" widgetType="episodes" widgetTarget="video">videodb://recentlyaddedepisodes/</shortcut> -->
+			<!-- <shortcut label="31733" icon="logos/kodi-pl.png" condition="Library.HasContent(TVShows)" widget="library" widgetType="episodes" widgetTarget="video">special://skin/extras/InProgressEpisodes.xsp</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.skin.helper.widgets 32008]" condition="System.HasAddon(script.skin.helper.widgets)" icon="logos/shs-logo.png" widget="library" widgetType="episodes" widgetTarget="video">plugin://script.skin.helper.widgets/?action=random&amp;mediatype=episodes&amp;reload=$INFO[Window(Home).Property(widgetreload-episodes)]</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.skin.helper.widgets 32039]" condition="System.HasAddon(script.skin.helper.widgets)" icon="logos/shs-logo.png" widget="library" widgetType="episodes" widgetTarget="video">plugin://script.skin.helper.widgets/?action=recent&amp;mediatype=episodes&amp;reload=$INFO[Window(Home).Property(widgetreload-episodes)]</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.skin.helper.widgets 32009]" condition="System.HasAddon(script.skin.helper.widgets)" icon="logos/shs-logo.png" widget="library" widgetType="episodes" widgetTarget="video">plugin://script.skin.helper.widgets/?action=recommended&amp;mediatype=episodes&amp;reload=$INFO[Window(Home).Property(widgetreload-episodes)]</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.skin.helper.widgets 32027]" condition="System.HasAddon(script.skin.helper.widgets)" icon="logos/shs-logo.png" widget="library" widgetType="episodes" widgetTarget="video">plugin://script.skin.helper.widgets/?action=inprogress&amp;mediatype=episodes&amp;reload=$INFO[Window(Home).Property(widgetreload-episodes)]</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.skin.helper.widgets 32010]" condition="System.HasAddon(script.skin.helper.widgets)" icon="logos/shs-logo.png" widget="library" widgetType="episodes" widgetTarget="video">plugin://script.skin.helper.widgets/?action=inprogressandrecommended&amp;mediatype=episodes&amp;reload=$INFO[Window(Home).Property(widgetreload-episodes)]</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.skin.helper.widgets 32049]" condition="System.HasAddon(script.skin.helper.widgets)" icon="logos/shs-logo.png" widget="library" widgetType="episodes" widgetTarget="video">plugin://script.skin.helper.widgets/?action=inprogressandrandom&amp;mediatype=episodes&amp;reload=$INFO[Window(Home).Property(widgetreload-episodes)]</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.skin.helper.widgets 32002]" condition="System.HasAddon(script.skin.helper.widgets)" icon="logos/shs-logo.png" widget="library" widgetType="episodes" widgetTarget="video">plugin://script.skin.helper.widgets/?action=next&amp;mediatype=episodes&amp;reload=$INFO[Window(Home).Property(widgetreload-episodes)]</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.skin.helper.widgets 32043]" condition="System.HasAddon(script.skin.helper.widgets)" icon="logos/shs-logo.png" widget="library" widgetType="episodes" widgetTarget="video">plugin://script.skin.helper.widgets/?action=nextaired&amp;mediatype=episodes&amp;reload=$INFO[Window(Home).Property(widgetreload-episodes)]</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.skin.helper.widgets 32042]" condition="System.HasAddon(script.skin.helper.widgets)" icon="logos/shs-logo.png" widget="library" widgetType="episodes" widgetTarget="video">plugin://script.skin.helper.widgets/?action=unaired&amp;mediatype=episodes&amp;reload=$INFO[Window(Home).Property(widgetreload-episodes)]</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.skin.helper.widgets 32068]" condition="System.HasAddon(script.skin.helper.widgets)" icon="logos/shs-logo.png" widget="library" widgetType="episodes" widgetTarget="video">plugin://script.skin.helper.widgets/?action=airingtoday&amp;mediatype=episodes&amp;reload=$INFO[Window(Home).Property(widgetreload-episodes)]</shortcut> -->
+			<!-- <shortcut label="$LOCALIZE[10134]" condition="System.HasAddon(script.skin.helper.widgets)" icon="logos/shs-logo.png" widget="library" widgetType="episodes" widgetTarget="video">plugin://script.skin.helper.widgets/?action=favourites&amp;mediatype=episodes&amp;reload=$INFO[Window(Home).Property(widgetreload-episodes)]</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.extendedinfo 32028]" condition="System.HasAddon(script.extendedinfo)" icon="logos/trakt.png" widget="trakt" widgetType="tvshows" widgetTarget="video">plugin://script.extendedinfo?info=airingepisodes</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.extendedinfo 32029]" condition="System.HasAddon(script.extendedinfo)" icon="logos/trakt.png" widget="trakt" widgetType="tvshows" widgetTarget="video">plugin://script.extendedinfo?info=premiereepisodes</shortcut> -->
+		<!-- </node> -->
+		<!-- <node label="31015"> -->
+			<!-- <shortcut label="$LOCALIZE[19287]" condition="System.HasPVRAddon" icon="logos/kodi.png" widget="pvr" widgetType="pvr" widgetTarget="pvr">pvr://channels/tv/*</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.skin.helper.widgets 32020]" condition="System.HasAddon(script.skin.helper.widgets)" icon="logos/shs-logo.png" widget="pvr" widgetType="pvr" widgetTarget="pvr">plugin://script.skin.helper.widgets/?action=channels&amp;mediatype=pvr&amp;reload=$INFO[Window(Home).Property(widgetreload2)]</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.skin.helper.widgets 32069]" condition="System.HasAddon(script.skin.helper.widgets)" icon="logos/shs-logo.png" widget="pvr" widgetType="pvr" widgetTarget="pvr">plugin://script.skin.helper.widgets/?action=lastchannels&amp;mediatype=pvr&amp;reload=$INFO[Window(Home).Property(widgetreload2)]</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.skin.helper.widgets 32018]" condition="System.HasAddon(script.skin.helper.widgets)" icon="logos/shs-logo.png" widget="pvr" widgetType="pvr" widgetTarget="pvr">plugin://script.skin.helper.widgets/?action=recordings&amp;mediatype=pvr&amp;reload=$INFO[Window(Home).Property(widgetreload2)]</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.skin.helper.widgets 32019]" condition="System.HasAddon(script.skin.helper.widgets)" icon="logos/shs-logo.png" widget="pvr" widgetType="pvr" widgetTarget="pvr">plugin://script.skin.helper.widgets/?action=nextrecordings&amp;mediatype=pvr&amp;reload=$INFO[Window(Home).Property(widgetreload2)]</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.skin.helper.widgets 32031]" condition="System.HasAddon(script.skin.helper.widgets)" icon="logos/shs-logo.png" widget="pvr" widgetType="pvr" widgetTarget="pvr">plugin://script.skin.helper.widgets/?action=nextrecordings&amp;mediatype=pvr&amp;reversed=true&amp;reload=$INFO[Window(Home).Property(widgetreload2)]</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.skin.helper.widgets 32021]" condition="System.HasAddon(script.skin.helper.widgets)" icon="logos/shs-logo.png" widget="pvr" widgetType="pvr" widgetTarget="pvr">plugin://script.skin.helper.widgets/?action=timers&amp;mediatype=pvr&amp;reload=$INFO[Window(Home).Property(widgetreload2)]</shortcut> -->
+		<!-- </node> -->
+		<!-- <node label="2"> -->
+			<!-- <shortcut label="$ADDON[service.library.data.provider 32017]" condition="System.HasAddon(service.library.data.provider)" icon="logos/ldp.png" widget="library" widgetType="albums" widgetTarget="music">plugin://service.library.data.provider?type=recentalbums&amp;reload=$INFO[Window.Property(recentalbums)]</shortcut> -->
+			<!-- <shortcut label="$ADDON[service.library.data.provider 32016]" condition="System.HasAddon(service.library.data.provider)" icon="logos/ldp.png" widget="library" widgetType="albums" widgetTarget="music">plugin://service.library.data.provider?type=randomalbums&amp;reload=$INFO[Window.Property(randomalbums)]</shortcut> -->
+			<!-- <shortcut label="$ADDON[service.library.data.provider 32018]" condition="System.HasAddon(service.library.data.provider)" icon="logos/ldp.png" widget="library" widgetType="albums" widgetTarget="music">plugin://service.library.data.provider?type=recommendedalbums&amp;reload=$INFO[Window.Property(recommendedalbums)]</shortcut> -->
+			<!-- <shortcut label="$ADDON[service.library.data.provider 32015]" condition="System.HasAddon(service.library.data.provider)" icon="logos/ldp.png" widget="library" widgetType="songs" widgetTarget="music">plugin://service.library.data.provider?type=randomsongs&amp;reload=$INFO[Window.Property(randomsongs)]</shortcut> -->
+			<!-- <shortcut label="359" icon="logos/kodi.png" condition="Library.HasContent(Music)" widget="library" widgetType="albums" widgetTarget="music">musicdb://recentlyaddedalbums/</shortcut> -->
+			<!-- <shortcut label="517" icon="logos/kodi.png" condition="Library.HasContent(Music)" widget="library" widgetType="albums" widgetTarget="music">musicdb://recentlyplayedalbums/</shortcut> -->
+			<!-- <shortcut label="521" icon="logos/kodi.png" condition="Library.HasContent(Music)" widget="library" widgetType="albums" widgetTarget="music">musicdb://compilations/</shortcut> -->
+			<!-- <shortcut label="10505" icon="logos/kodi.png" condition="Library.HasContent(Music)" widget="library" widgetType="albums" widgetTarget="music"> musicdb://top100/albums/</shortcut> -->
+			<!-- <shortcut label="10504" icon="logos/kodi.png" condition="Library.HasContent(Music)" widget="library" widgetType="songs" widgetTarget="music">musicdb://top100/songs/</shortcut> -->
+			<!-- <shortcut label="359" condition="System.HasAddon(script.skin.helper.widgets)" icon="logos/shs-logo.png" widget="library" widgetType="albums" widgetTarget="music">plugin://script.skin.helper.widgets/?action=recentalbums&amp;reload=$INFO[Window(Home).Property(widgetreload-music)]</shortcut> -->
+			<!-- <shortcut label="517" condition="System.HasAddon(script.skin.helper.widgets)" icon="logos/shs-logo.png" widget="library" widgetType="albums" widgetTarget="music">plugin://script.skin.helper.widgets/?action=recentplayedalbums&amp;reload=$INFO[Window(Home).Property(widgetreload-music)]</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.skin.helper.widgets 32015]" condition="System.HasAddon(script.skin.helper.widgets)" icon="logos/shs-logo.png" widget="library" widgetType="albums" widgetTarget="music">plugin://script.skin.helper.widgets/?action=recommendedalbums&amp;reload=$INFO[Window(Home).Property(widgetreload-music)]</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.skin.helper.widgets 32012]" condition="System.HasAddon(script.skin.helper.widgets)" icon="logos/shs-logo.png" widget="library" widgetType="songs" widgetTarget="music">plugin://script.skin.helper.widgets/?action=recentsongs&amp;reload=$INFO[Window(Home).Property(widgetreload-music)]</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.skin.helper.widgets 32013]" condition="System.HasAddon(script.skin.helper.widgets)" icon="logos/shs-logo.png" widget="library" widgetType="songs" widgetTarget="music">plugin://script.skin.helper.widgets/?action=recentplayedsongs&amp;reload=$INFO[Window(Home).Property(widgetreload-music)]</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.skin.helper.widgets 32016]" condition="System.HasAddon(script.skin.helper.widgets)" icon="logos/shs-logo.png" widget="library" widgetType="songs" widgetTarget="music">plugin://script.skin.helper.widgets/?action=recommendedsongs&amp;reload=$INFO[Window(Home).Property(widgetreload-music)]</shortcut> -->
+		<!-- </node> -->
+		<!-- <node label="20389"> -->
+			<!-- <shortcut label="$ADDON[service.library.data.provider 32022]" condition="System.HasAddon(service.library.data.provider)" icon="logos/ldp.png" widget="library" widgetType="musicvideos" widgetTarget="video">plugin://service.library.data.provider?type=randommusicvideos&amp;reload=$INFO[Window.Property(randommusicvideos)]</shortcut> -->
+			<!-- <shortcut label="$ADDON[service.library.data.provider 32023]" condition="System.HasAddon(service.library.data.provider)" icon="logos/ldp.png" widget="library" widgetType="musicvideos" widgetTarget="video">plugin://service.library.data.provider?type=recentmusicvideos&amp;reload=$INFO[Window.Property(recentmusicvideos)]</shortcut> -->
+			<!-- <shortcut label="20390" icon="logos/kodi.png" widget="library" widgetType="musicvideos" widgetTarget="video">videodb://recentlyaddedmusicvideos/</shortcut> -->
+		<!-- </node> -->
+		<!-- <node label="32020"> -->
+			<!-- <content>picturesources</content> -->
+		<!-- </node> -->
+		<!-- <node label="Mixed Media"> -->
+			<!-- <shortcut label="$ADDON[script.skin.helper.widgets 32005]" condition="System.HasAddon(script.skin.helper.widgets)" icon="logos/shs-logo.png" widget="library" widgetType="mixed" widgetTarget="video">plugin://script.skin.helper.widgets/?action=recentmedia&amp;reload=$INFO[Window(Home).Property(widgetreload)]</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.skin.helper.widgets 32004]" condition="System.HasAddon(script.skin.helper.widgets)" icon="logos/shs-logo.png" widget="library" widgetType="mixed" widgetTarget="video">plugin://script.skin.helper.widgets/?action=recommended&amp;mediatype=media&amp;reload=$INFO[Window(Home).Property(widgetreload2)]</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.skin.helper.widgets 32011]" condition="System.HasAddon(script.skin.helper.widgets)" icon="logos/shs-logo.png" widget="library" widgetType="mixed" widgetTarget="video">plugin://script.skin.helper.widgets/?action=inprogressmedia&amp;reload=$INFO[Window(Home).Property(widgetreload)]</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.skin.helper.widgets 32007]" condition="System.HasAddon(script.skin.helper.widgets)" icon="logos/shs-logo.png" widget="library" widgetType="mixed" widgetTarget="video">plugin://script.skin.helper.widgets/?action=inprogressandrecommendedmedia&amp;reload=$INFO[Window(Home).Property(widgetreload)]</shortcut> -->
+			<!-- <shortcut label="$ADDON[service.library.data.provider 32019]" condition="System.HasAddon(service.library.data.provider)" icon="logos/ldp.png" widget="library" widgetType="mixed" widgetTarget="video">plugin://service.library.data.provider?type=recentvideos&amp;reload=$INFO[Window.Property(recentvideos)]</shortcut> -->
+		<!-- </node> -->
+		<!-- <node label="32030"> -->
+			<!-- <content>video</content> -->
+			<!-- <content>videosources</content> -->
+		<!-- </node> -->
+		<!-- <node label="32031"> -->
+			<!-- <content>music</content> -->
+			<!-- <content>musicsources</content> -->
+		<!-- </node> -->
+		<!-- <node label="136"> -->
+			<!-- <content>playlist-video</content> -->
+			<!-- <content>playlist-audio</content> -->
+		<!-- </node> -->
+
+		<!-- <node label="1036"> -->
+			<!-- <shortcut label="1036" type="32010" condition="System.HasAddon(script.skin.helper.widgets)" icon="logos/shs-logo.png">||BROWSE||script.skin.helper.widgets/?action=widgets&amp;path=favourites</shortcut> -->
+			<!-- <shortcut label="$ADDON[script.skin.helper.widgets 32001]" condition="System.HasAddon(script.skin.helper.widgets)" icon="logos/shs-logo.png" widget="addon" widgetType="favourite">plugin://script.skin.helper.widgets/?action=favouritemedia&amp;reload=$INFO[Window(Home).Property(widgetreload2)]</shortcut> -->
+			<!-- <shortcut label="1036" condition="System.HasAddon(script.skin.helper.widgets)" icon="logos/shs-logo.png" widget="addon" widgetType="favourite">plugin://script.skin.helper.widgets/?action=favourites&amp;reload=$INFO[Window(Home).Property(widgetreload2)]</shortcut> -->
+		<!-- </node> -->
+		<!-- <node label="32007"> -->
+			<!-- <node label="32010"> -->
+				<!-- <content>addon-video</content> -->
+			<!-- </node> -->
+			<!-- <node label="32011"> -->
+				<!-- <content>addon-audio</content> -->
+			<!-- </node> -->
+			<!-- <node label="32012"> -->
+				<!-- <content>addon-image</content> -->
+			<!-- </node> -->
+			<!-- <node label="32009"> -->
+				<!-- <content>addon-program-plugin</content> -->
+			<!-- </node> -->
+			<!-- <shortcut label="10001" type="32021" icon="DefaultAddonProgram.png" widget="addon" widgetType="addon" widgetTarget="programs">addons://sources/executable</shortcut> -->
+			<!-- <shortcut label="1037" type="32014" icon="DefaultAddonVideo.png" widget="addon" widgetType="addon" widgetTarget="video">addons://sources/video</shortcut> -->
+			<!-- <shortcut label="1038" type="32019" icon="DefaultAddonMusic.png" widget="addon" widgetType="addon" widgetTarget="music">addons://sources/audio</shortcut> -->
+			<!-- <shortcut label="1039" type="32020" icon="DefaultAddonPicture.png" widget="addon" widgetType="addon" widgetTarget="pictures">addons://sources/image</shortcut> -->
+		<!-- </node> -->
+	<!-- </widget-groupings>     -->
+    
+	<!-- Parental control -->
+	<override action="globaloverride">
+		<condition>String.Contains(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))</condition>
+		<action>Skin.SetString(dialog_action,::ACTION::)</action>
+		<action>ActivateWindow(1132)</action> 
+		<action>AlarmClock(parental,Skin.Reset(mypassword),$VAR[password_time],Silent)</action>	
+	</override>
+	<override action="globaloverride">
+		<condition>[String.IsEmpty(Container(9000).ListItem.Property(ParentalControl)) | String.Contains(Container(9000).ListItem.Property(ParentalControl),no)] | String.IsEqual(Skin.String(mypassword),Skin.String(passcode))</condition>
+		<action>AlarmClock(parental,Skin.Reset(mypassword),$VAR[password_time],Silent)</action>
+		<action>::ACTION::</action>
+	</override>
+
+	<propertySettings property="ParentalControl" buttonID="993" title="$LOCALIZE[31690]" showNone="False" imageBrowse="False" />
+	<property property="ParentalControl" label="$LOCALIZE[106]" icon="common/lock_no.png">No</property>
+	<property property="ParentalControl" label="$LOCALIZE[107]" icon="common/lock_yes.png">Yes</property>
+	<alwaysReset>True</alwaysReset>
+	
+	<propertySettings property="hubImage" buttonID="9704" title="$LOCALIZE[31737]" showNone="True" imageBrowse="True" />
+    
+</overrides>

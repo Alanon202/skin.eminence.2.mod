@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<controls>	
+		<control type="image">
+			<texture border="1" colordiffuse="AAFFFFFF">common/black.png</texture>
+			<animation effect="fade" time="200">WindowOpen</animation>
+			<animation effect="fade" time="200">WindowClose</animation>
+			<visible>String.IsEqual(Skin.CurrentColourTheme,SKINDEFAULT)</visible>
+		</control>
+		<control type="image">
+			<texture border="1" colordiffuse="AAFFFFFF">common/white.png</texture>
+			<animation effect="fade" time="200">WindowOpen</animation>
+			<animation effect="fade" time="200">WindowClose</animation>
+			<visible>String.IsEqual(Skin.CurrentColourTheme,Light)</visible>
+		</control>		
+        <control type="multiimage">
+            <posy>42</posy>
+            <posx>62</posx>
+            <width>64</width>
+            <height>64</height> 
+            <aspectratio>keep</aspectratio>
+            <imagepath>$VAR[Defs_SpinnerTexture]</imagepath>
+            <timeperimage>75</timeperimage>
+            <fadetime>0</fadetime>
+            <colordiffuse>HomeBarFG</colordiffuse>
+			<visible>!Skin.HasSetting(disable.headertile) + !Skin.String(HomeStyle, vertical)</visible>
+        </control>
+        <control type="multiimage">
+            <posy>52</posy>
+            <posx>1462</posx>
+            <width>64</width>
+            <height>64</height> 
+            <aspectratio>keep</aspectratio>
+            <imagepath>$VAR[Defs_SpinnerTexture]</imagepath>
+            <timeperimage>75</timeperimage>
+            <fadetime>0</fadetime>
+            <colordiffuse>HomeBarFG</colordiffuse>
+			<visible>Skin.HasSetting(disable.headertile) | Skin.String(HomeStyle, vertical)</visible>
+        </control>		
+	</controls>
+</window>

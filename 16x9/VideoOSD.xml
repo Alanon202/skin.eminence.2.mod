@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">14</defaultcontrol>
+	<onload>ClearProperty(subtitlespanel)</onload>
+    <onunload>ClearProperty(osdinfo,home)</onunload>
+	<onunload>ClearProperty(subtitlespanel)</onunload>
+	
+	<controls>
+        <include>Window_OSD</include>
+	</controls>
+
+</window>

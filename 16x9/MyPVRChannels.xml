@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <backgroundcolor>Background</backgroundcolor>
+    <menucontrol>9000</menucontrol>
+    <defaultcontrol>165</defaultcontrol>
+    <views>164,163,165</views>
+	<onload>ClearProperty(quicknavsetup,home)</onload>
+	<onunload>ClearProperty(quicknavsetup,home)</onunload>	
+    <controls>
+        <include>Furniture_Background</include>
+        <include>Furniture_RSS</include>
+        <include>Furniture_TopBar</include>
+		<include>ClearLogo</include>		
+		<include>QuickNav</include>
+        
+        <include>PVR_List</include>
+        <include content="PVR_SmallList">
+            <param name="id" value="164" />
+        </include>
+        <include content="PVR_WideList">
+            <param name="id" value="163" />
+        </include>
+
+        <include>PVR_Menu2</include>
+    </controls>
+
+</window>

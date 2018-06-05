@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<include condition="Skin.HasSetting(verticalcontext)">Dialog_VerticalContext</include>
+	<include condition="!Skin.HasSetting(verticalcontext)">Dialog_HorizontalContext</include>
+</window>

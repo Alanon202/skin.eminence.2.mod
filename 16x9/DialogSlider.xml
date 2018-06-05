@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<!-- sliderdialog -->
+	<defaultcontrol always="true">11</defaultcontrol>
+
+	<controls>
+
+		<!-- Hidden labels passed to Info below -->
+		<control type="label" id="10">
+			<font></font>
+		</control>
+		<control type="label" id="12">
+			<font></font>
+		</control>
+
+		<control type="group">
+			<centerleft>50%</centerleft>
+			<top>0</top>
+			<width>800</width>
+			<height>180</height>
+			<include>Animation_SlideIn_Bounce</include>
+            <include>Animation_FadeOut</include>
+            <include>Dialog_Background</include>
+
+			<!-- Info -->
+			<control type="label">
+				<left>40</left>
+				<top>30</top>
+				<width>720</width>
+				<height>33</height>
+				<align>center</align>
+				<scroll>true</scroll>
+				<label>$INFO[Control.GetLabel(10)] - $INFO[Control.GetLabel(12)]</label>
+			</control>
+
+			<!-- Slider -->
+			<control type="slider" id="11">
+			<orientation>horizontal</orientation>
+				<left>40</left>
+				<top>104</top>
+				<width>720</width>
+				<height>20</height>
+<!-- Modification Slider -->				
+				<texturefocus border="5">common/panel.png</texturefocus>
+        				<texturesliderbar colordiffuse="PosterBorder"  border="5">common/panel.png</texturesliderbar>
+       				<texturenofocus  border="5">common/panel.png</texturenofocus>
+        				<textureslidernib border="5">common/panel_trans.png</textureslidernib>
+        				<textureslidernibfocus colordiffuse="$VAR[HighlightColor]" border="2">common/panel.png</textureslidernibfocus>
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>

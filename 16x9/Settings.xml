@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <backgroundcolor>Background</backgroundcolor>
+    <defaultcontrol>9000</defaultcontrol>
+	<onload>ClearProperty(quicknavsetup,home)</onload>
+	<onunload>ClearProperty(quicknavsetup,home)</onunload>	
+    <controls>
+        <!-- Background -->
+        <include>Furniture_Background</include>
+        <include>Furniture_TopBar</include>
+        <include>Furniture_RSS</include>
+		<include>QuickNav</include>
+
+        <!-- Settings -->
+        <control type="group">
+            <left>pad</left>
+			<right>0</right>
+			<top>top</top>
+			<control type="group">
+				<left>pad</left>
+				<top>10</top>
+				<include content="Object_Line">
+					<param name="width" value="1880" />
+					<param name="label" value="$LOCALIZE[5]" />
+				</include>
+			</control>	
+            <include>Animation_FadeSlide_Right</include>
+            <control type="panel" id="9000">
+                <left>0</left>
+                <right>0</right>
+                <top>0</top>
+                <height>740</height>
+                <orientation>vertical</orientation>
+                <itemlayout height="246.66" width="475">
+                    <control type="group">
+                        <top>pad</top>
+                        <bottom>pad</bottom>
+                        <left>pad</left>
+                        <right>pad</right>		
+						<include>Object_Background</include>
+                    </control>
+                    <control type="image">
+                        <top>20</top>
+                        <left>side</left>
+                        <right>20</right>
+                        <height>128</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture colordiffuse="ListLabel">$INFO[ListItem.Icon]</texture>
+                    </control>
+                    <control type="label">
+                        <left>45</left>
+                        <right>50</right>
+                        <height>50</height>
+                        <centerbottom>90</centerbottom>
+                        <textcolor>ListLabel</textcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+					<control type="textbox">
+						<left>40</left>
+						<right>40</right>
+						<height>100</height>
+						<centerbottom>40</centerbottom>
+						<font>Font-LineLabel</font>
+						<textcolor>SideArrow</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label2]</label>
+					</control>					
+                </itemlayout>
+                <focusedlayout height="246,66" width="475">
+                    <control type="group">
+                        <top>pad</top>
+                        <bottom>pad</bottom>
+                        <left>pad</left>
+                        <right>pad</right>
+                        <control type="image">
+                            <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                        </control>
+                    </control>
+                    <control type="image">
+                        <top>20</top>
+                        <left>side</left>
+                        <right>20</right>
+                        <height>128</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture colordiffuse="Selected">$INFO[ListItem.Icon]</texture>
+                    </control>
+                    <control type="label">
+                        <left>45</left>
+                        <right>50</right>
+                        <height>50</height>
+                        <centerbottom>90</centerbottom>
+                        <textcolor>Selected</textcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+					<control type="textbox">
+						<left>40</left>
+						<right>40</right>
+						<height>100</height>
+						<centerbottom>40</centerbottom>
+						<font>Font-LineLabel</font>
+						<textcolor>SideArrow</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label2]</label>
+					</control>						
+                </focusedlayout>
+                <content>
+                    <!-- Row 1 -->
+                    <item id="1">
+                        <description>Interface</description>
+						<label>14206</label>
+						<label2>$LOCALIZE[166] • $LOCALIZE[14222] • $LOCALIZE[360][CR]$LOCALIZE[12360] • $LOCALIZE[14224]</label2>
+                        <onclick>activatewindow(InterfaceSettings)</onclick>
+                        <icon>special://skin/extras/icons/skinsettings.png</icon>
+                    </item>
+                    <item id="5">
+                        <description>Library</description>
+						<label>14202</label>
+						<label2>$LOCALIZE[14022] • $LOCALIZE[16000] • $LOCALIZE[14215][CR]$LOCALIZE[14216] • $LOCALIZE[14217]</label2>
+                        <onclick>activatewindow(MediaSettings)</onclick>
+                        <icon>special://skin/extras/icons/tags.png</icon>
+                    </item>			
+                    <item id="9">
+                        <description>System</description>
+						<label>13000</label>
+						<label2>$LOCALIZE[14220] • $LOCALIZE[14221] • $LOCALIZE[14125] • $LOCALIZE[24001][CR]$LOCALIZE[798] • $LOCALIZE[14095]</label2>
+                        <onclick>activatewindow(SystemSettings)</onclick>
+                        <icon>special://skin/extras/icons/configure.png</icon>
+                    </item>	
+                    <item id="2">
+                        <description>Skin Settings</description>
+						<label>20077</label>
+						<label2>$LOCALIZE[10000] • $LOCALIZE[19190] • $LOCALIZE[31127][CR]$LOCALIZE[31126] • $LOCALIZE[478] • $LOCALIZE[31269]</label2>
+                        <onclick>activatewindow(skinsettings)</onclick>
+                        <!-- <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</onclick> -->
+                        <icon>special://skin/extras/icons/paintbrush.png</icon>
+                    </item>					
+					
+                    <!-- Row 2 -->
+
+                    <item id="10">
+                        <description>Addons</description>
+						<label>24001</label>
+						<label2>$LOCALIZE[24998] • $LOCALIZE[137][CR]$LOCALIZE[31270]</label2>
+                        <onclick>activatewindow(AddonBrowser)</onclick>
+                        <icon>special://skin/extras/icons/addons.png</icon>
+                    </item>
+                    <item id="6">
+                        <description>Player</description>
+						<label>14200</label>
+						<label2>$LOCALIZE[14215] • $LOCALIZE[14216] • $LOCALIZE[14087] • $LOCALIZE[14217][CR]$LOCALIZE[14218] • $LOCALIZE[37032]</label2>
+                        <onclick>activatewindow(PlayerSettings)</onclick>
+                        <icon>special://skin/extras/icons/equalizer.png</icon>
+                    </item>
+                    <item id="3">
+                        <description>Profiles</description>
+						<label>13200</label>
+						<label2>$LOCALIZE[10029] • $LOCALIZE[33084][CR]$LOCALIZE[31178]</label2>
+                        <onclick>activatewindow(Profiles)</onclick>
+                        <icon>special://skin/extras/icons/actor.png</icon>
+                    </item>
+                    <item id="8">
+                        <description>PVR Settings</description>
+						<label>19191</label>
+						<label2>$LOCALIZE[16000] • $LOCALIZE[19222] • $LOCALIZE[14086][CR]$LOCALIZE[19043] • $LOCALIZE[19259]</label2>
+                        <onclick>activatewindow(pvrsettings)</onclick>
+                        <icon>special://skin/extras/icons/livetv.png</icon>
+                    </item>
+					
+                    <!-- Row 3 -->					
+					
+                    <item id="12">
+                        <description>Services</description>
+						<label>14036</label>
+						<label2>$LOCALIZE[16000] • $LOCALIZE[14223] • $LOCALIZE[20187][CR]$LOCALIZE[1273] • $LOCALIZE[1200] • $LOCALIZE[12600]</label2>
+                        <onclick>activatewindow(servicesettings)</onclick>
+                        <icon>special://skin/extras/icons/network.png</icon>
+                    </item>
+                    <item id="11">
+                        <description>System Info</description>
+						<label>130</label>
+						<label2>$LOCALIZE[154] • $LOCALIZE[705] • $LOCALIZE[157][CR]$LOCALIZE[13281] • $LOCALIZE[31271] • $LOCALIZE[12389]</label2>
+                        <onclick>activatewindow(7)</onclick>
+                        <icon>special://skin/extras/icons/sysinfo.png</icon>
+                    </item>
+					<item id="12">
+						<description>Launch OSMC settings</description>
+						<label>$LOCALIZE[31800]</label>
+						<onclick>RunScript(service.osmc.settings)</onclick>
+						<visible>System.HasAddon(service.osmc.settings)</visible>
+						<icon>special://skin/extras/icons/osmc.png</icon>
+					</item>
+					<item id="13">
+						<description>Filemanager</description>
+						<label>File Manager</label>
+						<label2>$LOCALIZE[115] • $LOCALIZE[116] • $LOCALIZE[117][CR]$LOCALIZE[118] • $LOCALIZE[14226]</label2>
+						<onclick>activatewindow(filemanager)</onclick>
+						<icon>special://skin/extras/icons/database.png</icon>
+					</item>
+					<item id="14">
+						<description>Events</description>
+						<label>$LOCALIZE[14111]</label>
+						<label2>$LOCALIZE[31274][CR]$LOCALIZE[31275]</label2>
+						<onclick>activatewindow(eventlog)</onclick>
+						<icon>special://skin/extras/icons/year.png</icon>
+						<visible>!System.HasAddon(service.libreelec.settings) + !System.HasAddon(service.openelec.settings)</visible>
+					</item>					
+					<item id="15">
+						<description>Launch OpenELEC settings</description>
+						<label>$LOCALIZE[31801]</label>
+						<onclick>RunScript(service.openelec.settings)</onclick>
+						<visible>System.HasAddon(service.openelec.settings)</visible>
+						<icon>special://skin/extras/icons/openelec.png</icon>
+					</item>
+					<item id="16">
+						<description>Launch LibreELEC settings</description>
+						<label>$ADDON[service.libreelec.settings 600]</label>
+						<label2>$ADDON[service.libreelec.settings 32002] • $ADDON[service.libreelec.settings 32101] • $ADDON[service.libreelec.settings 32001][CR]$ADDON[service.libreelec.settings 32100] • $ADDON[service.libreelec.settings 32331]</label2>						
+						<onclick>RunScript(service.libreelec.settings)</onclick>
+						<visible>System.HasAddon(service.libreelec.settings)</visible>
+						<icon>special://skin/extras/icons/libreelec.png</icon>
+					</item>
+                </content>
+            </control>
+        </control>
+    </controls>
+
+</window>

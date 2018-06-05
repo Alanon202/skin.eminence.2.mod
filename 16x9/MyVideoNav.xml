@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <!-- videolibrary -->
+    <backgroundcolor>Background</backgroundcolor>
+    <menucontrol>9000</menucontrol>
+    <defaultcontrol always="true">50</defaultcontrol>   
+    <views>50,550,549,58,552,505,55,56,57,500,51,52,59,53,600,506,508,509,553,54,502,503,548,501,504,156,157,158,159,521,160,161,162,535,525,514,513,515,516,551,555</views>
+    <onload condition="System.HasAddon(script.tv.show.next.aired) + !Skin.HasSetting(hidenextairedinfos)">RunScript(script.tv.show.next.aired,backend=True)</onload>
+    <onunload>SetProperty(NodeReturn,videos,home)</onunload>
+    <onunload>SetProperty(HubReturn,$INFO[Container.FolderPath],home)</onunload>
+	<onload>ClearProperty(quicknavsetup,home)</onload>
+	<onunload>ClearProperty(quicknavsetup,home)</onunload>
+    <controls>
+
+        <!-- Background -->
+        <include>Furniture_Background</include>
+        <include>Furniture_RSS</include>
+        <include>Furniture_TopBar</include>       
+        <include>ClearLogo</include>
+		<include>QuickNav</include>
+
+        <!-- Main group -->
+        <control type="group">
+            <include>Animation_Common</include>
+            <include>Viewtype_List</include>
+			<include>Viewtype_List2</include>
+			<include>Viewtype_SquareList</include>
+			<include>Viewtype_PanelList</include>  
+			<include>Viewtype_PlainList</include>
+			<include>Viewtype_Gallery</include>
+			<include>Viewtype_Wide</include>
+            <include>Viewtype_Fanart</include>
+            <include>Viewtype_BigList</include>
+			<include>Viewtype_Thumbs</include>
+            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.51)">Viewtype_BigIcon</include>
+            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.52)">Viewtype_Icon</include>
+            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.59)">Viewtype_IconExtra</include>
+            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.53)">Viewtype_BigWide</include>               
+            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.600)">Viewtype_BigWideLogo</include>
+            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.506)">Viewtype_FanartList</include>
+			<include condition="!Skin.HasSetting(SkinHelper.View.Disabled.508)">Viewtype_InfoList</include>
+            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.509)">Viewtype_InfoList2</include>
+			<include condition="!Skin.HasSetting(SkinHelper.View.Disabled.553)">Viewtype_InfoList3</include>
+            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.54)">Viewtype_MediaInfo</include>
+            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.502)">Viewtype_MediaInfo2</include>
+            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.503)">Viewtype_MediaInfo3</include>
+            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.548)">Viewtype_MediaInfo4</include>			
+            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.501)">Viewtype_BigListInfo</include>            
+            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.504)">Viewtype_Posters_List1</include>
+            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.156)">Viewtype_Cycle</include>
+            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.157)">Viewtype_BigWide_Classic</include>
+            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.158)">Viewtype_Banner</include>
+            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.159)">Viewtype_FanartLogo</include>
+			<include condition="!Skin.HasSetting(SkinHelper.View.Disabled.521)">Viewtype_Lovefilm</include>
+            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.160)">Viewtype_BigWideClearArt</include>
+            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.161)">Viewtype_ClearArts_List</include>
+            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.162)">Viewtype_Logos_List</include>
+			<include condition="!Skin.HasSetting(SkinHelper.View.Disabled.535)">Viewtype_ShowCase</include>
+			<include condition="!Skin.HasSetting(SkinHelper.View.Disabled.525)">Viewtype_MediumIcon</include>
+			<include condition="!Skin.HasSetting(SkinHelper.View.Disabled.514)">Viewtype_FanArtIcons</include>
+			<include condition="!Skin.HasSetting(SkinHelper.View.Disabled.513)">Viewtype_FanArtIconsEp</include>
+			<include condition="!Skin.HasSetting(SkinHelper.View.Disabled.515)">Viewtype_Netflix</include>
+			<include condition="!Skin.HasSetting(SkinHelper.View.Disabled.516)">Video_RightList</include>
+			<include condition="!Skin.HasSetting(SkinHelper.View.Disabled.551)">Video_LowList</include>
+			<include condition="!Skin.HasSetting(SkinHelper.View.Disabled.555)">Viewtype_Widget</include>
+		</control>		
+
+        <!-- Menu -->
+        <control type="group">
+            <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
+            <include>Dialog_Top</include>
+            <include>Dialog_Background</include>
+            <include content="Dialog_Top_IconHeader">
+                <param name="label" value="$LOCALIZE[31068]" />
+                <param name="icon" value="special://skin/extras/icons/settings.png" />
+            </include>
+            <include content="Dialog_Top_Arrows">
+                <param name="id" value="9000" />
+            </include>
+
+            <control type="grouplist" id="9000">
+				<onup>SetProperty(quicknavsetup,1,home)</onup>
+				<onup>9987</onup>
+                <include>Dialog_Top_GroupList</include>
+                <defaultcontrol always="true">3</defaultcontrol>
+                <control type="button" id="9096">
+                    <description>Back to fullscreen</description>
+                    <include>Defs_OptionButton2</include>
+                    <label>31526</label>
+                    <onclick>fullscreen</onclick>
+                    <visible>Player.HasVideo</visible>
+                </control>              
+                <control type="button" id="9097">
+                    <description>Back to Music Viz</description>
+                    <include>Defs_OptionButton2</include>
+                    <label>31639</label>
+                    <onclick>fullscreen</onclick>
+                    <visible>Player.HasAudio</visible>
+                </control>                       
+                <include>Object_BasicViewList</include>
+                
+                <!-- Watched toggle -->
+                <control type="radiobutton" id="14">
+                    <include>Defs_OptionButton2</include>
+                    <label>20367</label>
+                    <visible>Control.IsEnabled(14)</visible>
+                </control>
+                
+                <!-- Hide Next Aired Infos -->
+                <control type="radiobutton" id="44">
+                    <include>Defs_OptionButton2</include>
+                    <label>31733</label>
+                    <selected>Skin.HasSetting(hidenextairedinfos)</selected>
+                    <onclick>Skin.ToggleSetting(hidenextairedinfos)</onclick>
+                    <visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
+                </control>
+                <!-- Hide/Show Indicators -->
+                <control type="button" id="45">
+                    <include>Defs_OptionButton2</include>
+                    <label>$LOCALIZE[31734] : $VAR[Label_Indicators]</label>
+                    <onclick condition="String.IsEmpty(Skin.String(indicators))">Skin.SetString(indicators,$LOCALIZE[31735])</onclick>
+                    <onclick condition="String.IsEqual(Skin.String(indicators),$LOCALIZE[31189])">Skin.SetString(indicators,$LOCALIZE[31735])</onclick>
+                    <onclick condition="String.IsEqual(Skin.String(indicators),$LOCALIZE[31735])">Skin.SetString(indicators,$LOCALIZE[31736])</onclick>
+                    <onclick condition="String.IsEqual(Skin.String(indicators),$LOCALIZE[31736])">Skin.SetString(indicators,$LOCALIZE[31189])</onclick>
+                </control>
+                
+                <!-- Filter -->
+                <control type="edit" id="19">
+                    <include>Defs_OptionButton2</include>
+                    <label>587</label>
+                    <visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
+                </control>
+                <!-- Filter -->
+                <control type="radiobutton" id="93">
+                    <include>Defs_OptionButton2</include>
+                    <label>587</label>
+                    <onclick>Filter</onclick>
+                    <selected>Container.Filtered</selected>
+                    <visible>Container.CanFilterAdvanced</visible>
+                </control>
+                <control type="button" id="9003">
+                    <include>Defs_OptionButton2</include>
+                    <label>13350</label>
+                    <onclick>ActivateWindow(videoplaylist)</onclick>
+                    <visible>Integer.IsGreater(Playlist.Length(video),1)</visible>
+                    <visible>Player.HasVideo</visible>
+                </control>
+                <control type="button" id="9004">
+                    <include>Defs_OptionButton2</include>
+                    <label>13350</label>
+                    <onclick>ActivateWindow(musicplaylist)</onclick>
+                    <visible>Integer.IsGreater(Playlist.Length(music),1)</visible>
+                    <visible>Player.HasAudio</visible>
+                </control>                                    
+                <!-- Update -->
+                <control type="button" id="20">
+                    <label>653</label>
+                    <include>Defs_OptionButton2</include>
+                    <onclick>SetFocus(50)</onclick>
+                </control>
+            </control>
+        </control>
+		
+		<control type="fadelabel" id="4410">
+			<top>-1000</top>
+			<width min="10" max="50">auto</width>
+			<height>0</height>
+			<scrollspeed>60</scrollspeed>
+			<scrollout>false</scrollout>
+			<font>Font-LineLabel</font>
+			<textcolor>white</textcolor>
+			<randomize>true</randomize>
+			<label>$INFO[ListItem.Art(extrathumb1)]</label>
+			<label>$INFO[ListItem.Art(extrathumb2)]</label>
+			<label>$INFO[ListItem.Art(extrathumb3)]</label>
+			<label>$INFO[ListItem.Art(extrathumb4)]</label>
+			<label>$INFO[ListItem.Art(extrathumb5)]</label>
+			<label>$INFO[ListItem.Art(extrathumb6)]</label>
+			<label>$INFO[ListItem.Art(extrathumb7)]</label>
+			<label>$INFO[ListItem.Art(extrathumb8)]</label>
+			<label>$INFO[ListItem.Art(extrathumb9)]</label>
+			<label>$INFO[ListItem.Art(extrathumb10)]</label>
+			<label>$INFO[ListItem.Art(thumb1)]</label>
+			<label>$INFO[ListItem.Art(thumb2)]</label>
+			<label>$INFO[ListItem.Art(thumb3)]</label>
+			<label>$INFO[ListItem.Art(thumb4)]</label>
+			<label>$INFO[ListItem.Art(thumb5)]</label>
+			<label>$INFO[ListItem.Art(thumb6)]</label>
+			<label>$INFO[ListItem.Art(thumb7)]</label>
+			<label>$INFO[ListItem.Art(thumb8)]</label>
+			<label>$INFO[ListItem.Art(thumb9)]</label>
+			<label>$INFO[ListItem.Art(thumb10)]</label>			
+			<visible>Skin.HasSetting(rotatingthumbs)</visible>
+		</control>
+
+        <control type="multiimage" id="4440">
+            <top>-2000</top>
+            <left>0</left>
+            <width>1351</width>
+            <height>760</height>
+            <randomize>true</randomize>
+            <loop>yes</loop>
+            <imagepath background="true">$INFO[ListItem.Path,,extrafanart/]</imagepath>
+            <aspectratio>scale</aspectratio>
+            <fadetime>300</fadetime>
+            <include condition="String.IsEmpty(Skin.String(RotationLimit))">RotationLimit1</include>
+            <include condition="String.IsEqual(Skin.String(RotationLimit),1)">RotationLimit1</include>
+            <include condition="String.IsEqual(Skin.String(RotationLimit),2)">RotationLimit2</include>
+            <include condition="String.IsEqual(Skin.String(RotationLimit),3)">RotationLimit3</include>
+            <include condition="String.IsEqual(Skin.String(RotationLimit),4)">RotationLimit4</include>
+            <include condition="String.IsEqual(Skin.String(RotationLimit),5)">RotationLimit5</include>
+            <include condition="String.IsEqual(Skin.String(RotationLimit),6)">RotationLimit6</include>
+            <include condition="String.IsEqual(Skin.String(RotationLimit),7)">RotationLimit7</include>
+            <include condition="String.IsEqual(Skin.String(RotationLimit),8)">RotationLimit8</include>
+            <include condition="String.IsEqual(Skin.String(RotationLimit),9)">RotationLimit9</include>
+            <include condition="String.IsEqual(Skin.String(RotationLimit),10)">RotationLimit10</include>
+            <include condition="String.IsEqual(Skin.String(RotationLimit),11)">RotationLimit11</include>
+            <include condition="String.IsEqual(Skin.String(RotationLimit),12)">RotationLimit12</include>
+        </control>
+		
+		<control type="fadelabel" id="4430">
+			<top>-1000</top>
+			<width>2560</width>
+			<height>0</height>
+			<scrollspeed>20</scrollspeed>
+			<scrollout>false</scrollout>
+			<font>Font-LineLabel</font>
+			<textcolor>white</textcolor>
+			<randomize>true</randomize>
+			<include condition="String.IsEqual(Skin.String(rotationlimit),1)">FadeLimit1</include>
+			<include condition="String.IsEqual(Skin.String(rotationlimit),2)">FadeLimit2</include>
+			<include condition="String.IsEqual(Skin.String(rotationlimit),3)">FadeLimit3</include>
+			<include condition="String.IsEqual(Skin.String(rotationlimit),4)">FadeLimit4</include>
+			<include condition="String.IsEqual(Skin.String(rotationlimit),5)">FadeLimit5</include>
+			<include condition="String.IsEqual(Skin.String(rotationlimit),6)">FadeLimit6</include>
+			<include condition="String.IsEqual(Skin.String(rotationlimit),7)">FadeLimit7</include>
+			<include condition="String.IsEqual(Skin.String(rotationlimit),8)">FadeLimit8</include>
+			<include condition="String.IsEqual(Skin.String(rotationlimit),9)">FadeLimit9</include>
+			<include condition="String.IsEqual(Skin.String(rotationlimit),10)">FadeLimit10</include>
+			<include condition="String.IsEqual(Skin.String(rotationlimit),11)">FadeLimit11</include>
+			<include condition="String.IsEqual(Skin.String(rotationlimit),12)">FadeLimit12</include>
+			<include condition="String.IsEmpty(Skin.String(rotationlimit))">FadeLimit1</include>		
+			<label>$INFO[ListItem.Art(extrafanart1)]</label>
+			<label>$INFO[ListItem.Art(extrafanart2)]</label>
+			<label>$INFO[ListItem.Art(extrafanart3)]</label>
+			<label>$INFO[ListItem.Art(extrafanart4)]</label>
+			<label>$INFO[ListItem.Art(extrafanart5)]</label>
+			<label>$INFO[ListItem.Art(extrafanart6)]</label>
+			<label>$INFO[ListItem.Art(extrafanart7)]</label>
+			<label>$INFO[ListItem.Art(extrafanart8)]</label>
+			<label>$INFO[ListItem.Art(extrafanart9)]</label>
+			<label>$INFO[ListItem.Art(extrafanart10)]</label>
+			<label>$INFO[ListItem.Art(extrafanart11)]</label>
+			<label>$INFO[ListItem.Art(extrafanart12)]</label>
+			<label>$INFO[ListItem.Art(extrafanart13)]</label>
+			<label>$INFO[ListItem.Art(extrafanart14)]</label>
+			<label>$INFO[ListItem.Art(extrafanart15)]</label>
+			<label>$INFO[ListItem.Art(extrafanart16)]</label>
+			<label>$INFO[ListItem.Art(extrafanart17)]</label>
+			<label>$INFO[ListItem.Art(extrafanart18)]</label>
+			<label>$INFO[ListItem.Art(extrafanart19)]</label>
+			<label>$INFO[ListItem.Art(extrafanart20)]</label>
+			<label>$INFO[ListItem.Art(extrafanart21)]</label>
+			<label>$INFO[ListItem.Art(extrafanart22)]</label>
+			<label>$INFO[ListItem.Art(extrafanart23)]</label>
+			<label>$INFO[ListItem.Art(extrafanart24)]</label>
+			<label>$INFO[ListItem.Art(extrafanart25)]</label>
+			<label>$INFO[ListItem.Art(extrafanart26)]</label>
+			<label>$INFO[ListItem.Art(extrafanart27)]</label>
+			<label>$INFO[ListItem.Art(extrafanart28)]</label>
+			<label>$INFO[ListItem.Art(extrafanart29)]</label>
+			<label>$INFO[ListItem.Art(extrafanart30)]</label>
+			<label>$INFO[ListItem.Art(extrafanart31)]</label>
+			<label>$INFO[ListItem.Art(extrafanart32)]</label>
+			<label>$INFO[ListItem.Art(extrafanart33)]</label>
+			<label>$INFO[ListItem.Art(extrafanart34)]</label>
+			<label>$INFO[ListItem.Art(extrafanart35)]</label>
+			<label>$INFO[ListItem.Art(extrafanart36)]</label>
+			<label>$INFO[ListItem.Art(extrafanart37)]</label>
+			<label>$INFO[ListItem.Art(extrafanart38)]</label>
+			<label>$INFO[ListItem.Art(extrafanart39)]</label>
+			<label>$INFO[ListItem.Art(extrafanart40)]</label>
+			<label>$INFO[ListItem.Art(extrafanart41)]</label>
+			<label>$INFO[ListItem.Art(extrafanart42)]</label>
+			<label>$INFO[ListItem.Art(extrafanart43)]</label>
+			<label>$INFO[ListItem.Art(extrafanart44)]</label>
+			<label>$INFO[ListItem.Art(extrafanart45)]</label>
+			<label>$INFO[ListItem.Art(extrafanart46)]</label>
+			<label>$INFO[ListItem.Art(extrafanart47)]</label>
+			<label>$INFO[ListItem.Art(extrafanart48)]</label>
+			<label>$INFO[ListItem.Art(extrafanart49)]</label>
+			<label>$INFO[ListItem.Art(extrafanart50)]</label>
+			<label>$INFO[ListItem.Art(extrafanart51)]</label>
+			<label>$INFO[ListItem.Art(extrafanart52)]</label>
+			<label>$INFO[ListItem.Art(extrafanart53)]</label>
+			<label>$INFO[ListItem.Art(extrafanart54)]</label>
+			<label>$INFO[ListItem.Art(extrafanart55)]</label>
+			<label>$INFO[ListItem.Art(extrafanart56)]</label>
+			<label>$INFO[ListItem.Art(extrafanart57)]</label>
+			<label>$INFO[ListItem.Art(extrafanart58)]</label>
+			<label>$INFO[ListItem.Art(extrafanart59)]</label>
+			<label>$INFO[ListItem.Art(extrafanart60)]</label>
+		</control>
+
+		<control type="fadelabel" id="4420">
+			<top>-1000</top>
+			<width>2560</width>
+			<height>0</height>
+			<scrollspeed>20</scrollspeed>
+			<scrollout>false</scrollout>
+			<font>Font-LineLabel</font>
+			<textcolor>white</textcolor>
+			<randomize>true</randomize>
+			<include condition="String.IsEqual(Skin.String(rotationlimit),1)">FadeLimit1</include>
+			<include condition="String.IsEqual(Skin.String(rotationlimit),2)">FadeLimit2</include>
+			<include condition="String.IsEqual(Skin.String(rotationlimit),3)">FadeLimit3</include>
+			<include condition="String.IsEqual(Skin.String(rotationlimit),4)">FadeLimit4</include>
+			<include condition="String.IsEqual(Skin.String(rotationlimit),5)">FadeLimit5</include>
+			<include condition="String.IsEqual(Skin.String(rotationlimit),6)">FadeLimit6</include>
+			<include condition="String.IsEqual(Skin.String(rotationlimit),7)">FadeLimit7</include>
+			<include condition="String.IsEqual(Skin.String(rotationlimit),8)">FadeLimit8</include>
+			<include condition="String.IsEqual(Skin.String(rotationlimit),9)">FadeLimit9</include>
+			<include condition="String.IsEqual(Skin.String(rotationlimit),10)">FadeLimit10</include>
+			<include condition="String.IsEqual(Skin.String(rotationlimit),11)">FadeLimit11</include>
+			<include condition="String.IsEqual(Skin.String(rotationlimit),12)">FadeLimit12</include>
+			<include condition="String.IsEmpty(Skin.String(rotationlimit))">FadeLimit1</include>			
+			<label>$INFO[ListItem.Art(fanart)]</label>
+			<label>$INFO[ListItem.Art(fanart1)]</label>
+			<label>$INFO[ListItem.Art(fanart2)]</label>
+			<label>$INFO[ListItem.Art(fanart3)]</label>
+			<label>$INFO[ListItem.Art(fanart4)]</label>
+			<label>$INFO[ListItem.Art(fanart5)]</label>
+			<label>$INFO[ListItem.Art(fanart6)]</label>
+			<label>$INFO[ListItem.Art(fanart7)]</label>
+			<label>$INFO[ListItem.Art(fanart8)]</label>
+			<label>$INFO[ListItem.Art(fanart9)]</label>
+			<label>$INFO[ListItem.Art(fanart10)]</label>
+			<label>$INFO[ListItem.Art(fanart11)]</label>
+			<label>$INFO[ListItem.Art(fanart12)]</label>
+			<label>$INFO[ListItem.Art(fanart13)]</label>
+			<label>$INFO[ListItem.Art(fanart14)]</label>
+			<label>$INFO[ListItem.Art(fanart15)]</label>
+			<label>$INFO[ListItem.Art(fanart16)]</label>
+			<label>$INFO[ListItem.Art(fanart17)]</label>
+			<label>$INFO[ListItem.Art(fanart18)]</label>
+			<label>$INFO[ListItem.Art(fanart19)]</label>
+			<label>$INFO[ListItem.Art(fanart20)]</label>
+			<label>$INFO[ListItem.Art(tvshow.fanart1)]</label>
+			<label>$INFO[ListItem.Art(tvshow.fanart2)]</label>
+			<label>$INFO[ListItem.Art(tvshow.fanart3)]</label>
+			<label>$INFO[ListItem.Art(tvshow.fanart4)]</label>
+			<label>$INFO[ListItem.Art(tvshow.fanart5)]</label>
+			<label>$INFO[ListItem.Art(tvshow.fanart6)]</label>
+			<label>$INFO[ListItem.Art(tvshow.fanart7)]</label>
+			<label>$INFO[ListItem.Art(tvshow.fanart8)]</label>
+			<label>$INFO[ListItem.Art(tvshow.fanart9)]</label>
+			<label>$INFO[ListItem.Art(tvshow.fanart10)]</label>
+			<label>$INFO[ListItem.Art(tvshow.fanart11)]</label>
+			<label>$INFO[ListItem.Art(tvshow.fanart12)]</label>
+			<label>$INFO[ListItem.Art(tvshow.fanart13)]</label>
+			<label>$INFO[ListItem.Art(tvshow.fanart14)]</label>
+			<label>$INFO[ListItem.Art(tvshow.fanart15)]</label>
+			<label>$INFO[ListItem.Art(tvshow.fanart16)]</label>
+			<label>$INFO[ListItem.Art(tvshow.fanart17)]</label>
+			<label>$INFO[ListItem.Art(tvshow.fanart18)]</label>
+			<label>$INFO[ListItem.Art(tvshow.fanart19)]</label>
+			<label>$INFO[ListItem.Art(tvshow.fanart20)]</label>			
+		</control>			
+		
+        <include>Furniture_OverlayInfo</include>
+    </controls>
+
+</window>

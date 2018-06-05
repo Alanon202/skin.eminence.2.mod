@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window type="dialog" id="1193">
+    <backgroundcolor>Background</backgroundcolor>
+    <defaultcontrol always="true">9000</defaultcontrol>
+    <controls>
+        <control type="group">
+            <include>Animation_SlideIn_Bounce</include>
+            <include>Animation_FadeOut</include>
+            <centerleft>50%</centerleft>
+            <width>1792</width>
+            <bottom>100</bottom>
+            <height>676</height>
+            <include>Dialog_Background</include>
+            <include content="Dialog_Top_IconHeader">
+                <param name="label" value="$VAR[Label_SkinSetting_Misc]" />
+                <param name="icon" value="special://skin/extras/icons/settings.png" />
+            </include>
+            <control type="group">
+                <right>side</right>
+                <bottom>side</bottom>
+                <width>1024</width>
+                <height>576</height>
+                <include>Object_Background</include>
+                <control type="image">
+                    <aspectratio>scale</aspectratio>
+                    <texture background="true" fallback="DefaultAddon.png">$INFO[Container(9000).ListItem.Icon]</texture>
+                </control>
+            </control>
+
+            <control type="group">
+                <left>side</left>
+                <bottom>side</bottom>
+                <width>708</width>
+                <height>576</height>
+                <include>Object_Background</include>
+            </control>
+            <control type="list" id="9000">
+                <bottom>side</bottom>
+                <onleft>8000</onleft>
+                <onright>8000</onright>
+                <left>pad</left>
+                <width>728</width>
+                <height>576</height>
+                <orientation>vertical</orientation>
+				<onunload>Skin.Reset(windowmisc)</onunload>
+                <itemlayout height="96" width="728">
+                    <control type="group">
+                        <left>pad</left>
+                        <right>pad</right>
+                        <control type="image">
+                            <top>pad</top>
+                            <bottom>pad</bottom>
+                            <left>pad</left>
+                            <width>300</width>
+                            <aspectratio align="left">keep</aspectratio>
+                            <texture>$INFO[ListItem.Icon]</texture>
+                        </control>
+                        <control type="label">
+                            <height>100%</height>
+                            <left>170</left>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <label>$INFO[ListItem.Label]</label>
+                        </control>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="96" width="728">
+                    <control type="group">
+                        <left>pad</left>
+                        <right>pad</right>
+                        <control type="image">
+                            <visible>!Control.HasFocus(9000)</visible>
+                            <texture colordiffuse="PosterBorder">common/white.png</texture>
+                        </control>
+                        <control type="image">
+                            <visible>!Control.HasFocus(9000)</visible>
+                            <aspectratio>center</aspectratio>
+                            <texture colordiffuse="PosterBorder">common/selected.png</texture>
+                        </control>
+                        <control type="image">
+                            <visible>Control.HasFocus(9000)</visible>
+                            <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                        </control>
+
+                        <control type="image">
+                            <top>pad</top>
+                            <bottom>pad</bottom>
+                            <left>pad</left>
+                            <width>300</width>
+                            <aspectratio align="left">keep</aspectratio>
+                            <texture>$INFO[ListItem.Icon]</texture>
+                        </control>
+                        <control type="label">
+                            <height>100%</height>
+                            <left>170</left>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <textcolor>Selected</textcolor>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <label>$INFO[ListItem.Label]</label>
+                        </control>
+                    </control>
+                </focusedlayout>
+                <content>
+				
+					<!-- SUBMENU STYLE -->
+				
+					<!-- Submenu Large -->
+                    <item>
+                        <label>31759</label>
+                        <icon>special://skin/extras/viewthumbs/submenus_large_default.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Skin.SetString(SubmenuStyle,Large)</onclick>
+						<visible>Skin.String(windowmisc,1)</visible>
+                    </item>
+                    <!-- Submenu Small -->
+                    <item>
+                        <label>31760</label>
+                        <icon>special://skin/extras/viewthumbs/submenus_small_default.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Skin.SetString(SubmenuStyle,Small)</onclick>
+						<visible>Skin.String(windowmisc,1)</visible>
+                    </item>
+                    <!-- Touch Submenu -->
+                    <item>
+                        <label>31829</label>
+                        <icon>special://skin/extras/viewthumbs/submenus_touch.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Skin.SetString(SubmenuStyle,Touch)</onclick>
+						<visible>Skin.String(windowmisc,1)</visible>
+                    </item>					
+
+					
+					<!-- WIDGET STYLE -->
+					
+					
+                    <!-- Beveled Widget -->
+                    <item>
+                        <label>31505</label>
+                        <icon>special://skin/extras/viewthumbs/widget_beveled_default.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Skin.SetString(WidgetStyle,beveledwidget)</onclick>
+						<visible>Skin.String(windowmisc,2)</visible>
+                    </item>
+                    <!-- Rounded Widget -->
+                    <item>
+                        <label>31503</label>
+                        <icon>special://skin/extras/viewthumbs/widget_rounded_default.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Skin.SetString(WidgetStyle,roundedwidget)</onclick>
+						<visible>Skin.String(windowmisc,2)</visible>
+                    </item>
+                    <!-- Squared Widget -->
+                    <item>
+                        <label>31504</label>
+                        <icon>special://skin/extras/viewthumbs/widget_squared_default.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Skin.SetString(WidgetStyle,squaredwidget)</onclick>
+						<visible>Skin.String(windowmisc,2)</visible>
+                    </item>
+                    
+					
+					<!-- HEADER SETTINGS -->
+                    
+					
+					<!-- Beveled Header -->
+                    <item>
+                        <label>31505</label>
+                        <icon>special://skin/extras/viewthumbs/tile_beveled_default.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Skin.SetString(HeaderStyle,beveledheadertile)</onclick>
+						<visible>Skin.String(windowmisc,3)</visible>
+                    </item>
+                    <!-- Rounded Header-->
+                    <item>
+                        <label>31503</label>
+                        <icon>special://skin/extras/viewthumbs/tile_rounded_default.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Skin.SetString(HeaderStyle,roundedheadertile)</onclick>
+						<visible>Skin.String(windowmisc,3)</visible>
+                    </item>
+                    <!-- Square Header -->
+                    <item>
+                        <label>31504</label>
+                        <icon>special://skin/extras/viewthumbs/tile_squared_default.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Skin.SetString(HeaderStyle,squaredheadertile)</onclick>
+						<visible>Skin.String(windowmisc,3)</visible>						
+                    </item>
+					
+					
+					<!-- MUSIC VISUALIZATION -->
+					
+					
+					<!-- Fanart Visualization -->
+                    <item>
+                        <label>Fanart</label>
+                        <icon>special://skin/extras/viewthumbs/music_fanart_default.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Skin.SetString(MusicVisualisation,fanart)</onclick>
+						<visible>Skin.String(windowmisc,4)</visible>
+                    </item>
+                    <!-- Artist Slideshow -->
+                    <item>
+                        <label>31565</label>
+                        <icon>special://skin/extras/viewthumbs/music_artistslideshow_default.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Skin.SetString(MusicVisualisation,artistslideshow)</onclick>
+						<visible>System.HasAddon(script.artistslideshow) + Skin.String(windowmisc,4)</visible>
+                    </item>
+                    <!-- Album Wall -->
+                    <item>
+                        <label>31637</label>
+                        <icon>special://skin/extras/viewthumbs/music_albumswall_default.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Skin.SetString(MusicVisualisation,albumswall)</onclick>
+						<visible>Skin.String(windowmisc,4)</visible>						
+                    </item>						
+                    <!-- Pixelated Artwork -->
+                    <!-- <item> -->
+                        <!-- <label>31740</label> -->
+                        <!-- <icon>special://skin/extras/viewthumbs/music_pixelated_default.jpg</icon> -->
+                        <!-- <onclick>Close</onclick> -->
+                        <!-- <onclick>Skin.SetString(MusicVisualisation,pixelated)</onclick> -->
+						<!-- <visible>System.HasAddon(script.colorbox) + Skin.String(windowmisc,4)</visible>						 -->
+                    <!-- </item>	 -->
+                    <!-- No Visualization -->
+                    <item>
+                        <label>31189</label>
+                        <icon>special://skin/extras/viewthumbs/music_none_default.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Skin.SetString(MusicVisualisation,none)</onclick>
+						<visible>Skin.String(windowmisc,4)</visible>						
+                    </item>
+					
+					
+					<!-- ICONS SELECTOR -->
+					
+					<!-- Default Icons -->
+                    <item>
+                        <label>31822</label>
+                        <icon>special://skin/extras/viewthumbs/flags_default.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Skin.Reset(colouredflags)</onclick>
+						<visible>Skin.String(windowmisc,5)</visible>
+                    </item>	
+					<!-- Coloured Icons -->
+                    <item>
+                        <label>31823</label>
+                        <icon>special://skin/extras/viewthumbs/flags_coloured.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Skin.SetBool(colouredflags)</onclick>
+						<visible>Skin.String(windowmisc,5)</visible>
+                    </item>
+					
+					
+					<!-- HUB WIDGET SETTINGS -->
+					
+					<!-- Fanart -->
+                    <item>
+                        <label>31828</label>
+                        <icon>special://skin/extras/viewthumbs/hub_fanart.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Skin.SetString(hubbackground,$LOCALIZE[31828])</onclick>
+						<visible>Skin.String(windowmisc,6)</visible>
+                    </item>	
+					<!-- Landscape -->
+                    <item>
+                        <label>31267</label>
+                        <icon>special://skin/extras/viewthumbs/hub_landscape.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Skin.SetString(hubbackground,$LOCALIZE[31267])</onclick>
+						<visible>Skin.String(windowmisc,6)</visible>
+                    </item>
+					<!-- Posters -->
+                    <item>
+                        <label>31651</label>
+                        <icon>special://skin/extras/viewthumbs/hub_poster.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Skin.SetString(hubbackground,$LOCALIZE[31651])</onclick>
+						<visible>Skin.String(windowmisc,6)</visible>
+                    </item>
+					<!-- Thumbs -->
+                    <item>
+                        <label>31647</label>
+                        <icon>special://skin/extras/viewthumbs/hub_thumb.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Skin.SetString(hubbackground,$LOCALIZE[31647])</onclick>
+						<visible>Skin.String(windowmisc,6)</visible>
+                    </item>					
+					<!-- No Widget -->
+                    <item>
+                        <label>31824</label>
+                        <icon>special://skin/extras/viewthumbs/hub_none.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Skin.SetString(hubbackground,$LOCALIZE[31824])</onclick>
+						<visible>Skin.String(windowmisc,6)</visible>
+                    </item>						
+                </content>
+            </control>
+            <!-- Button grouplist -->
+            <control type="grouplist" id="8000">
+                <animation effect="slide" start="0" end="-586" time="0" condition="Control.IsVisible(3)">Conditional</animation>
+                <right>side</right>
+                <top>pad</top>
+                <align>right</align>
+                <height>60</height>
+                <onleft>9000</onleft>
+                <onright>9000</onright>
+                <onup>9000</onup>
+                <ondown>9000</ondown>
+                <orientation>horizontal</orientation>
+                <itemgap>pad</itemgap>
+                <!-- Cancel -->
+                <control type="button" id="8001">
+                    <width>auto</width>
+                    <height>100%</height>
+                    <align>right</align>
+                    <label>222</label>
+                    <texturenofocus></texturenofocus>
+                    <texturefocus></texturefocus>
+                    <focusedcolor>$VAR[HighlightColor]</focusedcolor>
+                    <include>Defs_OptionButton</include>
+                    <onclick>Close</onclick>
+                </control>
+                
+            </control>
+        </control>
+    </controls>
+</window>

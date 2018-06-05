@@ -1,0 +1,579 @@
+[B]3.0[/B]
+1. First Leia version.
+
+[B]2.5.2[/B]	
+1. Fixed the NextUp fanart display.
+2. Simplified hub navigation.
+3. Defined the home menu focused item.
+
+[B]2.5.1[/B]	
+1. Fixed the fallback widget.
+2. Partially fixed hub list colour option.
+3. More lenient sdtv source condition.
+
+[B]2.5[/B]	
+1. Added a vertical home menu.
+2. Added support for animated weather icons.
+3. Added more info for PVR.
+4. Header panel fixes.
+5. Added a workaround for widget shortcuts loop.
+6. Overhauled skin string dialogues.
+7. View shade option for the new viewtype.
+8. Added a hub layout switch setting.
+9. Added a hub list and other layout styles.
+10. Coloured flags support.
+11. Fixes for the infolines.
+12. Added a touch-optimised submenu (hopefully).
+13. Edited PVR channel menu.
+14. Various small fixes for PVR interfaces.
+15. Small fixes for the Extended Info interface.
+16. Removed Artwork Downloader link.
+17. Added Artwork Beef to the add-ons list.
+
+[B]2.4.5.1[/B]	
+1. Quick fix for fanart rotation.
+
+[B]2.4.5[/B]
+1. Added a Media Info view variant.
+2. Added a Widget View.
+3. Added a List view variant.
+4. Another fanart fix.
+5. Added a hide plot option.
+
+[B]2.4.4.2[/B]
+1. Fanart fix.
+
+[B]2.4.4.1[/B]
+1. Dependancy fix.
+
+[B]2.4.4[/B]
+1. Two new viewtypes! (Credits go to ZERO <ibis>!)
+2. Small bugfixes and improvements.
+3. More Hebrew updates.
+
+[B]2.4.3.3[/B]
+1. Next Aired fixes.
+2. Another PVR attempt.
+		
+[B]2.4.3.2[/B]
+1. Updated translations.
+2. Potential PVR fix.
+
+[B]2.4.3.1[/B]
+1. Small fix for thumbs.
+
+[B]2.4.3[/B]
+1. Showcase tweak.
+2. RSS Editor dialogue.
+3. Flags tweak.
+4. Artwork Beef tweak.
+5. Widget background setting.
+
+[B]2.4.2[/B]
+1. Huge viewtype overhaul.
+2. Showcase fix.
+3. RSS font size enlargement.
+4. Ported Settings screen.
+5. Ported Showcase Widget.
+6. Tweaks to the info screen.
+7. Small OSD fix.
+8. Small Hub fix.
+9. Script duration updates.
+
+[B]2.4.1[/B]
+1. Fixed widget type bug.
+2. Fix for viewtype lock.
+
+[B]2.4[/B]
+1. Further viewtype fixes.
+2. Music artwork overhaul.
+3. Add-on Info dialogue tweaks.
+4. Light theme info fix.
+5. Light theme busy dialogue tweak.
+6. Set Icon fix.
+7. Added manfeed's Videolyrics Plus.
+8. Showcase tweaks.
+9. Tweaked playlist background options.
+10. Added Low List view.
+11. Rotation label bugfix.
+12. Support for Artwork Beef add-on.
+13. Skin Backup workaround.
+14. French translation overhaul (by Kelexel)
+15. Light theme dark interface tweaks.
+16. Info and flags redundancy fixes.
+17. Caching OSD fix.
+
+[B]2.3.9.1[/B]
+1. Add-on browsing quick-fix.
+
+[B]2.3.9[/B]
+1. Busy Dialog tweak.
+2. Tweaked viewtypes conditions.
+3. Fixed add-on loading artefacts.
+4. Small log error fixes (syntax).
+5. Home menu header is now hideable.
+6. Fixed logo and flags bugs.
+7. Video Info ratings tweak.
+8. Video Info darken effect.
+9. QuickNav tweak.
+10. Subtitle Sync tweak.
+11. Added Hebrew translation (scofield272)!
+
+[B]2.3.8[/B]
+1. Context menu support for Library Editor Script.
+2. Context menu support for SimplePlaylists.
+3. PVR OSD fixes.
+4. Darkened the dim option.
+5. Random Backgrounds fix.
+6. Scrollbar fixes.
+7. Another attempt at RSS animation fix.
+8. OSD Logo fix.
+9. Poster Border fix.
+
+[B]2.3.7[/B]
+1. RSS animation tweaks.
+2. RightList artist thumbs fix.		
+3. LiveTV OSD fix.
+4. Flag fallbacks fixes.
+5. Added plot outline option.
+6. Alternate RightList for music tweak.
+7. RightList for video content.
+
+[B]2.3.6[/B]
+1. Added a duration setting for home widgets.
+2. Hub widget fixes.
+
+[B]2.3.5[/B]
+1. RightList tweaks.
+2. Flags tweaks.
+3. Spanish translation added!
+
+[B]2.3.4[/B]
+1. RightList fixes.
+2. Skin settings reorganisation.
+3. Fixes for the French translation.
+4. Significant Hub widget improvements.
+
+[B]2.3.3[/B]
+1. Updated a required add-on listing.
+2. Added a preliminary RightList view.
+3. Decreased the Home gradient.
+4. Fixes for the French translation.
+5. Disabled Black and Sollid colour themes (for now).
+
+[B]2.3.2[/B]
+1. Added a vertical/horizontal context menu switch.
+2. Widget handling improved.
+3. RSS bar for Text Only home.
+
+[B]2.3.1[/B]
+1. More music views.
+2. Updated French strings (Thanks to Kelexel!)
+3. Scrollbar fixes.
+4. Skin performance fixes.
+5. User rating fix.
+6. Fulscreen setting added.
+
+[B]2.3[/B]
+1. Improved extrathumbs handling.
+2. Improved the new context menu.
+3. Improved rating icons.
+4. Improved userratings.
+5. Added an info menu in the PVR OSD.
+6. Added screenshots for the addon.xml.
+7. Default highlight is back to blue.
+8. Dependencies version bump.
+9. Updated manfeed's lyrics to V2.
+10. Show/Hide CD case option.
+11. Artist logo improvements.
+12. Music OSD bugfix.
+13. Adjusted the skin background colour effects.
+
+[B]2.2.7[/B]
+1. Added a new context menu (testing!).
+2. Added a rotating backgrounds timer.
+3. Added extrathumbs support.
+4. Addon settings button fixes.
+
+[B]2.2.6[/B]
+1. QuickNav fixes.
+2. More PVR fixes.
+3. Other small fixes.
+
+[B]2.2.5[/B]
+1. Better mouse support for the skin settings.
+2. Subtitle menu fixes.
+3. Improved english language strings.
+4. Several small PVR fixes and tweaks.
+
+[B]2.2.4[/B]
+1. Added setting for onback command.
+2. Small language fix.
+
+[B]2.2.3[/B]
+1. Tweaks for the light colourscheme.
+2. Version bump for the github experiment.
+
+[B]2.2.2[/B]
+1. Added an opacity setting for the OSD.
+
+[B]2.2.1[/B]
+1. Added a clickable seekbar.
+2. New colour themes.
+3. Shortened the skin name.
+4. Added new icons.
+5. Tweaked the subtitles menu.
+6. Small fixes.
+
+[B]2.2[/B]
+1. Added a custom dialog for the view selector.
+2. Added new selector thumbnails.
+3. Added "Plain List" view.
+4. Added "Lovefilm" view.
+5. Added "Info List 3" view.
+6. Added "Medium Icons" view.
+7. Added an improved NextUp PostPlay skin.
+8. Added "disc.png" artwork for Music OSD.
+9. Added more flags settings.
+10. Added Director/Revenue info for the movie library.
+11. Added Forced Views for most content types.
+12. Fixed hub logos.
+13. Fixed movieset overlay info.
+14. Fixed subtitle dialog behaviour.
+15. Fixed some minor dialogs.
+16. General speed improvements. 
+17. Improved Showcase posters.
+18. Improved video thumbs.
+19. Improved Header colours.
+20. Improved hub back actions.
+21. Improved the Line Labels.
+
+[B]2.1[/B]
+1. Added manfeed's lyrics.
+2. Fixes for Hub widgets.
+3. Fixes for weather.
+4. Added music genre and record label resources.
+5. Added record label icons in dialog infos.
+6. Refined view types and categories.
+7. Added the old Hub menu as an option.
+8. Improved QuickNav and submenu handling.
+9. Functional Genre widget.
+
+[B]2.0.9[/B]
+1. Some stubborn bugs squashed.
+
+[B]2.0.8[/B]
+1. Small fixes.
+2. Fixed playlist dialog.
+3. Added some new animations.
+4. Mouse supported submenu.
+
+[B]2.0.7[/B]
+1. Small fixes.
+
+[B]2.0.6[/B]
+1. Added a fake disc with writing in Music OSD.
+2. Repaired the repeat button.
+3. Removed duplicate spinner textures. 
+4. Added more dependencies.
+5. Settings window shortcuts for OpenELEC, LibreELEC, and OSMC.
+6. Added a record button to the PVR OSD.
+7. Added Kodi's Privacy Policy display.
+8. Code updates.
+
+[B]2.0.5[/B]
+1. Tweaked the cast list.
+2. Added and improved skin dependencies.
+
+[B]2.0.4[/B]
+1. Color Picker fix.
+
+[B]2.0.3[/B]	
+1. Power menu fix.
+2. ColorPicker fixes.
+3. Moved the busy spinner.
+4. Moved the user ratings under the clock.
+
+[B]2.0.2[/B]
+1. Revert header change.
+2. New cast info in the OSD.
+3. More code updates.
+
+[B]2.0.1[/B]
+1. Quick bugfix.
+
+[B]2.0[/B]
+1. Added a Quick navigation shortcuts menu.
+2. Further code updates from Eminence 2.5.
+3. Fix for Library selection buttons.
+4. A fix for true hidden headers.
+5. PVR visual fixes.
+6. Overhaul of the available views.
+7. Further mouse control improvements.
+
+[B]1.9.2[/B]
+1. Small updates for the backgrounds.
+2. Changed position for the user rating.
+
+[B]1.9.1[/B]
+1. Flags and other modifications for Hubs.
+2. Updated skin support for Extended Info dialogs.
+
+[B]1.9[/B]
+1. Added a new Netflix view for video items (Arctic)!
+2. Ported some spinner textures.
+3. Added user rating flags for music and video!
+4. Overhauled the info screens.
+5. Ported new dialog design from Eminence 2.5.
+6. Ported the Settings from Eminence 2.5.
+7. More mouse optimizations for the setting menus.
+8. Added an option to use music artwork backgrounds.
+9. Ported the window shadows from Eminence 2.5.
+10. Fixed a weather widget bug.
+
+[B]1.8.3[/B]
+1. Updated the setting labels for Krypton, and improved mouse support.
+
+[B]1.8.2[/B]
+1. More code updates and fixes.
+2. Added new info for addons.
+
+[B]1.8.1[/B]
+1. New skin icon.
+2. Added music user ratings to most music album and song views.
+3. Huge code updates to reflect new string bools.
+4. A bunch of small fixes.
+
+[B]1.8[/B]
+1. Improvements and fixes for the Video OSD.
+2. Moved my portion of the changelog to the addon.xml.
+3. Restored the addoninfo changelog button for the new values.
+4. Added a setting for duration formats. "script.duration_axbmcuser" now required.
+5. Updated required addons list.
+6. Small fixes for the Showcase view.
+
+[B]1.7[/B]
+1. Improved vertical and horizontal scrolling.
+2. Added letter scrollbar (by marcelvedt and the Aeon Madnox team!).
+3. Added Player.Process dialog for Krypton.
+4. Adapted the game controlers file from Eminence 2.5 (needs to be tested).
+5. Fixed some small glitches.
+
+[B]1.6[/B]
+1. Added animated artwork!
+2. Cleaned up inconsistent code.
+3. Added proper settings and labels for various new features.
+
+[B]1.5.1[/B]
+1. Better flags icons and other small fixes.
+
+[B]1.5[/B]
+1. Added support for rotating ExtraFanart with Skin Helper!
+2. Fixed the Krypton settings screen.
+3. Added RottenTomatoes, Metacritic and IMDb ratings to the VideoInfo screen.
+4. Updated the Dialogs and added the "Get more..." and "Cancel" buttons.
+5. Added the Showcase view from Eminence 2.5!
+6. Redesigned the way Video OSD works.
+7. Fixed most of the Skin Helper properties.
+8. Altered flag aspect ratio.
+9. Fixed and improved the movieset display.
+10. Redesigned the large submenu.
+11. Tweaked the timestamp bubble.
+12. Removed the changelog button from the addon info screen.
+13. Darkened the interface dffuse graphic.
+14. Repaired the subitle offset slider.
+15. Modded the way source flags are displayed while playing.
+16. Changed the OSD info button function.
+
+[B]1.4.2[/B]
+Changes for Krypton latest build.
+Fix duration flag.
+Set non-persistent widgets as default (Use option "Allow widget reloading" to enable non-persistent widgets).
+To do : DialogGameControllers.xml
+	   Change string / integer compare
+
+[B]1.4.1[/B]
+Add small home submenu.
+Add small powermenu.
+Enable CleartArt on tv shows when CDArt is enable.
+Fix on Extended infos.
+Fix logos list views with sets.
+
+[B]1.4.0[/B]
+Add possibility to view CDArt instead of ClearArt on video infos.
+Add possibility to hide submenus icons.
+Add possibility to change colors of indicators.
+Many changes in PVR.
+Change posters aspect ratio.
+Change : justify all plots.
+Change structure for music artworks (logo.png and cdart.png).
+Fix views.
+
+[B]1.3.9[/B]
+Add number of TV shows on header.
+Add possibility to download automatically artworks after library update.
+Many fixes.
+Changes : bigger cleararts and logos on some views.
+
+[B]1.3.8[/B]
+Add new view : Cleararts list.
+Add new view : Logos list.
+Fix AM/PM on OSD.
+
+[B]1.3.7[/B]
+Add new view : Big wide with cleararts.
+Fix select dialog.
+
+[B]1.3.6[/B]
+Add new view : Logos with Fanarts/Thumbs.
+Fix finish time on OSD with 12 hours format.
+Fix indicators.
+Tweak for 16:9 thumbs/Hide infos to be independant with movies and tvshows.
+
+[B]1.3.5[/B]
+Add Unwatched Movies & Unwatched Episodes widgets.
+Add new music visualisation background : Pixelated fanart (need script.colorbox addon).
+Fix indicators not show by default.
+
+[B]1.3.4[/B]
+Add possibility to choose a widget or a picture/multi pictures for each item of Hub (Thanks 
+rhodges).
+
+[B]1.3.3[/B]
+Changes in Cycle view.
+
+[B]1.3.2[/B]
+Fix OK button with confirm dialog.
+Add possibility to show all indicators / Hide unwatched indicators only / Hide all indicators in library settings.
+
+[B]1.3.1[/B]
+Many fixes.
+
+[B]1.3.0[/B]
+Fix on music infos.
+
+[B]1.2.9[/B]
+Changes in necessary addons in skin settings.
+Change duration format on widgets.
+
+[B]1.2.8[/B]
+Add possibility to hide next aired infos on tvshows library.
+
+[B]1.2.7[/B]
+Fix views names.
+Add stuff at Christmas.
+
+[B]1.2.6[/B]
+Fix for music visualisation always stay.
+
+[B]1.2.5[/B]
+Add Big Banner view.
+Add duration on widgets.
+Fix Movies Widget Hub.
+Replace unwatched indicator.
+
+[B]1.2.4[/B]
+Add Big Fanarts view.
+
+[B]1.2.3[/B]
+Add fanarts support for Next Aired addon.
+Add season and episode number for next aired widget.
+
+[B]1.2.2[/B]
+Add cycle view.
+
+[B]1.2.1[/B]
+Add persistent widgets.
+Fix basic list.
+Fix header not disappear on password popup.
+
+[B]1.2.0[/B]
+Add possibility to show indicators of watched, unwatched, in progress and new videos with widget infos.
+Add possibility to show total number, unwatched number and watched number of episodes for TV shows and seasons.
+Add new Keyboard.
+Add autocompletion Keyboard (need plugin.program.autocompletion addon).
+Changes in numeric keyboard.
+Changes in Select, Browse and Profiles dialogs.
+Add auto size buttons on addons dialog infos.
+Tweak how cast lists etc are handled in videoinfo / extended info.
+Fix home menu with color for each tiles.
+Fix extended info video list views for new version.
+Fix dbid lookup in extendedinfo.
+Fix slide animation on home menu.
+Fix thumbs on episodes.
+Fix AM/PM not disappear on powermenu.
+Krypton : Changes infolabels on addons infos.
+Krypton : Add new default icons for addons browser root.
+
+[B]1.1.2[/B]
+Add possibility to show widget posters to be Always/Never/On Up for each menu item.
+Add possibility to hide header tile.
+Rollback with widgets playlists.
+Fix thumbs on episodes with info list 2.
+Fix playback previous item on weather widget (Thanks rhodges).
+Changes in home widgets.
+
+[B]1.1.1[/B]
+Add possibility to choose, photo, video or musique for splash screen.
+Add support for Arial font (Thanks yakirp88).
+Add new "Icons and texts only" home bar.
+Add possibility to show video infos panel when playback is paused.
+Add possibility to choose time before synopsis display in the video library.
+Fix AM/PM not disappear on submenu.
+Fix video info on actors info during playback.
+Fix aspect ratio poster on music playlist.
+Change ID of the skin.
+Change system date to be the same as date in settings.
+
+[B]1.1.0[/B]
+Add possibility to customize up to 15 hubs.
+Add search function in video library.
+Add possibility to create color theme.
+Add new login screen.
+Change : Header tile color is same as home bar color.
+Change : DialogKaiToast.xml has been renamed to DialogNotification.xml.
+Change : MyMusicPlaylist.xml / MyVideoPlaylist.xml has been merged into MyPlaylist.xml.
+Change : DialogOK.xml / DialogProgress.xml / DialogYesNo.xml has been merged into DialogConfirm.xml.
+Change : DialogAlbumInfo / DialogSongInfo.xml are merged into DialogMusicInfo.xml.
+Change : DialogMuteBug.xml has been removed.
+Cleanup duplicate widgets.
+Many changes in skin settings.
+Fix missing textures.
+
+[B]1.0.4[/B]
+Add new submenu on home.
+Add loop selection on submenu.
+Fix RSS on weather screen.
+Fix sources settings dialog.
+Other fixes.
+Changes for Krypton in progress...
+
+[B]1.0.3[/B]
+Add possibility to password protect items on home menu (Password need to be configured in extras skin settings and protection in personnalise home menu).
+Fix for "Text in tiles" home bar menu style when there is more 10 items.
+Fix RSS for new home bar menu.
+Fix submenu background when home background is added.
+Fix views for movies sets.
+
+[B]1.0.2[/B]
+Add support for studio icons.
+Add seasons and episodes numbers for Nextup Service Notification.
+Add possibility to change home bar color and opacity in skin settings.
+Add possibility to change widget tile color and opacity in skin settings.
+Add possibility to add background for each submenu items.
+Add possibility to add background for each hub items.
+Add arrows on "text only" home bar menu style.
+Add new "Posters list" view.
+Add possibility to replace widget fanart with home background.
+Fix logo with UnwatchedInfo from Nextup Service Notification with new update.
+Fix Big List view.
+Fix home bar menu arrows.
+Fix for "beveled tiles" and "empty beleved tiles" home bar menu style when there is more 10 items.
+
+[B]1.0.1[/B]
+Fix home menu bar problem.
+
+[B]1.0.0[/B]
+Initial release.
+
+All updates from original version and mod are included.
