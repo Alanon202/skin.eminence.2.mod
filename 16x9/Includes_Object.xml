@@ -844,15 +844,7 @@
             <selected>Skin.HasSetting(shadewatched)</selected>
             <onclick>Skin.ToggleSetting(shadewatched)</onclick>
             <visible>Control.IsVisible(514) | Control.IsVisible(513)</visible>
-        </control>
-        <!-- Hub Switch -->
-        <control type="radiobutton" id="90971">
-            <include>Defs_OptionButton2</include>
-            <label>Switch</label>
-            <selected>Skin.HasSetting(hub.changeplaces)</selected>
-            <onclick>Skin.ToggleSetting(hub.changeplaces)</onclick>
-            <visible>!String.IsEmpty(Window(home).Property(HubReturn)) + !Window.IsVisible(tvchannels) + !Window.IsVisible(tvguide)</visible>
-        </control>		
+        </control>	
         <!-- Show label overview -->
         <control type="radiobutton" id="90991">
             <include>Defs_OptionButton2</include>
