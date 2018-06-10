@@ -10,13 +10,13 @@
             <top>top</top>
             <height>height</height>
             <include content="Object_Poster">
-                <param name="left" value="posterx" />
-                <param name="width" value="posterw" />
+                <param name="left" value="1413" />
+                <param name="width" value="467" />
             </include>
             <include content="View_List">
                 <param name="viewlabel" value="31605" />
                 <param name="posx" value="0" />
-                <param name="width" value="listw" />
+                <param name="width" value="1403" />
                 <param name="id" value="550" />
 				<param name="condition" value="[Container.Content(movies) + [String.IsEqual(Skin.String(Skin.ForcedView.movies),$LOCALIZE[31605]) | String.IsEmpty(Skin.String(Skin.ForcedView.movies)) ]] | [Container.Content(sets) + [String.IsEqual(Skin.String(Skin.ForcedView.sets),$LOCALIZE[31605]) | String.IsEmpty(Skin.String(Skin.ForcedView.sets)) ]] | [Container.Content(tvshows) + [String.IsEqual(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[31605]) | String.IsEmpty(Skin.String(Skin.ForcedView.tvshows)) ]] | [Container.Content(seasons) + [String.IsEqual(Skin.String(Skin.ForcedView.seasons),$LOCALIZE[31605]) | String.IsEmpty(Skin.String(Skin.ForcedView.seasons)) ]] | [Container.Content(episodes) + [String.IsEqual(Skin.String(Skin.ForcedView.episodes),$LOCALIZE[31605]) | String.IsEmpty(Skin.String(Skin.ForcedView.episodes)) ]] | [Container.Content(actors) + [String.IsEqual(Skin.String(Skin.ForcedView.actors),$LOCALIZE[31605]) | String.IsEmpty(Skin.String(Skin.ForcedView.actors)) ]] | [Container.Content(countries) + [String.IsEqual(Skin.String(Skin.ForcedView.countries),$LOCALIZE[31605]) | String.IsEmpty(Skin.String(Skin.ForcedView.countries)) ]] | [Container.Content(playlists) + [String.IsEqual(Skin.String(Skin.ForcedView.playlists),$LOCALIZE[31605]) | String.IsEmpty(Skin.String(Skin.ForcedView.playlists)) ]] | [Container.Content(directors) + [String.IsEqual(Skin.String(Skin.ForcedView.directors),$LOCALIZE[31605]) | String.IsEmpty(Skin.String(Skin.ForcedView.directors)) ]] | [Container.Content(files) + [String.IsEqual(Skin.String(Skin.ForcedView.files),$LOCALIZE[31605]) | String.IsEmpty(Skin.String(Skin.ForcedView.files)) ]]"/>
             </include>
@@ -40,12 +40,12 @@
             <height>height</height>
             <include content="Object_Poster">
                 <param name="left" value="-4" />
-                <param name="width" value="posterw" />
+                <param name="width" value="467" />
             </include>
             <include content="View_List">
                 <param name="viewlabel" value="31813" />
                 <param name="posx" value="480" />
-                <param name="width" value="listw" />
+                <param name="width" value="1403" />
                 <param name="id" value="549" />
 				<param name="condition" value="[Container.Content(movies) + [String.IsEqual(Skin.String(Skin.ForcedView.movies),$LOCALIZE[31813]) | String.IsEmpty(Skin.String(Skin.ForcedView.movies)) ]] | [Container.Content(sets) + [String.IsEqual(Skin.String(Skin.ForcedView.sets),$LOCALIZE[31813]) | String.IsEmpty(Skin.String(Skin.ForcedView.sets)) ]] | [Container.Content(tvshows) + [String.IsEqual(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[31813]) | String.IsEmpty(Skin.String(Skin.ForcedView.tvshows)) ]] | [Container.Content(seasons) + [String.IsEqual(Skin.String(Skin.ForcedView.seasons),$LOCALIZE[31813]) | String.IsEmpty(Skin.String(Skin.ForcedView.seasons)) ]] | [Container.Content(episodes) + [String.IsEqual(Skin.String(Skin.ForcedView.episodes),$LOCALIZE[31813]) | String.IsEmpty(Skin.String(Skin.ForcedView.episodes)) ]] | [Container.Content(actors) + [String.IsEqual(Skin.String(Skin.ForcedView.actors),$LOCALIZE[31813]) | String.IsEmpty(Skin.String(Skin.ForcedView.actors)) ]] | [Container.Content(countries) + [String.IsEqual(Skin.String(Skin.ForcedView.countries),$LOCALIZE[31813]) | String.IsEmpty(Skin.String(Skin.ForcedView.countries)) ]] | [Container.Content(playlists) + [String.IsEqual(Skin.String(Skin.ForcedView.playlists),$LOCALIZE[31813]) | String.IsEmpty(Skin.String(Skin.ForcedView.playlists)) ]] | [Container.Content(directors) + [String.IsEqual(Skin.String(Skin.ForcedView.directors),$LOCALIZE[31813]) | String.IsEmpty(Skin.String(Skin.ForcedView.directors)) ]] | [Container.Content(files) + [String.IsEqual(Skin.String(Skin.ForcedView.files),$LOCALIZE[31813]) | String.IsEmpty(Skin.String(Skin.ForcedView.files)) ]]"/>
             </include>
@@ -1426,8 +1426,6 @@
 					<visible>!Skin.HasSetting(darkoverlay)</visible>
                     <include>Object_Background</include>
                 </control>
-                <include>Object_Scrollbar</include>
-				<include>Object_Scrollbar_Alphabet</include>
                 <control type="panel" id="$PARAM[id]">
                     <top>0</top>
                     <left>0</left>
