@@ -21,7 +21,7 @@
                 <left>side</left>
                 <include content="Object_Poster">
                     <param name="left" value="0" />
-                    <param name="width" value="posterw" />
+                    <param name="width" value="467" />
                 </include>
             </control>
             <control type="group">
