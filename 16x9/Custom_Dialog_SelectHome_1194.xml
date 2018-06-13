@@ -109,7 +109,7 @@
                         <label>31636</label>
                         <icon>special://skin/extras/viewthumbs/home_beveled_default.jpg</icon>
                         <onclick>Close</onclick>
-						<onclick>ReloadSkin()</onclick> 
+						<!-- <onclick>ReloadSkin()</onclick>  -->
                         <onclick>Skin.SetString(HomeStyle,beveled)</onclick>
                     </item>
                     <!-- Empty Beveled -->
@@ -117,7 +117,7 @@
                         <label>31668</label>
                         <icon>special://skin/extras/viewthumbs/home_emptybeveled_default.jpg</icon>
                         <onclick>Close</onclick>
-						<onclick>ReloadSkin()</onclick> 
+						<!-- <onclick>ReloadSkin()</onclick>  -->
                         <onclick>Skin.SetString(HomeStyle,emptybeveled)</onclick>
                     </item>
                     <!-- Rounded -->
@@ -125,7 +125,7 @@
                         <label>31664</label>
                         <icon>special://skin/extras/viewthumbs/home_rounded_default.jpg</icon>
                         <onclick>Close</onclick>
-						<onclick>ReloadSkin()</onclick> 
+						<!-- <onclick>ReloadSkin()</onclick>  -->
                         <onclick>Skin.SetString(HomeStyle,rounded)</onclick>
                     </item>
                     <!-- Empty Rounded-->
@@ -133,7 +133,7 @@
                         <label>31667</label>
                         <icon>special://skin/extras/viewthumbs/home_emptyrounded_default.jpg</icon>
                         <onclick>Close</onclick>
-						<onclick>ReloadSkin()</onclick> 
+						<!-- <onclick>ReloadSkin()</onclick>  -->
                         <onclick>Skin.SetString(HomeStyle,emptyrounded)</onclick>						
                     </item>
                     <!-- Squared -->
@@ -141,7 +141,7 @@
                         <label>31502</label>
                         <icon>special://skin/extras/viewthumbs/home_squared_default.jpg</icon>
                         <onclick>Close</onclick>
-						<onclick>ReloadSkin()</onclick> 
+						<!-- <onclick>ReloadSkin()</onclick>  -->
                         <onclick>Skin.SetString(HomeStyle,squared)</onclick>
                     </item>
                     <!-- Empty Squared -->
@@ -149,7 +149,7 @@
                         <label>31666</label>
                         <icon>special://skin/extras/viewthumbs/home_emptysquared_default.jpg</icon>
                         <onclick>Close</onclick>
-						<onclick>ReloadSkin()</onclick> 
+						<!-- <onclick>ReloadSkin()</onclick>  -->
                         <onclick>Skin.SetString(HomeStyle,emptysquared)</onclick>
                     </item>
                     <!-- Circle -->
@@ -157,7 +157,7 @@
                         <label>31501</label>
                         <icon>special://skin/extras/viewthumbs/home_circle_default.jpg</icon>
                         <onclick>Close</onclick>
-						<onclick>ReloadSkin()</onclick> 
+						<!-- <onclick>ReloadSkin()</onclick>  -->
                         <onclick>Skin.SetString(HomeStyle,circle)</onclick>
                     </item>
                     <!-- Empty Circle -->
@@ -165,7 +165,7 @@
                         <label>31665</label>
                         <icon>special://skin/extras/viewthumbs/home_emptycircle_default.jpg</icon>
                         <onclick>Close</onclick>
-						<onclick>ReloadSkin()</onclick> 
+						<!-- <onclick>ReloadSkin()</onclick>  -->
                         <onclick>Skin.SetString(HomeStyle,emptycircle)</onclick>
                     </item>
                     <!-- Icons Only -->
@@ -173,7 +173,7 @@
                         <label>31709</label>
                         <icon>special://skin/extras/viewthumbs/home_iconsonly_default.jpg</icon>
                         <onclick>Close</onclick>
-						<onclick>ReloadSkin()</onclick> 
+						<!-- <onclick>ReloadSkin()</onclick>  -->
                         <onclick>Skin.SetString(HomeStyle,iconsonly)</onclick>
                     </item>
                     <!-- Text In Tile -->
@@ -181,7 +181,7 @@
                         <label>31181</label>
                         <icon>special://skin/extras/viewthumbs/home_textintile_default.jpg</icon>
                         <onclick>Close</onclick>
-						<onclick>ReloadSkin()</onclick> 
+						<!-- <onclick>ReloadSkin()</onclick>  -->
                         <onclick>Skin.SetString(HomeStyle,textintile)</onclick>					
                     </item>
                     <!-- Text Only -->
@@ -189,7 +189,7 @@
                         <label>31182</label>
                         <icon>special://skin/extras/viewthumbs/home_textonly_default.jpg</icon>
                         <onclick>Close</onclick>
-						<onclick>ReloadSkin()</onclick> 
+						<!-- <onclick>ReloadSkin()</onclick>  -->
                         <onclick>Skin.SetString(HomeStyle,textonly)</onclick>					
                     </item>
                     <!-- Vertical -->
@@ -197,7 +197,7 @@
                         <label>$LOCALIZE[31817]</label>
                         <icon>special://skin/extras/viewthumbs/home_vertical_default.jpg</icon>
                         <onclick>Close</onclick>
-						<onclick>ReloadSkin()</onclick>
+						<!-- <onclick>ReloadSkin()</onclick> -->
                         <onclick>Skin.SetString(HomeStyle,vertical)</onclick>
                     </item>
                 </content>
