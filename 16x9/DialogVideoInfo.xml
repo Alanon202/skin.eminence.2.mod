@@ -77,7 +77,7 @@
                     <left>pad</left>
                     <right>side</right>
                     <top>pad</top>
-                    <height>32</height>                  
+                    <height>35</height>                  
                     <control type="image">
                         <width>32</width>
                         <height>32</height>
@@ -86,36 +86,36 @@
                         <visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
                     </control>
                     <control type="image">
-                        <width>32</width>
-                        <height>32</height>
+                        <width>35</width>
+                        <height>35</height>
                         <aspectratio>keep</aspectratio>
                         <texture>$INFO[ListItem.Property(AudioLanguage.1),lang/,.png]</texture>
                         <visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
                     </control>
                     <control type="image">
-                        <width>32</width>
-                        <height>32</height>
+                        <width>35</width>
+                        <height>35</height>
                         <aspectratio>keep</aspectratio>
                         <texture>$INFO[ListItem.Property(AudioLanguage.2),lang/,.png]</texture>
                         <visible>!String.IsEmpty(ListItem.Property(AudioLanguage.2))</visible>
                     </control>
                     <control type="image">
-                        <width>32</width>
-                        <height>32</height>
+                        <width>35</width>
+                        <height>35</height>
                         <aspectratio>keep</aspectratio>
                         <texture>$INFO[ListItem.Property(AudioLanguage.3),lang/,.png]</texture>
                         <visible>!String.IsEmpty(ListItem.Property(AudioLanguage.3))</visible>
                     </control>
                     <control type="image">
-                        <width>32</width>
-                        <height>32</height>
+                        <width>35</width>
+                        <height>35</height>
                         <aspectratio>keep</aspectratio>
                         <texture>$INFO[ListItem.Property(AudioLanguage.4),lang/,.png]</texture>
                         <visible>!String.IsEmpty(ListItem.Property(AudioLanguage.4))</visible>
                     </control>
                     <control type="image">
-                        <width>32</width>
-                        <height>32</height>
+                        <width>35</width>
+                        <height>35</height>
                         <aspectratio>keep</aspectratio>
                         <texture>$INFO[ListItem.Property(AudioLanguage.5),lang/,.png]</texture>
                         <visible>!String.IsEmpty(ListItem.Property(AudioLanguage.5))</visible>
@@ -128,36 +128,36 @@
                         <visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.1))</visible>
                     </control>                  
                     <control type="image">
-                        <width>32</width>
-                        <height>32</height>
+                        <width>35</width>
+                        <height>35</height>
                         <aspectratio>keep</aspectratio>
                         <texture fallback="lang">$INFO[ListItem.Property(SubtitleLanguage.1),lang/,.png]</texture>
                         <visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.1))</visible>
                     </control>
                     <control type="image">
-                        <width>32</width>
-                        <height>32</height>
+                        <width>35</width>
+                        <height>35</height>
                         <aspectratio>keep</aspectratio>
                         <texture>$INFO[ListItem.Property(SubtitleLanguage.2),lang/,.png]</texture>
                         <visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.2))</visible>
                     </control>
                     <control type="image">
-                        <width>32</width>
-                        <height>32</height>
+                        <width>35</width>
+                        <height>35</height>
                         <aspectratio>keep</aspectratio>
                         <texture>$INFO[ListItem.Property(SubtitleLanguage.3),lang/,.png]</texture>
                         <visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.3))</visible>
                     </control>
                     <control type="image">
-                        <width>32</width>
-                        <height>32</height>
+                        <width>35</width>
+                        <height>35</height>
                         <aspectratio>keep</aspectratio>
                         <texture>$INFO[ListItem.Property(SubtitleLanguage.4),lang/,.png]</texture>
                         <visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.5))</visible>
                     </control>
                     <control type="image">
-                        <width>32</width>
-                        <height>32</height>
+                        <width>35</width>
+                        <height>35</height>
                         <aspectratio>keep</aspectratio>
                         <texture>$INFO[ListItem.Property(SubtitleLanguage.5),lang/,.png]</texture>
                         <visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.5))</visible>
