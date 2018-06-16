@@ -357,7 +357,7 @@
 							<align>justify</align>
 							<textcolor>FFFFFFFF</textcolor>
 							<label>$INFO[Window.Property(next.plot)]</label>
-                            <visible>!IsEmpty(Window.Property(showplot))</visible>
+                            <visible>!String.IsEmpty(Window.Property(showplot))</visible>
 						</control>
 					</control>
 					<control type="group">
@@ -408,7 +408,7 @@
 							<align>justify</align>
 							<textcolor>FFFFFFFF</textcolor>
 							<label>$INFO[Window.Property(previous.plot)]</label>
-                            <visible>!IsEmpty(Window.Property(showplot))</visible>
+                            <visible>!String.IsEmpty(Window.Property(showplot))</visible>
 						</control>
 					</control>
 				</control>
