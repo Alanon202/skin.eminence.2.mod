@@ -281,12 +281,12 @@
 					<animation effect="slide" start="0" end="1415" time="500" tween="back" reversible="true" easing="out" condition="Skin.HasSetting(hub.changeplaces)">Conditional</animation>
                     <left>0</left>
                     <top>0</top>
-                    <width>posterw</width>
-                    <height>posterh</height>
+                    <width>467</width>
+                    <height>690</height>
 					<visible>Skin.String(hubbackground,$LOCALIZE[31651])</visible>
                     <control type="group">
                         <include content="Object_Line">
-                            <param name="width" value="posterw" />
+                            <param name="width" value="467" />
                             <param name="label" value="$VAR[Label_Hub_WidgetType]" />
                         </include>
                     </control>
@@ -309,8 +309,8 @@
                         <visible>Control.HasFocus(9500)</visible>
                     </control>
                     <control type="multiimage" id="9499">
-                      <width>posterw</width>
-                      <height>posterh</height>
+                      <width>467</width>
+                      <height>690</height>
                       <left>pad</left>
                       <right>pad</right>
                       <top>pad</top>

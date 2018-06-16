@@ -127,8 +127,8 @@
                 <param name="label" value="$INFO[Control.GetLabel(3),, ]$INFO[Control.GetLabel(4),[COLOR=PosterBorder]-[/COLOR] , ]" />
             </include>
             <include content="Object_Poster">
-                <param name="left" value="posterx" />
-                <param name="width" value="posterw" />
+                <param name="left" value="1413" />
+                <param name="width" value="467" />
             </include>
             <include content="View_InfoList">
                 <param name="id" value="508" />
@@ -647,7 +647,7 @@
             </include>
             <include content="Object_Poster">
                 <param name="left" value="1413" />
-                <param name="width" value="posterw" />
+                <param name="width" value="467" />
             </include>
             <include content="Object_ExtraInfo">
                 <param name="left" value="663" />
@@ -681,7 +681,7 @@
             </include>
             <include content="Object_Poster">
                 <param name="left" value="-5" />
-                <param name="width" value="posterw" />
+                <param name="width" value="467" />
             </include>
             <include content="Object_ExtraInfo">
                 <param name="left" value="1148" />

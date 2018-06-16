@@ -935,7 +935,7 @@
 				<onleft condition="Skin.HasSetting(AlphabetScrollbar)">6015</onleft>
                 <onleft condition="!Skin.HasSetting(AlphabetScrollbar) + !String.IsEqual(Window(home).Property(HubReturn),Home)">ActivateWindow($INFO[Window(home).Property(HubReturn)])</onleft>
                 <left>$PARAM[left]</left>
-                <height>height</height>
+                <height>690</height>
                 <onright>50</onright>
                 <width>12</width>
                 <orientation>vertical</orientation>

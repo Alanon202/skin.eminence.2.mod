@@ -634,7 +634,7 @@
             <height>276</height>
             <control type="group">
                 <left>pad</left>
-                <width>posterw</width>
+                <width>467</width>
                 <height>height</height>
 				<bottom>0</bottom>
 				<include>Animation_Bottom</include>
@@ -806,7 +806,7 @@
             <height>276</height>
             <control type="group">
                 <left>pad</left>
-                <width>posterw</width>
+                <width>467</width>
                 <height>height</height>
 				<bottom>0</bottom>
 				<include>Animation_Bottom</include>
