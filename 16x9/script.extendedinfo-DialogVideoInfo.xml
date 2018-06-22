@@ -342,7 +342,7 @@
                                 <radioposy>30</radioposy>
                                 <radiowidth>44</radiowidth>
                                 <radioheight>44</radioheight>
-                                <visible>IsEmpty(Window.Property(movie.DBID))</visible>
+                                <visible>String.IsEmpty(Window.Property(movie.DBID))</visible>
                                 <visible>!String.IsEqual(Window.Property(Type),tvshow) + !String.IsEqual(Window.Property(Type),episode) + !String.IsEqual(Window.Property(Type),season)</visible>
                             </control>
                             <control type="radiobutton" id="19">
@@ -390,7 +390,7 @@
                                 <radioposy>30</radioposy>
                                 <radiowidth>44</radiowidth>
                                 <radioheight>44</radioheight>
-                                <visible>IsEmpty(Window.Property(movie.DBID))</visible>
+                                <visible>String.IsEmpty(Window.Property(movie.DBID))</visible>
                                 <visible>!String.IsEqual(Window.Property(Type),movie) + !String.IsEqual(Window.Property(Type),episode) + !String.IsEqual(Window.Property(Type),season)</visible>
                             </control>
                             <control type="radiobutton" id="21">
@@ -828,7 +828,7 @@
                                 <radioheight>44</radioheight>
                                 <label>$ADDON[script.extendedinfo 32132]</label>
                                 <onclick>XBMC.RunScript(script.videoextras,display,"$INFO[Window.Property(movie.FilenameAndPath)]")</onclick>
-                                <visible>System.HasAddon(script.videoextras) + IsEmpty(Window(movieinformation).Property(HideVideoExtrasButton))</visible>
+                                <visible>System.HasAddon(script.videoextras) + String.IsEmpty(Window(movieinformation).Property(HideVideoExtrasButton))</visible>
                                 <visible>!String.IsEmpty(Window.Property(movie.FilenameAndPath))</visible>
                                 <textureradioonfocus colordiffuse="FFFAFAFA">icons/plus2.png</textureradioonfocus>
                                 <textureradioofffocus colordiffuse="FFFAFAFA">icons/plus2.png</textureradioofffocus>
@@ -1366,7 +1366,7 @@
                             <aligny>center</aligny>
                             <font>font14</font>
                             <label>$LOCALIZE[33054]$INFO[Container(250).NumItems, (,)]</label>
-                            <visible>IsEmpty(Window.Property(movie.set.label))</visible>
+                            <visible>String.IsEmpty(Window.Property(movie.set.label))</visible>
                         </control>
                         <control type="image">
                             <posx>0</posx>
@@ -1427,7 +1427,7 @@
                                             <posy>10</posy>
                                             <posx>169</posx>
                                             <texture>flags/local.png</texture>
-                                            <visible>!String.IsEmpty(ListItem.Property(DBID))</visible>
+                                            <visible>!String.IsEmpty(ListItem.DBID)</visible>
                                         </control>
                                         <control type="image">
                                             <posy>310</posy>
@@ -1505,7 +1505,7 @@
                                             <posy>10</posy>
                                             <posx>169</posx>
                                             <texture>flags/local.png</texture>
-                                            <visible>!String.IsEmpty(ListItem.Property(DBID))</visible>
+                                            <visible>!String.IsEmpty(ListItem.DBID)</visible>
                                         </control>
                                         <control type="image">
                                             <posy>310</posy>
@@ -1633,7 +1633,7 @@
                                             <posy>10</posy>
                                             <posx>169</posx>
                                             <texture>flags/local.png</texture>
-                                            <visible>!String.IsEmpty(ListItem.Property(DBID))</visible>
+                                            <visible>!String.IsEmpty(ListItem.DBID)</visible>
                                         </control>
                                         <control type="image">
                                             <posy>10</posy>
@@ -1693,7 +1693,7 @@
                                             <posy>10</posy>
                                             <posx>169</posx>
                                             <texture>flags/local.png</texture>
-                                            <visible>!String.IsEmpty(ListItem.Property(DBID))</visible>
+                                            <visible>!String.IsEmpty(ListItem.DBID)</visible>
                                         </control>
                                         <control type="image">
                                             <posy>310</posy>

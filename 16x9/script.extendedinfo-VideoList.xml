@@ -48,7 +48,7 @@
                     <posy>107</posy>
                     <width>330</width>
                     <height>432</height>
-                    <visible>Control.HasFocus(500) + IsEmpty(Window.Property(alt_layout))</visible>
+                    <visible>Control.HasFocus(500) + String.IsEmpty(Window.Property(alt_layout))</visible>
                     <animation type="WindowOpen" reversible="false">
                         <effect type="fade" start="0" end="100" delay="700" time="300" />
                     </animation>
