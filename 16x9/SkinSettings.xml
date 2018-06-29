@@ -1395,7 +1395,7 @@
                         <width>100%</width>
                         <label>31633</label>
                         <label2>$VAR[Label_SkinSetting_WeatherIcons]</label2>
-                        <onclick>RunScript(script.image.resource.select,property=weather.icons&amp;type=resource.images.weathericons)</onclick>
+                        <onclick>RunScript(script.image.resource.select,property=weathericons&amp;type=resource.images.weathericons)</onclick>
                         <include>Defs_OptionButton</include>
                     </control>
                     <!-- Show Studio Icons -->

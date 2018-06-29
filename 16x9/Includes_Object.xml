@@ -893,8 +893,8 @@
                     <height>200</height>
                     <width>200</width>
                     <aspectratio>keep</aspectratio>
-                    <texture>$INFO[Skin.String(weather.icons.path),,/]$INFO[Window(weather).Property($PARAM[day].FanartCode),,.png]</texture>
-                    <visible>!String.IsEmpty(Skin.String(weather.icons.path)) + !Skin.HasSetting(weather.icons.multi)</visible>
+                    <texture>$INFO[Skin.String(weathericons.path),,/]$INFO[Window(weather).Property($PARAM[day].FanartCode),,.png]</texture>
+                    <visible>!String.IsEmpty(Skin.String(weathericons.path)) + !Skin.HasSetting(weathericons.multi)</visible>
                 </control>
                 <control type="multiimage">
                     <centertop>50%</centertop>
@@ -905,7 +905,7 @@
 					<randomize>false</randomize>					
                     <aspectratio>keep</aspectratio>
                     <imagepath>$VAR[WeatherIconsPathVar]$INFO[Window(weather).Property($PARAM[day].FanartCode)]$VAR[WeatherIconsExtVar]</imagepath>
-                    <visible>!String.IsEmpty(Skin.String(weather.icons.path)) + Skin.HasSetting(weather.icons.multi)</visible>
+                    <visible>!String.IsEmpty(Skin.String(weathericons.path)) + Skin.HasSetting(weathericons.multi)</visible>
                 </control>				
                 <control type="image">
                     <centertop>50%</centertop>
@@ -913,7 +913,7 @@
                     <width>200</width>
                     <aspectratio>keep</aspectratio>
                     <texture>$INFO[Window(weather).Property($PARAM[day].OutlookIcon)]</texture>
-                    <visible>String.IsEmpty(Skin.String(weather.icons.path))</visible>
+                    <visible>String.IsEmpty(Skin.String(weathericons.path))</visible>
                 </control>
                 <control type="label">
                     <font>Font-ListInfo-Small</font>

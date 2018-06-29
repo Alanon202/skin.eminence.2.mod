@@ -147,7 +147,7 @@
                 <!-- Icon -->
                 <control type="button" id="9003">
                     <label>31174</label>
-                    <onclick>RunScript(script.image.resource.select,property=weather.icons&amp;type=resource.images.weathericons)</onclick>
+                    <onclick>RunScript(script.image.resource.select,property=weathericons&amp;type=resource.images.weathericons)</onclick>
                     <include>Defs_OptionButton2</include>
                 </control>
                 <!-- Settings -->

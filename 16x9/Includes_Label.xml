@@ -908,7 +908,7 @@
         <value>$LOCALIZE[31189]</value>
     </variable>
     <variable name="Label_SkinSetting_WeatherIcons">
-        <value condition="!String.IsEmpty(Skin.String(weather.icons.name))">$INFO[Skin.String(weather.icons.name)]</value>
+        <value condition="!String.IsEmpty(Skin.String(weathericons.name))">$INFO[Skin.String(weathericons.name)]</value>
         <value>$LOCALIZE[31189]</value>
     </variable>
     <variable name="Label_SkinSetting_TimeLimit">
