@@ -14,7 +14,7 @@
                 <param name="label" value="$INFO[Control.GetLabel(3),, ]$INFO[Control.GetLabel(4),[COLOR=PosterBorder]-[/COLOR] , ]" />
             </include>
 <!--Custom scrollbars-->			
-			<include>Object_Scrollbar_Alphabet</include>
+			<include condition="Window.IsVisible(MyMusicNav.xml)">Object_Scrollbar_Alphabet</include>
 			<control type="scrollbar" id="61">   
 				<visible>Skin.HasSetting(showscrollbars)</visible>
                 <onup>50</onup>

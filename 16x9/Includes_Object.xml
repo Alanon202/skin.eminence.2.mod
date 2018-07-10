@@ -964,10 +964,11 @@
     <include name="Object_Scrollbar_Alphabet">
 	<!--Letter Scrollbar-->		
 		<control type="image">
-			<left>-5</left>
-			<bottom>-98</bottom>
+			<left>10</left>
+			<bottom>-413</bottom>
 			<width>width</width>
 			<height>58</height>
+			<animation effect="slide" start="0,0" end="-20,-310" time="50" condition="Window.IsActive(addonbrowser)">Conditional</animation>
 			<animation effect="fade" start="100" end="80" time="50" condition="Control.HasFocus(6015)">Conditional</animation>
 			<texture colordiffuse="DialogBG">scroll/sbl_backround.png</texture>
 			<visible>Control.HasFocus(6015) + Skin.HasSetting(AlphabetScrollbar)</visible>
@@ -975,12 +976,13 @@
 		<control type="panel" id="6015">
 			<onup>50</onup>
 			<ondown condition="!String.IsEqual(Window(home).Property(HubReturn),Home)">ActivateWindow($INFO[Window(home).Property(HubReturn)])</ondown>
-			<bottom>-100</bottom>
-			<left>0</left>
+			<bottom>-415</bottom>
+			<left>10</left>
 			<height>50</height>
 			<width>1880</width>
 			<visible>Skin.HasSetting(AlphabetScrollbar)</visible>
 			<animation effect="fade" start="100" end="0" time="50" condition="!Control.HasFocus(6015)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="-15,-310" time="50" condition="Window.IsActive(addonbrowser)">Conditional</animation>
 			<itemlayout height="41" width="40">
 				<control type="image">
 					<texture colordiffuse="LineLabel">scroll/1/$INFO[ListItem.Label].png</texture>

@@ -407,7 +407,7 @@
 				<include content="Object_Scrollbar">
 					<param name="left" value="-480r" />
 				</include>
-				<include>Object_Scrollbar_Alphabet</include>
+				<include condition="Window.IsVisible(MyMusicNav.xml)">Object_Scrollbar_Alphabet</include>
             </control>	
 		</control>
 	</include>
@@ -729,7 +729,7 @@
 				<left>500</left>
                 <width>800</width>
                 <include>Object_Arrows_Vertical</include>
-				<include>Object_Scrollbar_Alphabet</include>
+				<include condition="Window.IsVisible(MyMusicNav.xml)">Object_Scrollbar_Alphabet</include>
 				<animation effect="slide" end="-500,0" time="500" tween="cubic" easing="inout" condition="Skin.HasSetting(lowlist.hideplot)">Conditional</animation>
             </control>			
             <control type="scrollbar" id="60">
@@ -864,7 +864,7 @@
 				<left>500</left>
                 <width>800</width>
                 <include>Object_Arrows_Vertical</include>
-				<include>Object_Scrollbar_Alphabet</include>
+				<include condition="Window.IsVisible(MyMusicNav.xml)">Object_Scrollbar_Alphabet</include>
 				<animation effect="slide" end="-500,0" time="500" tween="cubic" easing="inout" condition="Skin.HasSetting(lowlist.hideplot)">Conditional</animation>
             </control>
             <control type="scrollbar" id="60">

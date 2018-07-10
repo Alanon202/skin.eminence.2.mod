@@ -16,7 +16,7 @@
 			<include condition="Skin.HasSetting(darkoverlay)">Object_Background2</include>
 			<control type="group">
 				<bottom>25</bottom>
-				<include>Object_Scrollbar_Alphabet</include>
+				<include condition="Window.IsVisible(MyMusicNav.xml)">Object_Scrollbar_Alphabet</include>
 			</control>	
 			<control type="scrollbar" id="61">   
 				<visible>Skin.HasSetting(showscrollbars)</visible>

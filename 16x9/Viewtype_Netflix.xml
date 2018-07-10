@@ -447,45 +447,45 @@
 					<ondown condition="!Skin.HasSetting(global.kioskmode)">9000</ondown>
 					<animation effect="fade" start="100" end="33" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 			</control>	
-			<control type="group" id="99999">	
-				<control type="image">
-					<left>-5</left>
-					<bottom>5</bottom>
-					<width>width</width>
-					<height>58</height>
-					<animation effect="fade" start="100" end="80" time="50" condition="Control.HasFocus(6015)">Conditional</animation>
-					<texture colordiffuse="DialogBG">scroll/sbl_backround.png</texture>
-					<visible>Control.HasFocus(6015) + Skin.HasSetting(AlphabetScrollbar)</visible>
-				</control>		
-				<control type="panel" id="6015">
-					<onup>50</onup>
-					<ondown condition="!String.IsEqual(Window(home).Property(HubReturn),Home)">ActivateWindow($INFO[Window(home).Property(HubReturn)])</ondown>
-					<bottom>5</bottom>
-					<left>0</left>
-					<height>50</height>
-					<width>1880</width>
-					<visible>Skin.HasSetting(AlphabetScrollbar)</visible>
-					<animation effect="fade" start="100" end="0" time="50" condition="!Control.HasFocus(6015)">Conditional</animation>
-					<itemlayout height="41" width="40">
-						<control type="image">
-							<texture colordiffuse="LineLabel">scroll/1/$INFO[ListItem.Label].png</texture>
-							<animation effect="fade" start="100" end="20" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
-						</control>
-						<control type="image">
-							<texture colordiffuse="white">scroll/1/$INFO[ListItem.Label].png</texture>
-							<animation effect="fade" start="100" end="0" time="0" condition="true">Conditional</animation>
-							<visible>String.IsEqual(ListItem.Label,Container.ListItem.SortLetter)</visible>
-						</control>
-					</itemlayout>
-					<focusedlayout height="41" width="40">
-						<control type="image">
-							<texture colordiffuse="$VAR[HighlightColor]">scroll/1/$INFO[ListItem.Label].png</texture>
-							<animation effect="fade" start="100" end="0" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
-						</control>
-					</focusedlayout>
-					<include condition="Skin.HasSetting(AlphabetScrollbar)">AlphabetAction</include>
-				</control>		
-			</control>
+			<!-- <control type="group" id="99999">	 -->
+				<!-- <control type="image"> -->
+					<!-- <left>-5</left> -->
+					<!-- <bottom>5</bottom> -->
+					<!-- <width>width</width> -->
+					<!-- <height>58</height> -->
+					<!-- <animation effect="fade" start="100" end="80" time="50" condition="Control.HasFocus(6015)">Conditional</animation> -->
+					<!-- <texture colordiffuse="DialogBG">scroll/sbl_backround.png</texture> -->
+					<!-- <visible>Control.HasFocus(6015) + Skin.HasSetting(AlphabetScrollbar)</visible> -->
+				<!-- </control>		 -->
+				<!-- <control type="panel" id="6015"> -->
+					<!-- <onup>50</onup> -->
+					<!-- <ondown condition="!String.IsEqual(Window(home).Property(HubReturn),Home)">ActivateWindow($INFO[Window(home).Property(HubReturn)])</ondown> -->
+					<!-- <bottom>5</bottom> -->
+					<!-- <left>0</left> -->
+					<!-- <height>50</height> -->
+					<!-- <width>1880</width> -->
+					<!-- <visible>Skin.HasSetting(AlphabetScrollbar)</visible> -->
+					<!-- <animation effect="fade" start="100" end="0" time="50" condition="!Control.HasFocus(6015)">Conditional</animation> -->
+					<!-- <itemlayout height="41" width="40"> -->
+						<!-- <control type="image"> -->
+							<!-- <texture colordiffuse="LineLabel">scroll/1/$INFO[ListItem.Label].png</texture> -->
+							<!-- <animation effect="fade" start="100" end="20" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation> -->
+						<!-- </control> -->
+						<!-- <control type="image"> -->
+							<!-- <texture colordiffuse="white">scroll/1/$INFO[ListItem.Label].png</texture> -->
+							<!-- <animation effect="fade" start="100" end="0" time="0" condition="true">Conditional</animation> -->
+							<!-- <visible>String.IsEqual(ListItem.Label,Container.ListItem.SortLetter)</visible> -->
+						<!-- </control> -->
+					<!-- </itemlayout> -->
+					<!-- <focusedlayout height="41" width="40"> -->
+						<!-- <control type="image"> -->
+							<!-- <texture colordiffuse="$VAR[HighlightColor]">scroll/1/$INFO[ListItem.Label].png</texture> -->
+							<!-- <animation effect="fade" start="100" end="0" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation> -->
+						<!-- </control> -->
+					<!-- </focusedlayout> -->
+					<!-- <include condition="Skin.HasSetting(AlphabetScrollbar)">AlphabetAction</include> -->
+				<!-- </control>		 -->
+			<!-- </control> -->
 	</control>
 	</include>
 </includes>

@@ -22,7 +22,6 @@
             </include>
             <include>Object_Arrows_Vertical</include>
 			<include>Object_Scrollbar</include>
-			<include>Object_Scrollbar_Alphabet</include>
         </control>
     </include>
 
@@ -147,7 +146,7 @@
             </include>
             <include>Object_Arrows_Vertical</include>
 			<include>Object_Scrollbar</include>
-			<include>Object_Scrollbar_Alphabet</include>
+			<include condition="Window.IsVisible(MyMusicNav.xml)">Object_Scrollbar_Alphabet</include>
         </control>
     </include>
 
@@ -404,8 +403,8 @@
             <visible>Control.IsVisible(53)</visible>
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
-			<include>Object_Scrollbar_Alphabet</include>
 			<include>Object_Scrollbar_Horizontal</include>
+			<include condition="Window.IsVisible(MyMusicNav.xml)">Object_Scrollbar_Alphabet</include>
             <left>side</left>
             <right>side</right>
             <top>top</top>
@@ -427,8 +426,8 @@
             <visible>Control.IsVisible(505)</visible>
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
-			<include>Object_Scrollbar_Alphabet</include>
 			<include>Object_Scrollbar_Horizontal</include>
+			<include condition="Window.IsVisible(MyMusicNav.xml)">Object_Scrollbar_Alphabet</include>
             <left>side</left>
             <right>side</right>
             <top>top</top>
@@ -1023,7 +1022,6 @@
             <visible>Control.IsVisible(600)</visible>
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
-			<include>Object_Scrollbar_Alphabet</include>
 			<include>Object_Scrollbar_Horizontal</include>
             <left>side</left>
             <right>side</right>
@@ -1289,7 +1287,7 @@
             <visible>Control.IsVisible(157)</visible>
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
-			<include>Object_Scrollbar_Alphabet</include>
+			<include condition="Window.IsVisible(MyMusicNav.xml)">Object_Scrollbar_Alphabet</include>
             <left>side</left>
             <right>side</right>
             <top>top</top>
@@ -1394,7 +1392,6 @@
             <visible>Control.IsVisible(160)</visible>
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
-			<include>Object_Scrollbar_Alphabet</include>
 			<include>Object_Scrollbar_Horizontal</include>
             <left>side</left>
             <right>side</right>
@@ -1660,7 +1657,6 @@
             <visible>Control.IsVisible(161)</visible>
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
-			<include>Object_Scrollbar_Alphabet</include>
 			<include>Object_Scrollbar_Horizontal</include>
             <left>side</left>
             <right>side</right>
@@ -2083,7 +2079,6 @@
             <visible>Control.IsVisible(162)</visible>
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
-			<include>Object_Scrollbar_Alphabet</include>
 			<include>Object_Scrollbar_Horizontal</include>
             <left>side</left>
             <right>side</right>

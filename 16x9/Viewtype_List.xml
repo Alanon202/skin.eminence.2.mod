@@ -24,7 +24,7 @@
                 <width>listw</width>
                 <include>Object_Arrows_Vertical</include>
 				<include>Object_Scrollbar</include>
-				<include>Object_Scrollbar_Alphabet</include>
+				<include condition="Window.IsVisible(MyMusicNav.xml)">Object_Scrollbar_Alphabet</include>
             </control>
         </control>
     </include>
@@ -54,7 +54,7 @@
 				<left>480</left>
                 <include>Object_Arrows_Vertical</include>
 				<include>Object_Scrollbar</include>
-				<include>Object_Scrollbar_Alphabet</include>
+				<include condition="Window.IsVisible(MyMusicNav.xml)">Object_Scrollbar_Alphabet</include>
             </control>
         </control>
     </include>	
@@ -80,7 +80,7 @@
             <control type="group">
                 <width>1880</width>
 				<include>Object_Scrollbar</include>
-				<include>Object_Scrollbar_Alphabet</include>
+				<include condition="Window.IsVisible(MyMusicNav.xml)">Object_Scrollbar_Alphabet</include>
                 <include>Object_Arrows_Vertical</include>
             </control>			
         </control>
@@ -110,7 +110,7 @@
                 <width>1180</width>
                 <include>Object_Arrows_Vertical</include>
 				<include>Object_Scrollbar</include>
-				<include>Object_Scrollbar_Alphabet</include>
+				<include condition="Window.IsVisible(MyMusicNav.xml)">Object_Scrollbar_Alphabet</include>
             </control>
         </control>
     </include>
@@ -166,7 +166,7 @@
     <include name="View_InfoList">
         <control type="group">
 			<include>Object_Scrollbar</include>
-			<include>Object_Scrollbar_Alphabet</include>
+			<include condition="Window.IsVisible(MyMusicNav.xml)">Object_Scrollbar_Alphabet</include>
 			<include>Animation_FadeSlide_Left</include>
             <control type="group">
 			<include condition="Skin.HasSetting(darkoverlay)">Object_Background2</include>
@@ -571,7 +571,7 @@
                 </control>
 				<control type="group">
 					<bottom>35</bottom>
-					<include>Object_Scrollbar_Alphabet</include>
+					<include condition="Window.IsVisible(MyMusicNav.xml)">Object_Scrollbar_Alphabet</include>
 				</control>
 			</control>
     </include>
@@ -596,7 +596,7 @@
                 <width>1130</width>
                 <include>Object_Arrows_Vertical</include>
 				<include>Object_Scrollbar</include>
-				<include>Object_Scrollbar_Alphabet</include>
+				<include condition="Window.IsVisible(MyMusicNav.xml)">Object_Scrollbar_Alphabet</include>
             </control>
         </control>
     </include>
@@ -623,7 +623,7 @@
                 <width>850</width>
                 <include>Object_Arrows_Vertical</include>
 				<include>Object_Scrollbar</include>
-				<include>Object_Scrollbar_Alphabet</include>
+				<include condition="Window.IsVisible(MyMusicNav.xml)">Object_Scrollbar_Alphabet</include>
 				<include>Animation_FadeSlide_Left</include>
             </control>
         </control>
@@ -657,7 +657,7 @@
                 <width>653</width>
                 <include>Object_Arrows_Vertical</include>
 				<include>Object_Scrollbar</include>
-				<include>Object_Scrollbar_Alphabet</include>
+				<include condition="Window.IsVisible(MyMusicNav.xml)">Object_Scrollbar_Alphabet</include>
 				<include>Animation_FadeSlide_Left</include>
             </control>
         </control>
@@ -691,7 +691,7 @@
                 <width>653</width>
                 <include>Object_Arrows_Vertical</include>
 				<include>Object_Scrollbar</include>
-				<include>Object_Scrollbar_Alphabet</include>
+				<include condition="Window.IsVisible(MyMusicNav.xml)">Object_Scrollbar_Alphabet</include>
 				<include>Animation_FadeSlide_Left</include>
             </control>
         </control>
@@ -734,7 +734,7 @@
                 <width>659</width>
                 <include>Object_Arrows_Vertical</include>
 				<include>Object_Scrollbar</include>
-				<include>Object_Scrollbar_Alphabet</include>
+				<include condition="Window.IsVisible(MyMusicNav.xml)">Object_Scrollbar_Alphabet</include>
             </control>
         </control>
     </include>
@@ -759,7 +759,7 @@
                 <param name="name" value="31137" />
             </include>
             <include>Object_Scrollbar</include>
-			<include>Object_Scrollbar_Alphabet</include>
+			<include condition="Window.IsVisible(MyMusicNav.xml)">Object_Scrollbar_Alphabet</include>
             <include>Object_Arrows_Vertical</include>
         </control>
     </include>
@@ -784,7 +784,7 @@
                 <param name="name" value="537" />
             </include>
             <include>Object_Scrollbar</include>
-			<include>Object_Scrollbar_Alphabet</include>
+			<include condition="Window.IsVisible(MyMusicNav.xml)">Object_Scrollbar_Alphabet</include>
             <include>Object_Arrows_Vertical</include>
         </control>
     </include>
@@ -811,7 +811,7 @@
             </include>
             <include>Object_ExtraInfo</include>
             <include>Object_Scrollbar</include>
-			<include>Object_Scrollbar_Alphabet</include>
+			<include condition="Window.IsVisible(MyMusicNav.xml)">Object_Scrollbar_Alphabet</include>
             <control type="group">
                 <width>1140</width>
                 <include>Object_Arrows_Vertical</include>
@@ -1400,7 +1400,7 @@
 				<param name="condition" value="[Container.Content(movies) + [String.IsEqual(Skin.String(Skin.ForcedView.movies),$LOCALIZE[31742]) | String.IsEmpty(Skin.String(Skin.ForcedView.movies)) ]] | [Container.Content(sets) + [String.IsEqual(Skin.String(Skin.ForcedView.sets),$LOCALIZE[31742]) | String.IsEmpty(Skin.String(Skin.ForcedView.sets)) ]] | [Container.Content(tvshows) + [String.IsEqual(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[31742]) | String.IsEmpty(Skin.String(Skin.ForcedView.tvshows)) ]]" />
             </include>
 			<include>Object_Scrollbar</include>
-			<include>Object_Scrollbar_Alphabet</include>
+			<include condition="Window.IsVisible(MyMusicNav.xml)">Object_Scrollbar_Alphabet</include>
             <control type="group">
                 <width>659</width>
                 <include>Object_Arrows_Vertical</include>
