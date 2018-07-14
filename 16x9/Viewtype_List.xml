@@ -80,7 +80,7 @@
             <control type="group">
                 <width>1880</width>
 				<include>Object_Scrollbar</include>
-				<include condition="Window.IsVisible(MyMusicNav.xml)">Object_Scrollbar_Alphabet</include>
+				<include condition="Window.IsVisible(addonbrowser) | Window.IsVisible(MyMusicNav.xml)">Object_Scrollbar_Alphabet</include>
                 <include>Object_Arrows_Vertical</include>
             </control>			
         </control>
@@ -110,7 +110,7 @@
                 <width>1180</width>
                 <include>Object_Arrows_Vertical</include>
 				<include>Object_Scrollbar</include>
-				<include condition="Window.IsVisible(MyMusicNav.xml)">Object_Scrollbar_Alphabet</include>
+				<include condition="Window.IsVisible(addonbrowser) | Window.IsVisible(MyMusicNav.xml)">Object_Scrollbar_Alphabet</include>
             </control>
         </control>
     </include>
@@ -734,7 +734,7 @@
                 <width>659</width>
                 <include>Object_Arrows_Vertical</include>
 				<include>Object_Scrollbar</include>
-				<include condition="Window.IsVisible(MyMusicNav.xml)">Object_Scrollbar_Alphabet</include>
+				<include condition="Window.IsVisible(addonbrowser) | Window.IsVisible(MyMusicNav.xml)">Object_Scrollbar_Alphabet</include>
             </control>
         </control>
     </include>
@@ -759,7 +759,7 @@
                 <param name="name" value="31137" />
             </include>
             <include>Object_Scrollbar</include>
-			<include condition="Window.IsVisible(MyMusicNav.xml)">Object_Scrollbar_Alphabet</include>
+			<include condition="Window.IsVisible(addonbrowser) | Window.IsVisible(MyMusicNav.xml)">Object_Scrollbar_Alphabet</include>
             <include>Object_Arrows_Vertical</include>
         </control>
     </include>
@@ -784,7 +784,7 @@
                 <param name="name" value="537" />
             </include>
             <include>Object_Scrollbar</include>
-			<include condition="Window.IsVisible(MyMusicNav.xml)">Object_Scrollbar_Alphabet</include>
+			<include condition="Window.IsVisible(addonbrowser) | Window.IsVisible(MyMusicNav.xml)">Object_Scrollbar_Alphabet</include>
             <include>Object_Arrows_Vertical</include>
         </control>
     </include>

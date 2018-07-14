@@ -968,7 +968,7 @@
 			<bottom>-413</bottom>
 			<width>width</width>
 			<height>58</height>
-			<animation effect="slide" start="0,0" end="-20,-310" time="50" condition="Window.IsActive(addonbrowser)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="-20,-310" time="50" condition="Window.IsVisible(addonbrowser) | Window.IsVisible(music)">Conditional</animation>
 			<animation effect="fade" start="100" end="80" time="50" condition="Control.HasFocus(6015)">Conditional</animation>
 			<texture colordiffuse="DialogBG">scroll/sbl_backround.png</texture>
 			<visible>Control.HasFocus(6015) + Skin.HasSetting(AlphabetScrollbar)</visible>
@@ -982,7 +982,7 @@
 			<width>1880</width>
 			<visible>Skin.HasSetting(AlphabetScrollbar)</visible>
 			<animation effect="fade" start="100" end="0" time="50" condition="!Control.HasFocus(6015)">Conditional</animation>
-			<animation effect="slide" start="0,0" end="-15,-310" time="50" condition="Window.IsActive(addonbrowser)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="-15,-310" time="50" condition="Window.IsVisible(addonbrowser) | Window.IsVisible(music)">Conditional</animation>
 			<itemlayout height="41" width="40">
 				<control type="image">
 					<texture colordiffuse="LineLabel">scroll/1/$INFO[ListItem.Label].png</texture>
@@ -1017,7 +1017,8 @@
             <top>682</top>
             <orientation>horizontal</orientation>
             <left>0</left>
-            <width>1880</width>
+			<right>0</right>
+            <width>100%</width>
             <height>8</height>
             <animation effect="fade" condition="!Control.HasFocus(60) + !Container.Scrolling" time="200" start="100" end="0">Conditional</animation>
         </control>
