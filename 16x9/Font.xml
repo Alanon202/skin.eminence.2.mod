@@ -633,7 +633,43 @@
             <name>CDAlbum</name>
             <filename>fafers.ttf</filename>
 			<size>36</size>
-        </font>		
+        </font>
+		<font>
+			<name>font_SimplerE3D_bold</name>
+			<filename>arial.ttf</filename>
+			<style>uppercase bold</style>
+			<size>48</size>
+		</font>
+		<font>
+			<name>font_armyofdarkness</name>
+			<filename>arial.ttf</filename>
+			<style>uppercase</style>
+			<size>48</size>
+		</font>
+		<font>
+			<name>font_babylon5</name>
+			<filename>arial.ttf</filename>
+			<style>uppercase</style>
+			<size>48</size>
+		</font>
+		<font>
+			<name>font_bachelorpad</name>
+			<filename>arial.ttf</filename>
+			<style>uppercase</style>
+			<size>48</size>
+		</font>
+		<font>
+			<name>font_bullpen3d</name>
+			<filename>arial.ttf</filename>
+			<style>uppercase</style>
+			<size>48</size>
+		</font>
+		<font>
+			<name>font_terminator</name>
+			<filename>arial.ttf</filename>
+			<style>uppercase</style>
+			<size>48</size>
+		</font>			
     </fontset>
 
 </fonts>
