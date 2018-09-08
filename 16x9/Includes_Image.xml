@@ -220,10 +220,10 @@
         <value condition="Window.IsVisible(home) + [!String.IsEmpty(Container(9002).ListItem.Property(Background)) + !String.IsEmpty(Window(home).Property(submenumouse))]">$INFO[Container(9002).ListItem.Property(Background)]</value>        
         <value condition="[!String.IsEmpty(Container(9501).ListItem.Property(Background)) + Control.HasFocus(9501)]">$INFO[Container(9501).ListItem.Property(Background)]</value>    
 		<value condition="!String.IsEmpty(Window(home).Property(SkinHelper.Music.Fanart)) + !Skin.HasSetting(global.fanart)">$INFO[Window(home).Property(SkinHelper.Music.Fanart)]</value>       
-		<value condition="Window.IsVisible(home) + String.IsEmpty(Skin.String(background.fallback))">special://skin/extras/backgrounds/home.jpg</value>
-        <value condition="Window.IsVisible(home) + !String.IsEmpty(Skin.String(background.fallback))">$INFO[Skin.String(background.fallback)]</value>
-        <value condition="Skin.HasSetting(background.hidefanart) + String.IsEmpty(Skin.String(background.fallback))">common/black.png</value>
-        <value condition="Skin.HasSetting(background.hidefanart) + !String.IsEmpty(Skin.String(background.fallback))">$INFO[Skin.String(background.fallback)]</value>
+		<value condition="Window.IsVisible(home) + String.IsEmpty(Skin.String(fanartfallback.path))">special://skin/extras/backgrounds/home.jpg</value>
+        <value condition="Window.IsVisible(home) + !String.IsEmpty(Skin.String(fanartfallback.path))">$INFO[Skin.String(fanartfallback.path)]</value>
+        <value condition="Skin.HasSetting(background.hidefanart) + String.IsEmpty(Skin.String(fanartfallback.path))">common/black.png</value>
+        <value condition="Skin.HasSetting(background.hidefanart) + !String.IsEmpty(Skin.String(fanartfallback.path))">$INFO[Skin.String(fanartfallback.path)]</value>
         <value condition="!String.IsEmpty(Container(9500).ListItem.Art(fanart)) + !Skin.HasSetting(global.fanart)">$INFO[Container(9500).ListItem.Art(fanart)]</value>
         <value condition="String.IsEqual(Container(9502).ListItem.Property(background),playlistBackground)">$INFO[Container(9988).ListItem.Art(fanart)]</value>       	
 		<value condition="System.HasAddon(script.artwork.beef) + Skin.HasSetting(SkinHelperExtrafanart) + !String.IsEmpty(Control.Getlabel(4420)) + !Skin.HasSetting(global.fanart)">$INFO[Control.Getlabel(4420)]</value>        
@@ -232,7 +232,8 @@
 		<value condition="!System.HasAddon(script.artwork.beef) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.ExtraFanArt)) + !String.IsEmpty(Control.Getlabel(4440)) + Skin.HasSetting(SkinHelperExtrafanart) + !Skin.HasSetting(global.fanart)">$INFO[Control.Getlabel(4440)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(global.fanart)">$INFO[ListItem.Art(fanart)]</value>
 		<value condition="!String.IsEmpty(Fanart.Image) + !Skin.HasSetting(global.fanart)">$INFO[Fanart.Image]</value>		
-		<value condition="!String.IsEmpty(Skin.String(background.fallback))">$INFO[Skin.String(background.fallback)]</value>
+		<value condition="!String.IsEmpty(Skin.String(fanartfallback.path))">$INFO[Skin.String(fanartfallback.path)]</value>
+		<value condition="String.IsEmpty(Skin.String(fanartfallback.path))">special://skin/extras/backgrounds/home.jpg</value>
         <value>common/black.png</value>
     </variable>
 

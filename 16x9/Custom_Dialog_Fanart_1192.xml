@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1192" type="dialog">
+    <defaultcontrol always="true">9000</defaultcontrol>
+    <controls>
+        <include>GlobalOverlay</include>
+        <control type="group">
+            <include>Animation_SlideIn_Bounce</include>
+            <include>Animation_FadeOut</include>
+            <centerleft>50%</centerleft>
+            <width>1156</width>
+            <bottom>89</bottom>
+            <height>652</height>
+            <control type="group">
+                <visible>Control.IsVisible(9000)</visible>
+                <include>Dialog_Background</include>
+            </control>
+            <control type="group">
+                <left>0</left>
+                <right>0</right>
+                <visible>Control.IsVisible(9000)</visible>
+                <include>Dialog_Background</include>
+            </control>
+            <include content="Dialog_Top_IconHeader">
+                <param name="label" value="$LOCALIZE[31146]" />
+                <param name="icon" value="special://skin/extras/icons/filebox.png" />
+            </include>
+            <include content="Dialog_FavouriteList">
+                <param name="id" value="9000" />
+                <param name="onup" value="9000" />
+                <param name="ondown" value="9000" />
+                <param name="moveid" value="5" />
+                <param name="left" value="side" />
+                <param name="top" value="80" />
+                <param name="width" value="1116" />
+                <param name="bottom" value="side" />
+            </include>
+			<control type="button" id="8001">
+				<left>1016</left>
+				<top>-284</top>
+				<width>auto</width>
+				<height>100%</height>
+				<align>left</align>
+				<label>222</label>
+				<texturenofocus></texturenofocus>
+				<texturefocus></texturefocus>
+				<focusedcolor>$VAR[HighlightColor]</focusedcolor>
+				<include>Defs_OptionButton</include>
+				<onclick>Close</onclick>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+			</control>
+            <control type="list" id="9000">
+				<align>right</align>
+				<right>side</right>
+				<left>20</left>
+				<itemgap>pad</itemgap>
+				<orientation>vertical</orientation> 
+				<onleft>8001</onleft>
+				<onright>8001</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<top>80</top>	
+				<itemlayout height="69" width="1146">
+					<control type="label">
+					    <width>100%</width>
+						<height>69</height>
+						<textcolor>ListLabel</textcolor>
+						<font>Font-ListInfo-Small-Bold</font>
+						<aligny>center</aligny>
+						<textoffsetx>side</textoffsetx>						
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="69" width="1146">
+					<control type="image">
+						<texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+						<visible>Control.HasFocus(9000)</visible>
+					</control>
+					<control type="label">
+					    <width>100%</width>
+						<height>69</height>
+						<textcolor>Selected</textcolor>
+						<font>Font-ListInfo-Small-Bold</font>
+						<aligny>center</aligny>
+						<textoffsetx>side</textoffsetx>							
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</focusedlayout>
+				<content>
+					<item>
+						<label>$LOCALIZE[13007]</label>
+						<onclick>Dialog.Close(1192)</onclick>
+						<onclick>Skin.Reset(fanartfallback.path)</onclick>
+					</item>
+					<item>
+						<label>$ADDON[script.skinshortcuts 32051]</label>
+						<onclick>Dialog.Close(1192)</onclick>
+						<onclick>Skin.SetImage(fanartfallback.path)</onclick>
+					</item>
+					<item>
+						<label>$ADDON[script.skinshortcuts 32052]</label>
+						<onclick>Dialog.Close(1192)</onclick>
+						<onclick>Skin.SetPath(fanartfallback.path)</onclick>
+					</item>
+				</content>
+            </control>
+		
+        </control>
+
+        <!-- Hidden Label -->
+        <control type="label" id="1"><visible>false</visible><font></font></control>
+    </controls>
+
+</window>

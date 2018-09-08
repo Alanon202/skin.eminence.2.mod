@@ -880,7 +880,8 @@
         <value>$LOCALIZE[31500]</value>
     </variable>
     <variable name="Label_SkinSetting_FallbackFanart">
-        <value condition="!String.IsEmpty(Skin.String(background.fallback))">$INFO[Skin.String(background.fallback)]</value>
+        <value condition="!String.IsEmpty(Skin.String(fanartfallback.path))">$INFO[Skin.String(fanartfallback.path)]</value>
+		<value condition="String.IsEmpty(Skin.String(fanartfallback.path))">$LOCALIZE[31180]</value>
         <value>$LOCALIZE[31500]</value>
     </variable>
     <variable name="Label_SkinSetting_WeatherFanart">

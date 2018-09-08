@@ -515,9 +515,8 @@
                         <width>100%</width>
                         <label>31146</label>
                         <label2>$VAR[Label_SkinSetting_FallbackFanart]</label2>
-                        <onclick condition="String.IsEmpty(Skin.String(background.fallback))">Skin.SetImage(background.fallback)</onclick>
-                        <onclick condition="!String.IsEmpty(Skin.String(background.fallback))">Skin.Reset(background.fallback)</onclick>
-                        <include>Defs_OptionButton</include>
+						<onclick>ActivateWindow(1192)</onclick>
+						<include>Defs_OptionButton</include>
                     </control>
                     <!-- Darken Settings -->
                     <control type="radiobutton" id="9966">
