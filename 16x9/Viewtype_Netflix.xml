@@ -16,10 +16,10 @@
 				<aspectratio align="left" aligny="center">keep</aspectratio>
 				<texture>$VAR[ClearLogoTop]</texture>
 				<animation effect="fade" start="0" end="100" time="150">VisibleChange</animation>
-				<visible allowhiddenfocus="true">Control.HasFocus(515)</visible>
+				<visible allowhiddenfocus="true">Control.IsVisible(515)</visible>
 			</control>
 			<!-- MAD - Fake Logos -->
-			<!--<control type="textbox">
+			<control type="textbox">
 				<left>85</left>
 				<top>25</top>
 				<width>510</width>
@@ -29,10 +29,10 @@
 				<textcolor>$VAR[HighlightColor]</textcolor>
 				<shadowcolor>Black</shadowcolor>
 				<font>font_SimplerE3D_bold</font>
-				<label>[B]$VAR[LabelTitle][/B]</label>
-				<visible allowhiddenfocus="true">Control.HasFocus(515)</visible>
-				<visible>[Container.Content(movies) | Container.Content(sets) + String.IsEmpty(ListItem.Art(clearlogo))] | [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))]</visible>
-				<visible>[String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + [String.Contains(ListItem.Title,a) | String.Contains(ListItem.Title,b) | String.Contains(ListItem.Title,c) | String.Contains(ListItem.Title,d)]</visible>
+				<label>[B]$VAR[Label_OverlayTitle][/B]</label>
+				<visible allowhiddenfocus="true">Control.IsVisible(515)</visible>
+				<visible>[Container.Content(movies) | Container.Content(sets) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Clearlogo))] | [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Clearlogo))]</visible>
+				<visible>[String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Clearlogo))] + [String.S(ListItem.Title,a) | String.StartsWith(ListItem.Title,b) | String.StartsWith(ListItem.Title,c) | String.StartsWith(ListItem.Title,d)]</visible>
 			</control>
 			<control type="textbox">
 				<left>85</left>
@@ -44,10 +44,10 @@
 				<textcolor>$VAR[HighlightColor]</textcolor>
 				<shadowcolor>Black</shadowcolor>
 				<font>font_armyofdarkness</font>
-				<label>[B]$VAR[LabelTitle][/B]</label>
-				<visible allowhiddenfocus="true">Control.HasFocus(515)</visible>
-				<visible>[Container.Content(movies) | Container.Content(sets) + String.IsEmpty(ListItem.Art(clearlogo))] | [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))]</visible>
-				<visible>[String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))]+ [String.Contains(ListItem.Title,e) | String.Contains(ListItem.Title,f) | String.Contains(ListItem.Title,g) | String.Contains(ListItem.Title,h)]</visible>
+				<label>[B]$VAR[Label_OverlayTitle][/B]</label>
+				<visible allowhiddenfocus="true">Control.IsVisible(515)</visible>
+				<visible>[Container.Content(movies) | Container.Content(sets) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Clearlogo))] | [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) + String.IsEmpty(ListItem.Art(tvshow.clearlogo + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Clearlogo))))]</visible>
+				<visible>[String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Clearlogo))]+ [String.StartsWith(ListItem.Title,e) | String.StartsWith(ListItem.Title,f) | String.StartsWith(ListItem.Title,g) | String.StartsWith(ListItem.Title,h)]</visible>
 			</control>
 			<control type="textbox">
 				<left>85</left>
@@ -59,10 +59,10 @@
 				<textcolor>$VAR[HighlightColor]</textcolor>
 				<shadowcolor>Black</shadowcolor>
 				<font>font_babylon5</font>
-				<label>[B]$VAR[LabelTitle][/B]</label>
-				<visible allowhiddenfocus="true">Control.HasFocus(515)</visible>
-				<visible>[Container.Content(movies) | Container.Content(sets) + String.IsEmpty(ListItem.Art(clearlogo))] | [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))]</visible>
-				<visible>[String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + [String.Contains(ListItem.Title,i) | String.Contains(ListItem.Title,j) | String.Contains(ListItem.Title,k) | String.Contains(ListItem.Title,l)]</visible>
+				<label>[B]$VAR[Label_OverlayTitle][/B]</label>
+				<visible allowhiddenfocus="true">Control.IsVisible(515)</visible>
+				<visible>[Container.Content(movies) | Container.Content(sets) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Clearlogo))] | [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Clearlogo))]</visible>
+				<visible>[String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Clearlogo))] + [String.StartsWith(ListItem.Title,i) | String.StartsWith(ListItem.Title,j) | String.StartsWith(ListItem.Title,k) | String.StartsWith(ListItem.Title,l)]</visible>
 			</control>
 			<control type="textbox">
 				<left>85</left>
@@ -75,9 +75,9 @@
 				<shadowcolor>Black</shadowcolor>
 				<font>font_bachelorpad</font>
 				<label>[B]$VAR[Label_OverlayTitle][/B]</label>
-				<visible allowhiddenfocus="true">Control.HasFocus(515)</visible>
-				<visible>[Container.Content(movies) | Container.Content(sets) + String.IsEmpty(ListItem.Art(clearlogo))] | [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))]</visible>
-				<visible>[String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + [String.Contains(ListItem.Title,m) | String.Contains(ListItem.Title,n) | String.Contains(ListItem.Title,o) | String.Contains(ListItem.Title,p)]</visible>
+				<visible allowhiddenfocus="true">Control.IsVisible(515)</visible>
+				<visible>[Container.Content(movies) | Container.Content(sets) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Clearlogo))] | [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Clearlogo))]</visible>
+				<visible>[String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Clearlogo))] + [String.StartsWith(ListItem.Title,m) | String.StartsWith(ListItem.Title,n) | String.StartsWith(ListItem.Title,o) | String.StartsWith(ListItem.Title,p)]</visible>
 			</control>
 			<control type="textbox">
 				<left>85</left>
@@ -90,9 +90,9 @@
 				<shadowcolor>Black</shadowcolor>
 				<font>font_bullpen3d</font>
 				<label>[B]$VAR[Label_OverlayTitle][/B]</label>
-				<visible allowhiddenfocus="true">Control.HasFocus(515)</visible>
-				<visible>[Container.Content(movies) | Container.Content(sets) + String.IsEmpty(ListItem.Art(clearlogo))] | [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))]</visible>
-				<visible>[String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + [String.Contains(ListItem.Title,q) | String.Contains(ListItem.Title,r) | String.Contains(ListItem.Title,s) | String.Contains(ListItem.Title,t)]</visible>
+				<visible allowhiddenfocus="true">Control.IsVisible(515)</visible>
+				<visible>[Container.Content(movies) | Container.Content(sets) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Clearlogo))] | [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Clearlogo))]</visible>
+				<visible>[String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Clearlogo))] + [String.StartsWith(ListItem.Title,q) | String.StartsWith(ListItem.Title,r) | String.StartsWith(ListItem.Title,s) | String.StartsWith(ListItem.Title,t)]</visible>
 			</control>
 			<control type="textbox">
 				<left>85</left>
@@ -105,10 +105,10 @@
 				<shadowcolor>Black</shadowcolor>
 				<font>font_terminator</font>
 				<label>[B]$VAR[Label_OverlayTitle][/B]</label>
-				<visible allowhiddenfocus="true">Control.HasFocus(515)</visible>
-				<visible>[Container.Content(movies) | Container.Content(sets) + String.IsEmpty(ListItem.Art(clearlogo))] | [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))]</visible>
-				<visible>[String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + [String.Contains(ListItem.Title,u) | String.Contains(ListItem.Title,v) | String.Contains(ListItem.Title,w) | String.Contains(ListItem.Title,x) | String.Contains(ListItem.Title,y) | String.Contains(ListItem.Title,z)]</visible>
-			</control> -->
+				<visible allowhiddenfocus="true">Control.IsVisible(515)</visible>
+				<visible>[Container.Content(movies) | Container.Content(sets) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Clearlogo))] | [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Clearlogo))]</visible>
+				<visible>[String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Clearlogo))] + [String.StartsWith(ListItem.Title,u) | String.StartsWith(ListItem.Title,v) | String.StartsWith(ListItem.Title,w) | String.StartsWith(ListItem.Title,x) | String.StartsWith(ListItem.Title,y) | String.StartsWith(ListItem.Title,z)]</visible>
+			</control>
 			<!--MAD - End of Fake Logo -->
 			<!-- New Plot Info -->
 			<control type="group">

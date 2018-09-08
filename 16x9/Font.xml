@@ -490,6 +490,42 @@
             <filename>Arial.ttf</filename>
             <size>21</size>
         </font>
+		<font>
+			<name>font_SimplerE3D_bold</name>
+			<filename>font_SimplerE3D_bold.ttf</filename>
+			<style>uppercase bold</style>
+			<size>48</size>
+		</font>
+		<font>
+			<name>font_armyofdarkness</name>
+			<filename>font_armyofdarkness.ttf</filename>
+			<style>uppercase</style>
+			<size>72</size>
+		</font>
+		<font>
+			<name>font_babylon5</name>
+			<filename>font_babylon5.ttf</filename>
+			<style>uppercase</style>
+			<size>60</size>
+		</font>
+		<font>
+			<name>font_bachelorpad</name>
+			<filename>font_bachelorpad.ttf</filename>
+			<style>uppercase</style>
+			<size>48</size>
+		</font>
+		<font>
+			<name>font_bullpen3d</name>
+			<filename>font_bullpen3d.ttf</filename>
+			<style>uppercase</style>
+			<size>48</size>
+		</font>
+		<font>
+			<name>font_terminator</name>
+			<filename>font_terminator.ttf</filename>
+			<style>uppercase</style>
+			<size>48</size>
+		</font>		
     </fontset>
     
     <fontset id="Arial">
