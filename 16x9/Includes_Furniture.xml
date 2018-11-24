@@ -345,7 +345,6 @@
                 <width>32</width>
                 <height>32</height>
                 <texture colordiffuse="LineLabel">$VAR[Image_RSS_Icon]</texture>
-                <visible>!Window.IsVisible(DialogAudioDSPManager.xml)</visible>
                 <visible>Window.IsVisible(SkinSettings.xml)</visible>				
                 <!-- <visible>Player.HasMedia | [!Player.HasMedia + [system.getbool(lookandfeel.enablerssfeeds) | Window.IsVisible(SettingsCategory.xml)] + [Window.IsVisible(weather) | Window.IsVisible(home)]]</visible> -->
             </control>			
@@ -371,7 +370,6 @@
                 <textcolor>LineLabel</textcolor>
                 <label>$VAR[Label_RSS,   ,]</label>
                 <wrapmultiline>false</wrapmultiline>
-                <visible>!Window.IsVisible(DialogAudioDSPManager.xml)</visible>
                 <visible>Window.IsVisible(SkinSettings.xml)</visible>
             </control>
         </control>
