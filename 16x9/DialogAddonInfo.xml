@@ -282,6 +282,14 @@
                         <include>Defs_OptionButton2</include>
                         <visible>Control.IsEnabled(7)</visible>
                     </control>
+                    <!-- Dependencies -->
+                    <control type="button" id="10">                   
+                        <width>auto</width>
+                        <label>39024</label>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <include>Defs_OptionButton2</include>
+                        <visible>Control.IsEnabled(10)</visible>
+                    </control>					
                     <!-- New changelog button -->
                     <control type="button" id="910">                   
                         <width>auto</width>
@@ -290,7 +298,7 @@
                         <include>Defs_OptionButton2</include>
                         <visible>!String.IsEmpty(ListItem.AddonNews)</visible>
 						<onclick>RunScript(script.toolbox,info=textviewer,header='$ESCINFO[ListItem.Label]',text='$ESCINFO[ListItem.AddonNews]')</onclick>
-                    </control>					
+                    </control>						
                 </control>
             </control>
         </control>
