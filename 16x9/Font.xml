@@ -430,7 +430,13 @@
         <font>
             <name>Font-Flag</name>
             <filename>RobotoCondensed-Bold.ttf</filename>
-            <size>40</size>
+            <size>47</size>
+        </font>  
+        <font>
+            <name>Font-SubMenu</name>
+            <filename>RobotoCondensed-Bold.ttf</filename>
+            <size>28</size>
+			<style>uppercase</style>
         </font>          
         <font>
             <name>NextUpTitle</name>
@@ -615,6 +621,12 @@
             <filename>arial.ttf</filename>
             <size>48</size>
         </font>
+        <font>
+            <name>Font-SubMenu</name>
+            <filename>arial.ttf</filename>
+            <size>18</size>
+            <style>uppercase</style>
+        </font>		
         <!-- Required for system -->
         <font>
             <name>font13</name>

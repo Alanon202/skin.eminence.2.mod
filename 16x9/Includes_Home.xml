@@ -9,7 +9,7 @@
         <animation effect="slide" end="0" start="0,266" time="150" reversible="false" condition="![Control.HasFocus(9001) | Control.HasFocus(9101)]">Conditional</animation>
     </include>
     <include name="Home_Vertical_Animate">
-        <animation effect="slide" start="0" end="-196,0" time="500" tween="back" reversible="true" easing="out" condition="[Control.HasFocus(9001) | Control.HasFocus(9101)]">Conditional</animation>
+        <animation effect="slide" start="0" end="-232,0" time="500" tween="back" reversible="true" easing="out" condition="[Control.HasFocus(9001) | Control.HasFocus(9101)]">Conditional</animation>
     </include>	
     <include name="Home_Dialogs_TextOnly_Animate">
         <animation effect="slide" tween="quadratic" easing="in" time="150" end="0,106" start="0" reversible="false" condition="!String.IsEmpty(Window(home).Property(FO9001)) + String.IsEqual(Window(home).Property(FO9001),2)">Conditional</animation>
@@ -67,7 +67,7 @@
             <animation effect="slide" end="0,160" condition="Skin.String(HomeStyle, vertical)">Conditional</animation>
             <bottom>0</bottom>
             <top>-500</top>
-			<width>200</width>
+			<width>240</width>
             <aspectratio>scale</aspectratio>           
             <texture colordiffuse="$VAR[HomeBar_Color]">common/white.png</texture>
             <animation effect="fade" start="100" end="90" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
@@ -87,7 +87,7 @@
                 <top>0</top>
 				<left>13</left>
                 <height>1080</height>
-				<width>200</width>
+				<width>240</width>
 				<focusposition>5</focusposition>
 				<visible>Skin.String(HomeStyle, vertical)</visible>
                 <onright condition="!Player.HasMedia + !Window.IsVisible(PlayerControls.xml)">SetProperty(FO9001,1,home)</onright>
@@ -102,11 +102,11 @@
                 </animation>
                 <orientation>vertical</orientation>
                 <scrolltime tween="sine" easing="out">240</scrolltime>			
-			    <itemlayout width="200" height="100">
+			    <itemlayout width="240" height="100">
                     <control type="label">
                         <top>16</top>
                         <height>78</height>
-                        <width>170</width>
+                        <width>200</width>
                         <align>center</align>
                         <aligny>center</aligny>
                         <font>Font-Flag</font>
@@ -115,11 +115,11 @@
                         <animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
                     </control>
                 </itemlayout>
-                <focusedlayout width="200" height="100">
+                <focusedlayout width="240" height="100">
                     <control type="label">
                         <top>16</top>
                         <height>78</height>
-                        <width>170</width>
+                        <width>200</width>
                         <align>center</align>
                         <aligny>center</aligny>
                         <font>Font-Flag</font>                      
@@ -128,7 +128,7 @@
                         <animation effect="slide" start="0" end="0,-12" time="100" reversible="false">Focus</animation>
                     </control>
                     <control type="image">
-                        <centerleft>85</centerleft>
+                        <centerleft>100</centerleft>
                         <top>88</top>
                         <width>16</width>
                         <height>16</height>
@@ -139,7 +139,7 @@
                         <visible>![String.Contains(Container(9000).ListItem.Property(ParentalControl),yes) + !String.IsEqual(Skin.String(mypassword),Skin.String(passcode))]</visible>
                     </control>					
                     <control type="image">
-                        <centerleft>85</centerleft>
+                        <centerleft>100</centerleft>
                         <top>3</top>
                         <width>22</width>
                         <height>22</height>
@@ -151,7 +151,7 @@
                     </control>
                     <control type="image">
                         <top>80</top>
-                        <width>170</width>
+                        <width>210</width>
                         <height>6</height>
                         <texture colordiffuse="$VAR[Defs_HomeTileColor]">common/white.png</texture>
                         <aspectratio>scale</aspectratio>
@@ -1528,7 +1528,7 @@
 			<animation effect="slide" end="350,0" time="280" condition="Control.HasFocus(90100)">Conditional</animation>
 			<left>-350</left>
 			<control type="image">
-				<width>180</width>
+				<width>200</width>
 				<height>1080</height>
 				<texture colordiffuse="$VAR[HomeBar_Color]">common/white.png</texture>
 				<visible>Control.HasFocus(90100)</visible>
@@ -1545,27 +1545,27 @@
 				<pagecontrol />
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>
 				<orientation>vertical</orientation>
-				<itemlayout height="60" width="175">
+				<itemlayout height="60" width="190">
 					<control type="label">
 						<left>5</left>
-						<width>170</width>
+						<width>185</width>
 						<height>60</height>
-						<font>Font-LineLabel</font>
+						<font>Font-SubMenu</font>
 						<textcolor>$VAR[Defs_HomeTextColor]</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout height="60" width="175">
+				<focusedlayout height="60" width="190">
 					<control type="image">
-						<width>180</width>
+						<width>190</width>
 						<height>60</height>
 						<texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
 					</control>
 					<control type="label">
 						<left>5</left>
-						<width>170</width>
+						<width>185</width>
 						<height>60</height>
-						<font>Font-LineLabel</font>
+						<font>Font-SubMenu</font>
 						<textcolor>$VAR[Defs_HomeTextColor]</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
@@ -1671,7 +1671,7 @@
         <visible>Integer.IsGreater(Container(9001).NumItems,0)</visible>    
         <visible>![!String.IsEmpty(Container(9002).ListItem.Property(Background)) + !String.IsEmpty(Window(home).Property(submenumouse))]</visible>
         <include condition="Skin.HasSetting(home.showdiscart) + !String.IsEqual(Skin.String(home.widgetposters),$LOCALIZE[31154]) + !String.IsEqual(Skin.String(home.widgetposters),$LOCALIZE[31153])">Home_Widget_DiscArt</include>
-		<animation effect="slide" end="40" condition="Skin.String(HomeStyle, vertical)">Conditional</animation>
+		<animation effect="slide" end="80" condition="Skin.String(HomeStyle, vertical)">Conditional</animation>
         <control type="image">
             <posx>0</posx>
             <width>800</width>
@@ -1778,7 +1778,7 @@
         <include>Animation_Right</include>
         <visible>Integer.IsGreater(Container(9001).NumItems,0)</visible>        
         <visible>![!String.IsEmpty(Container(9002).ListItem.Property(Background)) + !String.IsEmpty(Window(home).Property(submenumouse))]</visible>
-		<animation effect="slide" end="40" condition="Skin.String(HomeStyle, vertical)">Conditional</animation>
+		<animation effect="slide" end="80" condition="Skin.String(HomeStyle, vertical)">Conditional</animation>
         <control type="image">         
             <posx>750</posx>
             <width>2000</width>
