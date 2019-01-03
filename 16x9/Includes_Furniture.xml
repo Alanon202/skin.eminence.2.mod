@@ -688,7 +688,8 @@
         <control type="image">
             <aspectratio>scale</aspectratio>
 			<include>FullscreenDimensions</include>
-            <texture background="true">$INFO[Player.Art(fanart)]</texture>       
+            <texture background="true">$INFO[Player.Art(fanart)]</texture>
+	    <visible>!Player.HasVideo</visible>			
             <visible>String.IsEmpty(Skin.String(MusicVisualisation)) | Skin.String(MusicVisualisation, fanart)</visible>
             <visible>!String.IsEmpty(Player.Art(fanart))</visible>
             <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(ArtistSlideshow.Animate)">Conditional</animation>
