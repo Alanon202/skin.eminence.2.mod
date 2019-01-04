@@ -84,7 +84,7 @@
 			
             <control type="wraplist" id="9000">
                 <animation effect="slide" end="16" condition="!Integer.IsGreater(Container(9000).NumItems,0)">Conditional</animation>
-                <top>0</top>
+                <top>-20</top>
 				<left>13</left>
                 <height>1080</height>
 				<width>240</width>
