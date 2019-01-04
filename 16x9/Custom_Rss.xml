@@ -43,7 +43,7 @@
                 <height>32</height>
                 <texture colordiffuse="LineLabel">common/rss.png</texture>
 				<animation effect="slide" start="0,6400" end="0" time="5">VisibleChange</animation>
-				<animation effect="slide" end="196,266" start="0" time="0" reversible="false" condition="String.IsEqual(Skin.String(HomeStyle),vertical)">Conditional</animation>
+				<animation effect="slide" end="226,266" start="0" time="0" reversible="false" condition="String.IsEqual(Skin.String(HomeStyle),vertical)">Conditional</animation>
 			</control>
             <control type="rss">
                 <posx>48</posx>
@@ -56,7 +56,7 @@
                 <headlinecolor>SideArrow</headlinecolor>
                 <titlecolor>LineLabel</titlecolor>
 				<animation effect="slide" start="0,6400" end="0" time="5">VisibleChange</animation>
-				<animation effect="slide" end="206,266" start="0" time="0" reversible="false" condition="String.IsEqual(Skin.String(HomeStyle),vertical)">Conditional</animation>
+				<animation effect="slide" end="236,266" start="0" time="0" reversible="false" condition="String.IsEqual(Skin.String(HomeStyle),vertical)">Conditional</animation>
             </control>
         </control>
 

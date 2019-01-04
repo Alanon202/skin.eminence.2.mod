@@ -106,7 +106,7 @@
                     <control type="label">
                         <top>16</top>
                         <height>78</height>
-                        <width>200</width>
+                        <width>210</width>
                         <align>center</align>
                         <aligny>center</aligny>
                         <font>Font-Flag</font>
@@ -119,7 +119,7 @@
                     <control type="label">
                         <top>16</top>
                         <height>78</height>
-                        <width>200</width>
+                        <width>210</width>
                         <align>center</align>
                         <aligny>center</aligny>
                         <font>Font-Flag</font>                      
@@ -1909,7 +1909,7 @@
     <include name="Home_NowPlaying">
         <control type="group">
             <animation effect="slide" end="0,160" condition="Skin.String(HomeStyle, textonly)">Conditional</animation>
-            <animation effect="slide" end="200,270" start="0" time="0" reversible="false" condition="String.IsEqual(Skin.String(HomeStyle),vertical)">Conditional</animation>
+            <animation effect="slide" end="240,270" start="0" time="0" reversible="false" condition="String.IsEqual(Skin.String(HomeStyle),vertical)">Conditional</animation>
 			<control type="group">
                 <visible>Window.IsVisible(home)</visible>
                 <!-- <visible>![Control.HasFocus(9001) | Control.HasFocus(9101)]</visible> -->
@@ -2145,7 +2145,7 @@
                 <visible>Window.IsActive(DialogNotification.xml)</visible>
                 <visible>!Window.IsVisible(weather)</visible>
                 <animation effect="slide" start="-1200" end="0" time="250">VisibleChange</animation>
-				<animation effect="slide" end="206,266" start="0" time="0" reversible="false" condition="String.IsEqual(Skin.String(HomeStyle),vertical)">Conditional</animation>
+				<animation effect="slide" end="226,266" start="0" time="0" reversible="false" condition="String.IsEqual(Skin.String(HomeStyle),vertical)">Conditional</animation>
                 <control type="image">
                     <left>0</left>
                     <posy>64r</posy>
