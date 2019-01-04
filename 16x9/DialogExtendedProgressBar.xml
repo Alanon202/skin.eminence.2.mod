@@ -52,7 +52,7 @@
 
                 <include condition="!Skin.String(HomeStyle, textonly) + !Skin.String(HomeStyle, vertical)">Home_Dialogs_Icons_Animate</include>
 				
-                <animation effect="slide" end="206,266" condition="Skin.String(HomeStyle, vertical)">Conditional</animation>
+                <animation effect="slide" end="236,266" condition="Skin.String(HomeStyle, vertical)">Conditional</animation>
 				
                 <control type="image">
                     <left>16</left>
