@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
     id="skin.eminence.2.mod"
-    version="3.0.2"
+    version="3.0.3"
     name="Eminence 2 MOD"
     provider-name="jurialmunkey - Mod by Guilouz - Mod by Alanon">
     <requires>
-        <import addon="xbmc.gui" version="5.13.0"/>
+        <import addon="xbmc.gui" version="5.14.0"/>
         <import addon="script.skinshortcuts" version="1.0.18"/>
         <import addon="script.skin.helper.service" version="1.1.23"/>
 		<import addon="script.skin.helper.widgets" version="1.0.35"/>
@@ -34,6 +34,15 @@
  			<screenshot>extras/viewthumbs/159.jpg</screenshot>
 		</assets>	
 		<news> Changelog:
+		
+		[B]3.0.3[/B]
+		1. GUI bump.
+		2. Tweaked vertical menu layout and size.
+		3. Added addon dependency button.
+		4. Removed Audio DSP related settings.
+		5. Tweaked startup video.
+		6. Premiere date tweaks.
+		7. PVR Recordings fix.
 		
 		[B]3.0.2[/B]
 		1. Fixed weather animated icons.

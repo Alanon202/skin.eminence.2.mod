@@ -1,3 +1,12 @@
+[B]3.0.3[/B]
+1. GUI bump.
+2. Tweaked vertical menu layout and size.
+3. Added addon dependency button.
+4. Removed Audio DSP related settings.
+5. Tweaked startup video.
+6. Premiere date tweaks.
+7. PVR Recordings fix.
+
 [B]3.0.2[/B]
 1. Fixed weather animated icons.
 2. Alphabet scrollbar fixes.
