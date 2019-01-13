@@ -2401,3 +2401,11 @@ msgstr ""
 msgctxt "#31829"
 msgid "Touch submenu"
 msgstr ""
+
+msgctxt "#31830"
+msgid "Display aired date"
+msgstr ""
+
+msgctxt "#31831"
+msgid "Displays the original air date of items in library."
+msgstr ""

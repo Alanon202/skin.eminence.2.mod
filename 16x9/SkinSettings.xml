@@ -1048,6 +1048,15 @@
                         <selected>Skin.HasSetting(disable.rating)</selected>
                         <include>Defs_OptionButton</include>
                     </control>
+                    <!-- Air Date -->
+                    <control type="radiobutton" id="9950">
+                        <width>100%</width>
+                        <label>31830</label>
+                        <radioposx>1350</radioposx>
+                        <onclick>Skin.ToggleSetting(airdate)</onclick>
+                        <selected>Skin.HasSetting(airdate)</selected>
+                        <include>Defs_OptionButton</include>
+                    </control>					
                     <!-- Disable MPAA -->
                     <control type="radiobutton" id="9006">
                         <width>100%</width>
