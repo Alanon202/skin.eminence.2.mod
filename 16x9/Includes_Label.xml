@@ -631,7 +631,6 @@
     <variable name="Label_HomeWidget">
         <value condition="String.IsEqual(Container(9000).ListItem.Property(widget),Weather) + !String.IsEmpty(Skin.String(weather.fanart.path))">$INFO[Weather.Location]</value>
         <value condition="String.IsEqual(Container(9000).ListItem.Property(widget),SimilarMovies)">$INFO[Container(9001).ListItem.Property(originaltitle),$LOCALIZE[31125] ,]</value>
-        <value condition="String.IsEqual(Container(9000).ListItem.Property(widgetTarget),pictures)">$INFO[Container(9001).ListItem.Label]</value>
 		<value condition="!String.IsEmpty(Container(9000).ListItem.Property(widgetName))">$INFO[Container(9000).ListItem.Property(widgetName)]</value>
         <value condition="!String.IsEmpty(Skin.String(home.fallbackwidget)) + String.IsEqual(Skin.String(home.fallbackwidget.name),$LOCALIZE[31124])">$INFO[Container(9001).ListItem.Property(originaltitle),$LOCALIZE[31125] ,]</value>
         <value condition="!String.IsEmpty(Skin.String(home.fallbackwidget)) + !String.IsEmpty(Skin.String(home.fallbackwidget.name))">$INFO[Skin.String(home.fallbackwidget.name)]</value>
