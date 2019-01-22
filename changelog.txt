@@ -1,3 +1,8 @@
+[B]3.0.4[/B]
+1. Skin Shortcuts menu fix.
+2. Minor widget fixes.
+3. Dialog Busy tweak.
+
 [B]3.0.3[/B]
 1. GUI bump.
 2. Tweaked vertical menu layout and size.
