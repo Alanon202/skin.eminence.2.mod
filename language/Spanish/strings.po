@@ -228,7 +228,7 @@ msgstr "Información"
 
 msgctxt "#31071"
 msgid "Finishes at"
-msgstr "Terminados"
+msgstr "Termina: "
 
 msgctxt "#31072"
 msgid "Playing"
@@ -2136,7 +2136,7 @@ msgstr "Permite la recarga del widget."
 
 msgctxt "#31762"
 msgid "Use compact Video OSD"
-msgstr "Utilice OSD de vídeo compacto"
+msgstr "Desactivar OSD de vídeo (Al cambiar)?"
 
 msgctxt "#31763"
 msgid "Use animated artwork"
