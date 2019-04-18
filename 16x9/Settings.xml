@@ -208,7 +208,7 @@
 						<label2>$LOCALIZE[31274][CR]$LOCALIZE[31275]</label2>
 						<onclick>activatewindow(eventlog)</onclick>
 						<icon>special://skin/extras/icons/year.png</icon>
-						<visible>!System.HasAddon(service.libreelec.settings) + !System.HasAddon(service.openelec.settings)</visible>
+						<visible>!System.HasAddon(service.libreelec.settings) + !System.HasAddon(service.openelec.settings) + !System.HasAddon(service.coreelec.settings)</visible>
 					</item>					
 					<item id="15">
 						<description>Launch OpenELEC settings</description>
