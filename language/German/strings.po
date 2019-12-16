@@ -36,7 +36,7 @@ msgstr "Demnächst"
 
 msgctxt "#31004"
 msgid "Opaque panels"
-msgstr "Undurchsichtige Paneele"
+msgstr "Undurchsichtiger Hintergrund für Skin-Menüs und Fenster"
 
 msgctxt "#31005"
 msgid "Video OSD"
@@ -52,7 +52,7 @@ msgstr "Zeige Medieninformationssymbole"
 
 msgctxt "#31008"
 msgid "Show plot overlay in video library after delay"
-msgstr "Zeige Handlung in der Videodatenbank verzögert in an"
+msgstr "Zeige Handlung in der Video-Bibliothek verzögert in an"
 
 msgctxt "#31009"
 msgid "Open playlist"
@@ -104,7 +104,7 @@ msgstr "Hintergrund"
 
 msgctxt "#31021"
 msgid "Show fanart"
-msgstr "Zeige Fanart"
+msgstr "Zeige Fanart als Hintergrund in der Bibliothek"
 
 msgctxt "#31027"
 msgid "Show background video"
@@ -112,7 +112,7 @@ msgstr "Zeige Video im Hintergrund"
 
 msgctxt "#31028"
 msgid "Show music artwork as background"
-msgstr "Zeige Album-Kunst als Hintergrund"
+msgstr "Zeige Musik-Artwork als Hintergrund"
 
 msgctxt "#31031"
 msgid "Recent movies"
@@ -432,7 +432,7 @@ msgstr "Musik OSD"
 
 msgctxt "#31122"
 msgid "Match header tile with highlight colour"
-msgstr "Stimme Kopfbereich Kachelfarbe mit Highlight-Farbe ab"
+msgstr "Stimme Kachelfarbe der Kopfzeile mit Highlight-Farbe ab"
 
 msgctxt "#31123"
 msgid "Hub"
@@ -452,7 +452,7 @@ msgstr "Farben"
 
 msgctxt "#31127"
 msgid "Header & Hubs"
-msgstr "Kopfbereich & Hubs"
+msgstr "Kopfzeile & Hubs"
 
 msgctxt "#31128"
 msgid "Colour"
@@ -572,7 +572,7 @@ msgstr "Zeige DiscArt in Widgets"
 
 msgctxt "#31157"
 msgid "Home header text"
-msgstr "Text im Kopfbereich des Hauptmenü"
+msgstr "Text in Kopfzeile des Hauptmenü"
 
 msgctxt "#31158"
 msgid "Media Center"
@@ -612,7 +612,7 @@ msgstr "Individuell im Anpassungsdialog eingestellt"
 
 msgctxt "#31167"
 msgid "Show unwatched count in header"
-msgstr "Zeige ungesehen Zähler in Kopfbereich"
+msgstr "Zeige Zähler für ungesehenes in Kopfzeile"
 
 msgctxt "#31168"
 msgid "Now / Next"
@@ -632,11 +632,11 @@ msgstr "Skin neu laden"
 
 msgctxt "#31172"
 msgid "Transparent home bar"
-msgstr "Transparentes Hauptmenü"
+msgstr "Transparente Hauptmenü-Leiste"
 
 msgctxt "#31173"
 msgid "Home bar style"
-msgstr "Aussehen Hauptmenü"
+msgstr "Aussehen der Hauptmenü-Leiste"
 
 msgctxt "#31174"
 msgid "Weather icons"
@@ -648,7 +648,7 @@ msgstr "Ausschalten Menü anpassen"
 
 msgctxt "#31176"
 msgid "Genre icons"
-msgstr "Genre Symbole"
+msgstr "Symbole für Genre"
 
 msgctxt "#31177"
 msgid "Music genre icons"
@@ -656,7 +656,7 @@ msgstr "Symbole für Musik Genre"
 
 msgctxt "#31178"
 msgid "Record label icons"
-msgstr ""
+msgstr "Symbole für Plattenlabel"
 
 msgctxt "#31179"
 msgid "Select the record label icons resource add-on."
@@ -676,11 +676,11 @@ msgstr "Nur Text"
 
 msgctxt "#31183"
 msgid "Customise shutdown menu"
-msgstr "Ausschalten Menü anpassen"
+msgstr "Menü Ausschalten anpassen"
 
 msgctxt "#31184"
 msgid "Splash screen (photo, video or music)"
-msgstr "Splash Screen (Bild, Video oder Musik)"
+msgstr "Startbildschirm (Bild, Video oder Musik)"
 
 msgctxt "#31185"
 msgid "Label"
@@ -744,7 +744,7 @@ msgstr "Schaufenster"
 
 msgctxt "#31200"
 msgid "Netflix"
-msgstr "Ntflix"
+msgstr "Netflix"
 
 msgctxt "#31201"
 msgid "Select view mode"
@@ -996,7 +996,7 @@ msgstr ""
 
 msgctxt "#31263"
 msgid "Use plot outline"
-msgstr ""
+msgstr "Benutze eine Zusammenfassung der Handlung"
 
 msgctxt "#31264"
 msgid "Displays a shortened plot type for video media in the entire skin."
@@ -1008,7 +1008,7 @@ msgstr "Niedrige Liste"
 
 msgctxt "#31266"
 msgid "Showcase Widgets"
-msgstr "Showcase Widgets"
+msgstr "Schaufenster Widgets"
 
 msgctxt "#31267"
 msgid "Landscape"
@@ -1016,7 +1016,7 @@ msgstr "Querformat"
 
 msgctxt "#31268"
 msgid "Show showcase widget on down"
-msgstr "Zeige Showcase-Widget bei abwärts"
+msgstr "Zeige Schaufenster-Widget bei abwärts"
 
 msgctxt "#31269"
 msgid "Miscellaneous"
@@ -1032,7 +1032,7 @@ msgstr "PVR"
 
 msgctxt "#31272"
 msgid "Displays a window to setup the Showcase widgets type and layout."
-msgstr "Zeige ein Fenster zum Einstellen von Typ und Ansicht des Showcase-Widget"
+msgstr "Zeige ein Fenster zum Einstellen von Typ und Ansicht des Schaufenster-Widget"
 
 msgctxt "#31273"
 msgid "Displays the showcase widget when pressing down on menu items without submenus."
@@ -1048,7 +1048,7 @@ msgstr "Ereignisprotokoll"
 
 msgctxt "#31276"
 msgid "Customise showcase widgets"
-msgstr "Bearbeite Showcase-Widget"
+msgstr "Bearbeite Schaufenster-Widget"
 
 msgctxt "#31277"
 msgid "Show widget backgrounds on focus"
@@ -1060,11 +1060,11 @@ msgstr ""
 
 msgctxt "#31279"
 msgid "Set main panel colour"
-msgstr "Definiere Farbe der Haupt-Leiste"
+msgstr "Definiere Farbe der Hauptleiste"
 
 msgctxt "#31280"
 msgid "Reset panel colour to default"
-msgstr "Setzte Farbe des Leiste auf Standard zurück"
+msgstr "Setzte Farbe der Leiste auf Standard zurück"
 
 msgctxt "#31281"
 msgid "Sets the colour of the light back panels used across the skin view-types. [B]Not available with the Dark interface.[/B]"
@@ -1076,7 +1076,7 @@ msgstr ""
 
 msgctxt "#31283"
 msgid "Colour the background"
-msgstr ""
+msgstr "Hintergrundfarbe"
 
 msgctxt "#31284"
 msgid "Fanart Icons"
@@ -1092,7 +1092,7 @@ msgstr "Ohne"
 
 msgctxt "#31501"
 msgid "Rounded tiles"
-msgstr "Gerundete Kacheln"
+msgstr "Runde Kacheln"
 
 msgctxt "#31502"
 msgid "Squared tiles"
@@ -1100,7 +1100,7 @@ msgstr "Eckige Kacheln"
 
 msgctxt "#31503"
 msgid "Rounded Tile"
-msgstr "Gerundete Kachel"
+msgstr "Runde Kachel"
 
 msgctxt "#31504"
 msgid "Squared Tile"
@@ -1112,7 +1112,7 @@ msgstr "Schräge Kacheln"
 
 msgctxt "#31506"
 msgid "Header tile style"
-msgstr "Aussehen der Kacheln in der Kofbereich"
+msgstr "Aussehen der Kachel in der Kopfzeile"
 
 msgctxt "#31507"
 msgid "Widgets tile style"
@@ -1128,19 +1128,19 @@ msgstr "Bibliotheks-Optionen"
 
 msgctxt "#31510"
 msgid "Disable rating and votes display"
-msgstr ""
+msgstr "Deaktivere die Anzeige der Benutzerbewertung"
 
 msgctxt "#31511"
 msgid "Disable classification infos (MPAA) display"
-msgstr ""
+msgstr "Deaktiviere die Anzeige der Einstufung (MPAA)"
 
 msgctxt "#31512"
 msgid "Show ClearArt on video info screens"
-msgstr ""
+msgstr "Zeige ClearArt in Video-Infobildschirmen"
 
 msgctxt "#31513"
 msgid "Show movies/tv shows ClearLogo artwork"
-msgstr ""
+msgstr "Zeige ClearLogos für Filme und Serien"
 
 msgctxt "#31514"
 msgid "active"
@@ -1164,7 +1164,7 @@ msgstr "Untertitel"
 
 msgctxt "#31519"
 msgid "Show artist ClearLogos"
-msgstr ""
+msgstr "Zeige ClearLogos von Künstlern"
 
 msgctxt "#31520"
 msgid "Path to musics directory"
@@ -1172,7 +1172,7 @@ msgstr "Pfad zu den Musikverzeichnissen"
 
 msgctxt "#31521"
 msgid "Show DiscArt on album info screens"
-msgstr "Zeige DiscArt im Album-Informationsbildschirm"
+msgstr "Zeige DiscArt im Album-Infobildschirm"
 
 msgctxt "#31522"
 msgid "Path to the music directory"
@@ -1184,11 +1184,11 @@ msgstr "Letztes Update :"
 
 msgctxt "#31524"
 msgid "Rollback"
-msgstr ""
+msgstr "Rückgängig machen"
 
 msgctxt "#31525"
 msgid "Show ClearArt on video info screens"
-msgstr "Zeige ClearArt im Video-Informationsbildschirm "
+msgstr "Zeige ClearArt im Video-Infobildschirm"
 
 msgctxt "#31526"
 msgid "Back to Fullscreen"
@@ -1196,7 +1196,7 @@ msgstr "Zurück zum Vollbild"
 
 msgctxt "#31527"
 msgid "Show ClearArt with the UpNext Service add-on"
-msgstr ""
+msgstr "Zeige ClearArt mit dem UpNext Service Addon"
 
 msgctxt "#31528"
 msgid "Channels"
@@ -1212,7 +1212,7 @@ msgstr ""
 
 msgctxt "#31531"
 msgid "Hide header tile"
-msgstr "Verberge Kachel im Kopfbereich"
+msgstr "Verberge Kachel der Kopfzeile"
 
 msgctxt "#31532"
 msgid "Big Wide with Logos"
@@ -1228,7 +1228,7 @@ msgstr "Schneller Rücklauf"
 
 msgctxt "#31535"
 msgid "Show ClearLogo on widget tiles"
-msgstr ""
+msgstr "Zeige ClearLogo in Widget-Kacheln"
 
 msgctxt "#31536"
 msgid "This category contains the settings for the home menu."
@@ -1524,7 +1524,7 @@ msgstr ""
 
 msgctxt "#31609"
 msgid "must be manually installed"
-msgstr ""
+msgstr "muss manuell intalliert werden"
 
 msgctxt "#31610"
 msgid "[B]Image Resource Select Addon[/B] add-on is needed to select addons (genres icons, studios icons, weather icons, etc...)."
@@ -1604,7 +1604,7 @@ msgstr ""
 
 msgctxt "#31629"
 msgid "Show media flags on Hub widgets"
-msgstr ""
+msgstr "Zeige Medien-Flags in Hub-Widgets"
 
 msgctxt "#31630"
 msgid "Shows media info icons on Hub widgets such as ratio, resolution, video codec, audio codec, number of channels..."
@@ -1612,7 +1612,7 @@ msgstr ""
 
 msgctxt "#31631"
 msgid "Show ClearLogos on Hub widgets"
-msgstr ""
+msgstr "Zeige ClearLogos in Hub-Widgets"
 
 msgctxt "#31632"
 msgid "Show movies/tv shows ClearLogos on Hub widget"
@@ -1628,7 +1628,7 @@ msgstr ""
 
 msgctxt "#31635"
 msgid "Music visualisation background"
-msgstr ""
+msgstr "Musik-Visualisierungshintergrund"
 
 msgctxt "#31636"
 msgid "Beveled Tiles"
@@ -1716,11 +1716,11 @@ msgstr ""
 
 msgctxt "#31657"
 msgid "Background colour and opacity"
-msgstr "Hintegrundfarbe und Durchsichtigkeit"
+msgstr "Hintegrundfarbe und Transparenz"
 
 msgctxt "#31658"
 msgid "Reset the colour and opacity to defaults"
-msgstr ""
+msgstr "Hintergrundfarbe und Transparenz auf Standard zurücksetzen"
 
 msgctxt "#31659"
 msgid "Resets the fanart colour and opacity to defaults."
@@ -1736,11 +1736,11 @@ msgstr ""
 
 msgctxt "#31662"
 msgid "Reset the text colour to default"
-msgstr ""
+msgstr "Textfarbe auf Standard zurücksetzen"
 
 msgctxt "#31663"
 msgid "Resets the text colour to default."
-msgstr ""
+msgstr "Setzt die Textfarbe auf Standard zurück."
 
 msgctxt "#31664"
 msgid "Squared tiles with rounded corners"
@@ -1748,19 +1748,19 @@ msgstr "Eckige Kacheln mit gerundeten Ecken"
 
 msgctxt "#31665"
 msgid "Empty rounded tiles"
-msgstr "Leere gerundeten Kacheln"
+msgstr "Leere, runde Kacheln"
 
 msgctxt "#31666"
 msgid "Empty squared tiles"
-msgstr "Leere eckige Kacheln"
+msgstr "Leere, eckige Kacheln"
 
 msgctxt "#31667"
 msgid "Empty squared tiles with rounded corners"
-msgstr "Leere eckige Kacheln mit gerundeten Ecken"
+msgstr "Leere, eckige Kacheln mit gerundeten Ecken"
 
 msgctxt "#31668"
 msgid "Empty beveled tiles"
-msgstr "Leere schräge Kacheln"
+msgstr "Leere, schräge Kacheln"
 
 msgctxt "#31669"
 msgid "Studio icons"
@@ -1780,11 +1780,11 @@ msgstr ""
 
 msgctxt "#31673"
 msgid "Home bar colour and opacity"
-msgstr ""
+msgstr "Farbe und Transparenz der Hauptmenü-Leiste"
 
 msgctxt "#31674"
 msgid "Reset the home bar colour and opacity"
-msgstr ""
+msgstr "Farbe und Transparenz der Hauptmenü-Leiste auf Standard zurücksetzen"
 
 msgctxt "#31675"
 msgid "Sets the colour and opacity for the home bar menu."
@@ -1796,19 +1796,19 @@ msgstr ""
 
 msgctxt "#31677"
 msgid "Colour and opacity of the primary widget tile"
-msgstr ""
+msgstr "Farbe und Transparenz der primären Widget-Kachel"
 
 msgctxt "#31678"
 msgid "Colour and opacity of the secondary widget tile"
-msgstr ""
+msgstr "Farbe und Transparenz der sekundären Widget-Kachel"
 
 msgctxt "#31679"
 msgid "Reset the colour and opacity of the primary widget tile"
-msgstr ""
+msgstr "Farbe und Transparenz der primären Widget-Kachel auf Standard zurücksetzen"
 
 msgctxt "#31680"
 msgid "Reset the colour and opacity of the secondary widget tile"
-msgstr ""
+msgstr "Farbe und Transparenz der sekundären Widget-Kachel auf Standard zurücksetzen"
 
 msgctxt "#31681"
 msgid "Sets the colour and opacity of the primary widget tile."
@@ -1832,7 +1832,7 @@ msgstr "Plakatliste"
 
 msgctxt "#31686"
 msgid "Replace widget fanart with background"
-msgstr ""
+msgstr "Ersetze Fanart von Widgets mit Hintergrund"
 
 msgctxt "#31687"
 msgid "Replaces the widget fanart with the home background."
@@ -1848,7 +1848,7 @@ msgstr ""
 
 msgctxt "#31690"
 msgid "Password protection"
-msgstr ""
+msgstr "Passwortschutz"
 
 msgctxt "#31691"
 msgid "Password protection for menu items"
@@ -1884,19 +1884,19 @@ msgstr "Minute(n)"
 
 msgctxt "#31699"
 msgid "Enable day/night colour themes"
-msgstr ""
+msgstr "Aktiviere Tag/Nacht-Umschaltung für Themen"
 
 msgctxt "#31700"
 msgid "Theme to use at day time"
-msgstr ""
+msgstr "Thema welches während des Tages verwendet wird"
 
 msgctxt "#31701"
 msgid "Theme to use at night time"
-msgstr ""
+msgstr "Thema welches während der Nacht verwendet wird"
 
 msgctxt "#31702"
 msgid "every day at"
-msgstr ""
+msgstr "Jeden Tag um"
 
 msgctxt "#31703"
 msgid "Toggles the automatic change of the colour theme based on day and night."
@@ -1904,11 +1904,11 @@ msgstr ""
 
 msgctxt "#31704"
 msgid "Selects the theme to use during the day."
-msgstr ""
+msgstr "Wähle das Thema für Tags"
 
 msgctxt "#31705"
 msgid "Selects the theme to use on nights."
-msgstr ""
+msgstr "Wähle das Thema für Nachts"
 
 msgctxt "#31706"
 msgid "Create and manage all colour themes."
@@ -1916,7 +1916,7 @@ msgstr ""
 
 msgctxt "#31707"
 msgid "Protect home menu items with a password"
-msgstr ""
+msgstr "Schütze Hauptmenüeinträge mit einem Passwort"
 
 msgctxt "#31708"
 msgid "Protect home menu items with a password. The protection of each item is performed in [B]Customise Home Menu[/B]."
@@ -1928,11 +1928,11 @@ msgstr "Nur Symbole und Text"
 
 msgctxt "#31710"
 msgid "Show the info panel when video is paused"
-msgstr ""
+msgstr "Zeige den Info-Dialog bei pausiertem Video"
 
 msgctxt "#31711"
 msgid "Shows the info panel when the video is paused."
-msgstr ""
+msgstr "Zeigt den Info-Dialog bei pausiertem Video"
 
 msgctxt "#31712"
 msgid "second(s)"
@@ -1964,7 +1964,7 @@ msgstr ""
 
 msgctxt "#31719"
 msgid "Info displayed for episodes"
-msgstr ""
+msgstr "Angezeigte Info für Episoden"
 
 msgctxt "#31720"
 msgid "Total Episodes"
@@ -2012,15 +2012,15 @@ msgstr "Große Banner"
 
 msgctxt "#31731"
 msgid "Watched for the last time on"
-msgstr ""
+msgstr "Zuletzt gesehen am"
 
 msgctxt "#31732"
 msgid "Aired for the last time on"
-msgstr ""
+msgstr "Zuletzt ausgestrahlt am"
 
 msgctxt "#31733"
 msgid "Hide Next Aired infos"
-msgstr ""
+msgstr "Verberge Info's von NextAired"
 
 msgctxt "#31734"
 msgid "Indicators"
@@ -2036,7 +2036,7 @@ msgstr ""
 
 msgctxt "#31737"
 msgid "Hub Image"
-msgstr ""
+msgstr "Hub-Grafik"
 
 msgctxt "#31738"
 msgid "Unwatched Movies"
@@ -2060,7 +2060,7 @@ msgstr "Logos mit Fanart/Vorschaubild"
 
 msgctxt "#31743"
 msgid "Big Wide with ClearArt"
-msgstr "Große breite Liste mit ClearArt"
+msgstr "Große, breite Liste mit ClearArt"
 
 msgctxt "#31744"
 msgid "ClearArt List"
@@ -2072,11 +2072,11 @@ msgstr "Liste mit Logos"
 
 msgctxt "#31746"
 msgid "Hide bottom bar"
-msgstr ""
+msgstr "Verberge untere Leiste"
 
 msgctxt "#31747"
 msgid "Autostart Artwork Downloader after a library update"
-msgstr ""
+msgstr "Automatischer Download von Grafiken nach einem Update der Bibliothek"
 
 msgctxt "#31748"
 msgid "Automatically downloads all available artwork using the [B]Artwork Downloader[/B] add-on."
@@ -2084,19 +2084,19 @@ msgstr ""
 
 msgctxt "#31749"
 msgid "Show DiscArt on video info screens"
-msgstr ""
+msgstr "Zeige DiscArt im Video-Infobildschirm"
 
 msgctxt "#31750"
 msgid "Shows DiscArt on video info screens."
-msgstr ""
+msgstr "Zeigt DiscArt im Video-Infobildschirm"
 
 msgctxt "#31751"
-msgid "Verberge Untermenü Symole"
-msgstr ""
+msgid "Hide submenu icons"
+msgstr "Verberge Symbole in Untermenüs"
 
 msgctxt "#31752"
 msgid "Hides the submenu icons."
-msgstr ""
+msgstr "Verberge die Symbole in Untermenüs"
 
 msgctxt "#31753"
 msgid "Main colour of indicators"
@@ -2116,7 +2116,7 @@ msgstr ""
 
 msgctxt "#31757"
 msgid "Submenu style"
-msgstr "Ansicht der Untermenüs"
+msgstr "Aussehen der Untermenüs"
 
 msgctxt "#31758"
 msgid "Sets the submenu style."
@@ -2136,11 +2136,11 @@ msgstr "Erlaube neues Laden der Widgets"
 
 msgctxt "#31762"
 msgid "Use compact Video OSD"
-msgstr ""
+msgstr "Benutze kompaktes Video-OSD"
 
 msgctxt "#31763"
 msgid "Use animated artwork"
-msgstr ""
+msgstr "Benutze animierte Grafiken"
 
 msgctxt "#31764"
 msgid "Uses animations instead of static posters and fanart, if available."
@@ -2148,7 +2148,7 @@ msgstr ""
 
 msgctxt "#31765"
 msgid "Compacts the flags into the info popup."
-msgstr ""
+msgstr "Integriere Flags in den Info-Dialog"
 
 msgctxt "#31766"
 msgid "Use Extrafanart backgrounds"
@@ -2164,7 +2164,7 @@ msgstr "Dateimanager"
 
 msgctxt "#31769"
 msgid "Use the alphabet scrollbar"
-msgstr ""
+msgstr "Benutze Scrollbalken mit Alphabet"
 
 msgctxt "#31770"
 msgid "Enables the alphabet scrollbar for quicker navigation in the library. [B]Disable this setting if you experience performance issues.[/B]"
@@ -2188,7 +2188,7 @@ msgstr "Videodekoder"
 
 msgctxt "#31775"
 msgid "Use dark interface"
-msgstr "Benutze dunke Ansicht"
+msgstr "Benutze dunkle Ansicht"
 
 msgctxt "#31776"
 msgid "Enables custom dark diffused backgrounds for all views."
@@ -2200,7 +2200,7 @@ msgstr "Erstausstrahlung"
 
 msgctxt "#31778"
 msgid "Directed by"
-msgstr ""
+msgstr "Regie durch"
 
 msgctxt "#31779"
 msgid "Written by"
@@ -2208,7 +2208,7 @@ msgstr "Drehbuch von"
 
 msgctxt "#31780"
 msgid "Use HH:MM duration format"
-msgstr ""
+msgstr "Benutze das Format HH:MM"
 
 msgctxt "#31781"
 msgid "Uses hours and minutes for all duration flags."
@@ -2220,7 +2220,7 @@ msgstr ""
 
 msgctxt "#31784"
 msgid "Show user ratings for music and videos"
-msgstr ""
+msgstr "Zeige Benutzerbewertung für Musik und Videos"
 
 msgctxt "#31785"
 msgid "Enables the user rating display wherever possible, including the Music OSD."
@@ -2264,7 +2264,7 @@ msgstr "QuickNav"
 
 msgctxt "#31795"
 msgid "Opacity"
-msgstr "Durchsichtigkeit"
+msgstr "Transparenz"
 
 msgctxt "#31796"
 msgid "[B]Skin Helper Colourpicker[/B] add-on is needed to adjust the skin colour settings."
@@ -2284,15 +2284,15 @@ msgstr ""
 
 msgctxt "#31800"
 msgid "OSMC"
-msgstr ""
+msgstr "OSMC"
 
 msgctxt "#31801"
 msgid "OpenELEC"
-msgstr ""
+msgstr "OpenELEC"
 
 msgctxt "#31802"
 msgid "LibreELEC"
-msgstr ""
+msgstr "LibreELEC"
 
 msgctxt "#31803"
 msgid "[B]Skin Helper Skin Backup[/B] add-on is needed to enable skin backup and restore features."
@@ -2308,7 +2308,7 @@ msgstr ""
 
 msgctxt "#31806"
 msgid "Use bars in Hub menus"
-msgstr "Benutze Balken im HUB-Menü"
+msgstr "Benutze Balken in den Menüs der Hubs"
 
 msgctxt "#31807"
 msgid "Enables the white bars in hub menus instead of the dark and light themed panels."
@@ -2316,7 +2316,7 @@ msgstr ""
 
 msgctxt "#31808"
 msgid "Show duration flags"
-msgstr ""
+msgstr "Zeige Flags für die Spielzeit"
 
 msgctxt "#31809"
 msgid "Displays the finish time, duration and set posters in the library."
@@ -2356,11 +2356,11 @@ msgstr "Vetikal"
 
 msgctxt "#31818"
 msgid "Switch places"
-msgstr "Tausche Positionen"
+msgstr "Tausche Position zwischen Liste und Widget im Hub"
 
 msgctxt "#31819"
 msgid "Switches places of the list and widget panels in the hub."
-msgstr "Tausche Positionen zwischen Liste und Widget im HUB"
+msgstr "Tausche Positionen zwischen Liste und Widget im Hub"
 
 msgctxt "#31820"
 msgid "Choose flags"
@@ -2368,11 +2368,11 @@ msgstr "Wähle Flags"
 
 msgctxt "#31821"
 msgid "Choose between coloured or white media flags."
-msgstr "Wähle zwischen farbigen und weissen Media Flags"
+msgstr "Wähle zwischen farbigen und weißen Flags für Medien"
 
 msgctxt "#31822"
 msgid "White flags"
-msgstr "Weisse Flags"
+msgstr "Weiße Flags"
 
 msgctxt "#31823"
 msgid "Coloured flags"
@@ -2384,15 +2384,15 @@ msgstr "Kein Widget"
 
 msgctxt "#31825"
 msgid "Removes Hub widgets and expands the list"
-msgstr "Entferne HUB-Widgets und erweitere Liste"
+msgstr "Entferne Hub-Widgets und erweitere Liste"
 
 msgctxt "#31826"
 msgid "Hub Widget Control"
-msgstr ""
+msgstr "Einstellungen Hub-Widgets"
 
 msgctxt "#31827"
 msgid "Options for hub widgets (backgrounds and layout)."
-msgstr "Optionen für HUB-Widgets (Hintergrund und Anordnung)"
+msgstr "Optionen für Hub-Widgets (Hintergrund und Anordnung)"
 
 msgctxt "#31828"
 msgid "Fanart"
