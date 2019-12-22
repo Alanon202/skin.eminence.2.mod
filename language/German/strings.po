@@ -40,7 +40,7 @@ msgstr "Undurchsichtiger Hintergrund für Skin-Menüs und Fenster"
 
 msgctxt "#31005"
 msgid "Video OSD"
-msgstr "Video OSD"
+msgstr "Video-OSD"
 
 msgctxt "#31006"
 msgid "Show infos when pressing info"
@@ -48,7 +48,7 @@ msgstr "Zeige Handlung beim Drücken von Info"
 
 msgctxt "#31007"
 msgid "Show media flags"
-msgstr "Zeige Medieninformationssymbole"
+msgstr "Zeige Medien-Flags"
 
 msgctxt "#31008"
 msgid "Show plot overlay in video library after delay"
@@ -224,7 +224,7 @@ msgstr "Kontext Menü"
 
 msgctxt "#31070"
 msgid "Infos"
-msgstr "Info"
+msgstr "Infos"
 
 msgctxt "#31071"
 msgid "Finishes at"
@@ -256,7 +256,7 @@ msgstr "Angesagte Filme"
 
 msgctxt "#31078"
 msgid "In Cinemas"
-msgstr "Im Kino"
+msgstr "Im Kinos"
 
 msgctxt "#31079"
 msgid "Upcoming Films"
@@ -428,7 +428,7 @@ msgstr "Verberge Widergabeinformationen"
 
 msgctxt "#31121"
 msgid "Music OSD"
-msgstr "Musik OSD"
+msgstr "Musik-OSD"
 
 msgctxt "#31122"
 msgid "Match header tile with highlight colour"
@@ -504,11 +504,11 @@ msgstr "Hubs"
 
 msgctxt "#31140"
 msgid "Show tile colour on unfocused tiles"
-msgstr "Zeige Kachelfarbe bei unfokussierten Überschriften"
+msgstr "Zeige Kachelfarbe bei unfokussierten Kacheln"
 
 msgctxt "#31141"
 msgid "Posters with Info"
-msgstr "Poster mit Info"
+msgstr "Plakate mit Info"
 
 msgctxt "#31142"
 msgid "Big List Info"
@@ -544,7 +544,7 @@ msgstr "Als nächstes läuft"
 
 msgctxt "#31150"
 msgid "Show widget posters"
-msgstr "Zeige Widget Poster"
+msgstr "Zeige Widget Plakate"
 
 msgctxt "#31151"
 msgid "Home tile icon"
@@ -560,7 +560,7 @@ msgstr "Immer"
 
 msgctxt "#31154"
 msgid "On Up"
-msgstr "Ganz Oben"
+msgstr "Bei aufwärts"
 
 msgctxt "#31155"
 msgid "Never"
@@ -592,7 +592,7 @@ msgstr "Skin-Einstellungen sichern/wiederherstellen"
 
 msgctxt "#31162"
 msgid "Posters List"
-msgstr "Poster Liste"
+msgstr "Plakate Liste"
 
 msgctxt "#31163"
 msgid "Gallery"
@@ -600,7 +600,7 @@ msgstr "Galerie"
 
 msgctxt "#31164"
 msgid "Fanarts/Thumbs list"
-msgstr "Fanart/Thumbs Liste"
+msgstr "Fanart/Vorschaubilder Liste"
 
 msgctxt "#31165"
 msgid "Show sorting and info-line headers"
@@ -660,7 +660,7 @@ msgstr "Symbole für Plattenlabel"
 
 msgctxt "#31179"
 msgid "Select the record label icons resource add-on."
-msgstr ""
+msgstr "Wähle Resourcen-Addon für Aufnahmestudios"
 
 msgctxt "#31180"
 msgid "Default"
@@ -728,7 +728,7 @@ msgstr "Erlaube das Neuladen von Widgets"
 
 msgctxt "#31196"
 msgid "Select the music genre icons resource add-on."
-msgstr ""
+msgstr "Wähle Resourcen-Addon für Musik-Genre"
 
 msgctxt "#31197"
 msgid "Lock view"
@@ -788,7 +788,7 @@ msgstr "Verwalte farbige Themen"
 
 msgctxt "#31211"
 msgid "OSD Opacity"
-msgstr "OSD Transparenz"
+msgstr "OSD-Transparenz"
 
 msgctxt "#31212"
 msgid "90%"
@@ -812,7 +812,7 @@ msgstr "Aktiviere Zurück-Kommando"
 
 msgctxt "#31217"
 msgid "Enables returning directly to the point of origin when shortcuts are used."
-msgstr ""
+msgstr "Aktiviert das direkte Zurückspringen zum Ausgangspunkt wenn Kurzbefehle benutzt werden."
 
 msgctxt "#31218"
 msgid "Activate subtitles"
@@ -872,7 +872,7 @@ msgstr "30 Minuten"
 
 msgctxt "#31232"
 msgid "Defines the time spent on a single image when rotating backgrounds are enabled."
-msgstr ""
+msgstr "Definiert die Zeit, wie lange ein einzelnes Bild gezeigt wird wenn wechselnde Hintegründe aktiviert sind."
 
 msgctxt "#31233"
 msgid "Backgrounds rotation time"
@@ -880,7 +880,7 @@ msgstr "Zeit zwischen den Wechseln von Hintergründen"
 
 msgctxt "#31234"
 msgid "Show extrathumbs"
-msgstr ""
+msgstr "Zeige Extra-Vorschaubilder"
 
 msgctxt "#31235"
 msgid "Now:"
@@ -924,7 +924,7 @@ msgstr "Dimmen im Einstellungsmenü"
 
 msgctxt "#31245"
 msgid "Ignores the user's background settings and darkens the screens for better visibility."
-msgstr ""
+msgstr "Ignoriere die Benutzerdefinierten Hintergrund-Einstellungen und dunkle den Bildschirm für bessere Lesbarkeit ab."
 
 msgctxt "#31246"
 msgid "Go to fullscreen on playback"
@@ -932,7 +932,7 @@ msgstr "Wechsle in Vollbild während der Wiedergabe"
 
 msgctxt "#31247"
 msgid "Goes to the Music OSD immediately upon clicking a track."
-msgstr ""
+msgstr "Gehe direkt zum Musik-OSD bei Auswählen eines Titels."
 
 msgctxt "#31248"
 msgid "Use vertical context menu"
@@ -940,7 +940,7 @@ msgstr "Benutze vertikales Kontextmenü"
 
 msgctxt "#31249"
 msgid "Uses the vertical context menu instead of the default horizontal one."
-msgstr ""
+msgstr "Benutzt das vertikale Kontextmenü statt dem üblichen horizontalen."
 
 msgctxt "#31250"
 msgid "Show DiscArt"
@@ -976,7 +976,7 @@ msgstr "Resourcen"
 
 msgctxt "#31258"
 msgid "This category contains the settings for managing skin widgets."
-msgstr ""
+msgstr "Diese Kategorie beinhaltet die Einstellungen für die Verwaltung von Skin Widgets."
 
 msgctxt "#31259"
 msgid "Show the widget item duration"
@@ -984,15 +984,15 @@ msgstr "Zeige die Spielzeit für Einträge in Widgets"
 
 msgctxt "#31260"
 msgid "Enables the duration display of the focused item within the widgets."
-msgstr ""
+msgstr "Aktiviert die Speilzeit-Anzeige bei ausgewählten Objekten im Widget."
 
 msgctxt "#31261"
 msgid "Use animated discs"
-msgstr "Benutzer animierte CD's"
+msgstr "Benutzer animierte Disc's"
 
 msgctxt "#31262"
 msgid "Enables the spinning disc (DiscArt or fake disc) in the Music OSD."
-msgstr ""
+msgstr "Aktiviere drehende Disc (DiscArt oder Fake-Disc) im Musik-OSD"
 
 msgctxt "#31263"
 msgid "Use plot outline"
@@ -1000,7 +1000,7 @@ msgstr "Benutze eine Zusammenfassung der Handlung"
 
 msgctxt "#31264"
 msgid "Displays a shortened plot type for video media in the entire skin."
-msgstr ""
+msgstr "Zeigt eine verkütrzte Handlung für Videomaterial im gesamten Skin."
 
 msgctxt "#31265"
 msgid "Low List"
@@ -1032,11 +1032,11 @@ msgstr "PVR"
 
 msgctxt "#31272"
 msgid "Displays a window to setup the Showcase widgets type and layout."
-msgstr "Zeige ein Fenster zum Einstellen von Typ und Ansicht des Schaufenster-Widget"
+msgstr "Zeigt ein Fenster zum Einstellen von Typ und Ansicht des Schaufenster-Widget"
 
 msgctxt "#31273"
 msgid "Displays the showcase widget when pressing down on menu items without submenus."
-msgstr ""
+msgstr "Zeigt das Schaufenster-Widget bei Menüeinträgen ohne Untermenü beim drücken von abwärts."
 
 msgctxt "#31274"
 msgid "View system events"
@@ -1056,7 +1056,7 @@ msgstr "Zeige Widget-Hintergrund beim Fokusieren"
 
 msgctxt "#31278"
 msgid "The widget backgrounds will be shown only when the widget is focused (on up)."
-msgstr ""
+msgstr "Der Widget-Hintergrund wird nur angezeigt wenn das Widget fokusiert ist (bei aufwärts)."
 
 msgctxt "#31279"
 msgid "Set main panel colour"
@@ -1084,7 +1084,7 @@ msgstr "Fanart Symbole"
 
 msgctxt "#31285"
 msgid "Fanart Icons Ep."
-msgstr ""
+msgstr "Fanart Symbole Ep."
 
 msgctxt "#31500"
 msgid "None"
@@ -1108,7 +1108,7 @@ msgstr "Eckige Kachel"
 
 msgctxt "#31505"
 msgid "Beveled Tile"
-msgstr "Schräge Kacheln"
+msgstr "Schräge Kachel"
 
 msgctxt "#31506"
 msgid "Header tile style"
@@ -1204,11 +1204,11 @@ msgstr "Kanäle"
 
 msgctxt "#31529"
 msgid "Disable Box Office info on video info screens"
-msgstr ""
+msgstr "Deaktivere Handlungszusammenfassung im Video-Infobildschirm"
 
 msgctxt "#31530"
 msgid "Disable Box Office info on video info screens"
-msgstr ""
+msgstr "Deaktivere Handlungszusammenfassung im Video-Infobildschirm"
 
 msgctxt "#31531"
 msgid "Hide header tile"
@@ -1232,43 +1232,43 @@ msgstr "Zeige ClearLogo in Widget-Kacheln"
 
 msgctxt "#31536"
 msgid "This category contains the settings for the home menu."
-msgstr ""
+msgstr "Diese Kategorie beinhaltet die Einstellungen für das Hauptmenü."
 
 msgctxt "#31537"
 msgid "This category contains the settings for the background."
-msgstr ""
+msgstr "Diese Kategorie beinhaltet die Einstellungen für den Hintergrund."
 
 msgctxt "#31538"
 msgid "This category contains the settings for the Music OSD."
-msgstr ""
+msgstr "Diese Kategorie beinhaltet die Einstellungen für das Musik-OSD."
 
 msgctxt "#31539"
 msgid "This category contains the settings for the Video OSD."
-msgstr ""
+msgstr "Diese Kategorie beinhaltet die Einstellungen für das Video-OSD."
 
 msgctxt "#31540"
 msgid "This category contains the settings for the header and a few settings for the hubs."
-msgstr ""
+msgstr "Diese Kategorie beinhaltet die Einstellungen für den Kopfbereich und ein paar Einstellungen für die Hubs."
 
 msgctxt "#31541"
 msgid "This category contains the settings for displaying various items in the library."
-msgstr ""
+msgstr "Diese Kategorie beinhaltet die Einstellungen für die Anzeige verschiedener Einträge in der Bibliothek."
 
 msgctxt "#31542"
 msgid "This category contains the settings for highlight colours."
-msgstr ""
+msgstr "Diese Kategorie beinhaltet die Einstellungen für Markierungsfarben."
 
 msgctxt "#31543"
 msgid "This category contains extra settings."
-msgstr ""
+msgstr "Diese Kategorie beinhaltet die Extra-Einstellungen."
 
 msgctxt "#31544"
 msgid "This category contains the settings for managing various skin resources."
-msgstr ""
+msgstr "Diese Kategorie beinhaltet die Einstellungen für verschiedene Skin-Resourcen."
 
 msgctxt "#31545"
 msgid "Configure home menu and widgets."
-msgstr ""
+msgstr "Konfiguriere Hauptmenü und Widgets"
 
 msgctxt "#31546"
 msgid "Select the widget to display when no widget is selected in the configuration of the home menu."
@@ -1276,7 +1276,7 @@ msgstr ""
 
 msgctxt "#31547"
 msgid "Shows widget tile and infos on home menu."
-msgstr ""
+msgstr "Zeige Widget-Kachel und Infroamtionen auf dem Hauptbildschirm"
 
 msgctxt "#31548"
 msgid "Choose how posters are displayed with widgets. [[B]Never[/B]] No poster is displayed with widgets. [[B]Always[/B]] Posters are always displayed with widgets. [[B]On Up[/B]] Posters are displayed only when pressing the Up button. [B]Individually set in customisation dialog[/B]] Choose to display or not posters individually for each widget via customise home menu."
@@ -1284,11 +1284,11 @@ msgstr ""
 
 msgctxt "#31549"
 msgid "Shows discs with widgets."
-msgstr ""
+msgstr "Zeigt Discs in Widgets."
 
 msgctxt "#31550"
 msgid "Shows ClearLogos with widgets."
-msgstr ""
+msgstr "Zeigt ClearLogos in Widgets."
 
 msgctxt "#31551"
 msgid "Choose home tile icon."
@@ -1340,7 +1340,7 @@ msgstr ""
 
 msgctxt "#31563"
 msgid "Select the Weather fanart resource add-on."
-msgstr ""
+msgstr "Wähle Resourcen-Addon für Wetter-Fanart"
 
 msgctxt "#31564"
 msgid "Select background on music visualisation. [[B]None[/B]] show a black background. [[B]Fanart[/B]] show fanart set for artist. [[B]Artist Slideshow[/B]] show artist slideshow in background. [[B]Album wall[/B]] show a background with covers of all albums."
@@ -1348,7 +1348,7 @@ msgstr ""
 
 msgctxt "#31565"
 msgid "Artist Slideshow"
-msgstr ""
+msgstr "Künstler-Slideshow"
 
 msgctxt "#31566"
 msgid "Shows visualisation effects on music visualisation."
@@ -1488,7 +1488,7 @@ msgstr ""
 
 msgctxt "#31600"
 msgid "Select the genre icons resource add-on."
-msgstr ""
+msgstr "Wähle Resourcen-Addon für Genre-Symbole"
 
 msgctxt "#31601"
 msgid "Select a photo, a video or a tune to run when Kodi starts up."
@@ -1624,7 +1624,7 @@ msgstr "Wetter-Symbole"
 
 msgctxt "#31634"
 msgid "Select the weather icons resource add-on."
-msgstr ""
+msgstr "Wähle Resourcen-Addon für Wetter-Symbole"
 
 msgctxt "#31635"
 msgid "Music visualisation background"
@@ -1764,11 +1764,11 @@ msgstr "Leere, schräge Kacheln"
 
 msgctxt "#31669"
 msgid "Studio icons"
-msgstr ""
+msgstr "Studio Symbole"
 
 msgctxt "#31670"
 msgid "Select the studio icons resource add-on."
-msgstr ""
+msgstr "Wähle Resourcen-Addon für Studio-Symbole"
 
 msgctxt "#31671"
 msgid "Show studio icons on video info screens"
@@ -1828,7 +1828,7 @@ msgstr ""
 
 msgctxt "#31685"
 msgid "Posters list"
-msgstr "Plakatliste"
+msgstr "Plakate Liste"
 
 msgctxt "#31686"
 msgid "Replace widget fanart with background"
@@ -2276,7 +2276,7 @@ msgstr ""
 
 msgctxt "#31798"
 msgid "Backup fake disc"
-msgstr ""
+msgstr "Backup Fake Disc"
 
 msgctxt "#31799"
 msgid "Shows a fake rotating disc as backup on Music OSD instead of the plain CD underside."
@@ -2300,7 +2300,7 @@ msgstr ""
 
 msgctxt "#31804"
 msgid "Use manfeed's lyrics"
-msgstr ""
+msgstr "Benutze manfeed's Texte"
 
 msgctxt "#31805"
 msgid "Enables coloured and animated lyrics from manfeed instead of the regular one."
@@ -2324,7 +2324,7 @@ msgstr ""
 
 msgctxt "#31810"
 msgid "Revenue"
-msgstr ""
+msgstr "Einnahmen"
 
 msgctxt "#31811"
 msgid "Budget"
@@ -2400,7 +2400,7 @@ msgstr "Fanart"
 
 msgctxt "#31829"
 msgid "Touch submenu"
-msgstr ""
+msgstr "Touch Untermenü"
 
 msgctxt "#31830"
 msgid "Display aired date"
