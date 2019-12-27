@@ -3,7 +3,7 @@
     id="skin.eminence.2.mod"
     version="3.0.4"
     name="Eminence 2 MOD"
-    provider-name="jurialmunkey - Mod by Guilouz - Mod by Alanon">
+    provider-name="jurialmunkey - Mod by Guilouz - Mod by Alanon - Mod by hawkeyexp">
     <requires>
         <import addon="xbmc.gui" version="5.14.0"/>
         <import addon="script.skinshortcuts" version="1.0.13"/>
