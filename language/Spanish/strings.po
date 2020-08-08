@@ -1584,15 +1584,15 @@ msgstr "Mostrar argumento en Hub Fanart."
 
 msgctxt "#31624"
 msgid "Recently Played Episodes"
-msgstr "Episodios Vistos Recientemente"
+msgstr "Episodios vistos recientemente"
 
 msgctxt "#31625"
 msgid "Recently Played Movies"
-msgstr "Películas Vistas Recientemente"
+msgstr "Películas vistas recientemente"
 
 msgctxt "#31626"
 msgid "Recently Watched TV Shows"
-msgstr "Series Vistas Recientemente"
+msgstr "Series vistas recientemente"
 
 msgctxt "#31627"
 msgid "Fanart transparency"
