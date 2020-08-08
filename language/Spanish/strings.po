@@ -1632,7 +1632,7 @@ msgstr "Visualización de fondo en la música"
 
 msgctxt "#31636"
 msgid "Beveled Tiles"
-msgstr "Recuadros Biselados"
+msgstr "Mosaicos biselados"
 
 msgctxt "#31637"
 msgid "Album wall"
@@ -1744,23 +1744,23 @@ msgstr "Restablece el color del texto a valores predeterminados."
 
 msgctxt "#31664"
 msgid "Squared tiles with rounded corners"
-msgstr "Recuadros cuadrados con esquinas redondeadas"
+msgstr "Mosaicos cuadrados con esquinas redondeadas"
 
 msgctxt "#31665"
 msgid "Empty rounded tiles"
-msgstr "Recuadros redondos vacíos"
+msgstr "Mosaicos redondos vacíos"
 
 msgctxt "#31666"
 msgid "Empty squared tiles"
-msgstr "Recuadros cuadrados vacíos"
+msgstr "Mosaicos cuadrados vacíos"
 
 msgctxt "#31667"
 msgid "Empty squared tiles with rounded corners"
-msgstr "Recuadros cuadrados vacíos con esquinas redondeadas"
+msgstr "Mosaicos cuadrados vacíos con esquinas redondeadas"
 
 msgctxt "#31668"
 msgid "Empty beveled tiles"
-msgstr "Recuadros biselados vacíos"
+msgstr "Mosaicos biselados vacíos"
 
 msgctxt "#31669"
 msgid "Studio icons"
